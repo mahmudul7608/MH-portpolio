@@ -3,116 +3,59 @@
     class="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300"
   >
     <!-- Header Navbar -->
-    <template>
-      <header
-        class="fixed top-0 left-0 w-full z-50 px-6 sm:px-10 py-6 sm:py-8 bg-transparent"
+    <header class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 w-full z-50">
+      <nav
+        class="relative text-white font-light uppercase text-sm tracking-wide opacity-100 z-50"
       >
-        <!-- Mobile Navbar -->
-        <div class="sm:hidden flex justify-between items-center">
-          <h1 class="text-xl font-bold text-white">Mahmudul</h1>
-          <button
-            @click="isMobileNavOpen = !isMobileNavOpen"
-            class="focus:outline-none z-50"
-          >
-            <svg
-              v-if="!isMobileNavOpen"
-              class="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-            <svg
-              v-else
-              class="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <transition name="fade">
-          <div
-            v-if="isMobileNavOpen"
-            class="sm:hidden fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-8 text-white uppercase text-lg font-medium"
-          >
-            <a @click="closeMenu" href="#intro" class="hover:text-[#18ffb0]"
-              >Home</a
-            >
-            <a @click="closeMenu" href="#skills" class="hover:text-[#18ffb0]"
-              >Skills</a
-            >
+        <!-- Fixed Floating Navbar -->
+        <div
+          class="fixed top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-solid rounded-[80px] backdrop-blur-xl border-[rgba(255,255,255,.1)] bg-[rgba(37,74,61,0.5)] flex items-center py-6 z-50"
+        >
+          <div>
             <a
-              @click="closeMenu"
-              href="#tools-i-use"
-              class="hover:text-[#18ffb0]"
-              >Tools</a
-            >
-            <a
-              @click="closeMenu"
-              href="#my-recent-project"
-              class="hover:text-[#18ffb0]"
-              >Projects</a
-            >
-            <a
-              @click="closeMenu"
-              href="#contact-me"
-              class="hover:text-[#18ffb0]"
-              >Contact</a
-            >
-          </div>
-        </transition>
-
-        <!-- Desktop Navbar -->
-        <nav class="hidden sm:flex justify-center relative z-50">
-          <div
-            class="fixed top-6 sm:top-8 left-1/2 -translate-x-1/2 border border-[rgba(255,255,255,.1)] bg-[rgba(4,19,14,0.5)] backdrop-blur-xl rounded-full flex items-center py-3 px-4 space-x-2 sm:space-x-4 text-sm font-medium uppercase tracking-wide text-white"
-          >
-            <a
+              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
               href="#intro"
-              class="px-4 border-r border-[rgba(255,255,255,0.1)] hover:text-[#18ffb0] transition-all"
               >Home</a
             >
+          </div>
+          <div>
             <a
+              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
               href="#skills"
-              class="px-4 border-r border-[rgba(255,255,255,0.1)] hover:text-[#18ffb0] transition-all"
               >Skills</a
             >
+          </div>
+          <div>
             <a
+              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
               href="#tools-i-use"
-              class="px-4 border-r border-[rgba(255,255,255,0.1)] hover:text-[#18ffb0] transition-all"
               >Tools</a
             >
+          </div>
+          <div>
             <a
+              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
               href="#my-recent-project"
-              class="px-4 border-r border-[rgba(255,255,255,0.1)] hover:text-[#18ffb0] transition-all"
               >Projects</a
             >
+          </div>
+          <div>
             <a
+              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
+              href="#my-experience"
+              >Career</a
+            >
+          </div>
+          <div>
+            <a
+              class="px-8 text-30px tracking-[5px] transition-all hover:text-[#f73a21]"
               href="#contact-me"
-              class="px-4 hover:text-[#18ffb0] transition-all"
               >Contact</a
             >
           </div>
-        </nav>
-      </header>
-    </template>
-
+        </div>
+      </nav>
+    </header>
     <!-- Hero Section -->
     <section
       class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-20 pb-20 max-w-screen-xl mx-auto"
@@ -443,6 +386,191 @@
       </div>
     </section>
     <!-- another setion end -->
+
+    <!-- My project section start -->
+    <section class="bg-black py-20 px-6">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center text-white mb-16 font-[cursive]"
+      >
+        My Recent Projects
+      </h2>
+
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+      >
+        <!-- Project Card -->
+        <div
+          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
+        >
+          <!-- Image -->
+          <div class="overflow-hidden">
+            <img
+              src=""
+              alt="Project Screenshot"
+              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Info -->
+          <div class="p-6 text-white flex flex-col gap-3">
+            <h3 class="text-xl font-semibold">Practice API Project</h3>
+
+            <!-- Live Button -->
+            <div class="mt-4">
+              <a
+                href="https://practice-api-project.netlify.app/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
+        >
+          <!-- Image -->
+          <div class="overflow-hidden">
+            <img
+              src="/image/MH-portpolio-signin-6.png"
+              alt="Project Screenshot"
+              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Info -->
+          <div class="p-6 text-white flex flex-col gap-3">
+            <h3 class="text-xl font-semibold">Practice API Project</h3>
+
+            <!-- Live Button -->
+            <div class="mt-4">
+              <a
+                href="https://practice-api-project.netlify.app/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
+        >
+          <!-- Image -->
+          <div class="overflow-hidden">
+            <img
+              src="/image/MH-portpolio-signin-6.png"
+              alt="Project Screenshot"
+              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Info -->
+          <div class="p-6 text-white flex flex-col gap-3">
+            <h3 class="text-xl font-semibold">Practice API Project</h3>
+
+            <!-- Live Button -->
+            <div class="mt-4">
+              <a
+                href="https://practice-api-project.netlify.app/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
+        >
+          <!-- Image -->
+          <div class="overflow-hidden">
+            <img
+              src="/image/MH-portpolio-signin-6.png"
+              alt="Project Screenshot"
+              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Info -->
+          <div class="p-6 text-white flex flex-col gap-3">
+            <h3 class="text-xl font-semibold">Practice API Project</h3>
+
+            <!-- Live Button -->
+            <div class="mt-4">
+              <a
+                href="https://practice-api-project.netlify.app/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
+        >
+          <!-- Image -->
+          <div class="overflow-hidden">
+            <img
+              src="./image/"
+              alt="Project Screenshot"
+              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Info -->
+          <div class="p-6 text-white flex flex-col gap-3">
+            <h3 class="text-xl font-semibold">Practice API Project</h3>
+
+            <!-- Live Button -->
+            <div class="mt-4">
+              <a
+                href="https://practice-api-project.netlify.app/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
+        >
+          <!-- Image -->
+          <div class="overflow-hidden">
+            <img
+              src="/image/MH-portpolio-signin-6.png"
+              alt="Project Screenshot"
+              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Info -->
+          <div class="p-6 text-white flex flex-col gap-3">
+            <h3 class="text-xl font-semibold">Practice API Project</h3>
+
+            <!-- Live Button -->
+            <div class="mt-4">
+              <a
+                href="https://practice-api-project.netlify.app/"
+                target="_blank"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- my project section end -->
   </div>
 </template>
 
