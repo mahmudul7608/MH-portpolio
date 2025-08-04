@@ -102,7 +102,8 @@
     <!-- End Header Navbar -->
 
     <!-- Hero Section -->
-    <section id="intro"
+    <section
+      id="intro"
       class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-20 pb-20 max-w-screen-xl mx-auto"
     >
       <!-- Text Content -->
@@ -158,7 +159,7 @@
             href="https://github.com/mahmudul7608"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-2 rounded-full hover:bg-secondary transition-colors "
+            class="p-2 rounded-full hover:bg-secondary transition-colors"
             aria-label="GitHub"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +227,7 @@
         <img
           src="/image/HM-image-1.png"
           alt="Mahmudul Hasan"
-          class="rounded-xl shadow-lg mx-auto max-w-full "
+          class="rounded-xl shadow-lg mx-auto max-w-full"
         />
       </div>
     </section>
@@ -673,7 +674,11 @@
             class="inline-flex h-10 items-center justify-center rounded-md p-1 text-muted-foreground bg-background/50 backdrop-blur-sm"
             tabindex="0"
             data-orientation="horizontal"
-            style="border: dotted 1px #ccc; border-radius: 8px; overflow: hidden;"
+            style="
+              border: dotted 1px #ccc;
+              border-radius: 8px;
+              overflow: hidden;
+            "
           >
             <button
               type="button"
@@ -742,7 +747,7 @@
           id="radix-:r0:-content-all"
           tabindex="0"
           class="ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 mt-0 m-auto w-full max-w-screen-xl overflow-hidden rounded-md border bg-background p-8 shadow-lg transition-all duration-700 data-[state=active]:animate-in data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0 data-[state=active]:fade-in-0 data-[state=inactive]:slide-out-to-left-1 data-[state=active]:slide-in-from-left-1"
-          style="border:none; background: transparent;"
+          style="border: none; background: transparent"
         >
           <div
             class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
@@ -1435,7 +1440,7 @@
                 </h3>
               </div>
             </div>
-            
+
             <div
               class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
               style="transition-delay: 400ms"
@@ -1470,148 +1475,6 @@
       </div>
     </section>
     <!-- tools section end -->
-
-    <section class="py-24 bg-black/50">
-      <div class="container mx-auto px-4 max-w-7xl relative">
-        <h2
-          class="text-4xl md:text-5xl font-bold text-center mb-16 text-white/90 z-10"
-        >
-          A True Builder
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-brain w-12 h-12 mb-6 text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <path
-                      d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
-                    ></path>
-                    <path
-                      d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
-                    ></path>
-                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
-                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
-                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
-                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
-                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
-                    <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
-                    <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"
-                >
-                  Engineering
-                </h3>
-                <p class="text-white/70">
-                  Software engineering with expertise in Web and AI
-                  Technologies.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-purple-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-rocket w-12 h-12 mb-6 text-purple-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <path
-                      d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
-                    ></path>
-                    <path
-                      d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
-                    ></path>
-                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent"
-                >
-                  Design
-                </h3>
-                <p class="text-white/70">
-                  Creating intuitive user experiences and visually appealing
-                  interfaces.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-green-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-target w-12 h-12 mb-6 text-green-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="6"></circle>
-                    <circle cx="12" cy="12" r="2"></circle>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-green-400 to-green-200 bg-clip-text text-transparent"
-                >
-                  Marketing
-                </h3>
-                <p class="text-white/70">
-                  Building and growing products with effective marketing
-                  strategies.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- another setion end -->
 
     <!-- My project section start -->
     <section id="my-recent-project" class="bg-black py-20 px-6">
@@ -1752,6 +1615,428 @@
       </div>
     </section>
     <!-- my project section end -->
+
+
+    <!-- true builder section -->
+     <section class="py-24 bg-black/50">
+      <div class="container mx-auto px-4 max-w-7xl relative">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-center mb-16 text-white/90 z-10"
+        >
+          A True Builder
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+          >
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-brain w-12 h-12 mb-6 text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+                    ></path>
+                    <path
+                      d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+                    ></path>
+                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
+                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                    <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                    <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"
+                >
+                  Engineering
+                </h3>
+                <p class="text-white/70">
+                  Software engineering with expertise in Web and AI
+                  Technologies.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+          >
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-purple-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-rocket w-12 h-12 mb-6 text-purple-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                    ></path>
+                    <path
+                      d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                    ></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent"
+                >
+                  Design
+                </h3>
+                <p class="text-white/70">
+                  Creating intuitive user experiences and visually appealing
+                  interfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+          >
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-green-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-target w-12 h-12 mb-6 text-green-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-green-400 to-green-200 bg-clip-text text-transparent"
+                >
+                  Marketing
+                </h3>
+                <p class="text-white/70">
+                  Building and growing products with effective marketing
+                  strategies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- true builder section end -->
+
+    <!-- Contact section start -->
+    <section id="" class="py-6 bg-black/50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Get In <span class="gradient-text">Touch</span>
+          </h2>
+          <p class="text-muted-foreground">
+            Have a project in mind or just want to connect? Feel free to reach
+            out to me for collaborations or questions.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 m-12 gap-8">
+          <div
+            class="transition-all duration-700 delay-300 opacity-100 translate-y-0"
+          >
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm"
+            >
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-6">Send me a message</h3>
+                <form class="space-y-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                      <label for="name" class="text-sm font-medium"
+                        >Full Name</label
+                      ><input
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        id="name"
+                        placeholder="Enter your name"
+                        required=""
+                        fdprocessedid="mrzp2r"
+                      />
+                    </div>
+                    <div class="space-y-2">
+                      <label for="email" class="text-sm font-medium"
+                        >Email Address</label
+                      ><input
+                        type="email"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        id="email"
+                        placeholder="Enter your email"
+                        required=""
+                        fdprocessedid="637bl9"
+                      />
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <label for="subject" class="text-sm font-medium"
+                      >Subject</label
+                    ><input
+                      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                      id="subject"
+                      placeholder="Enter subject line"
+                      required=""
+                      fdprocessedid="k2ibrm"
+                    />
+                  </div>
+                  <div class="space-y-2">
+                    <label for="message" class="text-sm font-medium"
+                      >Your Message</label
+                    ><textarea
+                      class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[150px]"
+                      id="message"
+                      placeholder="Enter your message"
+                      required=""
+                    ></textarea>
+                  </div>
+                  <button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-xs lg:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gradient-bg w-full"
+                    type="submit"
+                    fdprocessedid="8jy1zq"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-send h-5 w-5 mr-2"
+                    >
+                      <path
+                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                      ></path>
+                      <path d="m21.854 2.147-10.94 10.939"></path>
+                    </svg>
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="transition-all duration-700 opacity-100 translate-y-0">
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-full"
+            >
+              <div
+                class="h-32 bg-gradient-to-r from-purple-500 to-tech-blue"
+              ></div>
+              <div class="p-6 pt-0 -mt-16 relative">
+                <div class="bg-card p-6 rounded-lg shadow-lg">
+                  <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                  <p class="text-muted-foreground mb-6">
+                    Feel free to reach out for opportunities, collaborations, or
+                    just to say hi! I'm always open to discussing new projects
+                    and ideas.
+                  </p>
+                  <div class="space-y-4">
+                    <div class="flex items-start">
+                      <div class="p-2 bg-secondary rounded-full mr-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-mail-check h-6 w-6 text-purple-500"
+                        >
+                          <path
+                            d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"
+                          ></path>
+                          <path
+                            d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                          ></path>
+                          <path d="m16 19 2 2 4-4"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="font-medium">Email</h4>
+                        <a
+                          href="mailto:dev.mahmudul@gmail.com"
+                          class="text-purple-500 hover:underline"
+                          >dev.mahmudul@gmail.com</a
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start">
+                      <div class="p-2 bg-secondary rounded-full mr-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-phone h-6 w-6 text-purple-500"
+                        >
+                          <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="font-medium">Phone</h4>
+                        <a
+                          href="tel:+88016-50217808"
+                          class="text-purple-500 hover:underline"
+                          >+88016-50217808</a
+                        >
+                      </div>
+                    </div>
+                    <div class="flex items-start">
+                      <div class="p-2 bg-secondary rounded-full mr-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-map-pin h-6 w-6 text-purple-500"
+                        >
+                          <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                          ></path>
+                          <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="font-medium">Location</h4>
+                        <a
+                          href="https://maps.google.com/?q=Khulna, Bangladesh"
+                          class="text-purple-500 hover:underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Bogura, Bangladesh</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-8">
+                    <h4 class="text-lg font-bold mb-1">Connect with me</h4>
+                    <div class="flex mt-4 space-x-4">
+                      <a
+                        href="https://github.com/mahmudul7608"
+                        class="p-3 bg-secondary rounded-full text-foreground hover:bg-purple-500 hover:text-white transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                          ></path>
+                          <path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a
+                      ><a
+                        href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
+                        class="p-3 bg-secondary rounded-full text-foreground hover:bg-purple-500 hover:text-white transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                          ></path>
+                          <rect width="4" height="12" x="2" y="9"></rect>
+                          <circle cx="4" cy="4" r="2"></circle></svg></a
+                      ><a
+                        href="https://wa.me/88016-50217808"
+                        class="p-3 bg-secondary rounded-full text-foreground hover:bg-purple-500 hover:text-white transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="WhatsApp"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 448 512"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M380.9 97.1C339 55.2 283.1 32 224.5 32c-117.9 0-213.6 95.6-213.6 213.5 0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2zM224.5 438.6c-29.5 0-58.5-7.8-83.9-22.5l-6-3.5-77.9 20.5 20.8-76-3.9-6.3c-17.9-28.7-27.3-62-27.3-95.8 0-99 80.6-179.5 179.6-179.5 47.9 0 92.9 18.7 126.7 52.5 33.8 33.7 52.5 78.7 52.5 126.5 0 99-80.6 179.6-179.6 179.6zm101.8-138.2c-5.6-2.8-33-16.3-38.1-18.2-5.1-1.9-8.8-2.8-12.5 2.8s-14.4 18.2-17.7 21.9-6.5 4.2-12.1 1.4c-33-16.5-54.6-29.4-76.3-66.5-5.8-10 5.8-9.3 16.5-30.9 1.8-3.7.9-6.9-.5-9.7s-12.5-30-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.7 6.9c-5.1 5.6-19.2 18.7-19.2 45.6 0 26.9 19.7 52.9 22.4 56.5 2.8 3.7 38.7 59.1 93.9 82.9 13.1 5.7 23.3 9.1 31.3 11.7 13.1 4.2 25 3.6 34.4 2.2 10.5-1.6 33-13.5 37.6-26.6 4.7-13.1 4.7-24.3 3.3-26.5-1.3-2.3-5.1-3.7-10.7-6.5z"
+                          ></path></svg
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section end -->
   </div>
 </template>
 
