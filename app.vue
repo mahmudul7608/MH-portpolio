@@ -396,7 +396,7 @@
       </h2>
 
       <div
-        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        class="max-w-6xl mx-auto grid grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-5"
       >
         <!-- Project Card -->
         <div
@@ -405,7 +405,7 @@
           <!-- Image -->
           <div class="overflow-hidden">
             <img
-              src=""
+              src="./public/image/MH-imageSRC-1.png"
               alt="Project Screenshot"
               class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
@@ -433,7 +433,7 @@
           <!-- Image -->
           <div class="overflow-hidden">
             <img
-              src="/image/MH-portpolio-signin-6.png"
+              src="./public/image/MH-country-2.png"
               alt="Project Screenshot"
               class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
@@ -461,7 +461,7 @@
           <!-- Image -->
           <div class="overflow-hidden">
             <img
-              src="/image/MH-portpolio-signin-6.png"
+              src="./public/image/MH-millFiender-3.png"
               alt="Project Screenshot"
               class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
@@ -489,7 +489,7 @@
           <!-- Image -->
           <div class="overflow-hidden">
             <img
-              src="/image/MH-portpolio-signin-6.png"
+              src="./public/image/MH-mullokoto-4.png"
               alt="Project Screenshot"
               class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
@@ -517,7 +517,7 @@
           <!-- Image -->
           <div class="overflow-hidden">
             <img
-              src="./image/"
+              src="./public/image/MH-signin-6.png"
               alt="Project Screenshot"
               class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
@@ -545,7 +545,7 @@
           <!-- Image -->
           <div class="overflow-hidden">
             <img
-              src="/image/MH-portpolio-signin-6.png"
+              src="./public/image/MH-pet-shop-7.png"
               alt="Project Screenshot"
               class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
