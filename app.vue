@@ -3,62 +3,47 @@
     class="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300"
   >
     <!-- Header Navbar -->
-    <header class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 w-full z-50">
-      <nav
-        class="relative text-white font-light uppercase text-sm tracking-wide opacity-100 z-50"
+    <header class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 w-full z-50 px-4">
+    <nav class="relative text-white font-light uppercase tracking-wide z-50">
+      <!-- Desktop Navbar -->
+      <div
+        class="hidden md:flex fixed top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/10 rounded-[80px] backdrop-blur-xl bg-[rgba(37,74,61,0.5)] items-center py-6 z-50"
       >
-        <!-- Fixed Floating Navbar -->
-        <div
-          class="fixed top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-solid rounded-[80px] backdrop-blur-xl border-[rgba(255,255,255,.1)] bg-[rgba(37,74,61,0.5)] flex items-center py-6 z-50"
-        >
-          <div>
-            <a
-              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
-              href="#intro"
-              >Home</a
-            >
-          </div>
-          <div>
-            <a
-              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
-              href="#about"
-              >About</a
-            >
-          </div>
-          <div>
-            <a
-              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
-              href="#skills"
-              >Skills</a
-            >
-          </div>
-          <div>
-            <a
-              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
-              href="#tools-i-use"
-              >Tools</a
-            >
-          </div>
-          <div>
-            <a
-              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
-              href="#my-recent-project"
-              >Projects</a
-            >
-          </div>
-          <div>
-            <a
-              class="px-8 text-30px tracking-[5px] transition-all hover:text-[#f73a21]"
-              href="#contact-me"
-              >Contact</a
-            >
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Hero Section -->
+        <a class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]" href="#intro">Home</a>
+        <a class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]" href="#about">About</a>
+        <a class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]" href="#skills">Skills</a>
+        <a class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]" href="#tools-i-use">Tools</a>
+        <a class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]" href="#my-recent-project">Projects</a>
+        <a class="px-6 text-[18px] tracking-widest transition-all hover:text-[#c9f721]" href="#contact-me">Contact</a>
+      </div>
 
-    <section id="#home"
+      <!-- Mobile Top Bar -->
+      <div class="md:hidden flex justify-between items-center py-4">
+        <h1 class="text-white text-lg font-semibold">Menu</h1>
+        <button @click="toggleMenu" class="text-white text-3xl focus:outline-none">
+          <span v-if="!isOpen">☰</span>
+          <span v-else>✕</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        v-if="isOpen"
+        class="md:hidden mt-4 flex flex-col bg-[rgba(37,74,61,0.95)] backdrop-blur-xl rounded-xl py-6 px-6 space-y-5 border border-white/10"
+      >
+        <a class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]" href="#intro" @click="toggleMenu">Home</a>
+        <a class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]" href="#about" @click="toggleMenu">About</a>
+        <a class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]" href="#skills" @click="toggleMenu">Skills</a>
+        <a class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]" href="#tools-i-use" @click="toggleMenu">Tools</a>
+        <a class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]" href="#my-recent-project" @click="toggleMenu">Projects</a>
+        <a class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]" href="#contact-me" @click="toggleMenu">Contact</a>
+      </div>
+    </nav>
+  </header>
+    <!-- End Header Navbar -->
+
+    <!-- Hero Section -->
+    <section
       class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-20 pb-20 max-w-screen-xl mx-auto"
     >
       <!-- Text Content -->
@@ -186,6 +171,7 @@
         />
       </div>
     </section>
+    <!-- End Hero Section -->
 
     <!-- Scroll Down Hint -->
     <div class="flex flex-col items-center space-y-2 mb-2">
@@ -200,134 +186,292 @@
         ></div>
       </div>
     </div>
+
     <!-- about section start -->
-    <section id="about" class="py-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Title -->
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-      About <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">Me</span>
-    </h2>
+    <section
+      id="about"
+      class="py-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          About
+          <span
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            >Me</span
+          >
+        </h2>
 
-    <!-- Content Grid -->
-    <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Content Grid -->
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <!-- Left: Personal Info -->
+          <div>
+            <p
+              class="text-muted-foreground mb-6 mt-4 text-sm md:text-base leading-relaxed"
+            >
+              I’m a
+              <span class="text-sky-600 font-semibold">Diploma Engineer</span>
+              and passionate
+              <span class="text-sky-600 font-semibold">Frontend Developer</span>
+              with solid experience in building modern, user-friendly web
+              interfaces. I’ve worked with startups and teams to turn ideas into
+              scalable applications that deliver real results.
+            </p>
 
-      <!-- Left: Personal Info -->
-      <div>
-        <p class="text-muted-foreground mb-6 text-sm md:text-base leading-relaxed">
-          I’m a Diploma Engineer and passionate Front-End Developer with solid experience in building modern, user-friendly web interfaces.
-          I’ve worked with startups and teams to turn ideas into scalable applications that deliver real results.
-          I'm currently diving deeper into advanced workflows, frameworks, and libraries through real-life projects.
-        </p>
+            <!-- Personal Info -->
+            <div class="space-y-3 mb-8 text-sm">
+              <div class="flex gap-x-4">
+                <span class="w-28 font-medium">Fullname:</span
+                ><span>Mahmudul Hasan MeRaj</span>
+              </div>
+              <div class="flex gap-x-4">
+                <span class="w-28 font-medium">Permanent Address:</span
+                ><span>Sirajganj, Bangladesh</span>
+              </div>
+              <div class="flex gap-x-4">
+                <span class="w-28 font-medium">Present Address:</span
+                ><span>Bogura, Bangladesh</span>
+              </div>
+              <div class="flex gap-x-4">
+                <span class="w-28 font-medium">Email:</span
+                ><a
+                  href="mailto:dev.mahmudulhasan2@gmail.com"
+                  class="text-purple-500 hover:underline"
+                  >dev.mahmudulhasan2@gmail.com</a
+                >
+              </div>
+              <div class="flex gap-x-4">
+                <span class="w-28 font-medium">Linkedin:</span
+                ><a
+                  href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
+                  class="text-purple-500 hover:underline"
+                  >Mahmudul Hasan</a
+                >
+              </div>
+              <div class="flex gap-x-4">
+                <span class="w-28 font-medium">GitHub:</span
+                ><a
+                  href="https://github.com/mahmudul7608"
+                  class="text-purple-500 hover:underline"
+                  >mahmudulhasan</a
+                >
+              </div>
+              <div class="flex gap-x-4">
+                <span class="w-28 font-medium">Phone:</span
+                ><a
+                  href="tel:+8801650217608"
+                  class="text-purple-500 hover:underline"
+                  >+8801650217608</a
+                >
+              </div>
+            </div>
 
-        <!-- Personal Info -->
-        <div class="space-y-3 mb-8 text-sm">
-          <div class="flex gap-x-4"><span class="w-28 font-medium">Fullname:</span><span>Mahmudul Hasan MeRaj</span></div>
-          <div class="flex gap-x-4"><span class="w-28 font-medium">Address:</span><span>Bogura, Bangladesh</span></div>
-          <div class="flex gap-x-4"><span class="w-28 font-medium">Email:</span><a href="mailto:dev.mahmudulhasan2@gmail.com" class="text-purple-500 hover:underline">dev.mahmudulhasan2@gmail.com</a></div>
-          <div class="flex gap-x-4"><span class="w-28 font-medium">Phone:</span><a href="tel:+8801650217608" class="text-purple-500 hover:underline">+8801650217608</a></div>
-        </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-4 mb-10">
+              <a
+                href="#contact"
+                class="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium shadow-lg hover:scale-105 transition"
+                >Contact Me</a
+              >
+              <a
+                href="#portfolio"
+                class="px-6 py-3 rounded-lg border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition"
+                >Download Resume</a
+              >
+            </div>
 
-        <!-- Action Buttons -->
-        <div class="flex flex-wrap gap-4 mb-10">
-          <a href="#contact" class="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium shadow-lg hover:scale-105 transition">Contact Me</a>
-          <a href="#portfolio" class="px-6 py-3 rounded-lg border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition">Download Resume</a>
-        </div>
-
-        <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
-            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div>
-            <div class="text-xl font-bold">4+</div>
-            <p class="text-xs text-muted-foreground">Years Experience</p>
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-8 gap-4">
+              <div
+                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                  </svg>
+                </div>
+                <div class="text-xl font-bold">3+</div>
+                <p class="text-xs text-muted-foreground">
+                  Years Coding Experience
+                </p>
+              </div>
+              <div
+                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                    ></path>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                    <path d="M10 9H8"></path>
+                    <path d="M16 13H8"></path>
+                    <path d="M16 17H8"></path>
+                  </svg>
+                </div>
+                <div class="text-xl font-bold">20+</div>
+                <p class="text-xs text-muted-foreground">Projects Built</p>
+              </div>
+              <div
+                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  </svg>
+                </div>
+                <p class="text-xs text-muted-foreground">Good Understanding</p>
+              </div>
+              <div
+                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="text-xl font-bold">30K+</div>
+                <p class="text-xs text-muted-foreground">Lines of Code</p>
+              </div>
+            </div>
           </div>
-          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
-            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></div>
-            <div class="text-xl font-bold">20+</div>
-            <p class="text-xs text-muted-foreground">Projects Completed</p>
+
+          <!-- Right: Education & Certifications -->
+          <div class="space-y-12">
+            <!-- Education -->
+            <div>
+              <h3 class="text-2xl font-bold mb-10 flex items-center">
+                <span
+                  class="p-2 mr-3 bg-purple-100 dark:bg-purple-800/30 rounded-full"
+                >
+                  <svg
+                    class="w-6 h-6 text-purple-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                  </svg>
+                </span>
+                Education
+              </h3>
+              <div
+                class="relative p-6 rounded-lg border-l-4 border-purple-400 bg-white dark:bg-gray-900 shadow-sm card-hover"
+              >
+                <div
+                  class="absolute -left-3 top-6 w-6 h-6 bg-white dark:bg-gray-900 border-2 border-purple-500 rounded-full"
+                ></div>
+                <h4 class="text-xl font-bold mb-1">Diploma in Engineering</h4>
+                <span
+                  class="inline-block text-xs bg-purple-100 dark:bg-purple-800/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full mb-2"
+                  >2019 - 2024</span
+                >
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Government Polytechnic Institute, Bogura
+                </p>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+              <div class="space-y-4">
+                <div
+                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Complete Web Development</h4>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        Self Learning
+                      </p>
+                    </div>
+                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                      >2022–2025</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Master HTML & CSS Projects</h4>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        Self Learning
+                      </p>
+                    </div>
+                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                      >2022–2023</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Master Git & GitHub</h4>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        Self Learning
+                      </p>
+                    </div>
+                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                      >2022</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Communications</h4>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        10 Minute School, Duolingo
+                      </p>
+                    </div>
+                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                      >2025</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
-            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"></circle><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path></svg></div>
-            <div class="text-xl font-bold">30+</div>
-            <p class="text-xs text-muted-foreground">Happy Clients</p>
-          </div>
-          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
-            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
-            <div class="text-xl font-bold">50K+</div>
-            <p class="text-xs text-muted-foreground">Lines of Code</p>
-          </div>
+          <!-- End Right Column -->
         </div>
       </div>
-
-      <!-- Right: Education & Certifications -->
-      <div class="space-y-12">
-
-        <!-- Education -->
-        <div>
-          <h3 class="text-2xl font-bold mb-4 flex items-center">
-            <span class="p-2 mr-3 bg-purple-100 dark:bg-purple-800/30 rounded-full">
-              <svg class="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /></svg>
-            </span>
-            Education
-          </h3>
-          <div class="relative p-6 rounded-lg border-l-4 border-purple-400 bg-white dark:bg-gray-900 shadow-sm card-hover">
-            <div class="absolute -left-3 top-6 w-6 h-6 bg-white dark:bg-gray-900 border-2 border-purple-500 rounded-full"></div>
-            <h4 class="text-xl font-bold mb-1">Diploma in Engineering</h4>
-            <span class="inline-block text-xs bg-purple-100 dark:bg-purple-800/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full mb-2">2019 - 2024</span>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Government Polytechnic Institute, Bogura</p>
-          </div>
-        </div>
-
-        <!-- Certifications -->
-        <div>
-         <div class="space-y-4">
-            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Complete Web Development</h4>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">Self Learning</p>
-                </div>
-                <span class="text-xs text-gray-500 dark:text-gray-400">2022–2025</span>
-              </div>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Master HTML & CSS Projects</h4>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">Self Learning</p>
-                </div>
-                <span class="text-xs text-gray-500 dark:text-gray-400">2022–2023</span>
-              </div>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Master Git & GitHub</h4>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">Self Learning</p>
-                </div>
-                <span class="text-xs text-gray-500 dark:text-gray-400">2022</span>
-              </div>
-            </div>
-            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Communications</h4>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">10 Minute School, Duolingo</p>
-                </div>
-                <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div> <!-- End Right Column -->
-    </div>
-  </div>
-</section>
-
-
-
+    </section>
     <!-- about secyion end  -->
+
     <!-- Skill and technology section -->
     <section id="skills" class="py-20 bg-transparent">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -453,7 +597,1032 @@
       </div>
     </section>
     <!-- skill section end -->
-    <!-- another section start -->
+
+    <!-- tools section start -->
+    <section class="bg-black py-20 px-6">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center text-white mb-12 font-[cursive]"
+      >
+        🚀 Tools I Use
+      </h2>
+
+      <div dir="ltr" data-orientation="horizontal" class="w-full">
+        <div class="flex justify-center mb-10 overflow-x-auto pb-2">
+          <div
+            role="tablist"
+            aria-orientation="horizontal"
+            class="inline-flex h-10 items-center justify-center rounded-md p-1 text-muted-foreground bg-background/50 backdrop-blur-sm"
+            tabindex="0"
+            data-orientation="horizontal"
+            style="outline: none"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="radix-:r0:-content-all"
+              data-state="active"
+              id="radix-:r0:-trigger-all"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+              tabindex="-1"
+              data-orientation="horizontal"
+              data-radix-collection-item=""
+            >
+              All</button
+            ><button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="radix-:r0:-content-frontend"
+              data-state="inactive"
+              id="radix-:r0:-trigger-frontend"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+              tabindex="-1"
+              data-orientation="horizontal"
+              data-radix-collection-item=""
+            >
+              Frontend</button
+            ><button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="radix-:r0:-content-backend"
+              data-state="inactive"
+              id="radix-:r0:-trigger-backend"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+              tabindex="-1"
+              data-orientation="horizontal"
+              data-radix-collection-item=""
+            >
+              Backend</button
+            ><button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="radix-:r0:-content-tools"
+              data-state="inactive"
+              id="radix-:r0:-trigger-tools"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+              tabindex="-1"
+              data-orientation="horizontal"
+              data-radix-collection-item=""
+            >
+              Tools</button
+            ><button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="radix-:r0:-content-soft"
+              data-state="inactive"
+              id="radix-:r0:-trigger-soft"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+              tabindex="-1"
+              data-orientation="horizontal"
+              data-radix-collection-item=""
+            >
+              Soft Skills
+            </button>
+          </div>
+        </div>
+        <div
+          data-state="active"
+          data-orientation="horizontal"
+          role="tabpanel"
+          aria-labelledby="radix-:r0:-trigger-all"
+          id="radix-:r0:-content-all"
+          tabindex="0"
+          class="ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 mt-0"
+          style=""
+        >
+          <div
+            class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
+          >
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 0ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code w-8 h-8 text-purple-500"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">ReactJs</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 50ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code w-8 h-8 text-purple-500"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">NextJs</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 100ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-workflow w-8 h-8 text-purple-500"
+                  >
+                    <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                    <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                    <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Redux</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 150ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-square-terminal w-8 h-8 text-purple-500"
+                  >
+                    <path d="m7 11 2-2-2-2"></path>
+                    <path d="M11 13h4"></path>
+                    <rect
+                      width="18"
+                      height="18"
+                      x="3"
+                      y="3"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">JavaScript</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 200ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-square-terminal w-8 h-8 text-purple-500"
+                  >
+                    <path d="m7 11 2-2-2-2"></path>
+                    <path d="M11 13h4"></path>
+                    <rect
+                      width="18"
+                      height="18"
+                      x="3"
+                      y="3"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">TypeScript</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 250ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-file-code w-8 h-8 text-purple-500"
+                  >
+                    <path d="M10 12.5 8 15l2 2.5"></path>
+                    <path d="m14 12.5 2 2.5-2 2.5"></path>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                    <path
+                      d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">HTML/CSS</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 300ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-paintbrush w-8 h-8 text-purple-500"
+                  >
+                    <path d="m14.622 17.897-10.68-2.913"></path>
+                    <path
+                      d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"
+                    ></path>
+                    <path
+                      d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Tailwind CSS</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 350ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-paintbrush w-8 h-8 text-purple-500"
+                  >
+                    <path d="m14.622 17.897-10.68-2.913"></path>
+                    <path
+                      d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"
+                    ></path>
+                    <path
+                      d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Bootstrap</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 400ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-paintbrush w-8 h-8 text-purple-500"
+                  >
+                    <path d="m14.622 17.897-10.68-2.913"></path>
+                    <path
+                      d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"
+                    ></path>
+                    <path
+                      d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">SASS</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 450ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-paintbrush w-8 h-8 text-purple-500"
+                  >
+                    <path d="m14.622 17.897-10.68-2.913"></path>
+                    <path
+                      d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"
+                    ></path>
+                    <path
+                      d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">
+                  Styled Component
+                </h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 0ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code w-8 h-8 text-purple-500"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Wordpress</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 50ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code w-8 h-8 text-purple-500"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Node.js</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 100ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code w-8 h-8 text-purple-500"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">ExpressJs</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 150ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-box w-8 h-8 text-purple-500"
+                  >
+                    <path
+                      d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"
+                    ></path>
+                    <path d="m3.3 7 8.7 5 8.7-5"></path>
+                    <path d="M12 22V12"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">
+                  MongoDB/Mongoose
+                </h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 200ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-workflow w-8 h-8 text-purple-500"
+                  >
+                    <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                    <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                    <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">REST APIs</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 250ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-lock w-8 h-8 text-purple-500"
+                  >
+                    <rect
+                      width="18"
+                      height="11"
+                      x="3"
+                      y="11"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">JWT</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 300ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-code w-8 h-8 text-purple-500"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Python</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 350ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-lock w-8 h-8 text-purple-500"
+                  >
+                    <rect
+                      width="18"
+                      height="11"
+                      x="3"
+                      y="11"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Firebase</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 400ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-git-merge w-8 h-8 text-purple-500"
+                  >
+                    <circle cx="18" cy="18" r="3"></circle>
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Git</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 450ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-git-merge w-8 h-8 text-purple-500"
+                  >
+                    <circle cx="18" cy="18" r="3"></circle>
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">GitHub</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 0ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-pyramid w-8 h-8 text-purple-500"
+                  >
+                    <path
+                      d="M2.5 16.88a1 1 0 0 1-.32-1.43l9-13.02a1 1 0 0 1 1.64 0l9 13.01a1 1 0 0 1-.32 1.44l-8.51 4.86a2 2 0 0 1-1.98 0Z"
+                    ></path>
+                    <path d="M12 2v20"></path>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Docker</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 50ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-settings w-8 h-8 text-purple-500"
+                  >
+                    <path
+                      d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Postman</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 100ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-settings w-8 h-8 text-purple-500"
+                  >
+                    <path
+                      d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Vercel</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 150ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-settings w-8 h-8 text-purple-500"
+                  >
+                    <path
+                      d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">VS Code</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 200ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-settings w-8 h-8 text-purple-500"
+                  >
+                    <path
+                      d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Figma</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 250ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user w-8 h-8 text-purple-500"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">
+                  Project Management
+                </h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 300ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user w-8 h-8 text-purple-500"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">
+                  Team Leadership
+                </h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 350ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user w-8 h-8 text-purple-500"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Communication</h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 400ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user w-8 h-8 text-purple-500"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">
+                  Problem Solving
+                </h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 450ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user w-8 h-8 text-purple-500"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">
+                  Decision Making
+                </h3>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden transition-all duration-700 card-hover opacity-100 translate-y-0"
+              style="transition-delay: 0ms"
+            >
+              <div
+                class="p-4 flex flex-col items-center justify-center text-center"
+              >
+                <div class="mb-3 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user w-8 h-8 text-purple-500"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-medium text-sm sm:text-base">Adaptability</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- tools section end -->
     <section class="py-24 bg-black/50">
       <div class="container mx-auto px-4 max-w-7xl relative">
         <h2
@@ -605,186 +1774,149 @@
       </h2>
 
       <div
-        class="max-w-6xl mx-auto grid grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        <!-- Project Card -->
+        <!-- Project 1 -->
         <div
           class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
         >
-          <!-- Image -->
-          <div class="overflow-hidden">
-            <img
-              src="./public/image/MH-imageSRC-1.png"
-              alt="Project Screenshot"
-              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-          <!-- Info -->
+          <img
+            src="./public/image/MH-imageSRC-1.png"
+            alt="Project Screenshot"
+            class="w-full h-60 object-cover rounded-t-2xl"
+          />
           <div class="p-6 text-white flex flex-col gap-3">
             <h3 class="text-xl font-semibold">Practice API Project</h3>
-
-            <!-- Live Button -->
-            <div class="mt-4">
-              <a
-                href="https://practice-api-project.netlify.app/"
-                target="_blank"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
+            <a
+              href="https://practice-api-project.netlify.app/"
+              target="_blank"
+              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+            >
+              🔗 Live View
+            </a>
           </div>
         </div>
+
+        <!-- Project 2 -->
         <div
           class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
         >
-          <!-- Image -->
-          <div class="overflow-hidden">
-            <img
-              src="./public/image/MH-country-2.png"
-              alt="Project Screenshot"
-              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-          <!-- Info -->
+          <img
+            src="./public/image/MH-country-2.png"
+            alt="Project Screenshot"
+            class="w-full h-60 object-cover rounded-t-2xl"
+          />
           <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Practice API Project</h3>
-
-            <!-- Live Button -->
-            <div class="mt-4">
-              <a
-                href="https://practice-api-project.netlify.app/"
-                target="_blank"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
+            <h3 class="text-xl font-semibold">Country Info Project</h3>
+            <a
+              href="https://practice-api-project.netlify.app/"
+              target="_blank"
+              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+            >
+              🔗 Live View
+            </a>
           </div>
         </div>
+
+        <!-- Project 3 -->
         <div
           class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
         >
-          <!-- Image -->
-          <div class="overflow-hidden">
-            <img
-              src="./public/image/MH-millFiender-3.png"
-              alt="Project Screenshot"
-              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-          <!-- Info -->
+          <img
+            src="./public/image/MH-millFiender-3.png"
+            alt="Project Screenshot"
+            class="w-full h-60 object-cover rounded-t-2xl"
+          />
           <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Practice API Project</h3>
-
-            <!-- Live Button -->
-            <div class="mt-4">
-              <a
-                href="https://practice-api-project.netlify.app/"
-                target="_blank"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
+            <h3 class="text-xl font-semibold">Mill Finder Project</h3>
+            <a
+              href="https://practice-api-project.netlify.app/"
+              target="_blank"
+              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+            >
+              🔗 Live View
+            </a>
           </div>
         </div>
+
+        <!-- Project 4 -->
         <div
           class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
         >
-          <!-- Image -->
-          <div class="overflow-hidden">
-            <img
-              src="./public/image/MH-mullokoto-4.png"
-              alt="Project Screenshot"
-              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-          <!-- Info -->
+          <img
+            src="./public/image/MH-mullokoto-4.png"
+            alt="Project Screenshot"
+            class="w-full h-60 object-cover rounded-t-2xl"
+          />
           <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Practice API Project</h3>
-
-            <!-- Live Button -->
-            <div class="mt-4">
-              <a
-                href="https://practice-api-project.netlify.app/"
-                target="_blank"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
+            <h3 class="text-xl font-semibold">Mullokoto App</h3>
+            <a
+              href="https://practice-api-project.netlify.app/"
+              target="_blank"
+              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+            >
+              🔗 Live View
+            </a>
           </div>
         </div>
+
+        <!-- Project 5 -->
         <div
           class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
         >
-          <!-- Image -->
-          <div class="overflow-hidden">
-            <img
-              src="./public/image/MH-signin-6.png"
-              alt="Project Screenshot"
-              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-          <!-- Info -->
+          <img
+            src="./public/image/MH-signin-6.png"
+            alt="Project Screenshot"
+            class="w-full h-60 object-cover rounded-t-2xl"
+          />
           <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Practice API Project</h3>
-
-            <!-- Live Button -->
-            <div class="mt-4">
-              <a
-                href="https://practice-api-project.netlify.app/"
-                target="_blank"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
+            <h3 class="text-xl font-semibold">Login Form UI</h3>
+            <a
+              href="https://practice-api-project.netlify.app/"
+              target="_blank"
+              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+            >
+              🔗 Live View
+            </a>
           </div>
         </div>
+
+        <!-- Project 6 -->
         <div
           class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
         >
-          <!-- Image -->
-          <div class="overflow-hidden">
-            <img
-              src="./public/image/MH-pet-shop-7.png"
-              alt="Project Screenshot"
-              class="w-full h-auto p-4 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
-          <!-- Info -->
+          <img
+            src="./public/image/MH-pet-shop-7.png"
+            alt="Project Screenshot"
+            class="w-full h-60 object-cover rounded-t-2xl"
+          />
           <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Practice API Project</h3>
-
-            <!-- Live Button -->
-            <div class="mt-4">
-              <a
-                href="https://practice-api-project.netlify.app/"
-                target="_blank"
-                class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
+            <h3 class="text-xl font-semibold">Pet Shop Project</h3>
+            <a
+              href="https://practice-api-project.netlify.app/"
+              target="_blank"
+              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
+            >
+              🔗 Live View
+            </a>
           </div>
         </div>
       </div>
     </section>
-
     <!-- my project section end -->
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+
+// navigation bar 
+const isOpen = ref(false)
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value
+}
+
+// naivigation bar end
 
 // Reactive state for dark mode
 const isDark = ref(false);
