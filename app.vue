@@ -21,6 +21,13 @@
           <div>
             <a
               class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
+              href="#about"
+              >About</a
+            >
+          </div>
+          <div>
+            <a
+              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
               href="#skills"
               >Skills</a
             >
@@ -41,13 +48,6 @@
           </div>
           <div>
             <a
-              class="px-8 text-30px tracking-[2px] border-r border-solid border-[rgba(255,255,255,.1)] transition-all hover:text-[#f73a21]"
-              href="#my-experience"
-              >Career</a
-            >
-          </div>
-          <div>
-            <a
               class="px-8 text-30px tracking-[5px] transition-all hover:text-[#f73a21]"
               href="#contact-me"
               >Contact</a
@@ -57,6 +57,7 @@
       </nav>
     </header>
     <!-- Hero Section -->
+
     <section
       class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-20 pb-20 max-w-screen-xl mx-auto"
     >
@@ -76,24 +77,104 @@
         </h2>
 
         <p
-          class="mt-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed"
+          class="mt-7 text-gray-700 dark:text-gray-300 text-md leading-relaxed"
         >
-          I'm
-          <span class="font-semibold text-black dark:text-white">Mahmudul</span>
-          — a
+          <span class="font-semibold text-black dark:text-white">I'm</span>
+          - a
           <span class="text-sky-600 font-semibold">Frontend Developer</span>
-          passionate about turning ideas into modern, responsive, and
-          user-friendly web experiences. With strong skills in
-          <span class="font-medium">Vue.js, Nuxt, Tailwind CSS</span>, and more,
-          I bring beautiful interfaces to life with clean, maintainable code.
+          with a passion for clean design, smooth user experiences, and smart,
+          scalable code. With strong experience in
+          <span class="font-medium">collaborative team environments</span>, I
+          thrive on building together and turning ideas into powerful, modern
+          web solutions. Always learning, always building.
         </p>
 
-        <a
-          href="#portfolio"
-          class="inline-block mt-8 px-6 py-3 rounded-lg border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-xl"
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start mt-8">
+          <!-- Get in Touch Button -->
+          <a
+            href="#contact"
+            class="inline-block px-4 py-2 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-xl"
+          >
+            Get in Touch
+          </a>
+
+          <!-- View Projects Button -->
+          <a
+            href="#projects"
+            class="inline-block px-4 py-2 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-xl"
+          >
+            View Projects
+          </a>
+        </div>
+        <!-- socil media -->
+        <div
+          class="flex items-center space-x-4 justify-center md:justify-start pt-6"
         >
-          download resume
-        </a>
+          <a
+            href="https://github.com/mahmudul7608"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-2 rounded-full hover:bg-secondary transition-colors"
+            aria-label="GitHub"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-github h-5 w-5"
+            >
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              ></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a
+          ><a
+            href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-2 rounded-full hover:bg-secondary transition-colors"
+            aria-label="LinkedIn"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-linkedin h-5 w-5"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              ></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle></svg></a
+          ><a
+            href="mailto:dev.mahmudulhasan2@gmail.com"
+            class="p-2 rounded-full hover:bg-secondary transition-colors"
+            aria-label="Email"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-mail h-5 w-5"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+          ></a>
+        </div>
       </div>
 
       <!-- Image -->
