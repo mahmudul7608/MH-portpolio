@@ -58,14 +58,14 @@
     </header>
     <!-- Hero Section -->
 
-    <section
+    <section id="#home"
       class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-20 pb-20 max-w-screen-xl mx-auto"
     >
       <!-- Text Content -->
       <div class="max-w-xl text-center md:text-left">
         <h2 class="leading-tight font-extrabold text-center md:text-left">
           <span
-            class="text-6xl sm:text-7xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block"
+            class="text-6xl mt-[4rem] sm:text-7xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block"
           >
             FRONTEND
           </span>
@@ -200,6 +200,134 @@
         ></div>
       </div>
     </div>
+    <!-- about section start -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Title -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      About <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">Me</span>
+    </h2>
+
+    <!-- Content Grid -->
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Left: Personal Info -->
+      <div>
+        <p class="text-muted-foreground mb-6 text-sm md:text-base leading-relaxed">
+          I’m a Diploma Engineer and passionate Front-End Developer with solid experience in building modern, user-friendly web interfaces.
+          I’ve worked with startups and teams to turn ideas into scalable applications that deliver real results.
+          I'm currently diving deeper into advanced workflows, frameworks, and libraries through real-life projects.
+        </p>
+
+        <!-- Personal Info -->
+        <div class="space-y-3 mb-8 text-sm">
+          <div class="flex gap-x-4"><span class="w-28 font-medium">Fullname:</span><span>Mahmudul Hasan MeRaj</span></div>
+          <div class="flex gap-x-4"><span class="w-28 font-medium">Address:</span><span>Bogura, Bangladesh</span></div>
+          <div class="flex gap-x-4"><span class="w-28 font-medium">Email:</span><a href="mailto:dev.mahmudulhasan2@gmail.com" class="text-purple-500 hover:underline">dev.mahmudulhasan2@gmail.com</a></div>
+          <div class="flex gap-x-4"><span class="w-28 font-medium">Phone:</span><a href="tel:+8801650217608" class="text-purple-500 hover:underline">+8801650217608</a></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="#contact" class="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium shadow-lg hover:scale-105 transition">Contact Me</a>
+          <a href="#portfolio" class="px-6 py-3 rounded-lg border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition">Download Resume</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
+            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div>
+            <div class="text-xl font-bold">4+</div>
+            <p class="text-xs text-muted-foreground">Years Experience</p>
+          </div>
+          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
+            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></div>
+            <div class="text-xl font-bold">20+</div>
+            <p class="text-xs text-muted-foreground">Projects Completed</p>
+          </div>
+          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
+            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"></circle><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path></svg></div>
+            <div class="text-xl font-bold">30+</div>
+            <p class="text-xs text-muted-foreground">Happy Clients</p>
+          </div>
+          <div class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover">
+            <div class="text-purple-500 mb-1"><svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+            <div class="text-xl font-bold">50K+</div>
+            <p class="text-xs text-muted-foreground">Lines of Code</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Education & Certifications -->
+      <div class="space-y-12">
+
+        <!-- Education -->
+        <div>
+          <h3 class="text-2xl font-bold mb-4 flex items-center">
+            <span class="p-2 mr-3 bg-purple-100 dark:bg-purple-800/30 rounded-full">
+              <svg class="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /></svg>
+            </span>
+            Education
+          </h3>
+          <div class="relative p-6 rounded-lg border-l-4 border-purple-400 bg-white dark:bg-gray-900 shadow-sm card-hover">
+            <div class="absolute -left-3 top-6 w-6 h-6 bg-white dark:bg-gray-900 border-2 border-purple-500 rounded-full"></div>
+            <h4 class="text-xl font-bold mb-1">Diploma in Engineering</h4>
+            <span class="inline-block text-xs bg-purple-100 dark:bg-purple-800/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full mb-2">2019 - 2024</span>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Government Polytechnic Institute, Bogura</p>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+         <div class="space-y-4">
+            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Complete Web Development</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Self Learning</p>
+                </div>
+                <span class="text-xs text-gray-500 dark:text-gray-400">2022–2025</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Master HTML & CSS Projects</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Self Learning</p>
+                </div>
+                <span class="text-xs text-gray-500 dark:text-gray-400">2022–2023</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Master Git & GitHub</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">Self Learning</p>
+                </div>
+                <span class="text-xs text-gray-500 dark:text-gray-400">2022</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Communications</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">10 Minute School, Duolingo</p>
+                </div>
+                <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- End Right Column -->
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- about secyion end  -->
     <!-- Skill and technology section -->
     <section id="skills" class="py-20 bg-transparent">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
