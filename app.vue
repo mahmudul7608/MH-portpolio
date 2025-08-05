@@ -2,49 +2,49 @@
   <div
     class="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300"
   >
-    <!-- Header Navbar -->
+    <!-- Header Navbar start -->
     <header
       class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 w-full z-50 px-4"
     >
-      <nav class="relative text-white font-light uppercase tracking-wide z-50">
+      <nav class="relative z-50 text-white font-light uppercase tracking-wide">
         <!-- Desktop Navbar -->
         <div
-          class="hidden md:flex fixed top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/10 rounded-[80px] backdrop-blur-xl bg-[rgba(50,99,82,0.5)] items-center py-6 z-50 shadow-md shadow-blue-100/50"
+          class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-xl bg-[rgba(50,99,82,0.5)] items-center py-4 px-2 shadow-md shadow-blue-100/30"
         >
           <a
-            class="px-4 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
             href="#intro"
             >Home</a
           >
           <a
-            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
             href="#about"
             >About</a
           >
           <a
-            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
             href="#skills"
             >Skills</a
           >
           <a
-            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
             href="#tools-i-use"
             >Tools</a
           >
           <a
-            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
             href="#my-recent-project"
             >Projects</a
           >
           <a
-            class="px-6 text-[15px] tracking-widest transition-all hover:text-[#d0f721]"
+            class="px-4 text-sm tracking-wider transition-colors duration-200 hover:text-[#c9f721]"
             href="#contact-me"
             >Contact</a
           >
         </div>
 
-        <!-- Mobile Top Bar -->
-        <div class="md:hidden flex justify-between items-center py-4">
+        <!-- Mobile Top Bar start -->
+        <div class="md:hidden flex justify-between items-center px-4 py-4">
           <h1 class="text-white text-lg font-semibold">Menu</h1>
           <button
             @click="toggleMenu"
@@ -55,43 +55,43 @@
           </button>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu start -->
         <div
           v-if="isOpen"
-          class="md:hidden mt-4 flex flex-col bg-[rgba(37,74,61,0.95)] backdrop-blur-xl rounded-xl py-6 px-6 space-y-5 border border-white/10"
+          class="md:hidden mt-2 mx-4 flex flex-col bg-[rgba(37,74,61,0.95)] backdrop-blur-xl rounded-xl py-6 px-6 space-y-4 border border-white/10 shadow-lg transition-all duration-300"
         >
           <a
-            class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]"
+            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
             href="#intro"
             @click="toggleMenu"
             >Home</a
           >
           <a
-            class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]"
+            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
             href="#about"
             @click="toggleMenu"
             >About</a
           >
           <a
-            class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]"
+            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
             href="#skills"
             @click="toggleMenu"
             >Skills</a
           >
           <a
-            class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]"
+            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
             href="#tools-i-use"
             @click="toggleMenu"
-            >Tools-</a
+            >Tools</a
           >
           <a
-            class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]"
+            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
             href="#my-recent-project"
             @click="toggleMenu"
             >Projects</a
           >
           <a
-            class="text-white font-medium text-lg uppercase tracking-wide transition hover:text-[#f73a21]"
+            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
             href="#contact-me"
             @click="toggleMenu"
             >Contact</a
@@ -101,16 +101,16 @@
     </header>
     <!-- End Header Navbar -->
 
-    <!-- Hero Section -->
+    <!-- Hero Section start -->
     <section
       id="intro"
-      class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-20 pb-20 max-w-screen-xl mx-auto"
+      class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-28 pb-20 max-w-screen-xl mx-auto"
     >
       <!-- Text Content -->
-      <div class="max-w-xl text-center md:text-left">
-        <h2 class="leading-tight font-extrabold text-center md:text-left">
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h2 class="font-extrabold leading-tight">
           <span
-            class="text-4xl mt-[4rem] sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block"
+            class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block"
           >
             FRONTEND
           </span>
@@ -122,10 +122,10 @@
         </h2>
 
         <p
-          class="mt-7 text-gray-700 dark:text-gray-300 text-md leading-relaxed"
+          class="mt-6 text-gray-700 dark:text-gray-300 text-base leading-relaxed"
         >
           <span class="font-semibold text-black dark:text-white">I'm</span>
-          - a
+          – a
           <span class="text-sky-600 font-semibold">Frontend Developer</span>
           with a passion for clean design, smooth user experiences, and smart,
           scalable code. With strong experience in
@@ -134,91 +134,97 @@
           web solutions. Always learning, always building.
         </p>
 
+        <!-- Buttons -->
         <div class="flex flex-wrap gap-4 justify-center md:justify-start mt-8">
-          <!-- Get in Touch Button -->
           <a
             href="#contact"
-            class="inline-block px-4 py-2 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-xl"
+            class="inline-block px-5 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
           >
             Get in Touch
           </a>
-
-          <!-- View Projects Button -->
           <a
             href="#projects"
-            class="inline-block px-4 py-2 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-xl"
+            class="inline-block px-5 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
           >
             View Projects
           </a>
         </div>
-        <!-- socil media -->
+
+        <!-- Social Media -->
         <div
           class="flex items-center space-x-4 justify-center md:justify-start pt-6"
         >
+          <!-- GitHub -->
           <a
             href="https://github.com/mahmudul7608"
             target="_blank"
             rel="noopener noreferrer"
             class="p-2 rounded-full hover:bg-secondary transition-colors"
             aria-label="GitHub"
-            ><svg
+          >
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              class="h-5 w-5"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-github h-5 w-5"
+              viewBox="0 0 24 24"
             >
               <path
                 d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
               ></path>
-              <path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a
-          ><a
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
             href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
             target="_blank"
             rel="noopener noreferrer"
             class="p-2 rounded-full hover:bg-secondary transition-colors"
             aria-label="LinkedIn"
-            ><svg
+          >
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              class="h-5 w-5"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-linkedin h-5 w-5"
+              viewBox="0 0 24 24"
             >
               <path
                 d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
               ></path>
               <rect width="4" height="12" x="2" y="9"></rect>
-              <circle cx="4" cy="4" r="2"></circle></svg></a
-          ><a
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a
             href="mailto:dev.mahmudulhasan2@gmail.com"
             class="p-2 rounded-full hover:bg-secondary transition-colors"
             aria-label="Email"
-            ><svg
+          >
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              class="h-5 w-5"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-mail h-5 w-5"
+              viewBox="0 0 24 24"
             >
               <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-          ></a>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </a>
         </div>
       </div>
 
@@ -227,13 +233,13 @@
         <img
           src="/image/HM-image-1.png"
           alt="Mahmudul Hasan"
-          class="rounded-xl shadow-lg mx-auto max-w-full"
+          class="rounded-xl shadow-xl mx-auto max-w-full"
         />
       </div>
     </section>
     <!-- End Hero Section -->
 
-    <!-- Scroll Down Hint -->
+    <!-- Scroll Mous section -->
     <div class="flex flex-col items-center space-y-2 mb-2">
       <span class="text-white text-xs sm:text-lg font-medium"
         >Scroll to explore</span
@@ -246,6 +252,7 @@
         ></div>
       </div>
     </div>
+    <!-- Scroll Mous section end -->
 
     <!-- about section start -->
     <section
@@ -532,7 +539,7 @@
     </section>
     <!-- about secyion end  -->
 
-    <!-- true builder section -->
+    <!-- true builder section start-->
     <section id="skills" class="py-2 bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -1541,141 +1548,141 @@
     <!-- tools section end -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="bg-black-100 py-8 px-6">
+    <section id="my-recent-project" class="bg-black-100 px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
         My
         <span
-          class="bg-gradient-to-r mb-30 from-purple-500 to-pink-500 text-transparent bg-clip-text"
-          >Projects</span
+          class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
         >
+          Projects
+        </span>
       </h2>
 
-      <div
-        class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <!-- Project 1 -->
-        <div
-          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
-        >
-          <img
-            src="./public/image/MH-imageSRC-1.png"
-            alt="Project Screenshot"
-            class="w-full h-60 object-cover rounded-t-2xl"
-          />
-          <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Practice API Project</h3>
-            <a
-              href="https://practice-api-project.netlify.app/"
-              target="_blank"
-              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-            >
-              🔗 Live View
-            </a>
+      <div class="max-w-7xl mx-auto px-4 md:px-6 py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Project 1 -->
+          <div
+            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+          >
+            <img
+              src="./public/image/MH-imageSRC-1.png"
+              alt="Practice API Project Screenshot"
+              class="w-full h-60 object-cover rounded-t-2xl"
+            />
+            <div class="p-6 text-white flex flex-col gap-4">
+              <h3 class="text-xl font-semibold">Practice API Project</h3>
+              <a
+                href="https://practice-api-project.netlify.app/"
+                target="_blank"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div
-          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
-        >
-          <img
-            src="./public/image/MH-country-2.png"
-            alt="Project Screenshot"
-            class="w-full h-60 object-cover rounded-t-2xl"
-          />
-          <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Country Info Project</h3>
-            <a
-              href="https://practice-api-project.netlify.app/"
-              target="_blank"
-              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-            >
-              🔗 Live View
-            </a>
+          <!-- Project 2 -->
+          <div
+            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+          >
+            <img
+              src="./public/image/MH-signin-6.png"
+              alt="Login Form UI Screenshot"
+              class="w-full h-60 object-cover rounded-t-2xl"
+            />
+            <div class="p-6 text-white flex flex-col gap-4">
+              <h3 class="text-xl font-semibold">Login Form UI</h3>
+              <a
+                href="https://animation-login-and-sign-in.netlify.app/#"
+                target="_blank"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
           </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div
-          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
-        >
-          <img
-            src="./public/image/MH-millFiender-3.png"
-            alt="Project Screenshot"
-            class="w-full h-60 object-cover rounded-t-2xl"
-          />
-          <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Mill Finder Project</h3>
-            <a
-              href="https://practice-api-project.netlify.app/"
-              target="_blank"
-              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-            >
-              🔗 Live View
-            </a>
+          <!-- Project 3 -->
+          <div
+            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+          >
+            <img
+              src="./public/image/MH-millFiender-3.png"
+              alt="Mill Finder Project Screenshot"
+              class="w-full h-60 object-cover rounded-t-2xl"
+            />
+            <div class="p-6 text-white flex flex-col gap-4">
+              <h3 class="text-xl font-semibold">Mill Finder Project</h3>
+              <a
+                href="https://meal-count.netlify.app/"
+                target="_blank"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Project 4 -->
-        <div
-          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
-        >
-          <img
-            src="./public/image/MH-mullokoto-4.png"
-            alt="Project Screenshot"
-            class="w-full h-60 object-cover rounded-t-2xl"
-          />
-          <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Mullokoto App</h3>
-            <a
-              href="https://practice-api-project.netlify.app/"
-              target="_blank"
-              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-            >
-              🔗 Live View
-            </a>
+          <!-- Project 4 -->
+          <div
+            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+          >
+            <img
+              src="./public/image/MH-mullokoto-4.png"
+              alt="Mullokoto App Screenshot"
+              class="w-full h-60 object-cover rounded-t-2xl"
+            />
+            <div class="p-6 text-white flex flex-col gap-4">
+              <h3 class="text-xl font-semibold">Mullokoto App</h3>
+              <a
+                href="https://mullo-koto-template.netlify.app/"
+                target="_blank"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Project 5 -->
-        <div
-          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
-        >
-          <img
-            src="./public/image/MH-signin-6.png"
-            alt="Project Screenshot"
-            class="w-full h-60 object-cover rounded-t-2xl"
-          />
-          <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Login Form UI</h3>
-            <a
-              href="https://practice-api-project.netlify.app/"
-              target="_blank"
-              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-            >
-              🔗 Live View
-            </a>
+          <!-- Project 5 -->
+          <div
+            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+          >
+            <img
+              src="./public/image/MH-country-2.png"
+              alt="Country Info Project Screenshot"
+              class="w-full h-60 object-cover rounded-t-2xl"
+            />
+            <div class="p-6 text-white flex flex-col gap-4">
+              <h3 class="text-xl font-semibold">Country Info Project</h3>
+              <a
+                href="https://country-duit-api-project.netlify.app/"
+                target="_blank"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Project 6 -->
-        <div
-          class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-lg border border-white/10 transition-transform hover:scale-[1.02] duration-300"
-        >
-          <img
-            src="./public/image/MH-pet-shop-7.png"
-            alt="Project Screenshot"
-            class="w-full h-60 object-cover rounded-t-2xl"
-          />
-          <div class="p-6 text-white flex flex-col gap-3">
-            <h3 class="text-xl font-semibold">Pet Shop Project</h3>
-            <a
-              href="https://practice-api-project.netlify.app/"
-              target="_blank"
-              class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white rounded-full hover:opacity-90 transition"
-            >
-              🔗 Live View
-            </a>
+          <!-- Project 6 -->
+          <div
+            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+          >
+            <img
+              src="./public/image/MH-5.png"
+              alt="Pet Shop Project Screenshot"
+              class="w-full h-60 object-cover rounded-t-2xl"
+            />
+            <div class="p-6 text-white flex flex-col gap-4">
+              <h3 class="text-xl font-semibold">Intelligent-business</h3>
+              <a
+                href="https://intelligent-buisness.netlify.app/"
+                target="_blank"
+                class="px-2 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-xs rounded-full hover:opacity-90 transition"
+              >
+                🔗 Live View
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1965,103 +1972,223 @@
 
     <!-- footer section start -->
     <footer class="bg-card pt-16 pb-6">
-  <div class="container mx-auto px-4 md:px-6">
-    <!-- Back to Top Button -->
-    <div class="flex justify-center mb-10">
-      <a href="#intro" class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-purple-500 bg-background text-muted-foreground hover:bg-purple-500 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path d="M5 12l7-7 7 7M12 19V5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span class="sr-only">Back to top</span>
-      </a>
-    </div>
-
-    <!-- Main Footer Content -->
-    <div class="border-b border-muted pb-10 mb-10">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground">
-        <!-- About -->
-        <div>
-          <h3 class="text-2xl font-bold gradient-text mb-4 text-white">
-            Mahmudul Hasan<span class="text-purple-500">.</span>
-          </h3>
-          <p class="max-w-sm">
-            I’m a Diploma Engineer and passionate self-taught Frontend Developer. I’ve worked with startups and teams to turn ideas into scalable applications that deliver real results.
-          </p>
+      <div class="container mx-auto px-4 md:px-6">
+        <!-- Back to Top Button -->
+        <div class="flex justify-center mb-10">
+          <a
+            href="#intro"
+            class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-purple-500 bg-background text-muted-foreground hover:bg-purple-500 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M5 12l7-7 7 7M12 19V5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="sr-only">Back to top</span>
+          </a>
         </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="#intro" class="hover:text-purple-500 transition-colors">Home</a></li>
-            <li><a href="#about" class="hover:text-purple-500 transition-colors">About</a></li>
-            <li><a href="#skills" class="hover:text-purple-500 transition-colors">Skills</a></li>
-            <li><a href="#tools-i-use" class="hover:text-purple-500 transition-colors">Tools</a></li>
-            <li><a href="#my-recent-project" class="hover:text-purple-500 transition-colors">Project</a></li>
-            <li><a href="#contact-me" class="hover:text-purple-500 transition-colors">Contact</a></li>
-          </ul>
-        </div>
+        <!-- Main Footer Content -->
+        <div class="border-b border-muted pb-10 mb-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground"
+          >
+            <!-- About -->
+            <div>
+              <h3 class="text-2xl font-bold gradient-text mb-4 text-white">
+                Mahmudul Hasan<span class="text-purple-500">.</span>
+              </h3>
+              <p class="max-w-sm">
+                I’m a Diploma Engineer and passionate self-taught Frontend
+                Developer. I’ve worked with startups and teams to turn ideas
+                into scalable applications that deliver real results.
+              </p>
+            </div>
 
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-lg font-semibold text-white mb-4">Get in Touch</h4>
-          <ul class="space-y-2">
-            <li class="flex items-center">
-              <svg class="h-4 w-4 text-purple-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              <a href="tel:+8801650217808" class="hover:text-purple-500 transition-colors">+88016-50217808</a>
-            </li>
-            <li class="flex items-center">
-              <svg class="h-4 w-4 text-purple-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              <a href="mailto:dev.mahmudulhasan@gmail.com" class="hover:text-purple-500 transition-colors">dev.mahmudulhasan@gmail.com</a>
-            </li>
-            <li class="flex items-center">
-              <svg class="h-4 w-4 text-purple-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <span>Bogura, Bangladesh</span>
-            </li>
-          </ul>
+            <!-- Quick Links -->
+            <div>
+              <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#intro"
+                    class="hover:text-purple-500 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="hover:text-purple-500 transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#skills"
+                    class="hover:text-purple-500 transition-colors"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tools-i-use"
+                    class="hover:text-purple-500 transition-colors"
+                    >Tools</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#my-recent-project"
+                    class="hover:text-purple-500 transition-colors"
+                    >Project</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact-me"
+                    class="hover:text-purple-500 transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
 
-          <!-- Social Icons -->
-          <div class="flex space-x-3 mt-4">
-            <a href="https://github.com/mahmudul7608" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="GitHub">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/mahmudul-hasan-7608/" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="LinkedIn">
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
-            <a href="https://wa.me/8801650217808" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="WhatsApp">
-              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 448 512">
-                <path d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z" />
-              </svg>
-            </a>
+            <!-- Contact Info -->
+            <div>
+              <h4 class="text-lg font-semibold text-white mb-4">
+                Get in Touch
+              </h4>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <svg
+                    class="h-4 w-4 text-purple-500 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                  <a
+                    href="tel:+8801650217808"
+                    class="hover:text-purple-500 transition-colors"
+                    >+88016-50217808</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="h-4 w-4 text-purple-500 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <a
+                    href="mailto:dev.mahmudulhasan@gmail.com"
+                    class="hover:text-purple-500 transition-colors"
+                    >dev.mahmudulhasan@gmail.com</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="h-4 w-4 text-purple-500 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>Bogura, Bangladesh</span>
+                </li>
+              </ul>
+
+              <!-- Social Icons -->
+              <div class="flex space-x-3 mt-4">
+                <a
+                  href="https://github.com/mahmudul7608"
+                  target="_blank"
+                  class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                    />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mahmudul-hasan-7608/"
+                  target="_blank"
+                  class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+                    />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/8801650217808"
+                  target="_blank"
+                  class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
+                  aria-label="WhatsApp"
+                >
+                  <svg
+                    class="h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Bottom Footer -->
+        <div class="text-center">
+          <p class="text-muted-foreground text-sm">
+            © 2025 Mahmudul Hasan. All Rights Reserved.
+          </p>
+        </div>
       </div>
-    </div>
-
-    <!-- Bottom Footer -->
-    <div class="text-center">
-      <p class="text-muted-foreground text-sm">
-        © 2025 Mahmudul Hasan. All Rights Reserved.
-      </p>
-    </div>
-  </div>
-</footer>
-
+    </footer>
     <!-- footer section end -->
   </div>
 </template>
