@@ -271,7 +271,7 @@
             >
               I’m a
               <span class="text-sky-600 font-semibold">Diploma Engineer</span>
-              and passionate
+              and passionate self-taught
               <span class="text-sky-600 font-semibold">Frontend Developer</span>
               with solid experience in building modern, user-friendly web
               interfaces. I’ve worked with startups and teams to turn ideas into
@@ -474,7 +474,7 @@
                       </p>
                     </div>
                     <span class="text-xs text-gray-500 dark:text-gray-400"
-                      >2022–2025</span
+                      >2022–2025(self-taught)</span
                     >
                   </div>
                 </div>
@@ -489,7 +489,7 @@
                       </p>
                     </div>
                     <span class="text-xs text-gray-500 dark:text-gray-400"
-                      >2022–2023</span
+                      >2022–2023(self-taught)</span
                     >
                   </div>
                 </div>
@@ -504,7 +504,7 @@
                       </p>
                     </div>
                     <span class="text-xs text-gray-500 dark:text-gray-400"
-                      >2022</span
+                      >2022–2025(self-taught)</span
                     >
                   </div>
                 </div>
@@ -532,141 +532,205 @@
     </section>
     <!-- about secyion end  -->
 
-    <!-- Skill and technology section -->
-    <section id="skills" class="py-20 bg-transparent">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-white">Frontend Tech Stack</h2>
-          <p class="text-lg text-gray-300 mt-2">
-            Modern Frontend Development Technologies & Tools
-          </p>
-        </div>
-
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <!-- Core Frontend -->
-          <div
-            class="relative group p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-lg transition-transform hover:-translate-y-2 hover:shadow-2xl"
+    <!-- true builder section -->
+    <section id="skills" class="py-2 bg-black-100">
+      <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
+       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          My
+          <span
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            >skills</span
           >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#18ffb033] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            ></div>
-
-            <div class="relative z-10">
-              <div class="flex items-center mb-4">
-                <div
-                  class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#61dafb] to-[#21d4fd] text-2xl mr-3"
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+          >
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-purple-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-rocket w-12 h-12 mb-6 text-purple-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                    ></path>
+                    <path
+                      d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                    ></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent"
                 >
-                  ⚛️
+                  Development
+                </h3>
+                <p class="text-white/70">Frontend & Development</p>
+                <p class="text-white/70">
+                  Languages & Frameworks / Build & Workflow
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="tech-badge">VueJs</span>
+                  <span class="tech-badge">NuxtJs</span>
+                  <span class="tech-badge">ReactJs</span>
+                  <span class="tech-badge">TypeScript</span>
+                  <span class="tech-badge">JavaScript</span>
+                  <span class="tech-badge">HTML5</span>
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">JavaScript</span>
+                  <span class="tech-badge">NodeJs</span>
+                  <span class="tech-badge">Vite</span>
+                  <span class="tech-badge">ESLint</span>
+                  <span class="tech-badge">Prettier</span>
+                  <span class="tech-badge">Git</span>
+                  <span class="tech-badge">GitHub</span>
+                  <span class="tech-badge">VS Code</span>
+                  <span class="tech-badge">Figma</span>
                 </div>
-                <div>
-                  <h3 class="text-xl font-semibold text-white">
-                    Core Frontend
-                  </h3>
-                  <p class="text-sm uppercase text-gray-400">
-                    Languages & Frameworks
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-badge">HTML5</span>
-                <span class="tech-badge">CSS3</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">TypeScript</span>
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">Vue</span>
-                <span class="tech-badge">Angular</span>
-                <span class="tech-badge">Next.js</span>
-                <span class="tech-badge">Nuxt.js</span>
               </div>
             </div>
           </div>
-
-          <!-- Styling & UI -->
           <div
-            class="relative group p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-lg transition-transform hover:-translate-y-2 hover:shadow-2xl"
+            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
           >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#18ffb033] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            ></div>
-
-            <div class="relative z-10">
-              <div class="flex items-center mb-4">
-                <div
-                  class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#ab47bc] to-[#8e24aa] text-2xl mr-3"
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-green-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-target w-12 h-12 mb-6 text-green-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-green-400 to-green-200 bg-clip-text text-transparent"
                 >
-                  🎨
+                  Design
+                </h3>
+                <p class="text-white/70">Styling & UI</p>
+                <p class="text-white/70">Design & Animation</p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="tech-badge">Tailwind CSS</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">Styled Components</span>
+                  <span class="tech-badge">CSS Modules</span>
+                  <span class="tech-badge">Figma</span>
+                  <span class="tech-badge">Photoshop</span>
+                  <span class="tech-badge">Canva</span>
+                  <span class="tech-badge">VS Code</span>
+                  <span class="tech-badge">Framer Motion</span>
+                  <span class="tech-badge">Material-UI</span>
                 </div>
-                <div>
-                  <h3 class="text-xl font-semibold text-white">Styling & UI</h3>
-                  <p class="text-sm uppercase text-gray-400">
-                    Design & Animation
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-badge">Tailwind CSS</span>
-                <span class="tech-badge">Sass/SCSS</span>
-                <span class="tech-badge">Styled Components</span>
-                <span class="tech-badge">Material-UI</span>
-                <span class="tech-badge">Ant Design</span>
-                <span class="tech-badge">Framer Motion</span>
-                <span class="tech-badge">CSS Modules</span>
-                <span class="tech-badge">Bootstrap</span>
               </div>
             </div>
           </div>
-
-          <!-- Dev Tools -->
           <div
-            class="relative group p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-lg transition-transform hover:-translate-y-2 hover:shadow-2xl"
+            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
           >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#18ffb033] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            ></div>
-
-            <div class="relative z-10">
-              <div class="flex items-center mb-4">
-                <div
-                  class="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#66bb6a] to-[#43a047] text-2xl mr-3"
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-brain w-12 h-12 mb-6 text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+                    ></path>
+                    <path
+                      d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+                    ></path>
+                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
+                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                    <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                    <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"
                 >
-                  🛠️
+                  Engineering
+                </h3>
+                <p class="text-white/70">
+                  Diploma in Engineering with a focus on practical
+                </p>
+                <p class="text-white/70">
+                  Bogura Polytechnic Institute, Bangladesh.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="tech-badge">Engineering</span>
+                  <span class="tech-badge">Team Work</span>
+                  <span class="tech-badge">Building</span>
+                  <span class="tech-badge">Problem Solving</span>
+                  <span class="tech-badge">Creativity</span>
+                  <span class="tech-badge">Critical Thinking</span>
+                  <span class="tech-badge">Communication</span>
+                  <span class="tech-badge">Collaboration</span>
+                  <span class="tech-badge">Adaptability</span>
+                  <span class="tech-badge">Flexibility</span>
+                  <span class="tech-badge">Time Management</span>
                 </div>
-                <div>
-                  <h3 class="text-xl font-semibold text-white">
-                    Development Tools
-                  </h3>
-                  <p class="text-sm uppercase text-gray-400">
-                    Build & Workflow
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-badge">Vite</span>
-                <span class="tech-badge">Webpack</span>
-                <span class="tech-badge">Parcel</span>
-                <span class="tech-badge">ESLint</span>
-                <span class="tech-badge">Prettier</span>
-                <span class="tech-badge">Git</span>
-                <span class="tech-badge">GitHub</span>
-                <span class="tech-badge">VS Code</span>
-                <span class="tech-badge">Figma</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- skill section end -->
+    <!-- true builder section end -->
 
     <!-- tools section start -->
-    <section id="tools-i-use" class="bg-black-300 py-20 px-6">
-      <h2
-        class="text-4xl md:text-5xl font-bold text-center text-white mb-12 font-[cursive]"
-      >
-        🚀 Tools I Use
-      </h2>
+    <section id="tools-i-use" class="bg-black-300 py-5 px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+          Tools
+          <span
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            >I Use</span
+          >
+        </h2>
 
-      <div dir="ltr" data-orientation="horizontal" class="w-full">
+      <div dir="ltr" data-orientation="horizontal" class="w-full mb-20">
         <div class="flex justify-center mb-10 overflow-x-auto pb-2">
           <div
             role="tablist"
@@ -1477,12 +1541,14 @@
     <!-- tools section end -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="bg-black py-20 px-6">
-      <h2
-        class="text-4xl md:text-5xl font-bold text-center text-white mb-16 font-[cursive]"
-      >
-        My Recent Projects
-      </h2>
+    <section id="my-recent-project" class="bg-black-100 py-8 px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          My
+          <span
+            class="bg-gradient-to-r mb-30 from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            >Projects</span
+          >
+        </h2>
 
       <div
         class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -1616,157 +1682,17 @@
     </section>
     <!-- my project section end -->
 
-
-    <!-- true builder section -->
-     <section class="py-24 bg-black/50">
-      <div class="container mx-auto px-4 max-w-7xl relative">
-        <h2
-          class="text-4xl md:text-5xl font-bold text-center mb-16 text-white/90 z-10"
-        >
-          A True Builder
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-brain w-12 h-12 mb-6 text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <path
-                      d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
-                    ></path>
-                    <path
-                      d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
-                    ></path>
-                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
-                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
-                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
-                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
-                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
-                    <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
-                    <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"
-                >
-                  Engineering
-                </h3>
-                <p class="text-white/70">
-                  Software engineering with expertise in Web and AI
-                  Technologies.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-purple-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-rocket w-12 h-12 mb-6 text-purple-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <path
-                      d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
-                    ></path>
-                    <path
-                      d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
-                    ></path>
-                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent"
-                >
-                  Design
-                </h3>
-                <p class="text-white/70">
-                  Creating intuitive user experiences and visually appealing
-                  interfaces.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-green-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-target w-12 h-12 mb-6 text-green-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="6"></circle>
-                    <circle cx="12" cy="12" r="2"></circle>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-green-400 to-green-200 bg-clip-text text-transparent"
-                >
-                  Marketing
-                </h3>
-                <p class="text-white/70">
-                  Building and growing products with effective marketing
-                  strategies.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- true builder section end -->
-
     <!-- Contact section start -->
-    <section id="" class="py-6 bg-black/50">
+    <section id="" class="py-6 bg-black-100 ">
       <div class="container mx-auto px-4 md:px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Get In <span class="gradient-text">Touch</span>
-          </h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Contact
+          <span
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            >Me</span
+          >
+        </h2>
           <p class="text-muted-foreground">
             Have a project in mind or just want to connect? Feel free to reach
             out to me for collaborations or questions.
