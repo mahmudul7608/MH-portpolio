@@ -9,35 +9,35 @@
       <nav class="relative text-white font-light uppercase tracking-wide z-50">
         <!-- Desktop Navbar -->
         <div
-          class="hidden md:flex fixed top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/10 rounded-[80px] backdrop-blur-xl bg-[rgba(37,74,61,0.5)] items-center py-6 z-50"
+          class="hidden md:flex fixed top-16 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/10 rounded-[80px] backdrop-blur-xl bg-[rgba(50,99,82,0.5)] items-center py-6 z-50 shadow-md shadow-blue-100/50"
         >
           <a
-            class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-4 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
             href="#intro"
             >Home</a
           >
           <a
-            class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
             href="#about"
             >About</a
           >
           <a
-            class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
             href="#skills"
             >Skills</a
           >
           <a
-            class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
             href="#tools-i-use"
             >Tools</a
           >
           <a
-            class="px-6 text-[18px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
+            class="px-6 text-[15px] tracking-widest border-r border-white/10 transition-all hover:text-[#c9f721]"
             href="#my-recent-project"
             >Projects</a
           >
           <a
-            class="px-6 text-[18px] tracking-widest transition-all hover:text-[#c9f721]"
+            class="px-6 text-[15px] tracking-widest transition-all hover:text-[#d0f721]"
             href="#contact-me"
             >Contact</a
           >
@@ -110,7 +110,7 @@
       <div class="max-w-xl text-center md:text-left">
         <h2 class="leading-tight font-extrabold text-center md:text-left">
           <span
-            class="text-6xl mt-[4rem] sm:text-7xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block"
+            class="text-4xl mt-[4rem] sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block"
           >
             FRONTEND
           </span>
@@ -330,20 +330,20 @@
             <div class="flex flex-wrap gap-4 mb-10">
               <a
                 href="#contact"
-                class="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium shadow-lg hover:scale-105 transition"
+                class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium shadow-lg hover:scale-105 transition"
                 >Contact Me</a
               >
               <a
                 href="#portfolio"
-                class="px-6 py-3 rounded-lg border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition"
+                class="px-6 py-3 rounded-full border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition"
                 >Download Resume</a
               >
             </div>
 
             <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 mt-8 gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-8 gap-5">
               <div
-                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+                class="text-center p-4 rounded-lg dark:bg-gray-800 bg-blue-100 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -363,7 +363,7 @@
                 </p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+                class="text-center p-4 rounded-lg dark:bg-gray-800 bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -386,7 +386,7 @@
                 <p class="text-xs text-muted-foreground">Projects Built</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+                class="text-center p-4 rounded-lg dark:bg-gray-800 bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -403,7 +403,7 @@
                 <p class="text-xs text-muted-foreground">Good Understanding</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow card-hover"
+                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 bg-blue-00 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -2030,20 +2030,20 @@
 
           <!-- Social Icons -->
           <div class="flex space-x-3 mt-4">
-            <a href="https://github.com/Abhamid3311" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="GitHub">
+            <a href="https://github.com/mahmudul7608" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="GitHub">
               <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                 <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/ab-hamid8/" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/mahmudul-hasan-7608/" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="LinkedIn">
               <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
                 <rect x="2" y="9" width="4" height="12" />
                 <circle cx="4" cy="4" r="2" />
               </svg>
             </a>
-            <a href="https://wa.me/8801985308586" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="WhatsApp">
+            <a href="https://wa.me/8801650217808" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="WhatsApp">
               <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 448 512">
                 <path d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z" />
               </svg>
