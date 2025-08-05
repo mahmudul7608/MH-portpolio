@@ -535,7 +535,7 @@
     <!-- true builder section -->
     <section id="skills" class="py-2 bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
-       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -723,12 +723,12 @@
     <!-- tools section start -->
     <section id="tools-i-use" class="bg-black-300 py-5 px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
-          Tools
-          <span
-            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
-            >I Use</span
-          >
-        </h2>
+        Tools
+        <span
+          class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+          >I Use</span
+        >
+      </h2>
 
       <div dir="ltr" data-orientation="horizontal" class="w-full mb-20">
         <div class="flex justify-center mb-10 overflow-x-auto pb-2">
@@ -1543,12 +1543,12 @@
     <!-- My project section start -->
     <section id="my-recent-project" class="bg-black-100 py-8 px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-          My
-          <span
-            class="bg-gradient-to-r mb-30 from-purple-500 to-pink-500 text-transparent bg-clip-text"
-            >Projects</span
-          >
-        </h2>
+        My
+        <span
+          class="bg-gradient-to-r mb-30 from-purple-500 to-pink-500 text-transparent bg-clip-text"
+          >Projects</span
+        >
+      </h2>
 
       <div
         class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -1683,99 +1683,97 @@
     <!-- my project section end -->
 
     <!-- Contact section start -->
-    <section id="" class="py-6 bg-black-100 ">
+    <section id="contact-me" class="py-6 bg-black-100">
       <div class="container mx-auto px-4 md:px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-          Contact
-          <span
-            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
-            >Me</span
-          >
-        </h2>
-          <p class="text-muted-foreground">
-            Have a project in mind or just want to connect? Feel free to reach
-            out to me for collaborations or questions.
-          </p>
+            Contact
+            <span
+              class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+              >Me</span
+            >
+          </h2>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 m-12 gap-8">
           <div
             class="transition-all duration-700 delay-300 opacity-100 translate-y-0"
           >
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-sm"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50"
             >
               <div class="p-6">
                 <h3 class="text-2xl font-bold mb-6">Send me a message</h3>
-                <form class="space-y-6">
+                <form class="space-y-8">
+                  <!-- Full Name & Email -->
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Full Name -->
                     <div class="space-y-2">
-                      <label for="name" class="text-sm font-medium"
+                      <label for="name" class="text-sm font-medium text-white"
                         >Full Name</label
-                      ><input
-                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                      >
+                      <input
+                        type="text"
                         id="name"
                         placeholder="Enter your name"
-                        required=""
-                        fdprocessedid="mrzp2r"
+                        required
+                        class="w-full rounded-md border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-black/20 transition"
                       />
                     </div>
+
+                    <!-- Email Address -->
                     <div class="space-y-2">
-                      <label for="email" class="text-sm font-medium"
+                      <label for="email" class="text-sm font-medium text-white"
                         >Email Address</label
-                      ><input
+                      >
+                      <input
                         type="email"
-                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         id="email"
                         placeholder="Enter your email"
-                        required=""
-                        fdprocessedid="637bl9"
+                        required
+                        class="w-full rounded-md border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-black/20 transition"
                       />
                     </div>
                   </div>
+
+                  <!-- Subject -->
                   <div class="space-y-2">
-                    <label for="subject" class="text-sm font-medium"
+                    <label for="subject" class="text-sm font-medium text-white"
                       >Subject</label
-                    ><input
-                      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    >
+                    <input
+                      type="text"
                       id="subject"
                       placeholder="Enter subject line"
-                      required=""
-                      fdprocessedid="k2ibrm"
+                      required
+                      class="w-full rounded-md border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-black/20 transition"
                     />
                   </div>
+
+                  <!-- Message -->
                   <div class="space-y-2">
-                    <label for="message" class="text-sm font-medium"
+                    <label for="message" class="text-sm font-medium text-white"
                       >Your Message</label
-                    ><textarea
-                      class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[150px]"
+                    >
+                    <textarea
                       id="message"
                       placeholder="Enter your message"
-                      required=""
+                      required
+                      class="w-full min-h-[150px] rounded-md border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-black/20 transition"
                     ></textarea>
                   </div>
+
+                  <!-- Submit Button -->
                   <button
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-xs lg:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gradient-bg w-full"
                     type="submit"
-                    fdprocessedid="8jy1zq"
+                    class="w-full py-3 rounded-full text-white font-semibold text-base hover:opacity-90 transition duration-300"
+                    style="
+                      background: linear-gradient(
+                        112.49deg,
+                        rgb(255, 109, 109) 37.67%,
+                        rgb(235, 0, 255) 76.59%
+                      );
+                    "
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-send h-5 w-5 mr-2"
-                    >
-                      <path
-                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
-                      ></path>
-                      <path d="m21.854 2.147-10.94 10.939"></path>
-                    </svg>
                     Send Message
                   </button>
                 </form>
@@ -1784,7 +1782,7 @@
           </div>
           <div class="transition-all duration-700 opacity-100 translate-y-0">
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-full"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden h-full"
             >
               <div
                 class="h-32 bg-gradient-to-r from-purple-500 to-tech-blue"
@@ -1793,9 +1791,10 @@
                 <div class="bg-card p-6 rounded-lg shadow-lg">
                   <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
                   <p class="text-muted-foreground mb-6">
-                    Feel free to reach out for opportunities, collaborations, or
-                    just to say hi! I'm always open to discussing new projects
-                    and ideas.
+                    "I'm always open to new opportunities, creative
+                    collaborations, or simply connecting with like-minded
+                    people. Whether you have a project in mind or just want to
+                    say hello - feel free to reach out!"
                   </p>
                   <div class="space-y-4">
                     <div class="flex items-start">
@@ -1963,6 +1962,107 @@
       </div>
     </section>
     <!-- contact section end -->
+
+    <!-- footer section start -->
+    <footer class="bg-card pt-16 pb-6">
+  <div class="container mx-auto px-4 md:px-6">
+    <!-- Back to Top Button -->
+    <div class="flex justify-center mb-10">
+      <a href="#intro" class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-purple-500 bg-background text-muted-foreground hover:bg-purple-500 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M5 12l7-7 7 7M12 19V5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="sr-only">Back to top</span>
+      </a>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="border-b border-muted pb-10 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground">
+        <!-- About -->
+        <div>
+          <h3 class="text-2xl font-bold gradient-text mb-4 text-white">
+            Mahmudul Hasan<span class="text-purple-500">.</span>
+          </h3>
+          <p class="max-w-sm">
+            I’m a Diploma Engineer and passionate self-taught Frontend Developer. I’ve worked with startups and teams to turn ideas into scalable applications that deliver real results.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#intro" class="hover:text-purple-500 transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-purple-500 transition-colors">About</a></li>
+            <li><a href="#skills" class="hover:text-purple-500 transition-colors">Skills</a></li>
+            <li><a href="#tools-i-use" class="hover:text-purple-500 transition-colors">Tools</a></li>
+            <li><a href="#my-recent-project" class="hover:text-purple-500 transition-colors">Project</a></li>
+            <li><a href="#contact-me" class="hover:text-purple-500 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Get in Touch</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <svg class="h-4 w-4 text-purple-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a href="tel:+8801650217808" class="hover:text-purple-500 transition-colors">+88016-50217808</a>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-4 w-4 text-purple-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <a href="mailto:dev.mahmudulhasan@gmail.com" class="hover:text-purple-500 transition-colors">dev.mahmudulhasan@gmail.com</a>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-4 w-4 text-purple-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Bogura, Bangladesh</span>
+            </li>
+          </ul>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-3 mt-4">
+            <a href="https://github.com/Abhamid3311" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="GitHub">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ab-hamid8/" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="LinkedIn">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://wa.me/8801985308586" target="_blank" class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors" aria-label="WhatsApp">
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 448 512">
+                <path d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="text-center">
+      <p class="text-muted-foreground text-sm">
+        © 2025 Mahmudul Hasan. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!-- footer section end -->
   </div>
 </template>
 
