@@ -2202,23 +2202,7 @@ const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
 
-// naivigation bar end
-
-// Reactive state for dark mode
-const isDark = ref(false);
-
-// Toggle dark mode and update the HTML root class
-const toggleDarkMode = () => {
-  isDark.value = !isDark.value;
-  document.documentElement.classList.toggle("dark", isDark.value);
-};
-
-// On mount, set theme based on system preference
-onMounted(() => {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  isDark.value = prefersDark;
-  document.documentElement.classList.toggle("dark", isDark.value);
-});
+// navigation bar end
 </script>
 
 <style scoped>
