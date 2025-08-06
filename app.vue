@@ -7,7 +7,7 @@
     <nav class="relative z-50 font-light uppercase tracking-wide">
       
       <!-- Desktop Navbar -->
-      <div class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-xl bg-[rgba(50,99,82,0.5)] items-center py-3 px-4 shadow-md shadow-blue-100/30 space-x-2">
+      <div class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-3xl bg-[rgba(50,99,82,0.5)] items-center py-3 px-4 shadow-md shadow-blue-100/30 space-x-2">
         <a
           href="#intro"
           class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#1bf154de]"
@@ -106,8 +106,8 @@
           </span>
         </h2>
 
-        <p class="mt-6 text-gray-700 text-base leading-relaxed">
-          <span class="font-semibold text-black">I'm</span>
+        <p class="mt-6 text-white-700 text-base leading-relaxed">
+          <span class="font-semibold text-white">I'm</span>
           – a
           <span class="text-sky-600 font-semibold">Frontend Developer</span>
           with a passion for clean design, smooth user experiences, and smart,
@@ -222,8 +222,8 @@
     </section>
     <!-- End Hero Section -->
 
-    <!-- Scroll Mous section -->
-    <div class="flex flex-col items-center space-y-2 mb-2">
+    <!-- Scroll Mouse section -->
+    <div class="flex flex-col items-center space-y-2 top-0 mb-2">
       <span class="text-white text-xs sm:text-lg font-medium"
         >Scroll to explore</span
       >
@@ -241,7 +241,7 @@
     <section id="about" class="py-16 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center top-0 mb-12">
           About
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
