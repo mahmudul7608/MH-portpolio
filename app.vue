@@ -1,104 +1,89 @@
 <template>
   <div
-    class="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300"
+    class="min-h-screen bg-gray-800 text-yellow-400 dark:text-white transition-colors duration-300"
   >
     <!-- Header Navbar start -->
-    <header
-      class="bg-black/50 backdrop-blur-lg fixed top-0 left-0 w-full z-50 px-4"
-    >
-      <nav class="relative z-50 text-white font-light uppercase tracking-wide">
-        <!-- Desktop Navbar -->
-        <div
-          class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-xl bg-[rgba(50,99,82,0.5)] items-center py-4 px-2 shadow-md shadow-blue-100/30"
-        >
-          <a
-            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            href="#intro"
-            >Home</a
-          >
-          <a
-            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            href="#about"
-            >About</a
-          >
-          <a
-            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            href="#skills"
-            >Skills</a
-          >
-          <a
-            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            href="#tools-i-use"
-            >Tools</a
-          >
-          <a
-            class="px-4 text-sm tracking-wider border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            href="#my-recent-project"
-            >Projects</a
-          >
-          <a
-            class="px-4 text-sm tracking-wider transition-colors duration-200 hover:text-[#c9f721]"
-            href="#contact-me"
-            >Contact</a
-          >
-        </div>
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-lg px-4">
+    <nav class="relative z-50 font-light uppercase tracking-wide">
+      
+      <!-- Desktop Navbar -->
+      <div class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-xl bg-[rgba(50,99,82,0.5)] items-center py-3 px-4 shadow-md shadow-blue-100/30 space-x-2">
+        <a
+          href="#intro"
+          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#1bf154de]"
+        >Home</a>
+        <a
+          href="#about"
+          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+        >About</a>
+        <a
+          href="#skills"
+          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+        >Skills</a>
+        <a
+          href="#tools-i-use"
+          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+        >Tools</a>
+        <a
+          href="#my-recent-project"
+          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+        >Projects</a>
+        <a
+          href="#contact-me"
+          class="px-4 py-2 text-sm transition-colors duration-200 hover:text-[#c9f721]"
+        >Contact</a>
+      </div>
 
-        <!-- Mobile Top Bar start -->
-        <div class="md:hidden flex justify-between items-center px-4 py-4">
-          <h1 class="text-white text-lg font-semibold">Menu</h1>
-          <button
-            @click="toggleMenu"
-            class="text-white text-3xl focus:outline-none"
-          >
-            <span v-if="!isOpen">☰</span>
-            <span v-else>✕</span>
-          </button>
-        </div>
-
-        <!-- Mobile Menu start -->
-        <div
-          v-if="isOpen"
-          class="md:hidden mt-2 mx-4 flex flex-col bg-[rgba(37,74,61,0.95)] backdrop-blur-xl rounded-xl py-6 px-6 space-y-4 border border-white/10 shadow-lg transition-all duration-300"
+      <!-- Mobile Top Bar -->
+      <div class="md:hidden flex justify-between items-center py-4">
+        <h1 class="text-white text-lg font-semibold">Menu</h1>
+        <button
+          @click="toggleMenu"
+          class="text-white text-3xl focus:outline-none"
         >
-          <a
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            href="#intro"
-            @click="toggleMenu"
-            >Home</a
-          >
-          <a
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            href="#about"
-            @click="toggleMenu"
-            >About</a
-          >
-          <a
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            href="#skills"
-            @click="toggleMenu"
-            >Skills</a
-          >
-          <a
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            href="#tools-i-use"
-            @click="toggleMenu"
-            >Tools</a
-          >
-          <a
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            href="#my-recent-project"
-            @click="toggleMenu"
-            >Projects</a
-          >
-          <a
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            href="#contact-me"
-            @click="toggleMenu"
-            >Contact</a
-          >
-        </div>
-      </nav>
-    </header>
+          <span v-if="!isOpen">☰</span>
+          <span v-else>✕</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        v-if="isOpen"
+        class="md:hidden mt-2 mx-2 mb-4 flex flex-col bg-[rgba(37,74,61,0.95)] backdrop-blur-xl rounded-xl py-6 px-6 space-y-4 border border-white/10 shadow-lg transition-all duration-300"
+      >
+        <a
+          href="#intro"
+          @click="toggleMenu"
+          class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
+        >Home</a>
+        <a
+          href="#about"
+          @click="toggleMenu"
+          class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
+        >About</a>
+        <a
+          href="#skills"
+          @click="toggleMenu"
+          class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
+        >Skills</a>
+        <a
+          href="#tools-i-use"
+          @click="toggleMenu"
+          class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
+        >Tools</a>
+        <a
+          href="#my-recent-project"
+          @click="toggleMenu"
+          class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
+        >Projects</a>
+        <a
+          href="#contact-me"
+          @click="toggleMenu"
+          class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
+        >Contact</a>
+      </div>
+    </nav>
+  </header>
     <!-- End Header Navbar -->
 
     <!-- Hero Section start -->
@@ -121,10 +106,8 @@
           </span>
         </h2>
 
-        <p
-          class="mt-6 text-gray-700 dark:text-gray-300 text-base leading-relaxed"
-        >
-          <span class="font-semibold text-black dark:text-white">I'm</span>
+        <p class="mt-6 text-gray-700 text-base leading-relaxed">
+          <span class="font-semibold text-black">I'm</span>
           – a
           <span class="text-sky-600 font-semibold">Frontend Developer</span>
           with a passion for clean design, smooth user experiences, and smart,
@@ -255,10 +238,7 @@
     <!-- Scroll Mous section end -->
 
     <!-- about section start -->
-    <section
-      id="about"
-      class="py-16 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100"
-    >
+    <section id="about" class="py-16 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -350,7 +330,7 @@
             <!-- Stats -->
             <div class="grid grid-cols-2 md:grid-cols-4 mt-8 gap-5">
               <div
-                class="text-center p-4 rounded-lg dark:bg-gray-800 bg-blue-100 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-blue-100 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -370,7 +350,7 @@
                 </p>
               </div>
               <div
-                class="text-center p-4 rounded-lg dark:bg-gray-800 bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -393,7 +373,7 @@
                 <p class="text-xs text-muted-foreground">Projects Built</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg dark:bg-gray-800 bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -410,7 +390,7 @@
                 <p class="text-xs text-muted-foreground">Good Understanding</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-gray-100 dark:bg-gray-800 bg-blue-00 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-gray-100 bg-blue-00 shadow-lg shadow-blue-500/50 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -435,9 +415,7 @@
             <!-- Education -->
             <div>
               <h3 class="text-2xl font-bold mb-10 flex items-center">
-                <span
-                  class="p-2 mr-3 bg-purple-100 dark:bg-purple-800/30 rounded-full"
-                >
+                <span class="p-2 mr-3 bg-purple-10 rounded-full">
                   <svg
                     class="w-6 h-6 text-purple-500"
                     fill="none"
@@ -451,17 +429,17 @@
                 Education
               </h3>
               <div
-                class="relative p-6 rounded-lg border-l-4 border-purple-400 bg-white dark:bg-gray-900 shadow-sm card-hover"
+                class="relative p-6 rounded-lg border-l-4 border-purple-400 bg-white shadow-sm card-hover"
               >
                 <div
-                  class="absolute -left-3 top-6 w-6 h-6 bg-white dark:bg-gray-900 border-2 border-purple-500 rounded-full"
+                  class="absolute -left-3 top-6 w-6 h-6 bg-white border-2 border-purple-500 rounded-full"
                 ></div>
                 <h4 class="text-xl font-bold mb-1">Diploma in Engineering</h4>
                 <span
-                  class="inline-block text-xs bg-purple-100 dark:bg-purple-800/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full mb-2"
+                  class="inline-block text-xs bg-purple-100 text-purple-800 px-3 py-1 rounded-full mb-2"
                   >2019 - 2024</span
                 >
-                <p class="text-sm text-gray-600 dark:text-gray-400">
+                <p class="text-sm text-gray-600">
                   Government Polytechnic Institute, Bogura
                 </p>
               </div>
@@ -470,64 +448,48 @@
             <!-- Certifications -->
             <div>
               <div class="space-y-4">
-                <div
-                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
-                >
+                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Complete Web Development</h4>
-                      <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Self Learning
-                      </p>
+                      <p class="text-sm text-gray-500">Self Learning</p>
                     </div>
-                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                    <span class="text-xs text-gray-500"
                       >2022–2025(self-taught)</span
                     >
                   </div>
                 </div>
-                <div
-                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
-                >
+                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Master HTML & CSS Projects</h4>
-                      <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Self Learning
-                      </p>
+                      <p class="text-sm text-gray-500">Self Learning</p>
                     </div>
-                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                    <span class="text-xs text-gray-500"
                       >2022–2023(self-taught)</span
                     >
                   </div>
                 </div>
-                <div
-                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
-                >
+                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Master Git & GitHub</h4>
-                      <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Self Learning
-                      </p>
+                      <p class="text-sm text-gray-500">Self Learning</p>
                     </div>
-                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                    <span class="text-xs text-gray-500"
                       >2022–2025(self-taught)</span
                     >
                   </div>
                 </div>
-                <div
-                  class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm card-hover"
-                >
+                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Communications</h4>
-                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                      <p class="text-sm text-gray-500">
                         10 Minute School, Duolingo
                       </p>
                     </div>
-                    <span class="text-xs text-gray-500 dark:text-gray-400"
-                      >2025</span
-                    >
+                    <span class="text-xs text-gray-500">2025</span>
                   </div>
                 </div>
               </div>
