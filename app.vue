@@ -330,7 +330,7 @@
             <!-- Stats -->
             <div class="grid grid-cols-2 md:grid-cols-4 mt-8 gap-5">
               <div
-                class="text-center p-4 rounded-lg bg-blue-100 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -350,7 +350,7 @@
                 </p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -373,7 +373,7 @@
                 <p class="text-xs text-muted-foreground">Projects Built</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-blue-500 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -390,7 +390,7 @@
                 <p class="text-xs text-muted-foreground">Good Understanding</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-gray-100 bg-blue-00 shadow-lg shadow-blue-500/50 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -414,10 +414,10 @@
           <div class="space-y-12">
             <!-- Education -->
             <div>
-              <h3 class="text-2xl font-bold mb-10 flex items-center">
+              <h3 class="text-3xl font-bold mb-2 flex items-center">
                 <span class="p-2 mr-3 bg-purple-10 rounded-full">
                   <svg
-                    class="w-6 h-6 text-purple-500"
+                    class="w-10 h-15 text-White-500 rounded-full"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -429,17 +429,17 @@
                 Education
               </h3>
               <div
-                class="relative p-6 rounded-lg border-l-4 border-purple-400 bg-white shadow-sm card-hover"
+                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm card-hover hover:bg-purple-500/10"
               >
                 <div
-                  class="absolute -left-3 top-6 w-6 h-6 bg-white border-2 border-purple-500 rounded-full"
+                  class="absolute -left-3 top-6 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
                 ></div>
                 <h4 class="text-xl font-bold mb-1">Diploma in Engineering</h4>
                 <span
-                  class="inline-block text-xs bg-purple-100 text-purple-800 px-3 py-1 rounded-full mb-2"
+                  class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full mb-2"
                   >2019 - 2024</span
                 >
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-white-600">
                   Government Polytechnic Institute, Bogura
                 </p>
               </div>
