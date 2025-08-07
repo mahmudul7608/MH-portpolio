@@ -238,7 +238,7 @@
     <!-- Scroll Mous section end -->
 
     <!-- about section start -->
-    <section id="about" class="py-16 text-white">
+    <section id="about" class="py-6 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
         <h2 class="text-3xl md:text-4xl font-bold text-center top-0 mb-12">
@@ -429,17 +429,17 @@
                 Education
               </h3>
               <div
-                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm card-hover hover:bg-purple-500/10"
+                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10"
               >
                 <div
-                  class="absolute -left-3 top-6 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
+                  class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
                 ></div>
-                <h4 class="text-xl font-bold mb-1">Diploma in Engineering</h4>
+                <h4 class="text-xl font-bold">Diploma in Engineering</h4>
                 <span
-                  class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full mb-2"
+                  class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
                   >2019 - 2024</span
                 >
-                <p class="text-sm text-white-600">
+                <p class="text-sm text-white-600 mt-2">
                   Government Polytechnic Institute, Bogura
                 </p>
               </div>
@@ -448,48 +448,48 @@
             <!-- Certifications -->
             <div>
               <div class="space-y-4">
-                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                <div class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Complete Web Development</h4>
-                      <p class="text-sm text-gray-500">Self Learning</p>
+                      <p class="text-sm text-white-500">Self Learning</p>
                     </div>
-                    <span class="text-xs text-gray-500"
+                    <span class="text-xs text-white-500"
                       >2022–2025(self-taught)</span
                     >
                   </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                <div class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Master HTML & CSS Projects</h4>
-                      <p class="text-sm text-gray-500">Self Learning</p>
+                      <p class="text-sm text-white-500">Self Learning</p>
                     </div>
-                    <span class="text-xs text-gray-500"
+                    <span class="text-xs text-white-500"
                       >2022–2023(self-taught)</span
                     >
                   </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                <div class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Master Git & GitHub</h4>
-                      <p class="text-sm text-gray-500">Self Learning</p>
+                      <p class="text-sm text-white-500">Self Learning</p>
                     </div>
-                    <span class="text-xs text-gray-500"
+                    <span class="text-xs text-white-500"
                       >2022–2025(self-taught)</span
                     >
                   </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                <div class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50">
                   <div class="flex justify-between items-center">
                     <div>
                       <h4 class="font-semibold">Communications</h4>
-                      <p class="text-sm text-gray-500">
+                      <p class="text-sm text-white-500">
                         10 Minute School, Duolingo
                       </p>
                     </div>
-                    <span class="text-xs text-gray-500">2025</span>
+                    <span class="text-xs text-white-500">2025</span>
                   </div>
                 </div>
               </div>
@@ -499,10 +499,10 @@
         </div>
       </div>
     </section>
-    <!-- about secyion end  -->
+    <!-- about section end  -->
 
-    <!-- true builder section start-->
-    <section id="skills" class="py-2 bg-black-100">
+    <!-- skills section start-->
+    <section id=" skills" class=" bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
           My
@@ -687,10 +687,10 @@
         </div>
       </div>
     </section>
-    <!-- true builder section end -->
+    <!-- skills section end -->
 
     <!-- tools section start -->
-    <section id="tools-i-use" class="bg-black-300 py-5 px-6">
+    <section id="tools-i-use" class="bg-black-500 py-2 px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
         Tools
         <span
@@ -700,7 +700,7 @@
       </h2>
 
       <div dir="ltr" data-orientation="horizontal" class="w-full mb-20">
-        <div class="flex justify-center mb-10 overflow-x-auto pb-2">
+        <div class="flex justify-center mb-4 overflow-x-auto">
           <div
             role="tablist"
             aria-orientation="horizontal"
@@ -1510,8 +1510,8 @@
     <!-- tools section end -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="bg-black-100 px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+    <section id="my-recent-project" class="bg-black-100 top-0">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">
         My
         <span
           class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
