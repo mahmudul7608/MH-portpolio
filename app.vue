@@ -1,36 +1,36 @@
 <template>
   <div
-    class="min-h-screen bg-gray-800 text-yellow-400 dark:text-white transition-colors duration-300"
+    class="min-h-screen bg-gray-900 text-yellow-400 dark:text-white transition-colors duration-300"
   >
     <!-- Header Navbar start -->
     <header class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-lg px-4">
     <nav class="relative z-50 font-light uppercase tracking-wide">
       
       <!-- Desktop Navbar -->
-      <div class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-3xl bg-[rgba(50,99,82,0.5)] items-center py-3 px-4 shadow-md shadow-blue-100/30 space-x-2">
+      <div class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-4xl bg-[rgba(50,99,82,0.5)] items-center py-2 px-3 shadow-md shadow-blue-100/30 space-x-2">
         <a
           href="#intro"
-          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#1bf154de]"
+          class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#1bf154de]"
         >Home</a>
         <a
           href="#about"
-          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+          class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
         >About</a>
         <a
           href="#skills"
-          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+          class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
         >Skills</a>
         <a
           href="#tools-i-use"
-          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+          class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
         >Tools</a>
         <a
           href="#my-recent-project"
-          class="px-4 py-2 text-sm border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
+          class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
         >Projects</a>
         <a
           href="#contact-me"
-          class="px-4 py-2 text-sm transition-colors duration-200 hover:text-[#c9f721]"
+          class="px-4 py-2 text-[16px] transition-colors duration-200 hover:text-[#c9f721]"
         >Contact</a>
       </div>
 
@@ -135,19 +135,19 @@
 
         <!-- Social Media -->
         <div
-          class="flex items-center space-x-4 justify-center md:justify-start pt-6"
+          class="flex items-center space-x-4 justify-center md:justify-start pt-6 "
         >
           <!-- GitHub -->
           <a
             href="https://github.com/mahmudul7608"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-2 rounded-full hover:bg-secondary transition-colors"
+            class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
             aria-label="GitHub"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
+              class="h-5 w-5 "
               fill="none"
               stroke="currentColor"
               stroke-width="2"
@@ -167,7 +167,7 @@
             href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-2 rounded-full hover:bg-secondary transition-colors"
+            class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
             aria-label="LinkedIn"
           >
             <svg
@@ -191,7 +191,7 @@
           <!-- Email -->
           <a
             href="mailto:dev.mahmudulhasan2@gmail.com"
-            class="p-2 rounded-full hover:bg-secondary transition-colors"
+            class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
             aria-label="Email"
           >
             <svg
@@ -254,12 +254,12 @@
           <!-- Left: Personal Info -->
           <div>
             <p
-              class="text-muted-foreground mb-6 mt-4 text-sm md:text-base leading-relaxed"
+              class="text-muted-foreground mb-6 mt-5 text-lg md:text-base leading-relaxed"
             >
               I’m a
-              <span class="text-sky-600 font-semibold">Diploma Engineer</span>
+              <span class="text-purple-500 font-semibold">Diploma Engineer</span>
               and passionate self-taught
-              <span class="text-sky-600 font-semibold">Frontend Developer</span>
+              <span class="text-purple-500 font-semibold">Frontend Developer</span>
               with solid experience in building modern, user-friendly web
               interfaces. I’ve worked with startups and teams to turn ideas into
               scalable applications that deliver real results.
@@ -502,7 +502,7 @@
     <!-- about section end  -->
 
     <!-- skills section start-->
-    <section id=" skills" class=" bg-black-100">
+    <section id="skills" class="mt-10 bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
           My
@@ -513,7 +513,7 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
           >
             <div class="p-6 pt-8 relative">
               <div class="flex flex-col items-center text-center">
@@ -574,7 +574,7 @@
             </div>
           </div>
           <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30  bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
           >
             <div class="p-6 pt-8 relative">
               <div class="flex flex-col items-center text-center">
@@ -622,7 +622,7 @@
             </div>
           </div>
           <div
-            class="rounded-lg border text-card-foreground shadow-sm bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30  bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/50 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
           >
             <div class="p-6 pt-8 relative">
               <div class="flex flex-col items-center text-center">
@@ -690,7 +690,7 @@
     <!-- skills section end -->
 
     <!-- tools section start -->
-    <section id="tools-i-use" class="bg-black-500 py-2 px-6">
+    <section id="tools-i-use" class="mt-10 bg-black-500 py-2 px-3">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
         Tools
         <span
@@ -699,7 +699,7 @@
         >
       </h2>
 
-      <div dir="ltr" data-orientation="horizontal" class="w-full mb-20">
+      <div dir="ltr" data-orientation="horizontal" class="w-full mb-10">
         <div class="flex justify-center mb-4 overflow-x-auto">
           <div
             role="tablist"
@@ -1652,7 +1652,7 @@
     <!-- my project section end -->
 
     <!-- Contact section start -->
-    <section id="contact-me" class="py-6 bg-black-100">
+    <section id="contact-me" class=" bg-black-100">
       <div class="container mx-auto px-4 md:px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -1933,7 +1933,7 @@
     <!-- contact section end -->
 
     <!-- footer section start -->
-    <footer class="bg-card pt-16 pb-6">
+    <footer class="bg-card pb-4">
       <div class="container mx-auto px-4 md:px-6">
         <!-- Back to Top Button -->
         <div class="flex justify-center mb-10">
@@ -2013,13 +2013,6 @@
                     href="#my-recent-project"
                     class="hover:text-purple-500 transition-colors"
                     >Project</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#contact-me"
-                    class="hover:text-purple-500 transition-colors"
-                    >Contact</a
                   >
                 </li>
               </ul>
