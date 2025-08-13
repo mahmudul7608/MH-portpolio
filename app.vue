@@ -824,8 +824,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="70"
-                    height="70"
+                    width="50"
+                    height="50"
                     viewBox="0 0 48 48"
                   >
                     <polygon
@@ -853,8 +853,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="80"
-                    height="80"
+                    width="50"
+                    height="50"
                     viewBox="0 0 48 48"
                   >
                     <polygon
@@ -889,13 +889,13 @@
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3">
+                <div class="mb-2 p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="80"
-                    height="80"
+                    width="60"
+                    height="60"
                     viewBox="0 0 100 100"
                   >
                     <path
@@ -1054,8 +1054,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="100"
-                    height="100"
+                    width="50"
+                    height="50"
                     viewBox="0 0 48 48"
                   >
                     <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -1080,8 +1080,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="100"
-                    height="100"
+                    width="50"
+                    height="50"
                     viewBox="0 0 48 48"
                   >
                     <rect
@@ -1116,8 +1116,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="100"
-                    height="100"
+                    width="50"
+                    height="50"
                     viewBox="0 0 100 100"
                   >
                     <path
@@ -1162,24 +1162,14 @@
               >
                 <div class="mb-3 p-3">
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-paintbrush w-8 h-8 text-purple-500"
+                    fill="currentColor"
                   >
-                    <path d="m14.622 17.897-10.68-2.913"></path>
                     <path
-                      d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"
-                    ></path>
-                    <path
-                      d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"
-                    ></path>
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
                   </svg>
                 </div>
                 <h3 class="font-medium text-sm sm:text-base">CSS</h3>
