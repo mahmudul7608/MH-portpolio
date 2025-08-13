@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-gray-900 text-yellow-400 dark:text-white transition-colors duration-300"
+    class="min-h-screen bg-gray-900 text-white transition-colors duration-300"
   >
     <!-- Header Navbar start -->
     <header
@@ -135,13 +135,13 @@
         <!-- Buttons -->
         <div class="flex flex-wrap gap-4 justify-center md:justify-start mt-8">
           <a
-            href="#contact"
+            href="#contact-me"
             class="inline-block px-5 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
           >
             Get in Touch
           </a>
           <a
-            href="#projects"
+            href="#my-recent-project"
             class="inline-block px-5 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
           >
             View Projects
@@ -335,7 +335,7 @@
             <!-- Action Buttons -->
             <div class="flex flex-wrap gap-4 mb-10">
               <a
-                href="#contact"
+                href="#contact-me"
                 class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium shadow-lg hover:scale-105 transition"
                 >Contact Me</a
               >
@@ -1997,7 +1997,7 @@
                         <a
                           href="tel:+88016-50217808"
                           class="text-purple-500 hover:underline"
-                          >+88016-50217808</a
+                          >+88016-50217608</a
                         >
                       </div>
                     </div>
@@ -2080,7 +2080,7 @@
                           <rect width="4" height="12" x="2" y="9"></rect>
                           <circle cx="4" cy="4" r="2"></circle></svg></a
                       ><a
-                        href="https://wa.me/88016-50217808"
+                        href="https://wa.me/88016-50217608"
                         class="p-3 bg-secondary rounded-full text-foreground hover:bg-purple-500 hover:text-white transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2108,7 +2108,7 @@
     <!-- contact section end -->
 
     <!-- footer section start -->
-    <footer class="bg-card pb-4">
+    <footer class="bg-card pb-7">
       <div class="container mx-auto px-4 md:px-6">
         <!-- Back to Top Button -->
         <div class="flex justify-center mb-10">
@@ -2135,12 +2135,12 @@
         </div>
 
         <!-- Main Footer Content -->
-        <div class="border-b border-muted pb-10 mb-10">
+        <div class="border-b border-muted pb-10 mb-5 ">
           <div
             class="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground"
           >
             <!-- About -->
-            <div>
+            <div class="ml-10">
               <h3 class="text-2xl font-bold gradient-text mb-4 text-white">
                 Mahmudul Hasan<span class="text-purple-500">.</span>
               </h3>
@@ -2152,7 +2152,7 @@
             </div>
 
             <!-- Quick Links -->
-            <div>
+            <div class="ml-[7rem]">
               <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
               <ul class="space-y-2">
                 <li>
@@ -2194,7 +2194,7 @@
             </div>
 
             <!-- Contact Info -->
-            <div>
+            <div class="ml-20">
               <h4 class="text-lg font-semibold text-white mb-4">
                 Get in Touch
               </h4>
@@ -2212,9 +2212,9 @@
                     />
                   </svg>
                   <a
-                    href="tel:+8801650217808"
+                    href="tel:+8801650217608"
                     class="hover:text-purple-500 transition-colors"
-                    >+88016-50217808</a
+                    >+88016-50217608</a
                   >
                 </li>
                 <li class="flex items-center">
