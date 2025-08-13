@@ -1711,7 +1711,7 @@
               <a
                 href="https://practice-api-project.netlify.app/"
                 target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
               >
                 🔗 Live View
               </a>
@@ -1732,7 +1732,7 @@
               <a
                 href="https://animation-login-and-sign-in.netlify.app/#"
                 target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
               >
                 🔗 Live View
               </a>
@@ -1752,7 +1752,7 @@
               <a
                 href="https://meal-count.netlify.app/"
                 target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
               >
                 🔗 Live View
               </a>
@@ -1773,7 +1773,7 @@
               <a
                 href="https://mullo-koto-template.netlify.app/"
                 target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
               >
                 🔗 Live View
               </a>
@@ -1794,7 +1794,7 @@
               <a
                 href="https://country-duit-api-project.netlify.app/"
                 target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-sm rounded-full hover:opacity-90 transition"
+                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
               >
                 🔗 Live View
               </a>
@@ -1815,7 +1815,7 @@
               <a
                 href="https://intelligent-buisness.netlify.app/"
                 target="_blank"
-                class="px-2 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-xs rounded-full hover:opacity-90 transition"
+                class="px-2 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
               >
                 🔗 Live View
               </a>
@@ -1934,7 +1934,7 @@
               <div class="p-6 pt-0 -mt-16 relative">
                 <div class="bg-card p-6 rounded-lg shadow-lg">
                   <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
-                  <p class="text-muted-foreground mb-6">
+                  <p class="text-muted-foreground mb-">
                     "I'm always open to new opportunities, creative
                     collaborations, or simply connecting with like-minded
                     people. Whether you have a project in mind or just want to
@@ -2135,7 +2135,7 @@
         </div>
 
         <!-- Main Footer Content -->
-        <div class="border-b border-muted pb-10 mb-5 ">
+        <div class="border-b border-muted pb-10 mb-5">
           <div
             class="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground"
           >
