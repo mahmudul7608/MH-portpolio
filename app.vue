@@ -824,8 +824,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="50"
-                    height="50"
+                    width="40"
+                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <polygon
@@ -853,8 +853,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="50"
-                    height="50"
+                    width="40"
+                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <polygon
@@ -894,8 +894,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="60"
-                    height="60"
+                    width="50"
+                    height="50"
                     viewBox="0 0 100 100"
                   >
                     <path
@@ -1054,8 +1054,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="50"
-                    height="50"
+                    width="40"
+                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -1080,8 +1080,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="50"
-                    height="50"
+                    width="40"
+                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <rect
@@ -1116,8 +1116,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="50"
-                    height="50"
+                    width="40"
+                    height="40"
                     viewBox="0 0 100 100"
                   >
                     <path
@@ -1162,14 +1162,34 @@
               >
                 <div class="mb-3 p-3">
                   <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 128 128"
+                    class="w-10 h-10"
                   >
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    />
+                      fill="#1572B6"
+                      d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"
+                    ></path>
+                    <path
+                      fill="#33A9DC"
+                      d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"
+                    ></path>
+                    <path
+                      fill="#EBEBEB"
+                      d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"
+                    ></path>
+                    <path
+                      fill="#fff"
+                      d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"
+                    ></path>
+                    <path
+                      fill="#EBEBEB"
+                      d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"
+                    ></path>
                   </svg>
                 </div>
                 <h3 class="font-medium text-sm sm:text-base">CSS</h3>
@@ -1283,21 +1303,23 @@
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
                 <div class="mb-3 p-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-code w-8 h-8 text-purple-500"
-                  >
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
+                  
+            <svg
+              xmlns="http://www.w3.org/2000/svg" 
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-code w-8 h-8 text-purple-500"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          
                 </div>
                 <h3 class="font-medium text-sm sm:text-base">Node.js</h3>
               </div>
