@@ -223,6 +223,19 @@
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
           </a>
+          <!-- sms -->
+          <a
+            href="https://wa.me/8801650217808"
+            target="_blank"
+            class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
+            aria-label="WhatsApp"
+          >
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+              <path
+                d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
 
@@ -349,7 +362,7 @@
             <!-- Stats -->
             <div class="grid grid-cols-2 md:grid-cols-4 mt-8 gap-5">
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -369,7 +382,7 @@
                 </p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -392,7 +405,7 @@
                 <p class="text-xs text-muted-foreground">Projects Built</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -409,7 +422,7 @@
                 <p class="text-xs text-muted-foreground">Good Understanding</p>
               </div>
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -440,6 +453,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    
                   >
                     <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                     <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
@@ -448,10 +462,10 @@
                 Education
               </h3>
               <div
-                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10"
+                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
               >
                 <div
-                  class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
+                  class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full "
                 ></div>
                 <h4 class="text-xl font-bold">Diploma in Engineering</h4>
                 <span
@@ -468,7 +482,7 @@
             <div>
               <div class="space-y-4">
                 <div
-                  class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10"
+                  class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
                 >
                   <div class="flex justify-between items-center">
                     <div>
@@ -481,7 +495,7 @@
                   </div>
                 </div>
                 <div
-                  class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10"
+                  class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
                 >
                   <div class="flex justify-between items-center">
                     <div>
@@ -494,7 +508,7 @@
                   </div>
                 </div>
                 <div
-                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50"
+                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
                 >
                   <div class="flex justify-between items-center">
                     <div>
@@ -507,7 +521,7 @@
                   </div>
                 </div>
                 <div
-                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50"
+                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
                 >
                   <div class="flex justify-between items-center">
                     <div>
@@ -580,22 +594,22 @@
                   Languages & Frameworks / Build & Workflow
                 </p>
                 <div class="flex flex-wrap gap-2 mt-6">
-                  <span class="tech-badge">VueJs</span>
-                  <span class="tech-badge">NuxtJs</span>
-                  <span class="tech-badge">ReactJs</span>
-                  <span class="tech-badge">TypeScript</span>
-                  <span class="tech-badge">JavaScript</span>
-                  <span class="tech-badge">HTML5</span>
-                  <span class="tech-badge">HTML</span>
-                  <span class="tech-badge">JavaScript</span>
-                  <span class="tech-badge">NodeJs</span>
-                  <span class="tech-badge">Vite</span>
-                  <span class="tech-badge">ESLint</span>
-                  <span class="tech-badge">Prettier</span>
-                  <span class="tech-badge">Git</span>
-                  <span class="tech-badge">GitHub</span>
-                  <span class="tech-badge">VS Code</span>
-                  <span class="tech-badge">Figma</span>
+                  <span class="tech-badge cursor-pointer">VueJs</span>
+                  <span class="tech-badge cursor-pointer">NuxtJs</span>
+                  <span class="tech-badge cursor-pointer">ReactJs</span>
+                  <span class="tech-badge cursor-pointer">TypeScript</span>
+                  <span class="tech-badge cursor-pointer">JavaScript</span>
+                  <span class="tech-badge cursor-pointer">HTML5</span>
+                  <span class="tech-badge cursor-pointer">HTML</span>
+                  <span class="tech-badge cursor-pointer">JavaScript</span>
+                  <span class="tech-badge cursor-pointer">NodeJs</span>
+                  <span class="tech-badge cursor-pointer">Vite</span>
+                  <span class="tech-badge cursor-pointer">ESLint</span>
+                  <span class="tech-badge cursor-pointer">Prettier</span>
+                  <span class="tech-badge cursor-pointer">Git</span>
+                  <span class="tech-badge cursor-pointer">GitHub</span>
+                  <span class="tech-badge cursor-pointer">VS Code</span>
+                  <span class="tech-badge cursor-pointer">Figma</span>
                 </div>
               </div>
             </div>
@@ -634,16 +648,16 @@
                 <p class="text-white/70">Styling & UI</p>
                 <p class="text-white/70">Design & Animation</p>
                 <div class="flex flex-wrap gap-2 mt-6">
-                  <span class="tech-badge">Tailwind CSS</span>
-                  <span class="tech-badge">CSS</span>
-                  <span class="tech-badge">Styled Components</span>
-                  <span class="tech-badge">CSS Modules</span>
-                  <span class="tech-badge">Figma</span>
-                  <span class="tech-badge">Photoshop</span>
-                  <span class="tech-badge">Canva</span>
-                  <span class="tech-badge">VS Code</span>
-                  <span class="tech-badge">Framer Motion</span>
-                  <span class="tech-badge">Material-UI</span>
+                  <span class="tech-badge cursor-pointer">Tailwind CSS</span>
+                  <span class="tech-badge cursor-pointer">CSS</span>
+                  <span class="tech-badge cursor-pointer">Styled Components</span>
+                  <span class="tech-badge cursor-pointer">CSS Modules</span>
+                  <span class="tech-badge cursor-pointer">Figma</span>
+                  <span class="tech-badge cursor-pointer">Photoshop</span>
+                  <span class="tech-badge cursor-pointer">Canva</span>
+                  <span class="tech-badge cursor-pointer">VS Code</span>
+                  <span class="tech-badge cursor-pointer">Framer Motion</span>
+                  <span class="tech-badge cursor-pointer">Material-UI</span>
                 </div>
               </div>
             </div>
@@ -696,17 +710,17 @@
                   Bogura Polytechnic Institute, Bangladesh.
                 </p>
                 <div class="flex flex-wrap gap-2 mt-6">
-                  <span class="tech-badge">Engineering</span>
-                  <span class="tech-badge">Team Work</span>
-                  <span class="tech-badge">Building</span>
-                  <span class="tech-badge">Problem Solving</span>
-                  <span class="tech-badge">Creativity</span>
-                  <span class="tech-badge">Critical Thinking</span>
-                  <span class="tech-badge">Communication</span>
-                  <span class="tech-badge">Collaboration</span>
-                  <span class="tech-badge">Adaptability</span>
-                  <span class="tech-badge">Flexibility</span>
-                  <span class="tech-badge">Time Management</span>
+                  <span class="tech-badge cursor-pointer">Engineering</span>
+                  <span class="tech-badge cursor-pointer">Team Work</span>
+                  <span class="tech-badge cursor-pointer">Building</span>
+                  <span class="tech-badge cursor-pointer">Problem Solving</span>
+                  <span class="tech-badge cursor-pointer">Creativity</span>
+                  <span class="tech-badge cursor-pointer">Critical Thinking</span>
+                  <span class="tech-badge cursor-pointer">Communication</span>
+                  <span class="tech-badge cursor-pointer">Collaboration</span>
+                  <span class="tech-badge cursor-pointer">Adaptability</span>
+                  <span class="tech-badge cursor-pointer">Flexibility</span>
+                  <span class="tech-badge cursor-pointer">Time Management</span>
                 </div>
               </div>
             </div>
@@ -813,7 +827,7 @@
             class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
           >
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 0ms"
             >
               <div
@@ -842,7 +856,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 50ms"
             >
               <div
@@ -883,7 +897,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 100ms"
             >
               <div
@@ -1043,7 +1057,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 150ms"
             >
               <div
@@ -1069,7 +1083,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 200ms"
             >
               <div
@@ -1105,7 +1119,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 250ms"
             >
               <div
@@ -1154,13 +1168,13 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 300ms"
             >
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3">
+                <div class="mb-2 p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 128 128"
@@ -1196,13 +1210,13 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 350ms"
             >
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3">
+                <div class="mb-2 p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 128 128"
@@ -1230,7 +1244,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 400ms"
             >
               <div
@@ -1263,7 +1277,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 450ms"
             >
               <div
@@ -1297,13 +1311,13 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 50ms"
             >
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3">
+                <div class="mb-2 p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="40"
@@ -1389,7 +1403,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 200ms"
             >
               <div
@@ -1418,13 +1432,13 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 250ms"
             >
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3">
+                <div class="mb-2 p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="70"
@@ -1435,7 +1449,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-lock w-8 h-8 text-purple-500"
+                    class="lucide lucide-lock w-10 h-10 text-purple-500"
                   >
                     <path
                       fill-rule="evenodd"
@@ -1527,13 +1541,13 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 300ms"
             >
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3">
+                <div class="mb-2 p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1679,13 +1693,13 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 400ms"
             >
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3">
+                <div class="mb-2 p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="40"
@@ -1696,7 +1710,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-git-merge w-8 h-8 text-purple-500"
+                    class="lucide lucide-git-merge w-10 h-10 text-purple-500"
                   >
                     <path
                       fill="#F34F29"
@@ -1708,7 +1722,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 450ms"
             >
               <div
@@ -1743,7 +1757,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 0ms"
             >
               <div
@@ -1776,7 +1790,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 50ms"
             >
               <div
@@ -1821,7 +1835,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 100ms"
             >
               <div
@@ -1854,7 +1868,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 150ms"
             >
               <div
@@ -1887,7 +1901,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 200ms"
             >
               <div
@@ -1954,7 +1968,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 250ms"
             >
               <div
@@ -1985,7 +1999,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 300ms"
             >
               <div
@@ -2015,13 +2029,13 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 400ms"
             >
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-3 p-3 ">
+                <div class="mb-3 p-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
