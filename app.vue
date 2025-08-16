@@ -819,7 +819,7 @@
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-1 ">
+                <div class="mb-3 p-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -848,7 +848,7 @@
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-1">
+                <div class="mb-3 p-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -889,7 +889,7 @@
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-2 p-2">
+                <div class="mb-3 p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -1206,7 +1206,7 @@
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 128 128"
-                    class="w-8 h-8"
+                    class="w-10 h-10"
                   >
                     <path
                       fill="#E44D26"
@@ -1991,7 +1991,7 @@
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-1">
+                <div class="mb-2 p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -2014,7 +2014,6 @@
                 </h3>
               </div>
             </div>
-
             <div
               class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0"
               style="transition-delay: 400ms"
@@ -2022,7 +2021,7 @@
               <div
                 class="p-4 flex flex-col items-center justify-center text-center"
               >
-                <div class="mb-1 ">
+                <div class="mb-3 p-3 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
