@@ -1,3 +1,9 @@
+This is my personal portfolio
+
+i made this website in Nuxt js 
+
+Live preview: https://mh-portfolio01.netlify.app/
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
