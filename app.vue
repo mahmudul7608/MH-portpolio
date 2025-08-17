@@ -280,6 +280,101 @@
         <!-- Content Grid -->
         <div class="grid md:grid-cols-2 gap-12 items-start">
           <!-- Left: Personal Info -->
+          <div class="space-y-12">
+            <!-- Education -->
+            <div>
+              <h3 class="text-3xl font-bold mb-2 flex items-center">
+                <span class="p-2 mr-3 bg-purple-10 rounded-full">
+                  <svg
+                    class="w-10 h-15 text-White-500 rounded-full"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                  </svg>
+                </span>
+                Education
+              </h3>
+              <div
+                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
+              >
+                <div
+                  class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
+                ></div>
+                <h4 class="text-xl font-bold">Diploma in Engineering</h4>
+                <span
+                  class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
+                  >2019 - 2024</span
+                >
+                <p class="text-sm text-white-600 mt-2">
+                  Government Polytechnic Institute, Bogura
+                </p>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+              <div class="space-y-4">
+                <div
+                  class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Complete Web Development</h4>
+                      <p class="text-sm text-white-500">Self Learning</p>
+                    </div>
+                    <span class="text-xs text-white-500"
+                      >2022–2025(self-taught)</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Master HTML & CSS Projects</h4>
+                      <p class="text-sm text-white-500">Self Learning</p>
+                    </div>
+                    <span class="text-xs text-white-500"
+                      >2022–2023(self-taught)</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Master Git & GitHub</h4>
+                      <p class="text-sm text-white-500">Self Learning</p>
+                    </div>
+                    <span class="text-xs text-white-500"
+                      >2022–2025(self-taught)</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Communications</h4>
+                      <p class="text-sm text-white-500">
+                        10 Minute School, Duolingo
+                      </p>
+                    </div>
+                    <span class="text-xs text-white-500">2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Education & Certifications -->
+
           <div>
             <p
               class="text-muted-foreground mb-6 mt-5 text-lg md:text-base leading-relaxed"
@@ -441,101 +536,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Right: Education & Certifications -->
-          <div class="space-y-12">
-            <!-- Education -->
-            <div>
-              <h3 class="text-3xl font-bold mb-2 flex items-center">
-                <span class="p-2 mr-3 bg-purple-10 rounded-full">
-                  <svg
-                    class="w-10 h-15 text-White-500 rounded-full"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    
-                  >
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-                  </svg>
-                </span>
-                Education
-              </h3>
-              <div
-                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
-              >
-                <div
-                  class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full "
-                ></div>
-                <h4 class="text-xl font-bold">Diploma in Engineering</h4>
-                <span
-                  class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
-                  >2019 - 2024</span
-                >
-                <p class="text-sm text-white-600 mt-2">
-                  Government Polytechnic Institute, Bogura
-                </p>
-              </div>
-            </div>
-
-            <!-- Certifications -->
-            <div>
-              <div class="space-y-4">
-                <div
-                  class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Complete Web Development</h4>
-                      <p class="text-sm text-white-500">Self Learning</p>
-                    </div>
-                    <span class="text-xs text-white-500"
-                      >2022–2025(self-taught)</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Master HTML & CSS Projects</h4>
-                      <p class="text-sm text-white-500">Self Learning</p>
-                    </div>
-                    <span class="text-xs text-white-500"
-                      >2022–2023(self-taught)</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Master Git & GitHub</h4>
-                      <p class="text-sm text-white-500">Self Learning</p>
-                    </div>
-                    <span class="text-xs text-white-500"
-                      >2022–2025(self-taught)</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Communications</h4>
-                      <p class="text-sm text-white-500">
-                        10 Minute School, Duolingo
-                      </p>
-                    </div>
-                    <span class="text-xs text-white-500">2025</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <!-- End Right Column -->
         </div>
       </div>
@@ -650,7 +650,9 @@
                 <div class="flex flex-wrap gap-2 mt-6">
                   <span class="tech-badge cursor-pointer">Tailwind CSS</span>
                   <span class="tech-badge cursor-pointer">CSS</span>
-                  <span class="tech-badge cursor-pointer">Styled Components</span>
+                  <span class="tech-badge cursor-pointer"
+                    >Styled Components</span
+                  >
                   <span class="tech-badge cursor-pointer">CSS Modules</span>
                   <span class="tech-badge cursor-pointer">Figma</span>
                   <span class="tech-badge cursor-pointer">Photoshop</span>
@@ -715,7 +717,9 @@
                   <span class="tech-badge cursor-pointer">Building</span>
                   <span class="tech-badge cursor-pointer">Problem Solving</span>
                   <span class="tech-badge cursor-pointer">Creativity</span>
-                  <span class="tech-badge cursor-pointer">Critical Thinking</span>
+                  <span class="tech-badge cursor-pointer"
+                    >Critical Thinking</span
+                  >
                   <span class="tech-badge cursor-pointer">Communication</span>
                   <span class="tech-badge cursor-pointer">Collaboration</span>
                   <span class="tech-badge cursor-pointer">Adaptability</span>
