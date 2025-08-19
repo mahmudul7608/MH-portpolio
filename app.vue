@@ -2364,9 +2364,9 @@
                       <div>
                         <h4 class="font-medium">Email</h4>
                         <a
-                          href="mailto:dev.mahmudul@gmail.com"
+                          href="mailto:dev.mahmudulhasan2@gmail.com"
                           class="text-purple-500 hover:underline"
-                          >dev.mahmudul@gmail.com</a
+                          >dev.mahmudulhasan2@gmail.com</a
                         >
                       </div>
                     </div>
@@ -2626,9 +2626,9 @@
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                   <a
-                    href="mailto:dev.mahmudulhasan@gmail.com"
+                    href="mailto:dev.mahmudulhasan2@gmail.com"
                     class="hover:text-purple-500 transition-colors"
-                    >dev.mahmudulhasan@gmail.com</a
+                    >dev.mahmudulhasan2@gmail.com</a
                   >
                 </li>
                 <li class="flex items-center">
