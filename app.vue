@@ -831,7 +831,7 @@
             class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
           >
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-300 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 0ms"
             >
               <div
@@ -2242,7 +2242,7 @@
 
         <!-- Form Card -->
         <div
-          class="rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-black shadow-lg shadow-cyan-500/20 backdrop-blur-md transition-all duration-500 hover:shadow-pink-500/30"
+          class="rounded-2xl border border-white/10 bg-gradient-to-br from-gray-900 shadow-lg shadow-cyan-500/20 backdrop-blur-md transition-all duration-500 hover:shadow-pink-500/30"
         >
           <div class="p-8 md:p-10">
             <h3 class="text-2xl font-bold mb-8 text-center">
@@ -2330,13 +2330,13 @@
     <!-- contact section end -->
 
     <!-- footer section start -->
-    <footer class="bg-card pb-7">
-      <div class="container mx-auto px-4 md:px-6">
+    <footer class="bg-gray-900 py-10 mt-12">
+      <div class="container mx-auto px-4 md:px-6 text-center">
         <!-- Back to Top Button -->
-        <div class="flex justify-center mb-10">
+        <div class="flex justify-center mb-8">
           <a
             href="#intro"
-            class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-purple-500 bg-background text-muted-foreground hover:bg-purple-500 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
+            class="inline-flex items-center justify-center h-12 w-12 rounded-full border border-purple-500 bg-background text-muted-foreground hover:bg-purple-500 hover:text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 shadow-sm hover:shadow-lg"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -2355,192 +2355,92 @@
             <span class="sr-only">Back to top</span>
           </a>
         </div>
-
-        <!-- Main Footer Content -->
-        <div class="border-b border-muted pb-10 mb-5">
-          <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground"
+        <!-- Social Links -->
+        <div class="flex justify-center gap-12 mt-6">
+          <!-- GitHub -->
+          <a
+            href="https://github.com/mahmudul7608"
+            target="_blank"
+            class="text-muted-foreground hover:text-purple-500 transition-colors"
           >
-            <!-- About -->
-            <div class="ml-10">
-              <h3 class="text-2xl font-bold gradient-text mb-4 text-white">
-                Mahmudul Hasan<span class="text-purple-500">.</span>
-              </h3>
-              <p class="max-w-sm">
-                I’m a Diploma Engineer and passionate self-taught Frontend
-                Developer. I’ve worked with startups and teams to turn ideas
-                into scalable applications that deliver real results.
-              </p>
-            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.579 
+          0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 
+          1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.419-1.305.762-1.605-2.665-.304-5.466-1.334-5.466-5.931 
+          0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.004-.404 
+          11.48 11.48 0 0 1 3.003.404c2.293-1.552 3.3-1.23 3.3-1.23.655 1.653.243 2.873.119 3.176.77.84 
+          1.235 1.91 1.235 3.221 0 4.609-2.804 5.624-5.475 5.921.43.372.823 1.103.823 2.222 
+          0 1.606-.014 2.898-.014 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.3 24 12 
+          c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            <span class="sr-only">GitHub</span>
+          </a>
 
-            <!-- Quick Links -->
-            <div class="ml-[7rem]">
-              <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-              <ul class="space-y-2">
-                <li>
-                  <a
-                    href="#intro"
-                    class="hover:text-purple-500 transition-colors"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#about"
-                    class="hover:text-purple-500 transition-colors"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#skills"
-                    class="hover:text-purple-500 transition-colors"
-                    >Skills</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#tools-i-use"
-                    class="hover:text-purple-500 transition-colors"
-                    >Tools</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#my-recent-project"
-                    class="hover:text-purple-500 transition-colors"
-                    >Project</a
-                  >
-                </li>
-              </ul>
-            </div>
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
+            target="_blank"
+            class="text-muted-foreground hover:text-purple-500 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 
+          5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 
+          19h-3v-10h3v10zm-1.5-11.268c-.966 
+          0-1.75-.79-1.75-1.764s.784-1.764 
+          1.75-1.764 1.75.79 
+          1.75 1.764-.784 1.764-1.75 1.764zm13.5 
+          11.268h-3v-5.604c0-1.337-.027-3.063-1.868-3.063-1.87 
+          0-2.156 1.46-2.156 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 
+          1.379-1.562 2.84-1.562 3.039 0 3.602 2.002 
+          3.602 4.604v5.591z"
+              />
+            </svg>
+            <span class="sr-only">LinkedIn</span>
+          </a>
 
-            <!-- Contact Info -->
-            <div class="ml-20">
-              <h4 class="text-lg font-semibold text-white mb-4">
-                Get in Touch
-              </h4>
-              <ul class="space-y-2">
-                <li class="flex items-center">
-                  <svg
-                    class="h-4 w-4 text-purple-500 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                    />
-                  </svg>
-                  <a
-                    href="tel:+8801650217608"
-                    class="hover:text-purple-500 transition-colors"
-                    >+88016-50217608</a
-                  >
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="h-4 w-4 text-purple-500 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                  </svg>
-                  <a
-                    href="mailto:dev.mahmudulhasan2@gmail.com"
-                    class="hover:text-purple-500 transition-colors"
-                    >dev.mahmudulhasan2@gmail.com</a
-                  >
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="h-4 w-4 text-purple-500 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>Bogura, Bangladesh</span>
-                </li>
-              </ul>
-
-              <!-- Social Icons -->
-              <div class="flex space-x-3 mt-4">
-                <a
-                  href="https://github.com/mahmudul7608"
-                  target="_blank"
-                  class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
-                  aria-label="GitHub"
-                >
-                  <svg
-                    class="h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                    />
-                    <path d="M9 18c-4.51 2-5-2-7-2" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mahmudul-hasan-7608/"
-                  target="_blank"
-                  class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <svg
-                    class="h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
-                    />
-                    <rect x="2" y="9" width="4" height="12" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                </a>
-                <a
-                  href="https://wa.me/8801650217808"
-                  target="_blank"
-                  class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
-                  aria-label="WhatsApp"
-                >
-                  <svg
-                    class="h-4 w-4"
-                    fill="currentColor"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+          <!-- Email -->
+          <a
+            href="mailto:dev.mahmudulhasan2@gmail.com"
+            class="text-muted-foreground hover:text-purple-500 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4C2.897 4 2.01 4.897 
+          2.01 6L2 18c0 1.103.897 2 2 2h16c1.104 
+          0 2-.897 2-2V6c0-1.103-.896-2-2-2zm0 
+          4-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+            <span class="sr-only">Email</span>
+          </a>
         </div>
 
-        <!-- Bottom Footer -->
-        <div class="text-center">
-          <p class="text-muted-foreground text-sm">
-            © 2025 Mahmudul Hasan. All Rights Reserved.
-          </p>
-        </div>
+        <!-- Copyright -->
+        <p class="mt-6 text-xs text-muted-foreground">
+          © 2025 <span class="font-semibold">Mahmudul Hasan.</span> All Rights
+          Reserved.
+        </p>
       </div>
     </footer>
+
     <!-- footer section end -->
   </div>
 </template>
