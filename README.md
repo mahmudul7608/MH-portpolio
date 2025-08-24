@@ -1,12 +1,24 @@
 This is my personal portfolio
 
 i made this website in Nuxt js 
+Personal Portfolio — Built with Nuxt 3
 
-Live preview: https://mh-portfolio01.netlify.app/
+🚀 This is my personal portfolio website, crafted with Nuxt.js 3 and Tailwind CSS.
+It showcases my skills, projects, and journey as a Frontend Developer.
 
-# Nuxt Minimal Starter
+🔗 Live Preview: mh-portfolio01.netlify.app
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+✨ Features
+
+⚡ Nuxt 3 for fast & modern development
+
+🎨 Tailwind CSS for responsive and clean UI
+
+🌓 Dark / Light mode support (optional if you added)
+
+📱 Fully responsive design (mobile, tablet & desktop)
+
+🚀 Deployed on Netlify with free SSL/HTTPS
 
 ## Setup
 
