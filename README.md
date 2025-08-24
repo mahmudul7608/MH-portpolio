@@ -1,7 +1,7 @@
 This is my personal portfolio
 
 i made this website in Nuxt js 
-Personal Portfolio — Built with Nuxt 3
+Personal Portfolio Built with Nuxt 3
 
 🚀 This is my personal portfolio website, crafted with Nuxt.js 3 and Tailwind CSS.
 It showcases my skills, projects, and journey as a Frontend Developer.
