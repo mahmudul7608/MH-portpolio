@@ -2082,145 +2082,97 @@
     <!-- tools section end -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="bg-black-100 top-0">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">
-        My
-        <span
-          class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+    <section id="my-recent-project" class="relative">
+    <!-- Section Heading -->
+    <h2
+      class="text-3xl md:text-4xl font-extrabold text-center mb-14 text-white tracking-wide"
+    >
+      My
+      <span
+        class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
+      >
+        Projects
+      </span>
+    </h2>
+
+    <!-- Slider -->
+    <div
+      class="relative overflow-hidden max-w-7xl mx-auto px-4 md:px-8"
+      ref="sliderContainer"
+    >
+      <div
+        class="flex gap-8 transition-transform duration-700 ease-in-out"
+        :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+      >
+        <!-- Card -->
+        <div
+          v-for="(project, i) in projects"
+          :key="i"
+          class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40"
         >
-          Projects
-        </span>
-      </h2>
-
-      <div class="max-w-7xl mx-auto px-4 md:px-6 py-16">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          <!-- Project 1 -->
+          <!-- Image -->
           <div
-            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+            class="mb-5 h-52 overflow-hidden rounded-xl border border-white/10"
           >
             <img
-              src="./public/image/MH-imageSRC-1.png"
-              alt="Practice API Project Screenshot"
-              class="w-full h-60 object-cover rounded-t-2xl"
+              :src="project.image"
+              :alt="project.title"
+              class="w-full h-full object-cover hover:scale-110 transition duration-500"
+              loading="lazy"
             />
-            <div class="p-6 text-white flex flex-col gap-4">
-              <h3 class="text-xl font-semibold">Practice API Project</h3>
-              <a
-                href="https://practice-api-project.netlify.app/"
-                target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
           </div>
 
-          <!-- Project 2 -->
-          <div
-            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
+          <!-- Title -->
+          <h3
+            class="text-2xl font-semibold text-white mb-4 relative inline-block"
           >
-            <img
-              src="./public/image/MH-signin-6.png"
-              alt="Login Form UI Screenshot"
-              class="w-full h-60 object-cover rounded-t-2xl"
-            />
-            <div class="p-6 text-white flex flex-col gap-4">
-              <h3 class="text-xl font-semibold">Login Form UI</h3>
-              <a
-                href="https://animation-login-and-sign-in.netlify.app/#"
-                target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div
-            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
-          >
-            <img
-              src="./public/image/MH-millFiender-3.png"
-              alt="Mill Finder Project Screenshot"
-              class="w-full h-60 object-cover rounded-t-2xl"
-            />
-            <div class="p-6 text-white flex flex-col gap-4">
-              <h3 class="text-xl font-semibold">Mill Finder Project</h3>
-              <a
-                href="https://meal-count.netlify.app/"
-                target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
-          </div>
+            {{ project.title }}
+            <span
+              class="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-pink-500"
+            ></span>
+          </h3>
 
-          <!-- Project 4 -->
-          <div
-            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
-          >
-            <img
-              src="./public/image/MH-mullokoto-4.png"
-              alt="Mullokoto App Screenshot"
-              class="w-full h-60 object-cover rounded-t-2xl"
-            />
-            <div class="p-6 text-white flex flex-col gap-4">
-              <h3 class="text-xl font-semibold">Mullokoto App</h3>
-              <a
-                href="https://mullo-koto-template.netlify.app/"
-                target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div
-            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
-          >
-            <img
-              src="./public/image/MH-country-2.png"
-              alt="Country Info Project Screenshot"
-              class="w-full h-60 object-cover rounded-t-2xl"
-            />
-            <div class="p-6 text-white flex flex-col gap-4">
-              <h3 class="text-xl font-semibold">Country Info Project</h3>
-              <a
-                href="https://country-duit-api-project.netlify.app/"
-                target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div
-            class="bg-[#1c1c1e] rounded-2xl overflow-hidden shadow-xl border border-white/10 transition-transform hover:scale-[1.03] duration-300"
-          >
-            <img
-              src="./public/image/MH-5.png"
-              alt="Pet Shop Project Screenshot"
-              class="w-full h-60 object-cover rounded-t-2xl"
-            />
-            <div class="p-6 text-white flex flex-col gap-4">
-              <h3 class="text-xl font-semibold">Intelligent-business</h3>
-              <a
-                href="https://intelligent-buisness.netlify.app/"
-                target="_blank"
-                class="px-2 py-2 bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white text-md rounded-full hover:opacity-90 transition"
-              >
-                🔗 Live View
-              </a>
-            </div>
+          <!-- Button -->
+          <div class="flex justify-center mt-4">
+            <a
+              :href="project.live"
+              target="_blank"
+              class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transition duration-300"
+            >
+              🚀 Live Demo
+            </a>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Prev -->
+      <button
+        @click="prevSlide"
+        class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
+      >
+        ❮
+      </button>
+
+      <!-- Next -->
+      <button
+        @click="nextSlide"
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
+      >
+        ❯
+      </button>
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center gap-3 mt-10">
+      <span
+        v-for="(dot, i) in totalSlides"
+        :key="i"
+        class="w-3 h-3 rounded-full cursor-pointer transition-all duration-300"
+        :class="i === currentSlide ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' : 'bg-white/50 hover:bg-white/80'"
+        @click="goToSlide(i)"
+      ></span>
+    </div>
+  </section>
     <!-- my project section end -->
 
     <!-- Contact section start -->
@@ -2446,7 +2398,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted , onBeforeUnmount } from "vue";
 
 // navigation bar
 const isOpen = ref(false);
@@ -2455,6 +2407,83 @@ const toggleMenu = () => {
 };
 
 // navigation bar end
+const projects = ref([
+  {
+    title: "Practice API Project",
+    image: "/image/MH-imageSRC-1.png",
+    live: "https://practice-api-project.netlify.app/",
+  },
+  {
+    title: "Login Form UI",
+    image: "/image/MH-signin-6.png",
+    live: "https://animation-login-and-sign-in.netlify.app/",
+  },
+  {
+    title: "Mill Finder Project",
+    image: "/image/MH-millFiender-3.png",
+    live: "https://meal-count.netlify.app/",
+  },
+  {
+    title: "Mullokoto App",
+    image: "/image/MH-mullokoto-4.png",
+    live: "https://mullo-koto-template.netlify.app/",
+  },
+  {
+    title: "Country Info Project",
+    image: "/image/MH-country-2.png",
+    live: "https://country-duit-api-project.netlify.app/",
+  },
+  {
+    title: "Intelligent-business",
+    image: "/image/MH-5.png",
+    live: "https://intelligent-buisness.netlify.app/",
+  },
+]);
+
+const currentSlide = ref(0);
+const sliderContainer = ref(null);
+
+const cardsPerView = computed(() => {
+  if (window.innerWidth <= 640) return 1;
+  if (window.innerWidth <= 1024) return 2;
+  return 3;
+});
+
+const totalSlides = computed(() =>
+  Math.ceil(projects.value.length / cardsPerView.value)
+);
+
+function nextSlide() {
+  currentSlide.value =
+    currentSlide.value >= totalSlides.value - 1 ? 0 : currentSlide.value + 1;
+}
+
+function prevSlide() {
+  currentSlide.value =
+    currentSlide.value <= 0 ? totalSlides.value - 1 : currentSlide.value - 1;
+}
+
+function goToSlide(index) {
+  currentSlide.value = index;
+}
+
+let autoSlide;
+onMounted(() => {
+  autoSlide = setInterval(() => {
+    nextSlide();
+  }, 5000);
+
+  sliderContainer.value.addEventListener("mouseenter", () =>
+    clearInterval(autoSlide)
+  );
+  sliderContainer.value.addEventListener("mouseleave", () => {
+    autoSlide = setInterval(() => nextSlide(), 5000);
+  });
+
+  window.addEventListener("resize", () => (currentSlide.value = 0));
+});
+
+onBeforeUnmount(() => clearInterval(autoSlide));
 </script>
 
 <style scoped>
