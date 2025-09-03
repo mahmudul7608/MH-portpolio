@@ -1,3 +1,4 @@
+// tailwind.config.js
 module.exports = {
   content: [
     "./components/**/*.{vue,js}",
@@ -22,9 +23,21 @@ module.exports = {
               "polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%)",
           },
         },
+        typingFrontend: {
+          "0%": { width: "0%" },
+          "50%": { width: "100%" }, // প্রথম 3s
+          "100%": { width: "100%" },
+        },
+        typingDeveloper: {
+          "0%, 50%": { width: "0%" },
+          "50%": { width: "0%" },
+          "100%": { width: "100%" }, // পরের 3s
+        },
       },
       animation: {
         waves: "waves 4s ease-in-out infinite",
+        frontend: "typingFrontend 6s steps(30) infinite",
+        developer: "typingDeveloper 6s steps(30) infinite",
       },
     },
   },

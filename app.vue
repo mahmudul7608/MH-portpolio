@@ -108,19 +108,25 @@
     >
       <!-- Text Content -->
       <div class="w-full mt-[70px] md:w-1/2 text-center md:text-left">
-        <h2 class="font-extrabold leading-tight">
-          <span
-            class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block"
-          >
-            FRONTEND
-          </span>
-          <span
-            class="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-2"
-          >
-            DEVELOPER
-          </span>
-        </h2>
+       <h2 class="font-extrabold leading-tight">
+      <!-- FRONTEND -->
+      <span
+        class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block 
+               overflow-hidden whitespace-nowrap 
+               animate-frontend"
+      >
+        FRONTEND
+      </span>
 
+      <!-- DEVELOPER -->
+      <span
+        class="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-2 
+               overflow-hidden whitespace-nowrap 
+               animate-developer"
+      >
+        DEVELOPER
+      </span>
+    </h2>
         <p class="mt-6 text-white-700 text-base leading-relaxed">
           <span class="font-semibold text-white">I'm</span>
           – a
