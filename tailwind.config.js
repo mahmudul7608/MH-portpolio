@@ -39,7 +39,7 @@ module.exports = {
         developer: "typingDeveloper 6s steps(30) infinite",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"], // ✅ এখানে Poppins এড করলাম
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

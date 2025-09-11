@@ -6,98 +6,105 @@
     <header
       class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-lg px-4"
     >
-      <nav class="relative z-50 font-light uppercase tracking-wide">
-        <!-- Desktop Navbar -->
-        <div
-          class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-4xl bg-[rgba(8,168,115,0.5)] items-center py-2 px-3 shadow-md shadow-blue-100/30 space-x-2"
-        >
-          <a
-            href="#intro"
-            class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#1bf154de]"
-            >Home</a
-          >
-          <a
-            href="#about"
-            class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            >About</a
-          >
-          <a
-            href="#skills"
-            class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            >Skills</a
-          >
-          <a
-            href="#tools-i-use"
-            class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            >Tools</a
-          >
-          <a
-            href="#my-recent-project"
-            class="px-4 py-2 text-[16px] border-r border-white/10 transition-colors duration-200 hover:text-[#c9f721]"
-            >Projects</a
-          >
-          <a
-            href="#contact-me"
-            class="px-4 py-2 text-[16px] transition-colors duration-200 hover:text-[#c9f721]"
-            >Contact</a
-          >
-        </div>
+      <nav class="fixed top-0 left-0 w-full z-50 font-light uppercase tracking-wide">
+  <!-- Desktop Navbar -->
+  <div
+    class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 
+           border border-white/20 rounded-full 
+           backdrop-blur-2xl bg-[rgba(8,20,20,0.85)] 
+           items-center py-3 px-6 shadow-lg shadow-cyan-400/30 space-x-2"
+  >
+    <a
+      href="#intro"
+      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#00ff99]"
+      >Home</a
+    >
+    <a
+      href="#about"
+      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#ffcc00]"
+      >About</a
+    >
+    <a
+      href="#skills"
+      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#00aaff]"
+      >Skills</a
+    >
+    <a
+      href="#tools-i-use"
+      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#ff3366]"
+      >Tools</a
+    >
+    <a
+      href="#my-recent-project"
+      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#33ff77]"
+      >Projects</a
+    >
+    <a
+      href="#contact-me"
+      class="px-4 py-2 text-[15px] transition duration-200 hover:text-[#ff884d]"
+      >Contact</a
+    >
+  </div>
 
-        <!-- Mobile Top Bar -->
-        <div class="md:hidden flex justify-between items-center py-4">
-          <h1 class="text-white text-lg font-semibold">Menu</h1>
-          <button
-            @click="toggleMenu"
-            class="text-white text-3xl focus:outline-none"
-          >
-            <span v-if="!isOpen">☰</span>
-            <span v-else>✕</span>
-          </button>
-        </div>
+  <!-- Mobile Top Bar -->
+  <div class="md:hidden flex justify-between items-center py-4 px-4 bg-[rgba(8,20,20,0.95)] backdrop-blur-2xl shadow-md">
+    <h1 class="text-white text-lg font-semibold">Menu</h1>
+    <button
+      @click="toggleMenu"
+      class="text-white text-3xl focus:outline-none"
+    >
+      <span v-if="!isOpen">☰</span>
+      <span v-else>✕</span>
+    </button>
+  </div>
 
-        <!-- Mobile Menu -->
-        <div
-          v-if="isOpen"
-          class="md:hidden mt-2 mx-2 mb-4 flex flex-col bg-[rgba(37,74,61,0.95)] backdrop-blur-xl rounded-xl py-6 px-6 space-y-4 border border-white/10 shadow-lg transition-all duration-300"
-        >
-          <a
-            href="#intro"
-            @click="toggleMenu"
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            >Home</a
-          >
-          <a
-            href="#about"
-            @click="toggleMenu"
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            >About</a
-          >
-          <a
-            href="#skills"
-            @click="toggleMenu"
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            >Skills</a
-          >
-          <a
-            href="#tools-i-use"
-            @click="toggleMenu"
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            >Tools</a
-          >
-          <a
-            href="#my-recent-project"
-            @click="toggleMenu"
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            >Projects</a
-          >
-          <a
-            href="#contact-me"
-            @click="toggleMenu"
-            class="text-white font-medium text-base uppercase tracking-wide transition-colors hover:text-[#f73a21]"
-            >Contact</a
-          >
-        </div>
-      </nav>
+  <!-- Mobile Menu -->
+  <div
+    v-if="isOpen"
+    class="md:hidden mt-2 mx-3 mb-4 flex flex-col 
+           bg-[rgba(8,20,20,0.95)] backdrop-blur-2xl 
+           rounded-xl py-6 px-6 space-y-4 
+           border border-white/10 shadow-xl transition-all duration-300"
+  >
+    <a
+      href="#intro"
+      @click="toggleMenu"
+      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#00ff99]"
+      >Home</a
+    >
+    <a
+      href="#about"
+      @click="toggleMenu"
+      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#ffcc00]"
+      >About</a
+    >
+    <a
+      href="#skills"
+      @click="toggleMenu"
+      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#00aaff]"
+      >Skills</a
+    >
+    <a
+      href="#tools-i-use"
+      @click="toggleMenu"
+      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#ff3366]"
+      >Tools</a
+    >
+    <a
+      href="#my-recent-project"
+      @click="toggleMenu"
+      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#33ff77]"
+      >Projects</a
+    >
+    <a
+      href="#contact-me"
+      @click="toggleMenu"
+      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#ff884d]"
+      >Contact</a
+    >
+  </div>
+</nav>
+
     </header>
     <!-- End Header Navbar -->
 
