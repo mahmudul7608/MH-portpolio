@@ -9,7 +9,7 @@
       <nav class="relative z-50 font-light uppercase tracking-wide">
         <!-- Desktop Navbar -->
         <div
-          class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-4xl bg-[rgba(50,99,82,0.5)] items-center py-2 px-3 shadow-md shadow-blue-100/30 space-x-2"
+          class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 border border-white/10 rounded-full backdrop-blur-4xl bg-[rgba(8,168,115,0.5)] items-center py-2 px-3 shadow-md shadow-blue-100/30 space-x-2"
         >
           <a
             href="#intro"

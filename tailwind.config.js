@@ -1,4 +1,3 @@
-// tailwind.config.js
 module.exports = {
   content: [
     "./components/**/*.{vue,js}",
@@ -25,19 +24,22 @@ module.exports = {
         },
         typingFrontend: {
           "0%": { width: "0%" },
-          "50%": { width: "100%" }, // প্রথম 3s
+          "50%": { width: "100%" },
           "100%": { width: "100%" },
         },
         typingDeveloper: {
           "0%, 50%": { width: "0%" },
           "50%": { width: "0%" },
-          "100%": { width: "100%" }, // পরের 3s
+          "100%": { width: "100%" },
         },
       },
       animation: {
         waves: "waves 4s ease-in-out infinite",
         frontend: "typingFrontend 6s steps(30) infinite",
         developer: "typingDeveloper 6s steps(30) infinite",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"], // ✅ এখানে Poppins এড করলাম
       },
     },
   },
