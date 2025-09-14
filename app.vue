@@ -758,78 +758,6 @@
       </h2>
 
       <div dir="ltr" data-orientation="horizontal" class="w-full mb-10">
-        <div class="flex justify-center mb-4 overflow-x-auto">
-          <div
-            role="tablist"
-            aria-orientation="horizontal"
-            class="inline-flex h-10 items-center justify-center rounded-md p-1 text-muted-foreground bg-background/50 backdrop-blur-sm"
-            tabindex="0"
-            data-orientation="horizontal"
-            style="
-              border: dotted 1px #ccc;
-              border-radius: 8px;
-              overflow: hidden;
-            "
-          >
-            <button
-              type="button"
-              role="tab"
-              aria-selected="false"
-              aria-controls="radix-:r0:-content-frontend"
-              data-state="inactive"
-              id="radix-:r0:-trigger-frontend"
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-              tabindex="-1"
-              data-orientation="horizontal"
-              data-radix-collection-item=""
-            >
-              Frontend
-            </button>
-            /
-            <button
-              type="button"
-              role="tab"
-              aria-selected="false"
-              aria-controls="radix-:r0:-content-backend"
-              data-state="inactive"
-              id="radix-:r0:-trigger-backend"
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-              tabindex="-1"
-              data-orientation="horizontal"
-              data-radix-collection-item=""
-            >
-              Backend
-            </button>
-            /<button
-              type="button"
-              role="tab"
-              aria-selected="false"
-              aria-controls="radix-:r0:-content-tools"
-              data-state="inactive"
-              id="radix-:r0:-trigger-tools"
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-              tabindex="-1"
-              data-orientation="horizontal"
-              data-radix-collection-item=""
-            >
-              Tools
-            </button>
-            /<button
-              type="button"
-              role="tab"
-              aria-selected="false"
-              aria-controls="radix-:r0:-content-soft"
-              data-state="inactive"
-              id="radix-:r0:-trigger-soft"
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-              tabindex="-1"
-              data-orientation="horizontal"
-              data-radix-collection-item=""
-            >
-              Soft Skills
-            </button>
-          </div>
-        </div>
         <div
           data-state="active"
           data-orientation="horizontal"
@@ -2191,9 +2119,9 @@
     <!-- Contact section start -->
     <section
       id="contact-me"
-      class="bg-gray-900 min-h-screen flex items-center justify-center px-4 mb-8"
+      class="bg-gray-900 min-h-screen flex items-center justify-center px-4 mb-8 mt-8"
     >
-      <div class="w-full max-w-4xl">
+      <div class="w-full max-w-3xl">
         <!-- Heading -->
         <div class="text-center max-w-2xl mx-auto mb-12">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
