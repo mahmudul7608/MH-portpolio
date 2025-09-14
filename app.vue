@@ -11,7 +11,7 @@
   <div
     class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 
            border border-white/20 rounded-full 
-           backdrop-blur-2xl bg-[rgba(8,20,20,0.85)] 
+           backdrop-blur-2xl bg-[rgba(0,7,7,0.88)] 
            items-center py-3 px-6 shadow-lg shadow-cyan-400/30 space-x-2"
   >
     <a
@@ -544,7 +544,7 @@
                     <polyline points="8 6 2 12 8 18"></polyline>
                   </svg>
                 </div>
-                <div class="text-xl font-bold">30K+</div>
+                <div class="text-xl font-bold">40K+</div>
                 <p class="text-xs text-muted-foreground">Lines of Code</p>
               </div>
             </div>
@@ -2049,7 +2049,7 @@
         <div
           v-for="(project, i) in projects"
           :key="i"
-          class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40"
+          class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40 "
         >
           <!-- Image -->
           <div
