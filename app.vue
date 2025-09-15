@@ -2089,7 +2089,7 @@
       <!-- Prev -->
       <button
         @click="prevSlide"
-        class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
+        class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black border-1px border-black flex items-center justify-center shadow hover:scale-110 transition"
       >
         ❮
       </button>
@@ -2104,7 +2104,7 @@
     </div>
 
     <!-- Dots -->
-    <div class="flex justify-center gap-3 mt-10">
+    <div class="flex justify-center gap-3 mt-6">
       <span
         v-for="(dot, i) in totalSlides"
         :key="i"
@@ -2350,6 +2350,11 @@ const toggleMenu = () => {
 // navigation bar end
 const projects = ref([
   {
+    title: "Salad Recipe Project",
+    image: "/image/MH-salad.png",
+    live: "https://salad-section-hotel-sector.netlify.app/",
+  },
+  {
     title: "Practice API Project",
     image: "/image/MH-imageSRC-1.png",
     live: "https://practice-api-project.netlify.app/",
@@ -2360,9 +2365,9 @@ const projects = ref([
     live: "https://animation-login-and-sign-in.netlify.app/",
   },
   {
-    title: "Mill Finder Project",
-    image: "/image/MH-millFiender-3.png",
-    live: "https://meal-count.netlify.app/",
+    title: "Intelligent-business",
+    image: "/image/MH-5.png",
+    live: "https://intelligent-buisness.netlify.app/",
   },
   {
     title: "Mullokoto App",
@@ -2370,14 +2375,9 @@ const projects = ref([
     live: "https://mullo-koto-template.netlify.app/",
   },
   {
-    title: "Country Info Project",
-    image: "/image/MH-country-2.png",
-    live: "https://country-duit-api-project.netlify.app/",
-  },
-  {
-    title: "Intelligent-business",
-    image: "/image/MH-5.png",
-    live: "https://intelligent-buisness.netlify.app/",
+    title: "Meal Finder",
+    image: "/image/MH-millFiender-3.png",
+    live: "https://meal-count.netlify.app/",
   },
 ]);
 
