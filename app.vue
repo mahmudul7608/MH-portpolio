@@ -2080,7 +2080,7 @@
               target="_blank"
               class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transition duration-300"
             >
-              🚀 Live Demo
+              🚀 Live view 
             </a>
           </div>
         </div>
@@ -2357,7 +2357,7 @@ const projects = ref([
   {
     title: "Practice API Project",
     image: "/image/MH-imageSRC-1.png",
-    live: "https://practice-api-project.netlify.app/",
+    live: "https://image-search-website2.netlify.app/",
   },
   {
     title: "Login Form UI",
