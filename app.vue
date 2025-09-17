@@ -3,80 +3,90 @@
     class="min-h-screen bg-gray-900 text-white transition-colors duration-300"
   >
     <!-- Header Navbar start -->
-       <header class="fixed top-0 left-0 w-full z-50">
-    <!-- Scroll Progress Bar -->
-    <div class="fixed top-0 left-0 w-full h-[5px] bg-gray-800 z-50">
-      <div
-        class="h-[5px] bg-gradient-to-r from-cyan-400 to-blue-500 shadow-md transition-all duration-300"
-        :style="{ width: scrollProgress + '%' }"
-      ></div>
-    </div>
-
-    <!-- Desktop Sidebar Navbar -->
-    <aside
-      class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 
-             flex-col items-center space-y-5 
-             bg-gray-700/95 backdrop-blur-lg 
-             rounded-3xl p-4 shadow-2xl border border-white/10"
-    >
-      <a v-for="(item, i) in navItems" :key="i"
-        :href="item.href"
-        class="p-3 rounded-full bg-gray-800 text-white 
-               hover:scale-110 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500
-               transition-all duration-300 shadow-md"
-      >
-        {{ item.icon }}
-      </a>
-    </aside>
-
-    <!-- Mobile Navbar Button -->
-    <button
-      @click="menuOpen = true"
-      class="md:hidden fixed top-4 right-4 z-50 
-             p-3 rounded-full bg-gray-800 text-white shadow-lg 
-             hover:bg-cyan-500 transition-all duration-300"
-    >
-      ☰
-    </button>
-
-    <!-- Mobile Menu Overlay -->
-    <transition name="fade">
-      <div
-        v-if="menuOpen"
-        class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex justify-center items-center"
-      >
+    <header class="fixed top-0 left-0 w-full z-50">
+      <!-- Scroll Progress Bar -->
+      <div class="fixed top-0 left-0 w-full h-[5px] bg-gray-800 z-50">
         <div
-          class="bg-gray-900 rounded-2xl p-6 w-80 max-h-[90vh] overflow-y-auto shadow-2xl relative"
-        >
-          <!-- Close Button -->
-          <button
-            @click="menuOpen = false"
-            class="absolute top-3 right-3 text-white text-2xl hover:text-red-400 transition"
-          >
-            ✕
-          </button>
-
-          <!-- Mobile Nav List -->
-          <ul class="flex flex-col space-y-4 text-center text-white font-medium">
-            <li v-for="(item, i) in navItems" :key="i" class="relative">
-              <a
-                :href="item.href"
-                class="block py-2 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition"
-                @click="menuOpen = false"
-              >
-                {{ item.icon }} {{ item.label }}
-              </a>
-              <!-- Divider -->
-              <div
-                v-if="i !== navItems.length - 1"
-                class="border-b border-dashed border-gray-600 mt-2"
-              ></div>
-            </li>
-          </ul>
-        </div>
+          class="h-[5px] bg-gradient-to-r from-cyan-400 to-blue-500 shadow-md transition-all duration-300"
+          :style="{ width: scrollProgress + '%' }"
+        ></div>
       </div>
-    </transition>
-  </header>
+
+      <!-- Desktop Right Sidebar Navbar -->
+      <aside
+        class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-700/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/10"
+      >
+        <a
+          v-for="item in navItems"
+          :key="item.href"
+          :href="item.href"
+          class="p-3 rounded-full bg-gray-800 text-white hover:scale-110 transition-all duration-300 shadow-md"
+          :class="{
+            'hover:bg-cyan-500': item.label === 'Home',
+            'hover:bg-pink-500': item.label === 'About',
+            'hover:bg-green-500': item.label === 'Skills',
+            'hover:bg-yellow-500': item.label === 'Tools',
+            'hover:bg-blue-500': item.label === 'Projects',
+            'hover:bg-purple-500': item.label === 'Contact',
+            'hover:bg-red-500': item.label === 'Footer',
+          }"
+        >
+          {{ item.icon }}
+        </a>
+      </aside>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        @click="isOpen = true"
+        class="md:hidden fixed top-4 right-4 z-50 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-cyan-500 transition-all duration-300"
+      >
+        ☰
+      </button>
+
+      <!-- Mobile Dropdown Menu -->
+      <transition name="fade">
+        <div
+          v-if="isOpen"
+          class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex justify-center items-center"
+        >
+          <div
+            class="bg-gray-900 rounded-2xl p-6 w-80 max-h-[90vh] overflow-y-auto shadow-2xl relative"
+          >
+            <!-- Close Button -->
+            <button
+              @click="isOpen = false"
+              class="absolute top-3 right-3 text-white text-2xl hover:text-red-400 transition"
+            >
+              ✕
+            </button>
+
+            <!-- Nav Links -->
+            <ul
+              class="flex flex-col space-y-4 text-center text-white font-medium"
+            >
+              <li
+                v-for="(item, i) in navItems"
+                :key="item.href"
+                class="relative"
+              >
+                <a
+                  :href="item.href"
+                  class="block py-2 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition"
+                  @click="isOpen = false"
+                >
+                  {{ item.icon }} {{ item.label }}
+                </a>
+                <!-- Divider -->
+                <div
+                  v-if="i !== navItems.length - 1"
+                  class="border-b border-dashed border-gray-600 mt-2"
+                ></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </transition>
+    </header>
     <!-- End Header Navbar -->
 
     <!-- Hero Section start -->
@@ -86,25 +96,21 @@
     >
       <!-- Text Content -->
       <div class="w-full mt-[70px] md:w-1/2 text-center md:text-left">
-       <h2 class="font-extrabold leading-tight">
-      <!-- FRONTEND -->
-      <span
-        class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block 
-               overflow-hidden whitespace-nowrap 
-               animate-frontend"
-      >
-        FRONTEND
-      </span>
+        <h2 class="font-extrabold leading-tight">
+          <!-- FRONTEND -->
+          <span
+            class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block overflow-hidden whitespace-nowrap animate-frontend"
+          >
+            FRONTEND
+          </span>
 
-      <!-- DEVELOPER -->
-      <span
-        class="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-2 
-               overflow-hidden whitespace-nowrap 
-               animate-developer"
-      >
-        DEVELOPER
-      </span>
-    </h2>
+          <!-- DEVELOPER -->
+          <span
+            class="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-2 overflow-hidden whitespace-nowrap animate-developer"
+          >
+            DEVELOPER
+          </span>
+        </h2>
         <p class="mt-6 text-white-700 text-base leading-relaxed">
           <span class="font-semibold text-white">I'm</span>
           – a
@@ -1995,96 +2001,100 @@
 
     <!-- My project section start -->
     <section id="my-recent-project" class="relative">
-    <!-- Section Heading -->
-    <h2
-      class="text-3xl md:text-4xl font-extrabold text-center mb-14 text-white tracking-wide"
-    >
-      My
-      <span
-        class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
+      <!-- Section Heading -->
+      <h2
+        class="text-3xl md:text-4xl font-extrabold text-center mb-14 text-white tracking-wide"
       >
-        Projects
-      </span>
-    </h2>
-
-    <!-- Slider -->
-    <div
-      class="relative overflow-hidden max-w-7xl mx-auto px-4 md:px-8"
-      ref="sliderContainer"
-    >
-      <div
-        class="flex gap-8 transition-transform duration-700 ease-in-out"
-        :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
-      >
-        <!-- Card -->
-        <div
-          v-for="(project, i) in projects"
-          :key="i"
-          class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40 "
+        My
+        <span
+          class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
         >
-          <!-- Image -->
+          Projects
+        </span>
+      </h2>
+
+      <!-- Slider -->
+      <div
+        class="relative overflow-hidden max-w-7xl mx-auto px-4 md:px-8"
+        ref="sliderContainer"
+      >
+        <div
+          class="flex gap-8 transition-transform duration-700 ease-in-out"
+          :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+        >
+          <!-- Card -->
           <div
-            class="mb-5 h-52 overflow-hidden rounded-xl border border-white/10"
+            v-for="(project, i) in projects"
+            :key="i"
+            class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40"
           >
-            <img
-              :src="project.image"
-              :alt="project.title"
-              class="w-full h-full object-cover hover:scale-110 transition duration-500"
-              loading="lazy"
-            />
-          </div>
-
-          <!-- Title -->
-          <h3
-            class="text-2xl font-semibold text-white mb-4 relative inline-block"
-          >
-            {{ project.title }}
-            <span
-              class="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-pink-500"
-            ></span>
-          </h3>
-
-          <!-- Button -->
-          <div class="flex justify-center mt-4">
-            <a
-              :href="project.live"
-              target="_blank"
-              class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transition duration-300"
+            <!-- Image -->
+            <div
+              class="mb-5 h-52 overflow-hidden rounded-xl border border-white/10"
             >
-              🚀 Live view 
-            </a>
+              <img
+                :src="project.image"
+                :alt="project.title"
+                class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Title -->
+            <h3
+              class="text-2xl font-semibold text-white mb-4 relative inline-block"
+            >
+              {{ project.title }}
+              <span
+                class="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-pink-500"
+              ></span>
+            </h3>
+
+            <!-- Button -->
+            <div class="flex justify-center mt-4">
+              <a
+                :href="project.live"
+                target="_blank"
+                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transition duration-300"
+              >
+                🚀 Live view
+              </a>
+            </div>
           </div>
         </div>
+
+        <!-- Prev -->
+        <button
+          @click="prevSlide"
+          class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black border-1px border-black flex items-center justify-center shadow hover:scale-110 transition"
+        >
+          ❮
+        </button>
+
+        <!-- Next -->
+        <button
+          @click="nextSlide"
+          class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
+        >
+          ❯
+        </button>
       </div>
 
-      <!-- Prev -->
-      <button
-        @click="prevSlide"
-        class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black border-1px border-black flex items-center justify-center shadow hover:scale-110 transition"
-      >
-        ❮
-      </button>
-
-      <!-- Next -->
-      <button
-        @click="nextSlide"
-        class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
-      >
-        ❯
-      </button>
-    </div>
-
-    <!-- Dots -->
-    <div class="flex justify-center gap-3 mt-6">
-      <span
-        v-for="(dot, i) in totalSlides"
-        :key="i"
-        class="w-3 h-3 rounded-full cursor-pointer transition-all duration-300"
-        :class="i === currentSlide ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' : 'bg-white/50 hover:bg-white/80'"
-        @click="goToSlide(i)"
-      ></span>
-    </div>
-  </section>
+      <!-- Dots -->
+      <div class="flex justify-center gap-3 mt-6">
+        <span
+          v-for="(dot, i) in totalSlides"
+          :key="i"
+          class="w-3 h-3 rounded-full cursor-pointer transition-all duration-300"
+          :class="
+            i === currentSlide
+              ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
+              : 'bg-white/50 hover:bg-white/80'
+          "
+          @click="goToSlide(i)"
+        ></span>
+      </div>
+    </section>
     <!-- my project section end -->
 
     <!-- Contact section start -->
@@ -2312,36 +2322,28 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 
-// navigation bar
+// Scroll progress bar
 const scrollProgress = ref(0);
-const isOpen = ref(false);
-
 const updateScroll = () => {
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
   scrollProgress.value = (scrollTop / docHeight) * 100;
 };
+onMounted(() => window.addEventListener("scroll", updateScroll));
+onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-};
+// Mobile menu state
+const isOpen = ref(false);
 
-onMounted(() => {
-  window.addEventListener("scroll", updateScroll);
-});
-onBeforeUnmount(() => {
-  window.removeEventListener("scroll", updateScroll);
-});
-
-// nav items
+// Navbar items
 const navItems = [
-  { href: "#intro", icon: "🏠", label: "Home" },
-  { href: "#about", icon: "👤", label: "About" },
-  { href: "#skills", icon: "💡", label: "Skills" },
-  { href: "#tools-i-use", icon: "🛠", label: "Tools" },
-  { href: "#my-recent-project", icon: "📂", label: "Projects" },
-  { href: "#contact-me", icon: "✉", label: "Contact" },
-  { href: "#footer", icon: "⬇", label: "Footer" },
+  { href: "#intro", label: "Home", icon: "🏠" },
+  { href: "#about", label: "About", icon: "👤" },
+  { href: "#skills", label: "Skills", icon: "💡" },
+  { href: "#tools-i-use", label: "Tools", icon: "🛠" },
+  { href: "#my-recent-project", label: "Projects", icon: "📂" },
+  { href: "#contact-me", label: "Contact", icon: "✉" },
+  { href: "#footer", label: "Footer", icon: "⬇" },
 ];
 
 // projects slider
