@@ -10,7 +10,7 @@
     <!-- Scroll Progress Bar -->
     <div class="fixed top-0 left-0 w-full h-[5px] bg-gray-800 z-50">
       <div
-        class="h-[5px] bg-gradient-to-r from-cyan-400 to-blue-500 shadow-md transition-all duration-300"
+        class="h-[5px] bg-gradient-to-r from-cyan-700 to-blue-200 shadow-md transition-all duration-300"
         :style="{ width: scrollProgress + '%' }"
       ></div>
     </div>
@@ -19,7 +19,7 @@
     <aside
       class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 
              flex-col items-center space-y-5 
-             bg-gray-700/95 backdrop-blur-lg 
+             bg-gray-900/95 backdrop-blur-lg 
              rounded-3xl p-4 shadow-2xl border border-white/10"
     >
       <a
@@ -2329,20 +2329,22 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 
-// Scroll progress bar
+// 🌐 Scroll progress bar
 const scrollProgress = ref(0);
 const updateScroll = () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  scrollProgress.value = (scrollTop / docHeight) * 100;
+  if (process.client) {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    scrollProgress.value = (scrollTop / docHeight) * 100;
+  }
 };
 onMounted(() => window.addEventListener("scroll", updateScroll));
 onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 
-// Mobile menu state
+// 📱 Mobile menu state
 const isOpen = ref(false);
 
-// Navbar items
+// 🧭 Navbar items
 const navItems = [
   { href: "#intro", label: "Home", icon: "🏠" },
   { href: "#about", label: "About", icon: "👤" },
@@ -2353,7 +2355,7 @@ const navItems = [
   { href: "#footer", label: "Footer", icon: "⬇" },
 ];
 
-// Projects slider
+// 🖼 Projects slider
 const projects = ref([
   {
     title: "Salad Recipe Project",
@@ -2387,14 +2389,31 @@ const projects = ref([
   },
 ]);
 
-// ✅ Responsive slider fix
-const windowWidth = ref(window.innerWidth);
-const handleResize = () => {
-  windowWidth.value = window.innerWidth;
-  currentSlide.value = 0; // reset slide on resize
-};
-window.addEventListener("resize", handleResize);
+// 📐 Responsive slider fix
+const windowWidth = ref(1024); // default safe value
+const currentSlide = ref(0);
 
+const handleResize = () => {
+  if (process.client) {
+    windowWidth.value = window.innerWidth;
+    currentSlide.value = 0; // reset slide on resize
+  }
+};
+
+onMounted(() => {
+  // first set width safely
+  if (process.client) {
+    windowWidth.value = window.innerWidth;
+    window.addEventListener("resize", handleResize);
+  }
+});
+onBeforeUnmount(() => {
+  if (process.client) {
+    window.removeEventListener("resize", handleResize);
+  }
+});
+
+// 🔢 cards per view logic
 const cardsPerView = computed(() => {
   if (windowWidth.value <= 640) return 1;
   if (windowWidth.value <= 1024) return 2;
@@ -2405,7 +2424,6 @@ const totalSlides = computed(() =>
   Math.ceil(projects.value.length / cardsPerView.value)
 );
 
-const currentSlide = ref(0);
 const sliderContainer = ref(null);
 
 function nextSlide() {
@@ -2420,6 +2438,7 @@ function goToSlide(index) {
   currentSlide.value = index;
 }
 
+// 🔁 Auto slide
 let autoSlide;
 onMounted(() => {
   autoSlide = setInterval(() => nextSlide(), 5000);
@@ -2435,9 +2454,9 @@ onMounted(() => {
 });
 onBeforeUnmount(() => {
   clearInterval(autoSlide);
-  window.removeEventListener("resize", handleResize);
 });
 </script>
+
 
 <style scoped>
 /* fade transition */
@@ -2470,52 +2489,62 @@ onBeforeUnmount(() => {
 .galaxy-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at bottom, #0d1b2a, #000);
+  background: radial-gradient(ellipse at bottom, #173554, #000);
   z-index: -1;
   overflow: hidden;
 }
 
+/* ✨ star layers */
 .galaxy-bg::before,
 .galaxy-bg::after {
   content: "";
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 200%;
-  height: 200%;
+  width: 300%;
+  height: 300%;
   background-repeat: repeat;
   background-position: center;
   animation: moveStars 100s linear infinite;
 }
 
+/* ⭐ Mixed small + medium stars */
 .galaxy-bg::before {
-  background-image: radial-gradient(2px 2px at 20px 30px, white, transparent),
-    radial-gradient(1px 1px at 40px 60px, #9ae6ff, transparent),
-    radial-gradient(2px 2px at 130px 80px, #ffd6ff, transparent),
-    radial-gradient(1.5px 1.5px at 200px 150px, #ffe066, transparent),
-    radial-gradient(2px 2px at 300px 250px, white, transparent);
-  background-size: 300px 300px;
-  opacity: 0.8;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 80px 120px, #9ae6ff, transparent),
+    radial-gradient(1.5px 1.5px at 130px 80px, #ffd6ff, transparent),
+    radial-gradient(2.5px 2.5px at 200px 150px, #ffe066, transparent),
+    radial-gradient(3px 3px at 300px 250px, white, transparent),
+    radial-gradient(2px 2px at 400px 350px, #ffcccc, transparent),
+    radial-gradient(1.2px 1.2px at 500px 200px, #aaffff, transparent),
+    radial-gradient(2.5px 2.5px at 600px 400px, #fff, transparent),
+    radial-gradient(1px 1px at 700px 450px, #ffd6ff, transparent),
+    radial-gradient(3.5px 3.5px at 850px 600px, #9ae6ff, transparent);
+  background-size: 400px 400px;
+  opacity: 0.9;
 }
 
+/* 🌟 Big glowing stars + blue haze */
 .galaxy-bg::after {
-  background-image: radial-gradient(1px 1px at 100px 200px, #ff80ed, transparent),
-    radial-gradient(2px 2px at 250px 100px, #80edff, transparent),
-    radial-gradient(1.5px 1.5px at 400px 300px, white, transparent),
-    radial-gradient(2px 2px at 500px 400px, #b3ff66, transparent),
-    radial-gradient(1px 1px at 600px 500px, #ffb366, transparent);
-  background-size: 600px 600px;
-  opacity: 0.5;
+  background-image: 
+    radial-gradient(4px 4px at 100px 200px, #ff80ed, transparent),
+    radial-gradient(3px 3px at 250px 100px, #80edff, transparent),
+    radial-gradient(2px 2px at 400px 300px, white, transparent),
+    radial-gradient(3.5px 3.5px at 550px 350px, #b3ff66, transparent),
+    radial-gradient(5px 5px at 700px 500px, #ffb366, transparent),
+    radial-gradient(3.5px 3.5px at 900px 650px, #fff, transparent),
+    /* 🌌 blue nebula glow */
+    radial-gradient(800px 800px at 50% 50%, rgba(0, 119, 255, 0.1), transparent);
+  background-size: 800px 800px;
+  opacity: 0.7;
   animation-duration: 200s;
 }
 
 @keyframes moveStars {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-1000px);
-  }
+  from { transform: translateY(0); }
+  to   { transform: translateY(-1000px); }
 }
 </style>
+
 
