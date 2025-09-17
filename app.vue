@@ -1,92 +1,99 @@
 <template>
   <div
-    class="min-h-screen bg-gray-900 text-white transition-colors duration-300"
+    class="min-h-screen text-white transition-colors duration-300 relative overflow-hidden"
   >
+  <!-- Galaxy Animated Background -->
+  <div class="absolute inset-0 -z-10 galaxy-bg"></div>
+
     <!-- Header Navbar start -->
-    <header class="fixed top-0 left-0 w-full z-50">
-      <!-- Scroll Progress Bar -->
-      <div class="fixed top-0 left-0 w-full h-[5px] bg-gray-800 z-50">
-        <div
-          class="h-[5px] bg-gradient-to-r from-cyan-400 to-blue-500 shadow-md transition-all duration-300"
-          :style="{ width: scrollProgress + '%' }"
-        ></div>
-      </div>
+       <header class="fixed top-0 left-0 w-full z-50">
+    <!-- Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-[5px] bg-gray-800 z-50">
+      <div
+        class="h-[5px] bg-gradient-to-r from-cyan-400 to-blue-500 shadow-md transition-all duration-300"
+        :style="{ width: scrollProgress + '%' }"
+      ></div>
+    </div>
 
-      <!-- Desktop Right Sidebar Navbar -->
-      <aside
-        class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-700/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/10"
+    <!-- Desktop Right Sidebar Navbar -->
+    <aside
+      class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 
+             flex-col items-center space-y-5 
+             bg-gray-700/95 backdrop-blur-lg 
+             rounded-3xl p-4 shadow-2xl border border-white/10"
+    >
+      <a
+        v-for="item in navItems"
+        :key="item.href"
+        :href="item.href"
+        class="p-3 rounded-full bg-gray-800 text-white 
+               hover:scale-110 transition-all duration-300 shadow-md"
+        :class="{
+          'hover:bg-cyan-500': item.label === 'Home',
+          'hover:bg-pink-500': item.label === 'About',
+          'hover:bg-green-500': item.label === 'Skills',
+          'hover:bg-yellow-500': item.label === 'Tools',
+          'hover:bg-blue-500': item.label === 'Projects',
+          'hover:bg-purple-500': item.label === 'Contact',
+          'hover:bg-red-500': item.label === 'Footer',
+        }"
       >
-        <a
-          v-for="item in navItems"
-          :key="item.href"
-          :href="item.href"
-          class="p-3 rounded-full bg-gray-800 text-white hover:scale-110 transition-all duration-300 shadow-md"
-          :class="{
-            'hover:bg-cyan-500': item.label === 'Home',
-            'hover:bg-pink-500': item.label === 'About',
-            'hover:bg-green-500': item.label === 'Skills',
-            'hover:bg-yellow-500': item.label === 'Tools',
-            'hover:bg-blue-500': item.label === 'Projects',
-            'hover:bg-purple-500': item.label === 'Contact',
-            'hover:bg-red-500': item.label === 'Footer',
-          }"
-        >
-          {{ item.icon }}
-        </a>
-      </aside>
+        {{ item.icon }}
+      </a>
+    </aside>
 
-      <!-- Mobile Hamburger Button -->
-      <button
-        @click="isOpen = true"
-        class="md:hidden fixed top-4 right-4 z-50 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-cyan-500 transition-all duration-300"
+    <!-- Mobile Hamburger Button -->
+    <button
+      @click="isOpen = true"
+      class="md:hidden fixed top-4 right-4 z-50 
+             p-3 rounded-full bg-gray-800 text-white shadow-lg 
+             hover:bg-cyan-500 transition-all duration-300"
+    >
+      ☰
+    </button>
+
+    <!-- Mobile Dropdown Menu -->
+    <transition name="fade">
+      <div
+        v-if="isOpen"
+        class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex justify-center items-center"
       >
-        ☰
-      </button>
-
-      <!-- Mobile Dropdown Menu -->
-      <transition name="fade">
         <div
-          v-if="isOpen"
-          class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex justify-center items-center"
+          class="bg-gray-900 rounded-2xl p-6 w-80 max-h-[90vh] overflow-y-auto shadow-2xl relative"
         >
-          <div
-            class="bg-gray-900 rounded-2xl p-6 w-80 max-h-[90vh] overflow-y-auto shadow-2xl relative"
+          <!-- Close Button -->
+          <button
+            @click="isOpen = false"
+            class="absolute top-3 right-3 text-white text-2xl hover:text-red-400 transition"
           >
-            <!-- Close Button -->
-            <button
-              @click="isOpen = false"
-              class="absolute top-3 right-3 text-white text-2xl hover:text-red-400 transition"
-            >
-              ✕
-            </button>
+            ✕
+          </button>
 
-            <!-- Nav Links -->
-            <ul
-              class="flex flex-col space-y-4 text-center text-white font-medium"
+          <!-- Nav Links -->
+          <ul class="flex flex-col space-y-4 text-center text-white font-medium">
+            <li
+              v-for="(item, i) in navItems"
+              :key="item.href"
+              class="relative"
             >
-              <li
-                v-for="(item, i) in navItems"
-                :key="item.href"
-                class="relative"
+              <a
+                :href="item.href"
+                class="block py-2 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition"
+                @click="isOpen = false"
               >
-                <a
-                  :href="item.href"
-                  class="block py-2 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition"
-                  @click="isOpen = false"
-                >
-                  {{ item.icon }} {{ item.label }}
-                </a>
-                <!-- Divider -->
-                <div
-                  v-if="i !== navItems.length - 1"
-                  class="border-b border-dashed border-gray-600 mt-2"
-                ></div>
-              </li>
-            </ul>
-          </div>
+                {{ item.icon }} {{ item.label }}
+              </a>
+              <!-- Divider -->
+              <div
+                v-if="i !== navItems.length - 1"
+                class="border-b border-dashed border-gray-600 mt-2"
+              ></div>
+            </li>
+          </ul>
         </div>
-      </transition>
-    </header>
+      </div>
+    </transition>
+  </header>
     <!-- End Header Navbar -->
 
     <!-- Hero Section start -->
@@ -96,21 +103,25 @@
     >
       <!-- Text Content -->
       <div class="w-full mt-[70px] md:w-1/2 text-center md:text-left">
-        <h2 class="font-extrabold leading-tight">
-          <!-- FRONTEND -->
-          <span
-            class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block overflow-hidden whitespace-nowrap animate-frontend"
-          >
-            FRONTEND
-          </span>
+       <h2 class="font-extrabold leading-tight">
+      <!-- FRONTEND -->
+      <span
+        class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block 
+               overflow-hidden whitespace-nowrap 
+               animate-frontend"
+      >
+        FRONTEND
+      </span>
 
-          <!-- DEVELOPER -->
-          <span
-            class="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-2 overflow-hidden whitespace-nowrap animate-developer"
-          >
-            DEVELOPER
-          </span>
-        </h2>
+      <!-- DEVELOPER -->
+      <span
+        class="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-2 
+               overflow-hidden whitespace-nowrap 
+               animate-developer"
+      >
+        DEVELOPER
+      </span>
+    </h2>
         <p class="mt-6 text-white-700 text-base leading-relaxed">
           <span class="font-semibold text-white">I'm</span>
           – a
@@ -2001,106 +2012,102 @@
 
     <!-- My project section start -->
     <section id="my-recent-project" class="relative">
-      <!-- Section Heading -->
-      <h2
-        class="text-3xl md:text-4xl font-extrabold text-center mb-14 text-white tracking-wide"
+    <!-- Section Heading -->
+    <h2
+      class="text-3xl md:text-4xl font-extrabold text-center mb-14 text-white tracking-wide"
+    >
+      My
+      <span
+        class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
       >
-        My
-        <span
-          class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
-        >
-          Projects
-        </span>
-      </h2>
+        Projects
+      </span>
+    </h2>
 
-      <!-- Slider -->
+    <!-- Slider -->
+    <div
+      class="relative overflow-hidden max-w-7xl mx-auto px-4 md:px-8"
+      ref="sliderContainer"
+    >
       <div
-        class="relative overflow-hidden max-w-7xl mx-auto px-4 md:px-8"
-        ref="sliderContainer"
+        class="flex gap-8 transition-transform duration-700 ease-in-out"
+        :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
       >
+        <!-- Card -->
         <div
-          class="flex gap-8 transition-transform duration-700 ease-in-out"
-          :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+          v-for="(project, i) in projects"
+          :key="i"
+          class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40 "
         >
-          <!-- Card -->
+          <!-- Image -->
           <div
-            v-for="(project, i) in projects"
-            :key="i"
-            class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40"
+            class="mb-5 h-52 overflow-hidden rounded-xl border border-white/10"
           >
-            <!-- Image -->
-            <div
-              class="mb-5 h-52 overflow-hidden rounded-xl border border-white/10"
-            >
-              <img
-                :src="project.image"
-                :alt="project.title"
-                class="w-full h-full object-cover hover:scale-110 transition duration-500"
-                loading="lazy"
-              />
-            </div>
+            <img
+              :src="project.image"
+              :alt="project.title"
+              class="w-full h-full object-cover hover:scale-110 transition duration-500"
+              loading="lazy"
+            />
+          </div>
 
-            <!-- Title -->
-            <h3
-              class="text-2xl font-semibold text-white mb-4 relative inline-block"
-            >
-              {{ project.title }}
-              <span
-                class="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-pink-500"
-              ></span>
-            </h3>
+          <!-- Title -->
+          <h3
+            class="text-2xl font-semibold text-white mb-4 relative inline-block"
+          >
+            {{ project.title }}
+            <span
+              class="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-pink-500"
+            ></span>
+          </h3>
 
-            <!-- Button -->
-            <div class="flex justify-center mt-4">
-              <a
-                :href="project.live"
-                target="_blank"
-                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transition duration-300"
-              >
-                🚀 Live view
-              </a>
-            </div>
+          <!-- Button -->
+          <div class="flex justify-center mt-4">
+            <a
+              :href="project.live"
+              target="_blank"
+              class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transition duration-300"
+            >
+              🚀 Live view 
+            </a>
           </div>
         </div>
-
-        <!-- Prev -->
-        <button
-          @click="prevSlide"
-          class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black border-1px border-black flex items-center justify-center shadow hover:scale-110 transition"
-        >
-          ❮
-        </button>
-
-        <!-- Next -->
-        <button
-          @click="nextSlide"
-          class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
-        >
-          ❯
-        </button>
       </div>
 
-      <!-- Dots -->
-      <div class="flex justify-center gap-3 mt-6">
-        <span
-          v-for="(dot, i) in totalSlides"
-          :key="i"
-          class="w-3 h-3 rounded-full cursor-pointer transition-all duration-300"
-          :class="
-            i === currentSlide
-              ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
-              : 'bg-white/50 hover:bg-white/80'
-          "
-          @click="goToSlide(i)"
-        ></span>
-      </div>
-    </section>
+      <!-- Prev -->
+      <button
+        @click="prevSlide"
+        class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black border-1px border-black flex items-center justify-center shadow hover:scale-110 transition"
+      >
+        ❮
+      </button>
+
+      <!-- Next -->
+      <button
+        @click="nextSlide"
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
+      >
+        ❯
+      </button>
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center gap-3 mt-6">
+      <span
+        v-for="(dot, i) in totalSlides"
+        :key="i"
+        class="w-3 h-3 rounded-full cursor-pointer transition-all duration-300"
+        :class="i === currentSlide ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' : 'bg-white/50 hover:bg-white/80'"
+        @click="goToSlide(i)"
+      ></span>
+    </div>
+  </section>
     <!-- my project section end -->
 
     <!-- Contact section start -->
     <section
       id="contact-me"
-      class="bg-gray-900 min-h-screen flex items-center justify-center px-4 mb-8 mt-8"
+      class="min-h-screen flex items-center justify-center px-4 mb-8 mt-8"
     >
       <div class="w-full max-w-3xl">
         <!-- Heading -->
@@ -2204,7 +2211,7 @@
     <!-- contact section end -->
 
     <!-- footer section start -->
-    <footer class="bg-gray-900 py-10 mt-12">
+    <footer class=" py-10 mt-12">
       <div class="container mx-auto px-4 md:px-6 text-center">
         <!-- Back to Top Button -->
         <div class="flex justify-center mb-8">
@@ -2346,7 +2353,7 @@ const navItems = [
   { href: "#footer", label: "Footer", icon: "⬇" },
 ];
 
-// projects slider
+// Projects slider
 const projects = ref([
   {
     title: "Salad Recipe Project",
@@ -2380,12 +2387,17 @@ const projects = ref([
   },
 ]);
 
-const currentSlide = ref(0);
-const sliderContainer = ref(null);
+// ✅ Responsive slider fix
+const windowWidth = ref(window.innerWidth);
+const handleResize = () => {
+  windowWidth.value = window.innerWidth;
+  currentSlide.value = 0; // reset slide on resize
+};
+window.addEventListener("resize", handleResize);
 
 const cardsPerView = computed(() => {
-  if (window.innerWidth <= 640) return 1;
-  if (window.innerWidth <= 1024) return 2;
+  if (windowWidth.value <= 640) return 1;
+  if (windowWidth.value <= 1024) return 2;
   return 3;
 });
 
@@ -2393,37 +2405,38 @@ const totalSlides = computed(() =>
   Math.ceil(projects.value.length / cardsPerView.value)
 );
 
+const currentSlide = ref(0);
+const sliderContainer = ref(null);
+
 function nextSlide() {
   currentSlide.value =
     currentSlide.value >= totalSlides.value - 1 ? 0 : currentSlide.value + 1;
 }
-
 function prevSlide() {
   currentSlide.value =
     currentSlide.value <= 0 ? totalSlides.value - 1 : currentSlide.value - 1;
 }
-
 function goToSlide(index) {
   currentSlide.value = index;
 }
 
 let autoSlide;
 onMounted(() => {
-  autoSlide = setInterval(() => {
-    nextSlide();
-  }, 5000);
+  autoSlide = setInterval(() => nextSlide(), 5000);
 
-  sliderContainer.value.addEventListener("mouseenter", () =>
-    clearInterval(autoSlide)
-  );
-  sliderContainer.value.addEventListener("mouseleave", () => {
-    autoSlide = setInterval(() => nextSlide(), 5000);
-  });
-
-  window.addEventListener("resize", () => (currentSlide.value = 0));
+  if (sliderContainer.value) {
+    sliderContainer.value.addEventListener("mouseenter", () =>
+      clearInterval(autoSlide)
+    );
+    sliderContainer.value.addEventListener("mouseleave", () => {
+      autoSlide = setInterval(() => nextSlide(), 5000);
+    });
+  }
 });
-
-onBeforeUnmount(() => clearInterval(autoSlide));
+onBeforeUnmount(() => {
+  clearInterval(autoSlide);
+  window.removeEventListener("resize", handleResize);
+});
 </script>
 
 <style scoped>
@@ -2452,4 +2465,57 @@ onBeforeUnmount(() => clearInterval(autoSlide));
   background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
+
+/* 🌌 Galaxy Starfield Background */
+.galaxy-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at bottom, #0d1b2a, #000);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.galaxy-bg::before,
+.galaxy-bg::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  background-position: center;
+  animation: moveStars 100s linear infinite;
+}
+
+.galaxy-bg::before {
+  background-image: radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(1px 1px at 40px 60px, #9ae6ff, transparent),
+    radial-gradient(2px 2px at 130px 80px, #ffd6ff, transparent),
+    radial-gradient(1.5px 1.5px at 200px 150px, #ffe066, transparent),
+    radial-gradient(2px 2px at 300px 250px, white, transparent);
+  background-size: 300px 300px;
+  opacity: 0.8;
+}
+
+.galaxy-bg::after {
+  background-image: radial-gradient(1px 1px at 100px 200px, #ff80ed, transparent),
+    radial-gradient(2px 2px at 250px 100px, #80edff, transparent),
+    radial-gradient(1.5px 1.5px at 400px 300px, white, transparent),
+    radial-gradient(2px 2px at 500px 400px, #b3ff66, transparent),
+    radial-gradient(1px 1px at 600px 500px, #ffb366, transparent);
+  background-size: 600px 600px;
+  opacity: 0.5;
+  animation-duration: 200s;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
 </style>
+
