@@ -3,115 +3,86 @@
     class="min-h-screen bg-gray-900 text-white transition-colors duration-300"
   >
     <!-- Header Navbar start -->
-    <header
-      class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-lg px-4"
-    >
-      <nav class="fixed top-0 left-0 w-full z-50 font-light uppercase tracking-wide">
-  <!-- Desktop Navbar -->
-  <div
-    class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 
-           border border-white/20 rounded-full 
-           backdrop-blur-2xl bg-[rgba(0,7,7,0.88)] 
-           items-center py-3 px-6 shadow-lg shadow-cyan-400/30 space-x-2"
-  >
-    <a
-      href="#intro"
-      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#00ff99]"
-      >Home</a
-    >
-    <a
-      href="#about"
-      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#ffcc00]"
-      >About</a
-    >
-    <a
-      href="#skills"
-      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#00aaff]"
-      >Skills</a
-    >
-    <a
-      href="#tools-i-use"
-      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#ff3366]"
-      >Tools</a
-    >
-    <a
-      href="#my-recent-project"
-      class="px-4 py-2 text-[15px] border-r border-white/10 transition duration-200 hover:text-[#33ff77]"
-      >Projects</a
-    >
-    <a
-      href="#contact-me"
-      class="px-4 py-2 text-[15px] transition duration-200 hover:text-[#ff884d]"
-      >Contact</a
-    >
-  </div>
+       <header class="fixed top-0 left-0 w-full z-50">
+    <!-- Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-[5px] bg-gray-800 z-50">
+      <div
+        class="h-[5px] bg-gradient-to-r from-cyan-400 to-blue-500 shadow-md transition-all duration-300"
+        :style="{ width: scrollProgress + '%' }"
+      ></div>
+    </div>
 
-  <!-- Mobile Top Bar -->
-  <div class="md:hidden flex justify-between items-center py-4 px-4 bg-[rgba(8,20,20,0.95)] backdrop-blur-2xl shadow-md">
-    <h1 class="text-white text-lg font-semibold">Menu</h1>
+    <!-- Desktop Sidebar Navbar -->
+    <aside
+      class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 
+             flex-col items-center space-y-5 
+             bg-gray-700/95 backdrop-blur-lg 
+             rounded-3xl p-4 shadow-2xl border border-white/10"
+    >
+      <a v-for="(item, i) in navItems" :key="i"
+        :href="item.href"
+        class="p-3 rounded-full bg-gray-800 text-white 
+               hover:scale-110 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-500
+               transition-all duration-300 shadow-md"
+      >
+        {{ item.icon }}
+      </a>
+    </aside>
+
+    <!-- Mobile Navbar Button -->
     <button
-      @click="toggleMenu"
-      class="text-white text-3xl focus:outline-none"
+      @click="menuOpen = true"
+      class="md:hidden fixed top-4 right-4 z-50 
+             p-3 rounded-full bg-gray-800 text-white shadow-lg 
+             hover:bg-cyan-500 transition-all duration-300"
     >
-      <span v-if="!isOpen">☰</span>
-      <span v-else>✕</span>
+      ☰
     </button>
-  </div>
 
-  <!-- Mobile Menu -->
-  <div
-    v-if="isOpen"
-    class="md:hidden mt-2 mx-3 mb-4 flex flex-col 
-           bg-[rgba(8,20,20,0.95)] backdrop-blur-2xl 
-           rounded-xl py-6 px-6 space-y-4 
-           border border-white/10 shadow-xl transition-all duration-300"
-  >
-    <a
-      href="#intro"
-      @click="toggleMenu"
-      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#00ff99]"
-      >Home</a
-    >
-    <a
-      href="#about"
-      @click="toggleMenu"
-      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#ffcc00]"
-      >About</a
-    >
-    <a
-      href="#skills"
-      @click="toggleMenu"
-      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#00aaff]"
-      >Skills</a
-    >
-    <a
-      href="#tools-i-use"
-      @click="toggleMenu"
-      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#ff3366]"
-      >Tools</a
-    >
-    <a
-      href="#my-recent-project"
-      @click="toggleMenu"
-      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#33ff77]"
-      >Projects</a
-    >
-    <a
-      href="#contact-me"
-      @click="toggleMenu"
-      class="text-white font-medium text-base uppercase tracking-wide transition hover:text-[#ff884d]"
-      >Contact</a
-    >
-  </div>
-</nav>
+    <!-- Mobile Menu Overlay -->
+    <transition name="fade">
+      <div
+        v-if="menuOpen"
+        class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex justify-center items-center"
+      >
+        <div
+          class="bg-gray-900 rounded-2xl p-6 w-80 max-h-[90vh] overflow-y-auto shadow-2xl relative"
+        >
+          <!-- Close Button -->
+          <button
+            @click="menuOpen = false"
+            class="absolute top-3 right-3 text-white text-2xl hover:text-red-400 transition"
+          >
+            ✕
+          </button>
 
-    </header>
+          <!-- Mobile Nav List -->
+          <ul class="flex flex-col space-y-4 text-center text-white font-medium">
+            <li v-for="(item, i) in navItems" :key="i" class="relative">
+              <a
+                :href="item.href"
+                class="block py-2 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition"
+                @click="menuOpen = false"
+              >
+                {{ item.icon }} {{ item.label }}
+              </a>
+              <!-- Divider -->
+              <div
+                v-if="i !== navItems.length - 1"
+                class="border-b border-dashed border-gray-600 mt-2"
+              ></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </transition>
+  </header>
     <!-- End Header Navbar -->
 
     <!-- Hero Section start -->
     <section
       id="intro"
-      class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-28 pb-20 max-w-screen-xl mx-auto"
+      class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-7 pb-15 max-w-screen-xl mx-auto"
     >
       <!-- Text Content -->
       <div class="w-full mt-[70px] md:w-1/2 text-center md:text-left">
@@ -2249,7 +2220,7 @@
           </a>
         </div>
         <!-- Social Links -->
-        <div class="flex justify-center gap-12 mt-6">
+        <div id="footer" class="flex justify-center gap-12 mt-6">
           <!-- GitHub -->
           <a
             href="https://github.com/mahmudul7608"
@@ -2339,15 +2310,41 @@
 </template>
 
 <script setup>
-import { ref, onMounted , onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 
 // navigation bar
+const scrollProgress = ref(0);
 const isOpen = ref(false);
+
+const updateScroll = () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  scrollProgress.value = (scrollTop / docHeight) * 100;
+};
+
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
 
-// navigation bar end
+onMounted(() => {
+  window.addEventListener("scroll", updateScroll);
+});
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateScroll);
+});
+
+// nav items
+const navItems = [
+  { href: "#intro", icon: "🏠", label: "Home" },
+  { href: "#about", icon: "👤", label: "About" },
+  { href: "#skills", icon: "💡", label: "Skills" },
+  { href: "#tools-i-use", icon: "🛠", label: "Tools" },
+  { href: "#my-recent-project", icon: "📂", label: "Projects" },
+  { href: "#contact-me", icon: "✉", label: "Contact" },
+  { href: "#footer", icon: "⬇", label: "Footer" },
+];
+
+// projects slider
 const projects = ref([
   {
     title: "Salad Recipe Project",
@@ -2428,14 +2425,16 @@ onBeforeUnmount(() => clearInterval(autoSlide));
 </script>
 
 <style scoped>
+/* fade transition */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
 }
+
 /* skill section */
 .tech-badge {
   padding: 0.4rem 1rem;
