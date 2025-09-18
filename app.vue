@@ -2329,7 +2329,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 
-// 🌐 Scroll progress bar
+// Scroll progress bar
 const scrollProgress = ref(0);
 const updateScroll = () => {
   if (process.client) {
@@ -2341,10 +2341,10 @@ const updateScroll = () => {
 onMounted(() => window.addEventListener("scroll", updateScroll));
 onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 
-// 📱 Mobile menu state
+// Mobile menu state
 const isOpen = ref(false);
 
-// 🧭 Navbar items
+// Navbar items
 const navItems = [
   { href: "#intro", label: "Home", icon: "🏠" },
   { href: "#about", label: "About", icon: "👤" },
@@ -2355,7 +2355,7 @@ const navItems = [
   { href: "#footer", label: "Footer", icon: "⬇" },
 ];
 
-// 🖼 Projects slider
+// Projects slider
 const projects = ref([
   {
     title: "Salad Recipe Project",
@@ -2366,6 +2366,11 @@ const projects = ref([
     title: "Practice API Project",
     image: "/image/MH-imageSRC-1.png",
     live: "https://image-search-website2.netlify.app/",
+  },
+  {
+    title: "Meal Finder",
+    image: "/image/MH-food.png",
+    live: "https://meal-count.netlify.app/",
   },
   {
     title: "Login Form UI",
@@ -2382,14 +2387,9 @@ const projects = ref([
     image: "/image/MH-mullokoto-4.png",
     live: "https://mullo-koto-template.netlify.app/",
   },
-  {
-    title: "Meal Finder",
-    image: "/image/MH-millFiender-3.png",
-    live: "https://meal-count.netlify.app/",
-  },
 ]);
 
-// 📐 Responsive slider fix
+// Responsive slider fix
 const windowWidth = ref(1024); // default safe value
 const currentSlide = ref(0);
 
@@ -2413,7 +2413,7 @@ onBeforeUnmount(() => {
   }
 });
 
-// 🔢 cards per view logic
+// cards per view logic
 const cardsPerView = computed(() => {
   if (windowWidth.value <= 640) return 1;
   if (windowWidth.value <= 1024) return 2;
@@ -2438,7 +2438,7 @@ function goToSlide(index) {
   currentSlide.value = index;
 }
 
-// 🔁 Auto slide
+// Auto slide
 let autoSlide;
 onMounted(() => {
   autoSlide = setInterval(() => nextSlide(), 5000);
@@ -2485,7 +2485,7 @@ onBeforeUnmount(() => {
   transform: translateY(-2px);
 }
 
-/* 🌌 Galaxy Starfield Background */
+/* Galaxy Starfield Background */
 .galaxy-bg {
   position: absolute;
   inset: 0;
@@ -2494,7 +2494,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
-/* ✨ star layers */
+/* star layers */
 .galaxy-bg::before,
 .galaxy-bg::after {
   content: "";
@@ -2508,7 +2508,7 @@ onBeforeUnmount(() => {
   animation: moveStars 100s linear infinite;
 }
 
-/* ⭐ Mixed small + medium stars */
+/* Mixed small + medium stars */
 .galaxy-bg::before {
   background-image: 
     radial-gradient(1px 1px at 20px 30px, white, transparent),
@@ -2525,7 +2525,7 @@ onBeforeUnmount(() => {
   opacity: 0.9;
 }
 
-/* 🌟 Big glowing stars + blue haze */
+/* Big glowing stars + blue haze */
 .galaxy-bg::after {
   background-image: 
     radial-gradient(4px 4px at 100px 200px, #ff80ed, transparent),
@@ -2534,7 +2534,8 @@ onBeforeUnmount(() => {
     radial-gradient(3.5px 3.5px at 550px 350px, #b3ff66, transparent),
     radial-gradient(5px 5px at 700px 500px, #ffb366, transparent),
     radial-gradient(3.5px 3.5px at 900px 650px, #fff, transparent),
-    /* 🌌 blue nebula glow */
+
+    /* blue nebula glow */
     radial-gradient(800px 800px at 50% 50%, rgba(0, 119, 255, 0.1), transparent);
   background-size: 800px 800px;
   opacity: 0.7;
