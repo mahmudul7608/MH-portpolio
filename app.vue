@@ -2512,8 +2512,13 @@ onBeforeUnmount(() => {
 .galaxy-bg::before {
   background-image: 
     radial-gradient(1px 1px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 20px 30px, white, transparent),
+    radial-gradient(1px 1px at 20px 30px, white, transparent),
     radial-gradient(2px 2px at 80px 120px, #9ae6ff, transparent),
+        radial-gradient(2px 2px at 80px 120px, #9ae6ff, transparent),
     radial-gradient(1.5px 1.5px at 130px 80px, #ffd6ff, transparent),
+    radial-gradient(2.5px 2.5px at 200px 150px, #ffe066, transparent),
+        radial-gradient(2.5px 2.5px at 200px 150px, #ffe066, transparent),
     radial-gradient(2.5px 2.5px at 200px 150px, #ffe066, transparent),
     radial-gradient(3px 3px at 300px 250px, white, transparent),
     radial-gradient(2px 2px at 400px 350px, #ffcccc, transparent),
