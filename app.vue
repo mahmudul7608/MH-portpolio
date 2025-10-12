@@ -17,30 +17,49 @@
 
       <!-- Desktop Right Sidebar Navbar -->
       <aside
-        class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-900/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/10"
-      >
+    class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 
+           bg-gray-800/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/20"
+  >
+    <!-- 🔹 Top Profile / Logo Image -->
+    <div
+      class="w-10 h-10 rounded-full overflow-hidden border-2 border-white/20 shadow-lg mb-1 
+             hover:scale-110 transition-all duration-300"
+    >
+      <img
+        src="/image/MH-Logo.jpg"
+        alt="My Logo"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- 🔹 Navigation Icons -->
+    <div class="flex flex-col items-center space-y-3">
+      <div v-for="item in navItems" :key="item.href" class="relative group">
+        <!-- Tooltip -->
+        <span
+          class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs px-3 py-1 rounded-md opacity-0 
+                 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 transition-all duration-300 
+                 pointer-events-none whitespace-nowrap shadow-lg"
+        >
+          {{ item.label }}
+        </span>
+
+        <!-- Icon -->
         <a
-          v-for="item in navItems"
-          :key="item.href"
           :href="item.href"
-          class="p-3 rounded-full bg-gray-800 text-white hover:scale-110 transition-all duration-300 shadow-md"
+          class="p-3 rounded-full flex items-center justify-center shadow-md transition-all duration-300
+                 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:scale-110"
           :class="[
-            {
-              'hover:bg-cyan-500': item.label === 'Home',
-              'hover:bg-pink-500': item.label === 'About',
-              'hover:bg-green-500': item.label === 'Skills',
-              'hover:bg-yellow-500': item.label === 'Tools',
-              'hover:bg-blue-500': item.label === 'Projects',
-              'hover:bg-purple-500': item.label === 'Contact',
-              'hover:bg-red-500': item.label === 'Footer',
-            },
-            // active class apply korar logic
-            activeSection === item.href ? activeColor(item.label) : '',
+            activeSection === item.href
+              ? activeColor(item.label) + ' text-white scale-110 shadow-lg ring-2 ring-white/30'
+              : '',
           ]"
         >
-          {{ item.icon }}
+          <component :is="item.icon" class="w-5 h-5" />
         </a>
-      </aside>
+      </div>
+    </div>
+  </aside>
 
       <!-- Mobile Hamburger Button -->
       <button
@@ -2344,6 +2363,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
+import { Home, User, Brain, Folder, Code, Mail, Book } from "lucide-vue-next";
 
 // Scroll progress bar
 const scrollProgress = ref(0);
@@ -2363,17 +2383,18 @@ const isOpen = ref(false);
 // Navbar items
 
 const navItems = [
-  { href: "#intro", label: "Home", icon: "🏠" },
-  { href: "#about", label: "About", icon: "👤" },
-  { href: "#skills", label: "Skills", icon: "💡" },
-  { href: "#tools-i-use", label: "Tools", icon: "🛠" },
-  { href: "#my-recent-project", label: "Projects", icon: "📂" },
-  { href: "#contact-me", label: "Contact", icon: "✉" },
-  { href: "#footer", label: "Footer", icon: "⬇" },
+  { href: "#intro", label: "Home", icon: Home },
+  { href: "#about", label: "About", icon: User },
+  { href: "#skills", label: "Skills", icon: Brain },
+  { href: "#tools-i-use", label: "Tools", icon: Code },
+  { href: "#my-recent-project", label: "Projects", icon: Folder },
+  { href: "#contact-me", label: "Contact", icon: Mail },
+  { href: "#footer", label: "Footer", icon: Book },
 ];
 
 const activeSection = ref("#intro");
 
+// 🔹 section অনুযায়ী color
 const activeColor = (label) => {
   switch (label) {
     case "Home":
@@ -2391,10 +2412,11 @@ const activeColor = (label) => {
     case "Footer":
       return "bg-red-500";
     default:
-      return "bg-gray-800";
+      return "bg-gray-700";
   }
 };
 
+// 🔹 scroll এ active section update
 let observer;
 
 onMounted(() => {
@@ -2402,29 +2424,37 @@ onMounted(() => {
 
   observer = new IntersectionObserver(
     (entries) => {
-      let visibleSection = null;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          visibleSection = `#${entry.target.id}`;
+          activeSection.value = `#${entry.target.id}`;
         }
       });
-
-      // শুধুমাত্র যখন visibleSection null নয় তখন activeSection আপডেট হবে
-      if (visibleSection) {
-        activeSection.value = visibleSection;
-      }
     },
-    {
-      threshold: 0.3, // আগের থেকে কম — এখন ছোট section ও detect হবে
-      rootMargin: "-10% 0px -20% 0px", // top-bottom margin adjust করা হয়েছে
-    }
+    { threshold: 0.4, rootMargin: "-10% 0px -10% 0px" }
   );
 
   sections.forEach((section) => observer.observe(section));
-});
 
-onBeforeUnmount(() => {
-  if (observer) observer.disconnect();
+  // fallback scroll event
+  const handleScroll = () => {
+    let scrollY = window.scrollY + window.innerHeight / 2;
+    let current = "#intro";
+    sections.forEach((section) => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollY >= top && scrollY < top + height) {
+        current = `#${section.id}`;
+      }
+    });
+    activeSection.value = current;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  onBeforeUnmount(() => {
+    if (observer) observer.disconnect();
+    window.removeEventListener("scroll", handleScroll);
+  });
 });
 
 // Projects slider
@@ -2535,6 +2565,14 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+/* nav style */
+a {
+  transition: all 0.3s ease;
+}
+a:hover svg {
+  transform: scale(1.1);
+}
+
 /* fade transition */
 .fade-enter-active,
 .fade-leave-active {
