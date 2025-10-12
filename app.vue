@@ -16,33 +16,31 @@
       </div>
 
       <!-- Desktop Right Sidebar Navbar -->
-     <aside
-    class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-900/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/10"
-  >
-    <a
-      v-for="item in navItems"
-      :key="item.href"
-      :href="item.href"
-      class="p-3 rounded-full bg-gray-800 text-white hover:scale-110 transition-all duration-300 shadow-md"
-      :class="[
-        {
-          'hover:bg-cyan-500': item.label === 'Home',
-          'hover:bg-pink-500': item.label === 'About',
-          'hover:bg-green-500': item.label === 'Skills',
-          'hover:bg-yellow-500': item.label === 'Tools',
-          'hover:bg-blue-500': item.label === 'Projects',
-          'hover:bg-purple-500': item.label === 'Contact',
-          'hover:bg-red-500': item.label === 'Footer',
-        },
-        // active class apply korar logic
-        activeSection === item.href
-          ? activeColor(item.label)
-          : ''
-      ]"
-    >
-      {{ item.icon }}
-    </a>
-  </aside>
+      <aside
+        class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-900/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/10"
+      >
+        <a
+          v-for="item in navItems"
+          :key="item.href"
+          :href="item.href"
+          class="p-3 rounded-full bg-gray-800 text-white hover:scale-110 transition-all duration-300 shadow-md"
+          :class="[
+            {
+              'hover:bg-cyan-500': item.label === 'Home',
+              'hover:bg-pink-500': item.label === 'About',
+              'hover:bg-green-500': item.label === 'Skills',
+              'hover:bg-yellow-500': item.label === 'Tools',
+              'hover:bg-blue-500': item.label === 'Projects',
+              'hover:bg-purple-500': item.label === 'Contact',
+              'hover:bg-red-500': item.label === 'Footer',
+            },
+            // active class apply korar logic
+            activeSection === item.href ? activeColor(item.label) : '',
+          ]"
+        >
+          {{ item.icon }}
+        </a>
+      </aside>
 
       <!-- Mobile Hamburger Button -->
       <button
@@ -2318,18 +2316,20 @@
 
         <!-- Profile view count -->
 
-       <div class="flex justify-center items-center pt-4">
-  <div
-    class="flex items-center justify-center border border-gray-200 dark:border-gray-700 rounded-xl shadow-md px-6 py-2"
-  >
-    <a
-      href="https://komarev.com/ghpvc/?username=mahmudul7608-portfolio0&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
-      target="_blank"
-    >
-      <img src="https://hits.sh/yourdomain.netlify.app.svg?style=flat-square&label=Portfolio+Views" />
-    </a>
-  </div>
-</div>
+        <div class="flex justify-center items-center pt-4">
+          <div
+            class="flex items-center justify-center border border-gray-200 dark:border-gray-700 rounded-xl shadow-md px-6 py-2"
+          >
+            <a
+              href="https://komarev.com/ghpvc/?username=mahmudul7608-portfolio0&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
+              target="_blank"
+            >
+              <img
+                src="https://hits.sh/yourdomain.netlify.app.svg?style=flat-square&label=Portfolio+Views"
+              />
+            </a>
+          </div>
+        </div>
         <!-- Copyright -->
         <p class="mt-4 text-xs text-muted-foreground">
           © 2025 <span class="font-semibold">Mahmudul Hasan.</span> All Rights
@@ -2361,12 +2361,13 @@ onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 const isOpen = ref(false);
 
 // Navbar items
+
 const navItems = [
   { href: "#intro", label: "Home", icon: "🏠" },
   { href: "#about", label: "About", icon: "👤" },
   { href: "#skills", label: "Skills", icon: "💡" },
   { href: "#tools-i-use", label: "Tools", icon: "🛠" },
-  { href: "#Projects", label: "Projects", icon: "📂" },
+  { href: "#my-recent-project", label: "Projects", icon: "📂" },
   { href: "#contact-me", label: "Contact", icon: "✉" },
   { href: "#footer", label: "Footer", icon: "⬇" },
 ];
@@ -2398,15 +2399,25 @@ let observer;
 
 onMounted(() => {
   const sections = document.querySelectorAll("section[id]");
+
   observer = new IntersectionObserver(
     (entries) => {
+      let visibleSection = null;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          activeSection.value = `#${entry.target.id}`;
+          visibleSection = `#${entry.target.id}`;
         }
       });
+
+      // শুধুমাত্র যখন visibleSection null নয় তখন activeSection আপডেট হবে
+      if (visibleSection) {
+        activeSection.value = visibleSection;
+      }
     },
-    { threshold: 0.6 } // section 60% visible holei active hobe
+    {
+      threshold: 0.3, // আগের থেকে কম — এখন ছোট section ও detect হবে
+      rootMargin: "-10% 0px -20% 0px", // top-bottom margin adjust করা হয়েছে
+    }
   );
 
   sections.forEach((section) => observer.observe(section));
