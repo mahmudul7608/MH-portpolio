@@ -2320,19 +2320,12 @@
       href="https://komarev.com/ghpvc/?username=mahmudul7608-portfolio0&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
       target="_blank"
     >
-      <img
-  src="https://komarev.com/ghpvc/?username=mahmudul7608-myportfolio&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
-  alt="Portfolio Views"
-  height="30"
-  width="150"
-/>
+      <img src="https://hits.sh/yourdomain.netlify.app.svg?style=flat-square&label=Portfolio+Views" />
     </a>
   </div>
 </div>
-
-
         <!-- Copyright -->
-        <p class="mt-6 text-xs text-muted-foreground">
+        <p class="mt-4 text-xs text-muted-foreground">
           © 2025 <span class="font-semibold">Mahmudul Hasan.</span> All Rights
           Reserved.
         </p>
