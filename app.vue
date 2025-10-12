@@ -2321,12 +2321,11 @@
       target="_blank"
     >
       <img
-        src="https://komarev.com/ghpvc/?username=mahmudul7608-portfolio0&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
-        alt="Portfolio Views"
-        class="rounded-lg"
-        height="30"
-        width="150"
-      />
+  src="https://komarev.com/ghpvc/?username=mahmudul7608-myportfolio&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
+  alt="Portfolio Views"
+  height="30"
+  width="150"
+/>
     </a>
   </div>
 </div>
