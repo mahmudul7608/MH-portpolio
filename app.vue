@@ -2310,6 +2310,28 @@
           </a>
         </div>
 
+        <!-- Profile view count -->
+
+       <div class="flex justify-center items-center pt-4">
+  <div
+    class="flex items-center justify-center border border-gray-200 dark:border-gray-700 rounded-xl shadow-md px-6 py-2"
+  >
+    <a
+      href="https://komarev.com/ghpvc/?username=mahmudul7608-portfolio0&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
+      target="_blank"
+    >
+      <img
+        src="https://komarev.com/ghpvc/?username=mahmudul7608-portfolio0&label=👀%20Portfolio%20Views&color=0e75b6&style=flat-square"
+        alt="Portfolio Views"
+        class="rounded-lg"
+        height="30"
+        width="150"
+      />
+    </a>
+  </div>
+</div>
+
+
         <!-- Copyright -->
         <p class="mt-6 text-xs text-muted-foreground">
           © 2025 <span class="font-semibold">Mahmudul Hasan.</span> All Rights
