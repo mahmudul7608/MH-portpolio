@@ -16,27 +16,33 @@
       </div>
 
       <!-- Desktop Right Sidebar Navbar -->
-      <aside
-        class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-900/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/10"
-      >
-        <a
-          v-for="item in navItems"
-          :key="item.href"
-          :href="item.href"
-          class="p-3 rounded-full bg-gray-800 text-white hover:scale-110 transition-all duration-300 shadow-md"
-          :class="{
-            'hover:bg-cyan-500': item.label === 'Home',
-            'hover:bg-pink-500': item.label === 'About',
-            'hover:bg-green-500': item.label === 'Skills',
-            'hover:bg-yellow-500': item.label === 'Tools',
-            'hover:bg-blue-500': item.label === 'Projects',
-            'hover:bg-purple-500': item.label === 'Contact',
-            'hover:bg-red-500': item.label === 'Footer',
-          }"
-        >
-          {{ item.icon }}
-        </a>
-      </aside>
+     <aside
+    class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-900/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/10"
+  >
+    <a
+      v-for="item in navItems"
+      :key="item.href"
+      :href="item.href"
+      class="p-3 rounded-full bg-gray-800 text-white hover:scale-110 transition-all duration-300 shadow-md"
+      :class="[
+        {
+          'hover:bg-cyan-500': item.label === 'Home',
+          'hover:bg-pink-500': item.label === 'About',
+          'hover:bg-green-500': item.label === 'Skills',
+          'hover:bg-yellow-500': item.label === 'Tools',
+          'hover:bg-blue-500': item.label === 'Projects',
+          'hover:bg-purple-500': item.label === 'Contact',
+          'hover:bg-red-500': item.label === 'Footer',
+        },
+        // active class apply korar logic
+        activeSection === item.href
+          ? activeColor(item.label)
+          : ''
+      ]"
+    >
+      {{ item.icon }}
+    </a>
+  </aside>
 
       <!-- Mobile Hamburger Button -->
       <button
@@ -2360,10 +2366,55 @@ const navItems = [
   { href: "#about", label: "About", icon: "👤" },
   { href: "#skills", label: "Skills", icon: "💡" },
   { href: "#tools-i-use", label: "Tools", icon: "🛠" },
-  { href: "#my-recent-project", label: "Projects", icon: "📂" },
+  { href: "#Projects", label: "Projects", icon: "📂" },
   { href: "#contact-me", label: "Contact", icon: "✉" },
   { href: "#footer", label: "Footer", icon: "⬇" },
 ];
+
+const activeSection = ref("#intro");
+
+const activeColor = (label) => {
+  switch (label) {
+    case "Home":
+      return "bg-cyan-500";
+    case "About":
+      return "bg-pink-500";
+    case "Skills":
+      return "bg-green-500";
+    case "Tools":
+      return "bg-yellow-500";
+    case "Projects":
+      return "bg-blue-500";
+    case "Contact":
+      return "bg-purple-500";
+    case "Footer":
+      return "bg-red-500";
+    default:
+      return "bg-gray-800";
+  }
+};
+
+let observer;
+
+onMounted(() => {
+  const sections = document.querySelectorAll("section[id]");
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeSection.value = `#${entry.target.id}`;
+        }
+      });
+    },
+    { threshold: 0.6 } // section 60% visible holei active hobe
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
+
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect();
+});
 
 // Projects slider
 const projects = ref([
@@ -2376,6 +2427,11 @@ const projects = ref([
     title: "Personal website",
     image: "/image/MH-personal.png",
     live: "https://mh-portfolio01.netlify.app/",
+  },
+  {
+    title: "Login Form UI",
+    image: "/image/MH-signin-6.png",
+    live: "https://animation-login-and-sign-in.netlify.app/",
   },
   {
     title: "Salad Recipe Project",
@@ -2393,19 +2449,9 @@ const projects = ref([
     live: "https://meal-count.netlify.app/",
   },
   {
-    title: "Login Form UI",
-    image: "/image/MH-signin-6.png",
-    live: "https://animation-login-and-sign-in.netlify.app/",
-  },
-  {
     title: "Intelligent-business",
     image: "/image/MH-5.png",
     live: "https://intelligent-buisness.netlify.app/",
-  },
-  {
-    title: "Mullokoto App",
-    image: "/image/MH-mullokoto-4.png",
-    live: "https://mullo-koto-template.netlify.app/",
   },
 ]);
 
