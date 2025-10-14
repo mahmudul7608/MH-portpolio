@@ -19,7 +19,6 @@
       <aside
         class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-900/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/20"
       >
-
         <!-- 🔹 Navigation Icons -->
         <div class="flex flex-col items-center space-y-3">
           <div v-for="item in navItems" :key="item.href" class="relative group">
@@ -103,414 +102,371 @@
 
     <!-- Hero Section start -->
     <section
-  id="intro"
-  class="relative flex flex-col items-center justify-center text-center px-6 md:px-12 py-20 min-h-screen overflow-hidden"
->
-  <!-- LEFT: Social Icons -->
-  <div
-    class="hidden md:flex flex-col items-center ml-[18rem] space-y-5 absolute left-6 top-1/2 -translate-y-1/2"
-  >
-    <!-- LinkedIn -->
-    <a
-      href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-      aria-label="LinkedIn"
+      id="intro"
+      class="relative flex flex-col items-center justify-center text-center px-6 md:px-12 py-20 min-h-screen overflow-hidden"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-        <rect width="4" height="12" x="2" y="9"></rect>
-        <circle cx="4" cy="4" r="2"></circle>
-      </svg>
-    </a>
-
-    <!-- GitHub -->
-    <a
-      href="https://github.com/mahmudul7608"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-      aria-label="GitHub"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-        <path
-          d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-        ></path>
-        <path d="M9 18c-4.51 2-5-2-7-2"></path>
-      </svg>
-    </a>
-
-    <!-- WhatsApp -->
-    <a
-      href="https://wa.me/8801650217808"
-      target="_blank"
-      class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-      aria-label="WhatsApp"
-    >
-      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
-        <path
-          d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
-        />
-      </svg>
-    </a>
-  </div>
-
-  <!-- RIGHT: Email -->
-  <div
-    class="hidden md:block absolute right-[-75px] mr-[25rem] top-1/2 -translate-y-1/2 rotate-90 origin-right text-sm text-white/70 tracking-wider"
-  >
-    dev.mahmudulhasan2@gmail.com
-  </div>
-
-  <!-- CENTER CONTENT -->
-  <div class="max-w-3xl">
-    <!-- PROFILE IMAGE -->
-    <div class="flex justify-center mb-8">
+      <!-- LEFT: Social Icons -->
       <div
-        class="relative w-28 h-28 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg shadow-purple-700/30"
+        class="hidden md:flex flex-col items-center ml-[18rem] space-y-5 absolute left-6 top-1/2 -translate-y-1/2"
       >
-        <img
-          src="/image/MH-Logo.jpg"
-          alt="Profile"
-          class="w-full h-full object-cover"
-        />
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+          aria-label="LinkedIn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect width="4" height="12" x="2" y="9"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a
+          href="https://github.com/mahmudul7608"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+          aria-label="GitHub"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+            ></path>
+            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+          </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/8801650217808"
+          target="_blank"
+          class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+          aria-label="WhatsApp"
+        >
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+            <path
+              d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
+            />
+          </svg>
+        </a>
       </div>
-    </div>
 
-    <!-- TEXTS -->
-    <h2 class="font-extrabold leading-tight">
-      <span
-        class="text-3xl sm:text-5xl md:text-7xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block overflow-hidden animate-frontend"
-      >
-        FRONTEND
-      </span>
-      <span
-        class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-1 animate-developer"
-      >
-        DEVELOPER
-      </span>
-    </h2>
-
-    <!-- Tagline -->
-    <p
-      class="mt-6 text-xl sm:text-2xl font-semibold bg-gradient-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent"
-    >
-      Your Vision, My Code – Let's Build Something Amazing!
-    </p>
-
-    <!-- Subtext -->
-    <p class="mt-3 text-white/70 text-base sm:text-lg">
-      I’m <span class="text-white font-medium">Mahmudul Hasan</span> — a Diploma Engineer and
-      Frontend Developer dedicated to crafting beautiful, responsive, and high-performance web
-      experiences.
-    </p>
-
-    <!-- Buttons -->
-    <div class="flex flex-wrap gap-4 justify-center mt-8">
-      <a
-        href="#contact-me"
-        class="inline-block px-6 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
-      >
-        Get in Touch
-      </a>
-      <a
-        href="#my-recent-project"
-        class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
-      >
-        View Projects
-      </a>
-    </div>
-    <!-- Scroll Mouse section -->
-    <div class="flex flex-col items-center space-y-2 mt-5 ">
-      <span class="text-white text-xs sm:text-lg font-medium"
-        >Scroll to explore</span
-      >
+      <!-- RIGHT: Email -->
       <div
-        class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white rounded-full flex justify-center p-1 bg-black/20 backdrop-blur-sm"
+        class="hidden md:block absolute right-[-75px] mr-[25rem] top-1/2 -translate-y-1/2 rotate-90 origin-right text-sm text-white/70 tracking-wider"
       >
-        <div
-          class="w-1 h-1.5 sm:w-1 sm:h-2 bg-white rounded-full animate-bounce"
-        ></div>
+        dev.mahmudulhasan2@gmail.com
       </div>
-    </div>
-    <!-- Scroll Mous section end -->
-  </div>
-</section>
+
+      <!-- CENTER CONTENT -->
+      <div class="max-w-3xl">
+        <!-- PROFILE IMAGE -->
+        <div class="flex justify-center mb-8">
+          <div
+            class="relative w-28 h-28 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg shadow-purple-700/30"
+          >
+            <img
+              src="/image/MH-Logo.jpg"
+              alt="Profile"
+              class="w-40 h-50 object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- TEXTS -->
+        <h2 class="font-extrabold leading-tight">
+          <span
+            class="text-3xl sm:text-5xl md:text-7xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block overflow-hidden animate-frontend"
+          >
+            FRONTEND
+          </span>
+          <span
+            class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-1 animate-developer"
+          >
+            DEVELOPER
+          </span>
+        </h2>
+
+        <!-- Tagline -->
+        <p
+          class="mt-6 text-xl sm:text-2xl font-semibold bg-gradient-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent"
+        >
+          Your Vision, My Code – Let's Build Something Amazing!
+        </p>
+
+        <!-- Subtext -->
+        <p class="mt-3 text-white/70 text-base sm:text-lg">
+          I’m <span class="text-white font-medium">Mahmudul Hasan</span> — a
+          Diploma Engineer and Frontend Developer dedicated to crafting
+          beautiful, responsive, and high-performance web experiences.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4 justify-center mt-8">
+          <a
+            href="#contact-me"
+            class="inline-block px-6 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
+          >
+            Get in Touch
+          </a>
+          <a
+            href="#my-recent-project"
+            class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
+          >
+            Download Resume
+          </a>
+        </div>
+        <!-- Scroll Mouse section -->
+        <div class="flex flex-col items-center space-y-2 mt-5">
+          <span class="text-white text-xs sm:text-lg font-medium"
+            >Scroll to explore</span
+          >
+          <div
+            class="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white rounded-full flex justify-center p-1 bg-black/20 backdrop-blur-sm"
+          >
+            <div
+              class="w-1 h-1.5 sm:w-1 sm:h-2 bg-white rounded-full animate-bounce"
+            ></div>
+          </div>
+        </div>
+        <!-- Scroll Mous section end -->
+      </div>
+    </section>
 
     <!-- End Hero Section -->
 
-    
-
     <!-- about section start -->
-    <section id="about" class="py-6 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- Content Grid -->
-        <div class="grid md:grid-cols-2 gap-12 items-start">
-          <!-- Left: Personal Info -->
-          <div class="space-y-12">
-            <!-- Education -->
-            <div>
-              <h3 class="text-3xl font-bold mb-2 flex items-center">
-                <span class="p-2 mr-3 bg-purple-10 rounded-full">
-                  <svg
-                    class="w-10 h-15 text-White-500 rounded-full"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-                  </svg>
-                </span>
-                Education
-              </h3>
-              <div
-                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
+    
+<section id="about" class="py-3 text-white">
+  <h2 class="text-3xl md:text-4xl mb-4 font-bold text-center ">
+          About
+          <span
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            >Me </span
+          >
+        </h2>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Content Grid -->
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <!-- Left Section (As is) -->
+      <div class="space-y-12">
+        <!-- Education -->
+        <div>
+          <h3 class="text-3xl font-bold mt-10 flex items-center">
+            <span class="p-2 mr-3 bg-purple-10 rounded-full">
+              <svg
+                class="w-10 h-15 mt-4 text-White-500 rounded-full"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <div
-                  class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
-                ></div>
-                <h4 class="text-xl font-bold">Diploma in Engineering</h4>
-                <span
-                  class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
-                  >2019 - 2024</span
-                >
-                <p class="text-sm text-white-600 mt-2">
-                  Government Polytechnic Institute, Bogura
-                </p>
-              </div>
-            </div>
-
-            <!-- Certifications -->
-            <div>
-              <div class="space-y-4">
-                <div
-                  class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Complete Web Development</h4>
-                      <p class="text-sm text-white-500">Self Learning</p>
-                    </div>
-                    <span class="text-xs text-white-500"
-                      >2022–2025(self-taught)</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Master HTML & CSS Projects</h4>
-                      <p class="text-sm text-white-500">Self Learning</p>
-                    </div>
-                    <span class="text-xs text-white-500"
-                      >2022–2023(self-taught)</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Master Git & GitHub</h4>
-                      <p class="text-sm text-white-500">Self Learning</p>
-                    </div>
-                    <span class="text-xs text-white-500"
-                      >2022–2025(self-taught)</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-                >
-                  <div class="flex justify-between items-center">
-                    <div>
-                      <h4 class="font-semibold">Communications</h4>
-                      <p class="text-sm text-white-500">
-                        10 Minute School, Duolingo
-                      </p>
-                    </div>
-                    <span class="text-xs text-white-500">2025</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Education & Certifications -->
-
-          <div>
-            <p
-              class="text-muted-foreground mb-6 mt-5 text-lg md:text-base leading-relaxed"
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+              </svg>
+            </span>
+            Education
+          </h3>
+          <div
+            class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
+          >
+            <div
+              class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
+            ></div>
+            <h4 class="text-xl font-bold">Diploma in Engineering</h4>
+            <span
+              class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
+              >2019 - 2024</span
             >
-              I’m a
-              <span class="text-purple-500 font-semibold"
-                >Diploma Engineer</span
-              >
-              and passionate self-taught
-              <span class="text-purple-500 font-semibold"
-                >Frontend Developer</span
-              >
-              with solid experience in building modern, user-friendly web
-              interfaces. I’ve worked with startups and teams to turn ideas into
-              scalable applications that deliver real results.
+            <p class="text-sm text-white-600 mt-2">
+              Government Polytechnic Institute, Bogura
             </p>
+          </div>
+        </div>
 
-            <!-- Personal Info -->
-            <div class="space-y-3 mb-8 text-sm">
-              <div class="flex gap-x-4">
-                <span class="w-28 font-medium">Fullname:</span
-                ><span>Mahmudul Hasan MeRaj</span>
-              </div>
-              <div class="flex gap-x-4">
-                <span class="w-28 font-medium">Permanent Address:</span
-                ><span>Sirajganj, Bangladesh</span>
-              </div>
-              <div class="flex gap-x-4">
-                <span class="w-28 font-medium">Present Address:</span
-                ><span>Bogura, Bangladesh</span>
-              </div>
-              <div class="flex gap-x-4">
-                <span class="w-28 font-medium">Email:</span
-                ><a
-                  href="mailto:dev.mahmudulhasan2@gmail.com"
-                  class="text-purple-500 hover:underline"
-                  >dev.mahmudulhasan2@gmail.com</a
-                >
-              </div>
-              <div class="flex gap-x-4">
-                <span class="w-28 font-medium">Linkedin:</span
-                ><a
-                  href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
-                  class="text-purple-500 hover:underline"
-                  >Mahmudul Hasan</a
-                >
-              </div>
-              <div class="flex gap-x-4">
-                <span class="w-28 font-medium">GitHub:</span
-                ><a
-                  href="https://github.com/mahmudul7608"
-                  class="text-purple-500 hover:underline"
-                  >mahmudulhasan</a
-                >
-              </div>
-              <div class="flex gap-x-4">
-                <span class="w-28 font-medium">Phone:</span
-                ><a
-                  href="tel:+8801650217608"
-                  class="text-purple-500 hover:underline"
-                  >+8801650217608</a
+        <!-- Certifications -->
+        <div>
+          <div class="space-y-4">
+            <div
+              class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
+            >
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Complete Web Development</h4>
+                  <p class="text-sm text-white-500">Self Learning</p>
+                </div>
+                <span class="text-xs text-white-500"
+                  >2022–2025(self-taught)</span
                 >
               </div>
             </div>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-wrap gap-4 mb-10">
-              <a
-                href="#contact-me"
-                class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium shadow-lg hover:scale-105 transition"
-                >Contact Me</a
-              >
-              <a
-                href="#portfolio"
-                class="px-6 py-3 rounded-full border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition"
-                >Download Resume</a
-              >
+            <div
+              class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
+            >
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Master HTML & CSS Projects</h4>
+                  <p class="text-sm text-white-500">Self Learning</p>
+                </div>
+                <span class="text-xs text-white-500"
+                  >2022–2023(self-taught)</span
+                >
+              </div>
             </div>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 mt-8 gap-5">
-              <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-              >
-                <div class="text-purple-500 mb-1">
-                  <svg
-                    class="w-6 h-6 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
-                  </svg>
+            <div
+              class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
+            >
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Master Git & GitHub</h4>
+                  <p class="text-sm text-white-500">Self Learning</p>
                 </div>
-                <div class="text-xl font-bold">3+</div>
-                <p class="text-xs text-muted-foreground">
-                  Years Coding Experience
-                </p>
+                <span class="text-xs text-white-500"
+                  >2022–2025(self-taught)</span
+                >
               </div>
-              <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-              >
-                <div class="text-purple-500 mb-1">
-                  <svg
-                    class="w-6 h-6 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
-                    ></path>
-                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                    <path d="M10 9H8"></path>
-                    <path d="M16 13H8"></path>
-                    <path d="M16 17H8"></path>
-                  </svg>
+            </div>
+            <div
+              class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
+            >
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold">Communications</h4>
+                  <p class="text-sm text-white-500">
+                    10 Minute School, Duolingo
+                  </p>
                 </div>
-                <div class="text-xl font-bold">20+</div>
-                <p class="text-xs text-muted-foreground">Projects Built</p>
-              </div>
-              <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-              >
-                <div class="text-purple-500 mb-1">
-                  <svg
-                    class="w-6 h-6 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="12" cy="7" r="4"></circle>
-                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                  </svg>
-                </div>
-                <p class="text-xs text-muted-foreground">Good Understanding</p>
-              </div>
-              <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-              >
-                <div class="text-purple-500 mb-1">
-                  <svg
-                    class="w-6 h-6 mx-auto"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
-                </div>
-                <div class="text-xl font-bold">40K+</div>
-                <p class="text-xs text-muted-foreground">Lines of Code</p>
+                <span class="text-xs text-white-500">2025</span>
               </div>
             </div>
           </div>
-          <!-- End Right Column -->
         </div>
       </div>
-    </section>
+
+      <!-- ✅ Right Section (Improved Center Layout) -->
+      <div class="flex flex-col items-center text-center">
+        <!-- Image -->
+        <div class="w-[60%] sm:w-[60%] md:w-[75%] lg:w-[70%] ">
+          <img
+            src="/image/HM-image-1.png"
+            alt="Mahmudul Hasan"
+            class="rounded-2xl shadow-2xl mx-auto object-cover w-full h-auto"
+          />
+        </div>
+
+        <!-- Stats -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-4 w-full justify-center"
+        >
+          <div
+            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+          >
+            <div class="text-purple-500 mb-1">
+              <svg
+                class="w-6 h-6 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+              </svg>
+            </div>
+            <div class="text-xl font-bold">3+</div>
+            <p class="text-xs text-muted-foreground">Years Coding Experience</p>
+          </div>
+
+          <div
+            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+          >
+            <div class="text-purple-500 mb-1">
+              <svg
+                class="w-6 h-6 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                ></path>
+                <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                <path d="M10 9H8"></path>
+                <path d="M16 13H8"></path>
+                <path d="M16 17H8"></path>
+              </svg>
+            </div>
+            <div class="text-xl font-bold">20+</div>
+            <p class="text-xs text-muted-foreground">Projects Built</p>
+          </div>
+
+          <div
+            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+          >
+            <div class="text-purple-500 mb-1">
+              <svg
+                class="w-6 h-6 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              </svg>
+            </div>
+            <p class="text-xs text-muted-foreground">Good Understanding</p>
+          </div>
+
+          <div
+            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+          >
+            <div class="text-purple-500 mb-1">
+              <svg
+                class="w-6 h-6 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="text-xl font-bold">40K+</div>
+            <p class="text-xs text-muted-foreground">Lines of Code</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Right -->
+    </div>
+  </div>
+</section>
+
     <!-- about section end  -->
 
     <!-- skills section start-->
