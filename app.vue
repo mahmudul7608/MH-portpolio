@@ -17,49 +17,35 @@
 
       <!-- Desktop Right Sidebar Navbar -->
       <aside
-    class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 
-           bg-gray-800/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/20"
-  >
-    <!-- 🔹 Top Profile / Logo Image -->
-    <div
-      class="w-10 h-10 rounded-full overflow-hidden border-2 border-white/20 shadow-lg mb-1 
-             hover:scale-110 transition-all duration-300"
-    >
-      <img
-        src="/image/MH-Logo.jpg"
-        alt="My Logo"
-        class="w-full h-full object-cover"
-      />
-    </div>
+        class="hidden md:flex fixed top-1/2 right-6 -translate-y-1/2 z-40 flex-col items-center space-y-5 bg-gray-900/95 backdrop-blur-lg rounded-3xl p-4 shadow-2xl border border-white/20"
+      >
 
-    <!-- 🔹 Navigation Icons -->
-    <div class="flex flex-col items-center space-y-3">
-      <div v-for="item in navItems" :key="item.href" class="relative group">
-        <!-- Tooltip -->
-        <span
-          class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs px-3 py-1 rounded-md opacity-0 
-                 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 transition-all duration-300 
-                 pointer-events-none whitespace-nowrap shadow-lg"
-        >
-          {{ item.label }}
-        </span>
+        <!-- 🔹 Navigation Icons -->
+        <div class="flex flex-col items-center space-y-3">
+          <div v-for="item in navItems" :key="item.href" class="relative group">
+            <!-- Tooltip -->
+            <span
+              class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-lg"
+            >
+              {{ item.label }}
+            </span>
 
-        <!-- Icon -->
-        <a
-          :href="item.href"
-          class="p-3 rounded-full flex items-center justify-center shadow-md transition-all duration-300
-                 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:scale-110"
-          :class="[
-            activeSection === item.href
-              ? activeColor(item.label) + ' text-white scale-110 shadow-lg ring-2 ring-white/30'
-              : '',
-          ]"
-        >
-          <component :is="item.icon" class="w-5 h-5" />
-        </a>
-      </div>
-    </div>
-  </aside>
+            <!-- Icon -->
+            <a
+              :href="item.href"
+              class="p-3 rounded-full flex items-center justify-center shadow-md transition-all duration-300 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:scale-110"
+              :class="[
+                activeSection === item.href
+                  ? activeColor(item.label) +
+                    ' text-white scale-110 shadow-lg ring-2 ring-white/30'
+                  : '',
+              ]"
+            >
+              <component :is="item.icon" class="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </aside>
 
       <!-- Mobile Hamburger Button -->
       <button
@@ -117,157 +103,128 @@
 
     <!-- Hero Section start -->
     <section
-      id="intro"
-      class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 pt-7 pb-15 max-w-screen-xl mx-auto"
+  id="intro"
+  class="relative flex flex-col items-center justify-center text-center px-6 md:px-12 py-20 min-h-screen overflow-hidden"
+>
+  <!-- LEFT: Social Icons -->
+  <div
+    class="hidden md:flex flex-col items-center ml-[18rem] space-y-5 absolute left-6 top-1/2 -translate-y-1/2"
+  >
+    <!-- LinkedIn -->
+    <a
+      href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+      aria-label="LinkedIn"
     >
-      <!-- Text Content -->
-      <div class="w-full mt-[70px] md:w-1/2 text-center md:text-left">
-        <h2 class="font-extrabold leading-tight">
-          <!-- FRONTEND -->
-          <span
-            class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block overflow-hidden whitespace-nowrap animate-frontend"
-          >
-            FRONTEND
-          </span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+        <rect width="4" height="12" x="2" y="9"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
+      </svg>
+    </a>
 
-          <!-- DEVELOPER -->
-          <span
-            class="text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-2 overflow-hidden whitespace-nowrap animate-developer"
-          >
-            DEVELOPER
-          </span>
-        </h2>
-        <p class="mt-6 text-white-700 text-base leading-relaxed">
-          <span class="font-semibold text-white">I'm</span>
-          – a
-          <span class="text-sky-600 font-semibold">Frontend Developer</span>
-          with a passion for clean design, smooth user experiences, and smart,
-          scalable code. With strong experience in
-          <span class="font-medium">collaborative team environments</span>, I
-          thrive on building together and turning ideas into powerful, modern
-          web solutions. Always learning, always building.
-        </p>
+    <!-- GitHub -->
+    <a
+      href="https://github.com/mahmudul7608"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+      aria-label="GitHub"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path
+          d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+        ></path>
+        <path d="M9 18c-4.51 2-5-2-7-2"></path>
+      </svg>
+    </a>
 
-        <!-- Buttons -->
-        <div class="flex flex-wrap gap-4 justify-center md:justify-start mt-8">
-          <a
-            href="#contact-me"
-            class="inline-block px-5 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
-          >
-            Get in Touch
-          </a>
-          <a
-            href="#my-recent-project"
-            class="inline-block px-5 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
-          >
-            View Projects
-          </a>
-        </div>
+    <!-- WhatsApp -->
+    <a
+      href="https://wa.me/8801650217808"
+      target="_blank"
+      class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+      aria-label="WhatsApp"
+    >
+      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
+        <path
+          d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
+        />
+      </svg>
+    </a>
+  </div>
 
-        <!-- Social Media -->
-        <div
-          class="flex items-center space-x-4 justify-center md:justify-start pt-6"
-        >
-          <!-- GitHub -->
-          <a
-            href="https://github.com/mahmudul7608"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-            aria-label="GitHub"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-              ></path>
-              <path d="M9 18c-4.51 2-5-2-7-2"></path>
-            </svg>
-          </a>
+  <!-- RIGHT: Email -->
+  <div
+    class="hidden md:block absolute right-[-75px] mr-[25rem] top-1/2 -translate-y-1/2 rotate-90 origin-right text-sm text-white/70 tracking-wider"
+  >
+    dev.mahmudulhasan2@gmail.com
+  </div>
 
-          <!-- LinkedIn -->
-          <a
-            href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-            aria-label="LinkedIn"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-              ></path>
-              <rect width="4" height="12" x="2" y="9"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-
-          <!-- Email -->
-          <a
-            href="mailto:dev.mahmudulhasan2@gmail.com"
-            class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-            aria-label="Email"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              viewBox="0 0 24 24"
-            >
-              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg>
-          </a>
-          <!-- sms -->
-          <a
-            href="https://wa.me/8801650217808"
-            target="_blank"
-            class="p-2 rounded-full bg-secondary text-foreground hover:bg-purple-500 hover:text-white transition-colors"
-            aria-label="WhatsApp"
-          >
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
-              <path
-                d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Image -->
-      <div class="w-full md:w-[45%] mb-10 md:mb-0">
+  <!-- CENTER CONTENT -->
+  <div class="max-w-3xl">
+    <!-- PROFILE IMAGE -->
+    <div class="flex justify-center mb-8">
+      <div
+        class="relative w-28 h-28 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg shadow-purple-700/30"
+      >
         <img
-          src="/image/HM-image-1.png"
-          alt="Mahmudul Hasan"
-          class="rounded-xl shadow-xl mx-auto max-w-full"
+          src="/image/MH-Logo.jpg"
+          alt="Profile"
+          class="w-full h-full object-cover"
         />
       </div>
-    </section>
-    <!-- End Hero Section -->
+    </div>
 
+    <!-- TEXTS -->
+    <h2 class="font-extrabold leading-tight">
+      <span
+        class="text-3xl sm:text-5xl md:text-7xl bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text block overflow-hidden animate-frontend"
+      >
+        FRONTEND
+      </span>
+      <span
+        class="text-4xl sm:text-6xl md:text-8xl bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text block mt-1 animate-developer"
+      >
+        DEVELOPER
+      </span>
+    </h2>
+
+    <!-- Tagline -->
+    <p
+      class="mt-6 text-xl sm:text-2xl font-semibold bg-gradient-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent"
+    >
+      Your Vision, My Code – Let's Build Something Amazing!
+    </p>
+
+    <!-- Subtext -->
+    <p class="mt-3 text-white/70 text-base sm:text-lg">
+      I’m <span class="text-white font-medium">Mahmudul Hasan</span> — a Diploma Engineer and
+      Frontend Developer dedicated to crafting beautiful, responsive, and high-performance web
+      experiences.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-wrap gap-4 justify-center mt-8">
+      <a
+        href="#contact-me"
+        class="inline-block px-6 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
+      >
+        Get in Touch
+      </a>
+      <a
+        href="#my-recent-project"
+        class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
+      >
+        View Projects
+      </a>
+    </div>
     <!-- Scroll Mouse section -->
-    <div class="flex flex-col items-center space-y-2 top-0 mb-2">
+    <div class="flex flex-col items-center space-y-2 mt-5 ">
       <span class="text-white text-xs sm:text-lg font-medium"
         >Scroll to explore</span
       >
@@ -280,18 +237,16 @@
       </div>
     </div>
     <!-- Scroll Mous section end -->
+  </div>
+</section>
+
+    <!-- End Hero Section -->
+
+    
 
     <!-- about section start -->
     <section id="about" class="py-6 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Title -->
-        <h2 class="text-3xl md:text-4xl font-bold text-center top-0 mb-12">
-          About
-          <span
-            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
-            >Me</span
-          >
-        </h2>
 
         <!-- Content Grid -->
         <div class="grid md:grid-cols-2 gap-12 items-start">
@@ -2026,101 +1981,83 @@
     <!-- tools section end -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="relative">
-      <!-- Section Heading -->
-      <h2
-        class="text-3xl md:text-4xl font-extrabold text-center mb-14 text-white tracking-wide"
-      >
-        My
-        <span
-          class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text"
-        >
-          Projects
-        </span>
-      </h2>
+    <section
+      id="my-recent-project"
+      class="py-16 from-[#080d16] via-[#0c1422] to-[#0a0f1a] text-white"
+    >
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          ✨ My Recent <span class="text-cyan-400">Projects</span>
+        </h2>
+      </div>
 
-      <!-- Slider -->
-      <div
-        class="relative overflow-hidden max-w-7xl mx-auto px-4 md:px-8"
-        ref="sliderContainer"
-      >
-        <div
-          class="flex gap-8 transition-transform duration-700 ease-in-out"
-          :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+      <div class="relative max-w-6xl mx-auto px-6">
+        <Swiper
+          :modules="[EffectCoverflow, Navigation, Pagination, Autoplay]"
+          effect="coverflow"
+          :grabCursor="true"
+          :centeredSlides="true"
+          :slidesPerView="'auto'"
+          :loop="true"
+          :coverflowEffect="{
+            rotate: 0,
+            stretch: 0,
+            depth: 180,
+            modifier: 3,
+            slideShadows: true,
+          }"
+          :autoplay="{ delay: 3500, disableOnInteraction: false }"
+          navigation
+          pagination
+          class="swiper-container"
         >
-          <!-- Card -->
-          <div
-            v-for="(project, i) in projects"
-            :key="i"
-            class="min-w-full sm:min-w-[50%] lg:min-w-[33.33%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center shadow-lg transition transform hover:-translate-y-3 hover:shadow-2xl hover:border-purple-400/40"
+          <SwiperSlide
+            v-for="(project, index) in projects"
+            :key="index"
+            class="rounded-2xl overflow-hidden border border-[#1f2b46]/40 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-cyan-500/30 transition-all duration-500"
+            style="
+              background: radial-gradient(
+                circle at top left,
+                rgba(8, 60, 95, 0.8),
+                rgba(10, 20, 35, 0.95)
+              );
+              backdrop-filter: blur(12px);
+            "
           >
-            <!-- Image -->
-            <div
-              class="mb-5 h-52 overflow-hidden rounded-xl border border-white/10"
-            >
-              <img
-                :src="project.image"
-                :alt="project.title"
-                class="w-full h-full object-cover hover:scale-110 transition duration-500"
-                loading="lazy"
-              />
+            <!-- Image Section -->
+            <div class="p-3">
+              <div class="rounded-xl overflow-hidden shadow-md">
+                <img
+                  :src="project.image"
+                  :alt="project.title"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             </div>
 
-            <!-- Title -->
-            <h3
-              class="text-2xl font-semibold text-white mb-4 relative inline-block"
-            >
-              {{ project.title }}
-              <span
-                class="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 to-pink-500"
-              ></span>
-            </h3>
+            <!-- Info Section -->
+            <div class="px-5 pb-5 text-center">
+              <h3 class="text-lg font-semibold text-white mb-1">
+                {{ project.title }}
+              </h3>
+              <p class="text-xs text-gray-400 mb-4">
+                Developed by
+                <span class="text-gray-200 font-medium">Mahmudul Hasan</span>
+              </p>
 
-            <!-- Button -->
-            <div class="flex justify-center mt-4">
               <a
                 :href="project.live"
                 target="_blank"
-                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-500 transition duration-300"
+                class="inline-block bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 px-5 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
               >
-                🚀 Live view
+                🚀 Live View
               </a>
             </div>
-          </div>
-        </div>
-
-        <!-- Prev -->
-        <button
-          @click="prevSlide"
-          class="absolute left-10 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black border-1px border-black flex items-center justify-center shadow hover:scale-110 transition"
-        >
-          ❮
-        </button>
-
-        <!-- Next -->
-        <button
-          @click="nextSlide"
-          class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center shadow hover:scale-110 transition"
-        >
-          ❯
-        </button>
-      </div>
-
-      <!-- Dots -->
-      <div class="flex justify-center gap-3 mt-6">
-        <span
-          v-for="(dot, i) in totalSlides"
-          :key="i"
-          class="w-3 h-3 rounded-full cursor-pointer transition-all duration-300"
-          :class="
-            i === currentSlide
-              ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
-              : 'bg-white/50 hover:bg-white/80'
-          "
-          @click="goToSlide(i)"
-        ></span>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
+
     <!-- my project section end -->
 
     <!-- Contact section start -->
@@ -2365,7 +2302,22 @@
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 import { Home, User, Brain, Folder, Code, Mail, Book } from "lucide-vue-next";
 
-// Scroll progress bar
+// Swiper imports
+import { Swiper, SwiperSlide } from "swiper/vue";
+import {
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+  Autoplay,
+} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// ==========================
+// 🔹 Scroll progress bar
+// ==========================
 const scrollProgress = ref(0);
 const updateScroll = () => {
   if (process.client) {
@@ -2377,11 +2329,14 @@ const updateScroll = () => {
 onMounted(() => window.addEventListener("scroll", updateScroll));
 onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 
-// Mobile menu state
+// ==========================
+// 🔹 Mobile menu state
+// ==========================
 const isOpen = ref(false);
 
-// Navbar items
-
+// ==========================
+// 🔹 Navbar items
+// ==========================
 const navItems = [
   { href: "#intro", label: "Home", icon: Home },
   { href: "#about", label: "About", icon: User },
@@ -2395,6 +2350,7 @@ const navItems = [
 const activeSection = ref("#intro");
 
 // 🔹 section অনুযায়ী color
+
 const activeColor = (label) => {
   switch (label) {
     case "Home":
@@ -2417,6 +2373,7 @@ const activeColor = (label) => {
 };
 
 // 🔹 scroll এ active section update
+
 let observer;
 
 onMounted(() => {
@@ -2457,7 +2414,7 @@ onMounted(() => {
   });
 });
 
-// Projects slider
+// 🔹 Projects slider (Swiper coverflow)
 const projects = ref([
   {
     title: "Mh-Ai-Powered-Design",
@@ -2487,81 +2444,14 @@ const projects = ref([
   {
     title: "Meal Finder",
     image: "/image/MH-food.png",
-    live: "https://meal-count.netlify.app/",
+    live: "***",
   },
-  {
-    title: "Intelligent-business",
-    image: "/image/MH-5.png",
-    live: "https://intelligent-buisness.netlify.app/",
-  },
+  // {
+  //   title: "Intelligent-business",
+  //   image: "/image/MH-5.png",
+  //   live: "https://intelligent-buisness.netlify.app/",
+  // },
 ]);
-
-// Responsive slider fix
-const windowWidth = ref(1024); // default safe value
-const currentSlide = ref(0);
-
-const handleResize = () => {
-  if (process.client) {
-    windowWidth.value = window.innerWidth;
-    currentSlide.value = 0; // reset slide on resize
-  }
-};
-
-onMounted(() => {
-  // first set width safely
-  if (process.client) {
-    windowWidth.value = window.innerWidth;
-    window.addEventListener("resize", handleResize);
-  }
-});
-onBeforeUnmount(() => {
-  if (process.client) {
-    window.removeEventListener("resize", handleResize);
-  }
-});
-
-// cards per view logic
-const cardsPerView = computed(() => {
-  if (windowWidth.value <= 640) return 1;
-  if (windowWidth.value <= 1024) return 2;
-  return 3;
-});
-
-const totalSlides = computed(() =>
-  Math.ceil(projects.value.length / cardsPerView.value)
-);
-
-const sliderContainer = ref(null);
-
-function nextSlide() {
-  currentSlide.value =
-    currentSlide.value >= totalSlides.value - 1 ? 0 : currentSlide.value + 1;
-}
-function prevSlide() {
-  currentSlide.value =
-    currentSlide.value <= 0 ? totalSlides.value - 1 : currentSlide.value - 1;
-}
-function goToSlide(index) {
-  currentSlide.value = index;
-}
-
-// Auto slide
-let autoSlide;
-onMounted(() => {
-  autoSlide = setInterval(() => nextSlide(), 5000);
-
-  if (sliderContainer.value) {
-    sliderContainer.value.addEventListener("mouseenter", () =>
-      clearInterval(autoSlide)
-    );
-    sliderContainer.value.addEventListener("mouseleave", () => {
-      autoSlide = setInterval(() => nextSlide(), 5000);
-    });
-  }
-});
-onBeforeUnmount(() => {
-  clearInterval(autoSlide);
-});
 </script>
 
 <style scoped>
@@ -2666,6 +2556,23 @@ a:hover svg {
   animation-duration: 200s;
 }
 
+.swiper-container {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.swiper-slide {
+  width: 340px;
+  height: 360px;
+  transition: all 0.4s ease-in-out;
+}
+
+.swiper-slide-active {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
 @keyframes moveStars {
   from {
     transform: translateY(0);
@@ -2673,5 +2580,43 @@ a:hover svg {
   to {
     transform: translateY(-1000px);
   }
+}
+@keyframes frontendAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes developerAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-frontend {
+  animation: frontendAppear 1.8s ease-out forwards;
+}
+
+.animate-developer {
+  animation: developerAppear 2s ease-out forwards;
+  animation-delay: 0.3s;
 }
 </style>
