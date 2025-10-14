@@ -103,7 +103,7 @@
     <!-- Hero Section start -->
     <section
       id="intro"
-      class="relative flex flex-col items-center justify-center text-center px-6 md:px-12 py-20 min-h-screen overflow-hidden"
+      class="relative flex flex-col items-center justify-center text-center px-8 md:px-12 py-20 min-h-screen overflow-hidden"
     >
       <!-- LEFT: Social Icons -->
       <div
@@ -221,7 +221,7 @@
         <!-- Subtext -->
         <p class="mt-3 text-white/70 text-base sm:text-lg">
           I’m <span class="text-white font-medium">Mahmudul Hasan</span> — a
-          Diploma Engineer and Frontend Developer dedicated to crafting
+          <span class="text-white font-medium">Diploma Engineer </span> and <span class="text-white font-medium">Frontend Developer</span> dedicated to crafting
           beautiful, responsive, and high-performance web experiences.
         </p>
 
@@ -472,7 +472,7 @@
     <!-- skills section start-->
     <section id="skills" class="mt-10 bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-20">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
