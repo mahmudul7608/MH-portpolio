@@ -3,7 +3,10 @@
     class="min-h-screen text-white transition-colors duration-300 relative overflow-hidden"
   >
     <!-- Galaxy Animated Background -->
-    <div class="absolute inset-0 -z-10 galaxy-bg"></div>
+    <div class="absolute inset-0 -z-10 galaxy-bg">
+      <!-- Horizontal moving stars (left to right) -->
+      <div class="horizontal-stars"></div>
+    </div>
 
     <!-- Header Navbar start -->
     <header class="fixed top-0 left-0 w-full z-50">
@@ -221,8 +224,10 @@
         <!-- Subtext -->
         <p class="mt-3 text-white/70 text-base sm:text-lg">
           I’m <span class="text-white font-medium">Mahmudul Hasan</span> — a
-          <span class="text-white font-medium">Diploma Engineer </span> and <span class="text-white font-medium">Frontend Developer</span> dedicated to crafting
-          beautiful, responsive, and high-performance web experiences.
+          <span class="text-white font-medium">Diploma Engineer </span> and
+          <span class="text-white font-medium">Frontend Developer</span>
+          dedicated to crafting beautiful, responsive, and high-performance web
+          experiences.
         </p>
 
         <!-- Buttons -->
@@ -260,212 +265,214 @@
     <!-- End Hero Section -->
 
     <!-- about section start -->
-    
-<section id="about" class="py-3 text-white">
-  <h2 class="text-3xl md:text-4xl mb-4 font-bold text-center ">
-          About
-          <span
-            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
-            >Me </span
-          >
-        </h2>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Content Grid -->
-    <div class="grid md:grid-cols-2 gap-12 items-start">
-      <!-- Left Section (As is) -->
-      <div class="space-y-12">
-        <!-- Education -->
-        <div>
-          <h3 class="text-3xl font-bold mt-10 flex items-center">
-            <span class="p-2 mr-3 bg-purple-10 rounded-full">
-              <svg
-                class="w-10 h-15 mt-4 text-White-500 rounded-full"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-              </svg>
-            </span>
-            Education
-          </h3>
-          <div
-            class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
-          >
-            <div
-              class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
-            ></div>
-            <h4 class="text-xl font-bold">Diploma in Engineering</h4>
-            <span
-              class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
-              >2019 - 2024</span
-            >
-            <p class="text-sm text-white-600 mt-2">
-              Government Polytechnic Institute, Bogura
-            </p>
-          </div>
-        </div>
 
-        <!-- Certifications -->
-        <div>
-          <div class="space-y-4">
-            <div
-              class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-            >
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Complete Web Development</h4>
-                  <p class="text-sm text-white-500">Self Learning</p>
-                </div>
-                <span class="text-xs text-white-500"
-                  >2022–2025(self-taught)</span
+    <section id="about" class="py-3 text-white">
+      <h2 class="text-3xl md:text-4xl mb-4 font-bold text-center">
+        About
+        <span
+          class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+          >Me
+        </span>
+      </h2>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Content Grid -->
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <!-- Left Section (As is) -->
+          <div class="space-y-12">
+            <!-- Education -->
+            <div>
+              <h3 class="text-3xl font-bold mt-10 flex items-center">
+                <span class="p-2 mr-3 bg-purple-10 rounded-full">
+                  <svg
+                    class="w-10 h-15 mt-4 text-White-500 rounded-full"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                  </svg>
+                </span>
+                Education
+              </h3>
+              <div
+                class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
+              >
+                <div
+                  class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
+                ></div>
+                <h4 class="text-xl font-bold">Diploma in Engineering</h4>
+                <span
+                  class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
+                  >2019 - 2024</span
                 >
+                <p class="text-sm text-white-600 mt-2">
+                  Government Polytechnic Institute, Bogura
+                </p>
               </div>
             </div>
-            <div
-              class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-            >
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Master HTML & CSS Projects</h4>
-                  <p class="text-sm text-white-500">Self Learning</p>
-                </div>
-                <span class="text-xs text-white-500"
-                  >2022–2023(self-taught)</span
+
+            <!-- Certifications -->
+            <div>
+              <div class="space-y-4">
+                <div
+                  class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
                 >
-              </div>
-            </div>
-            <div
-              class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-            >
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Master Git & GitHub</h4>
-                  <p class="text-sm text-white-500">Self Learning</p>
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Complete Web Development</h4>
+                      <p class="text-sm text-white-500">Self Learning</p>
+                    </div>
+                    <span class="text-xs text-white-500"
+                      >2022–2025(self-taught)</span
+                    >
+                  </div>
                 </div>
-                <span class="text-xs text-white-500"
-                  >2022–2025(self-taught)</span
+                <div
+                  class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
                 >
-              </div>
-            </div>
-            <div
-              class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-            >
-              <div class="flex justify-between items-center">
-                <div>
-                  <h4 class="font-semibold">Communications</h4>
-                  <p class="text-sm text-white-500">
-                    10 Minute School, Duolingo
-                  </p>
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Master HTML & CSS Projects</h4>
+                      <p class="text-sm text-white-500">Self Learning</p>
+                    </div>
+                    <span class="text-xs text-white-500"
+                      >2022–2023(self-taught)</span
+                    >
+                  </div>
                 </div>
-                <span class="text-xs text-white-500">2025</span>
+                <div
+                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Master Git & GitHub</h4>
+                      <p class="text-sm text-white-500">Self Learning</p>
+                    </div>
+                    <span class="text-xs text-white-500"
+                      >2022–2025(self-taught)</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
+                >
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <h4 class="font-semibold">Communications</h4>
+                      <p class="text-sm text-white-500">
+                        10 Minute School, Duolingo
+                      </p>
+                    </div>
+                    <span class="text-xs text-white-500">2025</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- ✅ Right Section (Improved Center Layout) -->
+          <div class="flex flex-col items-center text-center">
+            <!-- Image -->
+            <div class="w-[60%] sm:w-[60%] md:w-[75%] lg:w-[70%]">
+              <img
+                src="/image/HM-image-1.png"
+                alt="Mahmudul Hasan"
+                class="rounded-2xl shadow-2xl mx-auto object-cover w-full h-auto"
+              />
+            </div>
+
+            <!-- Stats -->
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-4 w-full justify-center"
+            >
+              <div
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                  </svg>
+                </div>
+                <div class="text-xl font-bold">3+</div>
+                <p class="text-xs text-muted-foreground">
+                  Years Coding Experience
+                </p>
+              </div>
+
+              <div
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                    ></path>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                    <path d="M10 9H8"></path>
+                    <path d="M16 13H8"></path>
+                    <path d="M16 17H8"></path>
+                  </svg>
+                </div>
+                <div class="text-xl font-bold">20+</div>
+                <p class="text-xs text-muted-foreground">Projects Built</p>
+              </div>
+
+              <div
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  </svg>
+                </div>
+                <p class="text-xs text-muted-foreground">Good Understanding</p>
+              </div>
+
+              <div
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+              >
+                <div class="text-purple-500 mb-1">
+                  <svg
+                    class="w-6 h-6 mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="text-xl font-bold">40K+</div>
+                <p class="text-xs text-muted-foreground">Lines of Code</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Right -->
         </div>
       </div>
-
-      <!-- ✅ Right Section (Improved Center Layout) -->
-      <div class="flex flex-col items-center text-center">
-        <!-- Image -->
-        <div class="w-[60%] sm:w-[60%] md:w-[75%] lg:w-[70%] ">
-          <img
-            src="/image/HM-image-1.png"
-            alt="Mahmudul Hasan"
-            class="rounded-2xl shadow-2xl mx-auto object-cover w-full h-auto"
-          />
-        </div>
-
-        <!-- Stats -->
-        <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-4 w-full justify-center"
-        >
-          <div
-            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-          >
-            <div class="text-purple-500 mb-1">
-              <svg
-                class="w-6 h-6 mx-auto"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                <rect width="20" height="14" x="2" y="6" rx="2"></rect>
-              </svg>
-            </div>
-            <div class="text-xl font-bold">3+</div>
-            <p class="text-xs text-muted-foreground">Years Coding Experience</p>
-          </div>
-
-          <div
-            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-          >
-            <div class="text-purple-500 mb-1">
-              <svg
-                class="w-6 h-6 mx-auto"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
-                ></path>
-                <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                <path d="M10 9H8"></path>
-                <path d="M16 13H8"></path>
-                <path d="M16 17H8"></path>
-              </svg>
-            </div>
-            <div class="text-xl font-bold">20+</div>
-            <p class="text-xs text-muted-foreground">Projects Built</p>
-          </div>
-
-          <div
-            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-          >
-            <div class="text-purple-500 mb-1">
-              <svg
-                class="w-6 h-6 mx-auto"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <circle cx="12" cy="7" r="4"></circle>
-                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-              </svg>
-            </div>
-            <p class="text-xs text-muted-foreground">Good Understanding</p>
-          </div>
-
-          <div
-            class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
-          >
-            <div class="text-purple-500 mb-1">
-              <svg
-                class="w-6 h-6 mx-auto"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <div class="text-xl font-bold">40K+</div>
-            <p class="text-xs text-muted-foreground">Lines of Code</p>
-          </div>
-        </div>
-      </div>
-      <!-- End Right -->
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- about section end  -->
 
@@ -1137,40 +1144,6 @@
             </div>
             <div
               class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
-              style="transition-delay: 450ms"
-            >
-              <div
-                class="p-4 flex flex-col items-center justify-center text-center"
-              >
-                <div class="mb-3 p-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-paintbrush w-8 h-8 text-purple-500"
-                  >
-                    <path d="m14.622 17.897-10.68-2.913"></path>
-                    <path
-                      d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"
-                    ></path>
-                    <path
-                      d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="font-medium text-sm sm:text-base">
-                  Styled Component
-                </h3>
-              </div>
-            </div>
-            <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 50ms"
             >
               <div
@@ -1241,22 +1214,6 @@
                       </linearGradient>
                     </defs>
                   </svg>
-
-                  <!-- <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-code w-8 h-8 text-purple-500"
-                  >
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg> -->
                 </div>
                 <h3 class="font-medium text-sm sm:text-base">Node.js</h3>
               </div>
@@ -1290,115 +1247,7 @@
                 <h3 class="font-medium text-sm sm:text-base">REST APIs</h3>
               </div>
             </div>
-            <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
-              style="transition-delay: 250ms"
-            >
-              <div
-                class="p-4 flex flex-col items-center justify-center text-center"
-              >
-                <div class="mb-2 p-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="70"
-                    height="70"
-                    viewBox="0 0 128 128"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-lock w-10 h-10 text-purple-500"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#3A4D54"
-                      d="M73.8 50.8h11.3v11.5h5.7c2.6 0 5.3-.5 7.8-1.3 1.2-.4 2.6-1 3.8-1.7-1.6-2.1-2.4-4.7-2.6-7.3-.3-3.5.4-8.1 2.8-10.8l1.2-1.4 1.4 1.1c3.6 2.9 6.5 6.8 7.1 11.4 4.3-1.3 9.3-1 13.1 1.2l1.5.9-.8 1.6c-3.2 6.2-9.9 8.2-16.4 7.8-9.8 24.3-31 35.8-56.8 35.8-13.3 0-25.5-5-32.5-16.8l-.1-.2-1-2.1c-2.4-5.2-3.1-10.9-2.6-16.6l.2-1.7h9.6V50.8h11.3V39.6h22.5V28.3h13.5v22.5z"
-                    ></path>
-                    <path
-                      fill="#00AADA"
-                      d="M110.4 55.1c.8-5.9-3.6-10.5-6.4-12.7-3.1 3.6-3.6 13.2 1.3 17.2-2.8 2.4-8.5 4.7-14.5 4.7H18.6c-.6 6.2.5 11.9 3 16.8l.8 1.5c.5.9 1.1 1.7 1.7 2.6 3 .2 5.7.3 8.2.2 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5 1.1-8.3 1.3h-.6c-1.3.1-2.7.1-4.2.1-1.6 0-3.1 0-4.9-.1 6 6.8 15.4 10.8 27.2 10.8 25 0 46.2-11.1 55.5-35.9 6.7.7 13.1-1 16-6.7-4.5-2.7-10.5-1.8-13.9-.1z"
-                    ></path>
-                    <path
-                      fill="#28B8EB"
-                      d="M110.4 55.1c.8-5.9-3.6-10.5-6.4-12.7-3.1 3.6-3.6 13.2 1.3 17.2-2.8 2.4-8.5 4.7-14.5 4.7h-68c-.3 9.5 3.2 16.7 9.5 21 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.5 1.4l-.1-.1c8.5 4.4 20.8 4.3 35-1.1 15.8-6.1 30.6-17.7 40.9-30.9-.2.1-.4.1-.5.2z"
-                    ></path>
-                    <path
-                      fill="#028BB8"
-                      d="M18.7 71.8c.4 3.3 1.4 6.4 2.9 9.3l.8 1.5c.5.9 1.1 1.7 1.7 2.6 3 .2 5.7.3 8.2.2 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.5 1.4h-.4c-1.3.1-2.7.1-4.1.1-1.6 0-3.2 0-4.9-.1 6 6.8 15.5 10.8 27.3 10.8 21.4 0 40-8.1 50.8-26H18.7v-.1z"
-                    ></path>
-                    <path
-                      fill="#019BC6"
-                      d="M23.5 71.8c1.3 5.8 4.3 10.4 8.8 13.5 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5.2 1.2-8.6 1.4 8.5 4.4 20.8 4.3 34.9-1.1 8.5-3.3 16.8-8.2 24.2-14.1H23.5z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#00ACD3"
-                      d="M28.4 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm3-12h9.8v9.8h-9.8v-9.8zm.9.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#23C2EE"
-                      d="M39.6 52.7h9.8v9.8h-9.8v-9.8zm.9.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#00ACD3"
-                      d="M50.9 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#23C2EE"
-                      d="M50.9 41.5h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm3.1 10.4H72v9.8h-9.8v-9.8zm.8.8h.8v8.1H63v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#00ACD3"
-                      d="M62.2 41.5H72v9.8h-9.8v-9.8zm.8.8h.8v8.1H63v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#23C2EE"
-                      d="M62.2 30.2H72V40h-9.8v-9.8zm.8.8h.8v8.1H63V31zm1.5 0h.8v8.1h-.8V31zm1.4 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31zm1.5 0h.8v8.1h-.8V31z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#00ACD3"
-                      d="M73.5 52.7h9.8v9.8h-9.8v-9.8zm.8.8h.8v8.1h-.8v-8.1zm1.4 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1zm1.5 0h.8v8.1h-.8v-8.1z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#D4EEF1"
-                      d="M48.8 78.3c1.5 0 2.7 1.2 2.7 2.7 0 1.5-1.2 2.7-2.7 2.7-1.5 0-2.7-1.2-2.7-2.7 0-1.5 1.2-2.7 2.7-2.7"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#3A4D54"
-                      d="M48.8 79.1c.2 0 .5 0 .7.1-.2.1-.4.4-.4.7 0 .4.4.8.8.8.3 0 .6-.2.7-.4.1.2.1.5.1.7 0 1.1-.9 1.9-1.9 1.9-1.1 0-1.9-.9-1.9-1.9 0-1 .8-1.9 1.9-1.9M1.1 72.8h125.4c-2.7-.7-8.6-1.6-7.7-5.2-5 5.7-16.9 4-20 1.2-3.4 4.9-23 3-24.3-.8-4.2 5-17.3 5-21.5 0-1.4 3.8-21 5.7-24.3.8-3 2.8-15 4.5-20-1.2 1.1 3.5-4.9 4.5-7.6 5.2"
-                    ></path>
-                    <path
-                      fill="#BFDBE0"
-                      d="M56 97.8c-6.7-3.2-10.3-7.5-12.4-12.2-2.5.7-5.5 1.2-8.9 1.4-1.3.1-2.7.1-4.1.1-1.7 0-3.4 0-5.2-.1 6 6 13.6 10.7 27.5 10.8H56z"
-                    ></path>
-                    <path
-                      fill="#D4EEF1"
-                      d="M46.1 89.9c-.9-1.3-1.8-2.8-2.5-4.3-2.5.7-5.5 1.2-8.9 1.4 2.3 1.2 5.7 2.4 11.4 2.9z"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="font-medium text-sm sm:text-base">Docker</h3>
-              </div>
-            </div>
+
             <div
               class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 300ms"
@@ -1759,177 +1608,6 @@
                 <h3 class="font-medium text-sm sm:text-base">Canva</h3>
               </div>
             </div>
-            <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
-              style="transition-delay: 200ms"
-            >
-              <div
-                class="p-4 flex flex-col items-center justify-center text-center"
-              >
-                <div class="mb-1 p-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    viewBox="0 0 128 128"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-settings w-10 h-10 text-purple-500"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#337BA2"
-                      d="M43.257 121.233c.079 1.018.029 2.071.299 3.037.115.408.9.629 1.381.935l.625.401c-.235.137-.469.389-.707.392a165.82 165.82 0 01-5.598.002c-.248-.004-.491-.237-.735-.364.198-.143.388-.391.597-.408 1.251-.105 1.632-.865 1.626-1.989-.011-2.066-.006-4.134.003-6.202.005-1.152-.322-1.993-1.679-2.045-.188-.008-.366-.296-.548-.453.182-.111.366-.321.546-.318 2.39.029 4.79-.024 7.167.177 1.873.159 3.107 1.455 3.234 2.949.138 1.639-.703 2.764-2.605 3.486l-.729.272c1.225 1.158 2.31 2.29 3.516 3.272.535.437 1.293.697 1.989.817 1.393.238 2.149-.361 2.187-1.742.061-2.229.032-4.461.011-6.691-.01-1.022-.449-1.697-1.589-1.753-.215-.01-.42-.253-.629-.388.239-.14.478-.4.715-.399 2.432.02 4.875-.055 7.291.161 4.123.366 6.42 3.797 5.214 7.588-.735 2.312-2.495 3.619-4.759 3.773-3.958.27-7.938.215-11.909.243-.316.002-.706-.341-.944-.623-.914-1.085-1.776-2.213-2.668-3.316-.27-.334-.571-.641-.858-.961l-.444.147zm13.119-5.869c0 2.785-.034 5.484.036 8.18.011.414.41 1.039.78 1.187 1.457.581 3.812-.368 4.47-1.842.881-1.973.988-4.05-.203-5.922-1.175-1.847-3.132-1.663-5.083-1.603zm-13.021 4.561c1.262.032 2.653.313 3.192-1.073.302-.777.234-1.982-.183-2.69-.633-1.076-1.906-.888-3.01-.752l.001 4.515z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#515151"
-                      d="M96.77 119.35c.834-.18 1.661-.154 2.198-.537.451-.32.563-1.116.908-1.886.199.357.386.539.39.724.025 1.38.03 2.761 0 4.141-.005.216-.226.427-.347.641-.136-.114-.339-.2-.399-.346-.733-1.771-.729-1.772-2.843-1.583.309 1.382-.763 3.149.89 4.058.843.463 2.203.371 3.189.068.841-.256 1.48-1.171 2.212-1.798v3.096c-.405.036-.712.086-1.021.086-4.141.006-8.282-.012-12.422.019-.714.006-1.197-.174-1.633-.773-.857-1.182-1.799-2.302-2.725-3.432-.232-.283-.534-.508-1.021-.962 0 1.154-.042 1.981.012 2.802.056.858.469 1.427 1.418 1.534.279.032.529.325.792.5-.271.105-.54.298-.812.303-1.827.026-3.653.025-5.48.001-.28-.004-.558-.173-.866-.275l.156-.303c2.244-.906 2.25-.906 2.248-3.508a343.88 343.88 0 00-.039-4.87c-.017-1.121-.321-2.01-1.689-2.058-.197-.007-.384-.287-.577-.441.226-.113.453-.325.678-.323 2.311.022 4.635-.054 6.93.16 2.512.234 4.065 2.329 3.132 4.257-.51 1.053-1.688 1.783-2.725 2.818.984.9 2.117 2.194 3.491 3.135 1.941 1.33 3.268.571 3.317-1.748.041-1.947-.007-3.896-.015-5.845-.004-1.155-.361-1.994-1.717-2.013-.185-.003-.367-.2-.586-.33.705-.52 7.499-.709 10.448-.332l.19 3.214-.333.136c-.686-.717-.601-2.199-2.02-2.204-1.084-.005-2.168-.119-3.332-.189.003 1.356.003 2.59.003 4.063zm-12.647.566c2.61.105 3.646-.603 3.584-2.364-.061-1.698-1.195-2.383-3.584-2.121v4.485z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#3179A1"
-                      d="M11.555 120.682c.996-2.947 1.979-5.897 3.003-8.834.141-.404.486-.737.737-1.104.248.378.587.725.729 1.14.931 2.719 1.817 5.451 2.722 8.179.072.219.165.43.375.969.928-2.813 1.787-5.308 2.564-7.829.27-.873-.081-1.504-1.097-1.618-.335-.039-.66-.17-1.051-.274.676-.749 5.957-.804 6.827-.108-.236.112-.424.271-.618.279-1.65.064-2.414 1.097-2.884 2.521-1.258 3.81-2.54 7.611-3.817 11.415-.133.395-.3.778-.452 1.166l-.421.03-3.579-10.821-3.619 10.788-.354.022c-.185-.401-.412-.79-.547-1.207-1.167-3.581-2.319-7.167-3.474-10.751-.495-1.539-.99-3.069-3.012-3.167-.132-.006-.253-.229-.38-.35.158-.13.316-.373.476-.375 2.272-.024 4.546-.024 6.818.001.158.001.313.247.47.379-.169.126-.319.309-.508.367-1.82.55-1.951.761-1.378 2.526.723 2.233 1.468 4.457 2.204 6.686l.266-.03z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#4D4D4D"
-                      d="M65.484 111.25c.279-.241.435-.494.587-.491 2.957.044 5.938-.093 8.864.247 2.768.321 4.301 2.919 3.466 5.359-.748 2.189-2.593 2.874-4.68 3.064-.881.081-1.776.013-2.824.013.093 1.453.14 2.78.275 4.098.113 1.114.863 1.56 1.923 1.65.239.021.457.288.684.442-.25.126-.498.36-.75.363-2.191.029-4.384.028-6.575.002-.263-.003-.523-.219-.784-.336.218-.165.432-.463.656-.472 1.463-.056 2.012-.964 2.03-2.235.044-3.081.04-6.162.002-9.243-.016-1.31-.649-2.148-2.072-2.206-.212-.008-.422-.13-.802-.255zm5.523 6.706c2.682.278 3.703.022 4.349-1.167.648-1.192.65-2.439-.116-3.566-1.059-1.559-2.679-1.098-4.233-1.154v5.887z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#3279A1"
-                      d="M31.076 126.463c-2.396-.104-4.348-.856-5.794-2.647-2.053-2.542-1.741-5.994.711-8.192 2.645-2.37 7.018-2.472 9.733-.171 1.838 1.559 2.709 3.533 2.111 5.953-.675 2.73-2.601 4.192-5.218 4.856-.546.137-1.122.149-1.543.201zm4.544-6.249l-.224-.147c-.149-.709-.236-1.439-.458-2.125-.642-1.971-1.986-2.945-3.963-2.949-1.97-.004-3.295.975-3.939 2.967-.572 1.771-.498 3.526.383 5.18 1.315 2.468 4.829 2.931 6.549.736.802-1.023 1.116-2.43 1.652-3.662z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#505050"
-                      d="M122.748 114.317l.893-.782v4.376l-.259.195c-.209-.295-.498-.562-.615-.891-.591-1.655-1.865-2.553-3.319-2.117-.499.149-1.099.649-1.232 1.11-.109.376.285 1.12.671 1.374 1.008.664 2.131 1.156 3.214 1.703 2.356 1.192 3.198 2.845 2.401 4.736-.809 1.921-3.263 2.915-5.462 2.173-.606-.206-1.167-.544-1.728-.811l-.857 1.126-.379-.116c0-1.477-.009-2.954.015-4.431.002-.143.215-.282.33-.423.18.218.448.41.527.66.523 1.656 1.53 2.756 3.325 2.94 1.023.105 2.023-.021 2.378-1.187.324-1.067-.42-1.669-1.219-2.124-.879-.5-1.808-.909-2.708-1.37-.395-.203-.798-.404-1.153-.665-1.257-.927-1.753-2.263-1.381-3.618.332-1.211 1.523-2.237 2.997-2.28 1.091-.031 2.195.25 3.561.422zm-16.269 11.027c-.166.33-.258.607-.429.821-.103.128-.356.25-.49.208-.127-.04-.262-.294-.265-.456-.021-1.299-.021-2.599.001-3.896.002-.159.178-.314.274-.471.184.117.446.193.537.362.169.314.208.696.356 1.024.668 1.482 2.021 2.409 3.573 2.184.649-.093 1.45-.586 1.772-1.138.434-.741-.086-1.504-.814-1.925-.979-.566-1.993-1.075-3.009-1.571-2.297-1.121-3.266-2.972-2.443-4.719.818-1.737 3.33-2.46 5.429-1.556.256.11.499.25.7.354l1.078-.886c.113.317.185.426.186.535.008 1.216.005 2.431.005 3.646l-.317.212c-.211-.27-.504-.509-.619-.814-.573-1.532-1.48-2.381-2.81-2.219-.624.075-1.419.504-1.726 1.018-.45.755.2 1.361.885 1.729.963.519 1.949.992 2.926 1.483 2.418 1.213 3.269 2.898 2.434 4.824-.813 1.876-3.346 2.847-5.517 2.077-.564-.199-1.087-.52-1.717-.826z"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      fill="#494949"
-                      d="M65.261 1.395C38.48.917 16.103 22.648 16.096 49c-.008 27.11 21.338 48.739 48.077 48.699 26.49-.039 47.932-21.587 47.932-48.167C112.104 23.384 90.76 1.85 65.261 1.395zm-1.148 93.887c-25.326.006-45.694-20.529-45.693-46.067.001-24.88 20.685-45.48 45.674-45.489 25.432-.008 45.695 20.654 45.687 46.587-.008 24.483-20.807 44.964-45.668 44.969zm24.395-59.347c-.994-1.638-2.216-3.227-2.778-5.013-.64-2.032-1.171-4.345-.832-6.382.576-3.454 3.225-5.169 6.812-5.497C72.086.83 41.248 7.349 29.885 27.138c4.374-.203 8.55-.468 12.729-.524.791-.011 2.1.657 2.286 1.277.416 1.385-.748 1.868-1.986 1.963-1.301.102-2.604.199-4.115.314l14.935 44.494c.359-.587.507-.752.572-.945 2.762-8.255 5.54-16.505 8.232-24.784.246-.755.124-1.755-.146-2.531-1.424-4.111-3.13-8.133-4.379-12.294-.855-2.849-1.988-4.692-5.355-4.362-.574.056-1.273-1.178-1.916-1.816.777-.463 1.548-1.316 2.332-1.328a659.24 659.24 0 0120.572.006c.786.013 1.557.889 2.335 1.364-.681.622-1.267 1.554-2.063 1.794-1.276.385-2.691.312-4.218.448l14.953 44.484c2.266-7.524 4.374-14.434 6.422-21.36 1.83-6.182.74-11.957-2.567-17.403zM52.719 88.149c-.092.267-.097.563-.168 1.007 8.458 2.344 16.75 2.175 25.24-.685l-12.968-35.52c-4.151 12.064-8.131 23.63-12.104 35.198zm-6.535-1.606L26.646 32.947c-8.814 17.217-2.109 43.486 19.538 53.596zm54.452-55.403c-.27 2.994-.082 6.327-.941 9.362-2.023 7.152-4.496 14.181-6.877 21.229-2.588 7.66-5.28 15.286-7.927 22.927 12.437-7.372 19.271-18.253 20.359-32.555.62-8.14-2.188-19.412-4.614-20.963z"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="font-medium text-sm sm:text-base">WordPress</h3>
-              </div>
-            </div>
-            <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
-              style="transition-delay: 250ms"
-            >
-              <div
-                class="p-4 flex flex-col items-center justify-center text-center"
-              >
-                <div class="mb-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 128 128"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-user w-10 h-10 text-purple-500"
-                  >
-                    <path
-                      d="M86.758 70.89c-4.992 0-9.465 2.208-12.528 5.68l-7.851-5.547a21.275 21.275 0 001.312-7.32c0-2.531-.46-4.95-1.27-7.203l7.837-5.488c3.062 3.457 7.523 5.652 12.5 5.652 9.207 0 16.703-7.48 16.703-16.672 0-9.195-7.496-16.672-16.703-16.672-9.211 0-16.707 7.477-16.707 16.672 0 1.645.25 3.23.699 4.735l-7.84 5.488a21.578 21.578 0 00-13.36-7.746v-9.43c7.567-1.586 13.27-8.293 13.27-16.312C62.82 7.53 55.324.055 46.117.055c-9.21 0-16.707 7.476-16.707 16.672 0 7.91 5.555 14.539 12.969 16.238v9.547c-10.117 1.773-17.84 10.59-17.84 21.191 0 10.652 7.797 19.5 17.992 21.211V95c-7.492 1.64-13.12 8.309-13.12 16.273 0 9.196 7.495 16.672 16.706 16.672 9.207 0 16.703-7.476 16.703-16.672 0-7.964-5.629-14.632-13.117-16.273V84.914a21.592 21.592 0 0013.133-7.625l7.902 5.586a16.45 16.45 0 00-.687 4.688c0 9.195 7.496 16.671 16.707 16.671 9.207 0 16.703-7.476 16.703-16.671 0-9.196-7.496-16.672-16.703-16.672zm0-38.984c4.465 0 8.097 3.63 8.097 8.086 0 4.453-3.632 8.082-8.097 8.082-4.469 0-8.102-3.629-8.102-8.082 0-4.457 3.633-8.086 8.102-8.086zm-48.742-15.18c0-4.456 3.632-8.081 8.101-8.081 4.465 0 8.098 3.625 8.098 8.082 0 4.457-3.633 8.082-8.098 8.082-4.469 0-8.101-3.625-8.101-8.082zm16.199 94.547c0 4.457-3.633 8.082-8.098 8.082-4.469 0-8.101-3.625-8.101-8.082 0-4.457 3.632-8.082 8.101-8.082 4.465 0 8.098 3.625 8.098 8.082zm-8.102-36.296c-6.226 0-11.293-5.059-11.293-11.274 0-6.219 5.067-11.277 11.293-11.277 6.23 0 11.297 5.058 11.297 11.277 0 6.215-5.066 11.274-11.297 11.274zm40.645 20.668c-4.469 0-8.102-3.625-8.102-8.082 0-4.458 3.633-8.083 8.102-8.083 4.465 0 8.097 3.625 8.097 8.082 0 4.458-3.632 8.083-8.097 8.083zm0 0"
-                      fill="#231f20"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="font-medium text-sm sm:text-base">
-                  Project Management
-                </h3>
-              </div>
-            </div>
-            <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
-              style="transition-delay: 300ms"
-            >
-              <div
-                class="p-4 flex flex-col items-center justify-center text-center"
-              >
-                <div class="mb-2 p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 128 128"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-user w-10 h-10 text-purple-500"
-                  >
-                    <path
-                      d="m125.571 39.926-58.5-39c-1.997-1.23-4.128-1.24-6.142 0l-58.5 39C.929 40.926 0 42.712 0 44.497v39c0 1.786.929 3.572 2.429 4.571l58.5 39.006c1.996 1.229 4.128 1.24 6.142 0l58.5-39.006c1.5-.999 2.429-2.785 2.429-4.57v-39c0-1.786-.929-3.572-2.429-4.572zm-56.07-24.144 43.07 28.715-19.214 12.858L69.5 41.425V15.784zm-11.001 0v25.644L34.642 57.354 15.428 44.498 58.5 15.782zm-47.5 39 13.786 9.215L11 73.212v-18.43zm47.5 57.43L15.428 83.497 34.642 70.64 58.5 86.569v25.643zM64 76.997l-19.428-13 19.428-13 19.428 13-19.428 13zm5.5 35.215V86.569L93.357 70.64l19.214 12.857-43.07 28.715zm47.5-39-13.786-9.215L117 54.783v18.429z"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="font-medium text-sm sm:text-base">
-                  Team Working & Problem Solving
-                </h3>
-              </div>
-            </div>
-            <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
-              style="transition-delay: 400ms"
-            >
-              <div
-                class="p-4 flex flex-col items-center justify-center text-center"
-              >
-                <div class="mb-3 p-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 128 128"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-user w-10 h-10 text-purple-500"
-                  >
-                    <linearGradient
-                      id="a"
-                      x1="45.842"
-                      x2="45.842"
-                      y1="89.57"
-                      y2="8.802"
-                      gradientTransform="translate(-2.405 27.316) scale(1.4463)"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop offset="0" stop-color="#fcee1f"></stop>
-                      <stop offset="1" stop-color="#f15b2a"></stop>
-                    </linearGradient>
-                    <path
-                      fill="url(#a)"
-                      d="M69.162 0c-9.91 6.4-11.77 14.865-11.77 14.865s.002.206-.101.412c-.62.104-1.033.31-1.549.413-.722.206-1.445.413-2.168.826l-2.168.93c-1.445.722-2.89 1.341-4.336 2.167-1.342.826-2.683 1.548-4.025 2.477a1.266 1.266 0 0 1-.309-.205c-13.316-5.161-25.084 1.031-25.084 1.031-1.032 14.245 5.367 23.02 6.606 24.672-.31.929-.62 1.754-.93 2.58a52.973 52.973 0 0 0-2.166 9.91c-.103.413-.104 1.033-.207 1.445C8.671 67.613 5.06 80.103 5.06 80.103c10.219 11.768 22.193 12.49 22.193 12.49 1.445 2.685 3.302 5.369 5.264 7.743.825 1.032 1.756 1.96 2.582 2.992-3.716 10.632.619 19.613.619 19.613 11.458.413 18.992-4.955 20.54-6.297 1.136.31 2.272.724 3.407 1.034a47.25 47.25 0 0 0 10.633 1.549h4.644C80.31 126.969 89.807 128 89.807 128c6.71-7.123 7.123-14.038 7.123-15.69v-.62c1.342-1.033 2.683-2.064 4.129-3.2 2.684-2.374 4.955-5.264 7.02-8.154.206-.207.309-.62.618-.826 7.639.413 12.903-4.748 12.903-4.748-1.24-7.949-5.78-11.768-6.71-12.49l-.103-.104-.103-.104-.104-.103c0-.413.104-.93.104-1.445.103-.93.103-1.755.103-2.58v-3.407c0-.206 0-.413-.103-.722l-.104-.723-.103-.723c-.104-.929-.31-1.754-.413-2.58-.825-3.406-2.166-6.71-3.818-9.498-1.858-2.993-4.026-5.471-6.504-7.742-2.477-2.168-5.264-4.025-8.154-5.264-2.994-1.342-5.884-2.167-8.98-2.476-1.446-.207-3.098-.207-4.544-.207H79.69c-.825.103-1.546.205-2.27.308-3.096.62-5.883 1.756-8.36 3.201-2.478 1.446-4.646 3.407-6.504 5.575-1.858 2.167-3.2 4.438-4.13 6.916a23.313 23.313 0 0 0-1.548 7.431v2.684c0 .31 0 .62.104.93.103 1.238.31 2.374.722 3.51.723 2.27 1.756 4.334 3.098 6.09a19.973 19.973 0 0 0 4.54 4.335c1.756 1.136 3.408 1.96 5.266 2.477 1.858.516 3.509.826 5.16.722h2.376c.206 0 .412-.101.619-.101.206 0 .31-.104.619-.104.31-.103.825-.207 1.135-.31.722-.207 1.342-.62 2.064-.826.723-.31 1.24-.722 1.756-1.032.103-.103.309-.207.412-.31.62-.413.723-1.238.207-1.858-.413-.413-1.136-.62-1.756-.31-.103.103-.205.104-.412.207-.413.206-1.032.413-1.445.619-.62.103-1.135.31-1.754.414-.31 0-.62.102-.93.102h-2.58c-.103 0-.31.001-.414-.102-1.239-.206-2.58-.62-3.818-1.137-1.239-.619-2.478-1.34-3.51-2.373a15.894 15.894 0 0 1-2.89-3.51c-.826-1.341-1.24-2.89-1.446-4.335-.103-.826-.207-1.55-.103-2.375v-1.239c0-.413.103-.825.207-1.238.619-3.406 2.27-6.71 4.851-9.187.723-.723 1.342-1.238 2.168-1.754.826-.62 1.547-1.032 2.373-1.342.826-.31 1.756-.723 2.582-.93.93-.206 1.858-.414 2.684-.414.413 0 .929-.101 1.342-.101h1.238c1.032.103 2.065.205 2.994.412 1.961.413 3.82 1.135 5.678 2.168 3.613 2.064 6.708 5.16 8.566 8.877.93 1.858 1.548 3.82 1.961 5.988.103.62.104 1.03.207 1.547v2.787c0 .62-.103 1.136-.103 1.756-.104.62-.102 1.134-.205 1.754-.104.619-.208 1.136-.311 1.755-.206 1.136-.722 2.168-1.031 3.303-.826 2.168-1.963 4.232-3.305 5.986-2.684 3.717-6.502 6.815-10.63 8.776-2.169.929-4.337 1.755-6.608 2.064a19.003 19.003 0 0 1-3.407.309h-1.755c-.62 0-1.238.002-1.858-.102-2.477-.206-4.85-.724-7.224-1.343-2.375-.723-4.647-1.548-6.815-2.684-4.335-2.27-8.153-5.573-11.25-9.289-1.445-1.961-2.892-4.027-4.027-6.092-1.136-2.064-1.961-4.438-2.58-6.709-.723-2.27-1.032-4.645-1.135-7.02v-3.613c0-1.135.102-2.372.309-3.61.103-1.24.309-2.376.619-3.614.206-1.239.62-2.375.93-3.614.722-2.374 1.444-4.644 2.476-6.812 2.064-4.335 4.645-8.155 7.742-11.252a24.86 24.86 0 0 1 2.479-2.168c.31-.31 1.135-1.033 2.064-1.549s1.858-1.136 2.89-1.549c.414-.206.93-.413 1.446-.722.206-.103.411-.206.824-.309.207-.103.414-.207.826-.31 1.033-.413 2.066-.825 3.098-1.135.207-.103.62-.104.826-.207.207-.103.618-.102.824-.205.62-.103 1.033-.208 1.55-.414.206-.104.619-.104.825-.207.207 0 .62-.102.827-.102.206 0 .62-.103.826-.103l.412-.104.412-.103c.206 0 .62-.104.826-.104.31 0 .62-.104.93-.104.206 0 .721-.101.928-.101.206 0 .311 0 .62-.104h.723c.31 0 .618 0 .928-.103h4.647c2.064.103 4.128.31 5.986.723 3.82.722 7.638 1.961 10.941 3.613 3.304 1.548 6.4 3.611 8.877 5.78.104.102.311.207.414.413.104.103.31.206.412.412.31.207.62.62.93.826.31.207.62.62.93.827.206.31.618.618.824.927 1.136 1.136 2.169 2.375 3.098 3.51a41.422 41.422 0 0 1 4.44 7.02c.102.103.1.207.204.414.103.103.104.205.207.412.103.206.206.62.412.826.104.206.208.62.31.826.104.207.208.62.311.826.413 1.033.826 2.064 1.135 3.096.62 1.548.929 2.993 1.239 4.13.103.412.62.825 1.033.825.619 0 .927-.414.927-1.033-.31-1.755-.308-3.198-.412-4.953-.206-2.168-.619-4.647-1.238-7.434-.62-2.787-1.86-5.677-3.305-8.877-1.548-3.096-3.509-6.4-6.09-9.394-1.032-1.239-2.167-2.373-3.302-3.612 1.858-7.122-2.168-13.42-2.168-13.42-6.916-.412-11.253 2.168-12.801 3.303-.206-.103-.618-.205-.824-.308-1.136-.413-2.375-.93-3.613-1.342-1.24-.31-2.478-.827-3.717-1.033-1.239-.31-2.58-.62-4.026-.827-.206 0-.413-.103-.722-.103C77.833 4.128 69.162 0 69.162 0z"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="font-medium text-sm sm:text-base">
-                  Problem Solving
-                </h3>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -1939,15 +1617,23 @@
     <!-- My project section start -->
     <section
       id="my-recent-project"
-      class="py-16 from-[#080d16] via-[#0c1422] to-[#0a0f1a] text-white"
+      class="py-16 from-[#080d16] via-[#0c1422] to-[#0a0f1a] text-white relative overflow-hidden"
     >
-      <div class="text-center mb-12">
+      <!-- 🔹 Decorative Glows -->
+      <div
+        class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full"
+      ></div>
+      <div
+        class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-600/10 blur-[120px] rounded-full"
+      ></div>
+
+      <div class="text-center mb-12 relative z-10">
         <h2 class="text-3xl md:text-4xl font-bold">
           ✨ My Recent <span class="text-cyan-400">Projects</span>
         </h2>
       </div>
 
-      <div class="relative max-w-6xl mx-auto px-6">
+      <div class="relative max-w-6xl mx-auto px-6 lg:px-10 xl:px-16 z-10">
         <Swiper
           :modules="[EffectCoverflow, Navigation, Pagination, Autoplay]"
           effect="coverflow"
@@ -1970,7 +1656,7 @@
           <SwiperSlide
             v-for="(project, index) in projects"
             :key="index"
-            class="rounded-2xl overflow-hidden border border-[#1f2b46]/40 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-cyan-500/30 transition-all duration-500"
+            class="rounded-2xl overflow-hidden border border-[#1f2b46]/40 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-cyan-500/30 transition-all duration-500 mx-4"
             style="
               background: radial-gradient(
                 circle at top left,
@@ -1981,7 +1667,7 @@
             "
           >
             <!-- Image Section -->
-            <div class="p-3">
+            <div class="p-5">
               <div class="rounded-xl overflow-hidden shadow-md">
                 <img
                   :src="project.image"
@@ -1992,7 +1678,7 @@
             </div>
 
             <!-- Info Section -->
-            <div class="px-5 pb-5 text-center">
+            <div class="px-5 pb-6 text-center">
               <h3 class="text-lg font-semibold text-white mb-1">
                 {{ project.title }}
               </h3>
@@ -2449,9 +2135,27 @@ a:hover svg {
 .galaxy-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at bottom, #173554, #000);
+  background: radial-gradient(ellipse at bottom, #0a1520, #000);
   z-index: -1;
   overflow: hidden;
+}
+
+/* 🌟 Horizontal Moving Stars (Left to Right) */
+.horizontal-stars {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(3px 3px at 0% 20%, white, transparent),
+    radial-gradient(4px 4px at 0% 40%, #9ae6ff, transparent),
+    radial-gradient(3.5px 3.5px at 0% 60%, #ffd6ff, transparent),
+    radial-gradient(4px 4px at 0% 80%, #ffe066, transparent),
+    radial-gradient(3px 3px at 0% 30%, white, transparent),
+    radial-gradient(4.5px 4.5px at 0% 50%, #80edff, transparent),
+    radial-gradient(3.5px 3.5px at 0% 70%, white, transparent),
+    radial-gradient(4px 4px at 0% 90%, #ffb366, transparent);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  animation: moveStarsHorizontal 40s linear infinite;
+  opacity: 0.8;
 }
 
 /* star layers */
@@ -2465,10 +2169,9 @@ a:hover svg {
   height: 300%;
   background-repeat: repeat;
   background-position: center;
-  animation: moveStars 100s linear infinite;
 }
 
-/* Mixed small + medium stars */
+/* Many small stars scattered everywhere with faster animation */
 .galaxy-bg::before {
   background-image: radial-gradient(1px 1px at 20px 30px, white, transparent),
     radial-gradient(1px 1px at 20px 30px, white, transparent),
@@ -2484,12 +2187,99 @@ a:hover svg {
     radial-gradient(1.2px 1.2px at 500px 200px, #aaffff, transparent),
     radial-gradient(2.5px 2.5px at 600px 400px, #fff, transparent),
     radial-gradient(1px 1px at 700px 450px, #ffd6ff, transparent),
-    radial-gradient(3.5px 3.5px at 850px 600px, #9ae6ff, transparent);
+    radial-gradient(3.5px 3.5px at 850px 600px, #9ae6ff, transparent),
+    radial-gradient(1px 1px at 50px 100px, white, transparent),
+    radial-gradient(1px 1px at 150px 200px, white, transparent),
+    radial-gradient(1px 1px at 250px 300px, white, transparent),
+    radial-gradient(1px 1px at 350px 150px, white, transparent),
+    radial-gradient(1px 1px at 450px 250px, white, transparent),
+    radial-gradient(1px 1px at 550px 350px, white, transparent),
+    radial-gradient(1px 1px at 650px 100px, white, transparent),
+    radial-gradient(1px 1px at 750px 200px, white, transparent),
+    radial-gradient(1px 1px at 100px 300px, white, transparent),
+    radial-gradient(1px 1px at 200px 400px, white, transparent),
+    radial-gradient(1px 1px at 300px 150px, white, transparent),
+    radial-gradient(1px 1px at 400px 250px, white, transparent),
+    radial-gradient(1px 1px at 500px 350px, white, transparent),
+    radial-gradient(1px 1px at 600px 450px, white, transparent),
+    radial-gradient(1px 1px at 700px 550px, white, transparent),
+    radial-gradient(1px 1px at 75px 180px, white, transparent),
+    radial-gradient(1px 1px at 175px 280px, white, transparent),
+    radial-gradient(1px 1px at 275px 80px, white, transparent),
+    radial-gradient(1px 1px at 375px 380px, white, transparent),
+    radial-gradient(1px 1px at 475px 180px, white, transparent),
+    radial-gradient(1px 1px at 575px 280px, white, transparent),
+    radial-gradient(1px 1px at 675px 380px, white, transparent),
+    radial-gradient(1px 1px at 775px 480px, white, transparent),
+    radial-gradient(1px 1px at 125px 220px, white, transparent),
+    radial-gradient(1px 1px at 225px 120px, white, transparent),
+    radial-gradient(1px 1px at 325px 420px, white, transparent),
+    radial-gradient(1px 1px at 425px 320px, white, transparent),
+    radial-gradient(1px 1px at 525px 220px, white, transparent),
+    radial-gradient(1px 1px at 625px 520px, white, transparent),
+    radial-gradient(1px 1px at 725px 120px, white, transparent),
+    radial-gradient(1px 1px at 825px 320px, white, transparent),
+    radial-gradient(1px 1px at 60px 260px, white, transparent),
+    radial-gradient(1px 1px at 160px 360px, white, transparent),
+    radial-gradient(1px 1px at 260px 460px, white, transparent),
+    radial-gradient(1px 1px at 360px 60px, white, transparent),
+    /* 50 more small stars - concentrated in center */
+      radial-gradient(1px 1px at 200px 200px, white, transparent),
+    radial-gradient(1px 1px at 220px 240px, white, transparent),
+    radial-gradient(1px 1px at 240px 180px, white, transparent),
+    radial-gradient(1px 1px at 260px 220px, white, transparent),
+    radial-gradient(1px 1px at 280px 260px, white, transparent),
+    radial-gradient(1px 1px at 300px 200px, white, transparent),
+    radial-gradient(1px 1px at 320px 240px, white, transparent),
+    radial-gradient(1px 1px at 340px 280px, white, transparent),
+    radial-gradient(1px 1px at 360px 220px, white, transparent),
+    radial-gradient(1px 1px at 380px 260px, white, transparent),
+    radial-gradient(1px 1px at 400px 200px, white, transparent),
+    radial-gradient(1px 1px at 420px 240px, white, transparent),
+    radial-gradient(1px 1px at 440px 280px, white, transparent),
+    radial-gradient(1px 1px at 460px 220px, white, transparent),
+    radial-gradient(1px 1px at 480px 260px, white, transparent),
+    radial-gradient(1px 1px at 500px 300px, white, transparent),
+    radial-gradient(1px 1px at 520px 240px, white, transparent),
+    radial-gradient(1px 1px at 540px 280px, white, transparent),
+    radial-gradient(1px 1px at 560px 320px, white, transparent),
+    radial-gradient(1px 1px at 580px 260px, white, transparent),
+    radial-gradient(1px 1px at 210px 300px, white, transparent),
+    radial-gradient(1px 1px at 230px 340px, white, transparent),
+    radial-gradient(1px 1px at 250px 280px, white, transparent),
+    radial-gradient(1px 1px at 270px 320px, white, transparent),
+    radial-gradient(1px 1px at 290px 360px, white, transparent),
+    radial-gradient(1px 1px at 310px 300px, white, transparent),
+    radial-gradient(1px 1px at 330px 340px, white, transparent),
+    radial-gradient(1px 1px at 350px 380px, white, transparent),
+    radial-gradient(1px 1px at 370px 320px, white, transparent),
+    radial-gradient(1px 1px at 390px 360px, white, transparent),
+    radial-gradient(1px 1px at 410px 300px, white, transparent),
+    radial-gradient(1px 1px at 430px 340px, white, transparent),
+    radial-gradient(1px 1px at 450px 380px, white, transparent),
+    radial-gradient(1px 1px at 470px 320px, white, transparent),
+    radial-gradient(1px 1px at 490px 360px, white, transparent),
+    radial-gradient(1px 1px at 510px 400px, white, transparent),
+    radial-gradient(1px 1px at 530px 340px, white, transparent),
+    radial-gradient(1px 1px at 550px 380px, white, transparent),
+    radial-gradient(1px 1px at 570px 420px, white, transparent),
+    radial-gradient(1px 1px at 590px 360px, white, transparent),
+    radial-gradient(1px 1px at 215px 260px, white, transparent),
+    radial-gradient(1px 1px at 235px 300px, white, transparent),
+    radial-gradient(1px 1px at 255px 340px, white, transparent),
+    radial-gradient(1px 1px at 275px 280px, white, transparent),
+    radial-gradient(1px 1px at 295px 320px, white, transparent),
+    radial-gradient(1px 1px at 315px 360px, white, transparent),
+    radial-gradient(1px 1px at 335px 300px, white, transparent),
+    radial-gradient(1px 1px at 355px 340px, white, transparent),
+    radial-gradient(1px 1px at 375px 280px, white, transparent),
+    radial-gradient(1px 1px at 395px 320px, white, transparent);
   background-size: 400px 400px;
   opacity: 0.9;
+  animation: moveStars 80s linear infinite;
 }
 
-/* Big glowing stars + blue haze */
+/* Bigger stars with faster animation */
 .galaxy-bg::after {
   background-image: radial-gradient(
       4px 4px at 100px 200px,
@@ -2501,6 +2291,12 @@ a:hover svg {
     radial-gradient(3.5px 3.5px at 550px 350px, #b3ff66, transparent),
     radial-gradient(5px 5px at 700px 500px, #ffb366, transparent),
     radial-gradient(3.5px 3.5px at 900px 650px, #fff, transparent),
+    radial-gradient(4px 4px at 150px 450px, white, transparent),
+    radial-gradient(3.5px 3.5px at 350px 550px, #9ae6ff, transparent),
+    radial-gradient(4.5px 4.5px at 450px 150px, #ffd6ff, transparent),
+    radial-gradient(3px 3px at 650px 350px, white, transparent),
+    radial-gradient(5px 5px at 750px 250px, #ffe066, transparent),
+    radial-gradient(4px 4px at 850px 450px, #80edff, transparent),
     /* blue nebula glow */
       radial-gradient(
         800px 800px at 50% 50%,
@@ -2509,7 +2305,7 @@ a:hover svg {
       );
   background-size: 800px 800px;
   opacity: 0.7;
-  animation-duration: 200s;
+  animation: moveStars 60s linear infinite;
 }
 
 .swiper-container {
@@ -2535,6 +2331,16 @@ a:hover svg {
   }
   to {
     transform: translateY(-1000px);
+  }
+}
+
+/* ⭐ Horizontal Stars Animation (Left to Right) */
+@keyframes moveStarsHorizontal {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 100% 0;
   }
 }
 @keyframes frontendAppear {
