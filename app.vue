@@ -2058,13 +2058,24 @@ onMounted(() => {
 
 // 🔹 Projects slider (Swiper coverflow)
 const projects = ref([
+
+{
+    title: "ONLINE.COM E-Commerce",
+    image: "/image/MH-online.com.png",
+    live: "https://shoppinginonline.netlify.app/",
+  },
+{
+    title: "Salad Menu Project",
+    image: "/image/MH-Salad-menu.png",
+    live: "https://onlineorder-saladmenu.netlify.app/",
+  },
   {
     title: "Mh-Ai-Powered-Design",
     image: "/image/MH-Ai-powered.png",
     live: "https://mh-ai-powered-design.netlify.app/",
   },
   {
-    title: "Personal website",
+    title: "Personal Website",
     image: "/image/MH-personal.png",
     live: "https://mh-portfolio01.netlify.app/",
   },
@@ -2074,25 +2085,10 @@ const projects = ref([
     live: "https://animation-login-and-sign-in.netlify.app/",
   },
   {
-    title: "Salad Recipe Project",
-    image: "/image/MH-salad.png",
-    live: "https://salad-section-hotel-sector.netlify.app/",
-  },
-  {
     title: "Practice API Project",
     image: "/image/MH-imageSRC-1.png",
     live: "https://image-search-website2.netlify.app/",
   },
-  {
-    title: "Meal Finder",
-    image: "/image/MH-food.png",
-    live: "***",
-  },
-  // {
-  //   title: "Intelligent-business",
-  //   image: "/image/MH-5.png",
-  //   live: "https://intelligent-buisness.netlify.app/",
-  // },
 ]);
 </script>
 
