@@ -52,7 +52,8 @@
       <!-- Mobile Hamburger Button -->
       <button
         @click="isOpen = true"
-        class="md:hidden fixed top-4 right-4 z-50 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-cyan-500 transition-all duration-300"
+        v-show="!isOpen"
+        class="md:hidden fixed top-4 right-4 z-[60] p-3 rounded-full bg-gray-800/90 backdrop-blur-sm text-white text-2xl shadow-lg hover:bg-cyan-500 transition-all duration-300"
       >
         ☰
       </button>
@@ -61,23 +62,29 @@
       <transition name="fade">
         <div
           v-if="isOpen"
-          class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex justify-center items-center"
+          class="fixed inset-0 z-[70] bg-black/80 backdrop-blur-md flex justify-center items-center p-4"
+          @click.self="isOpen = false"
         >
           <div
-            class="bg-gray-900 rounded-2xl p-6 w-80 max-h-[90vh] overflow-y-auto shadow-2xl relative"
+            class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 w-full max-w-sm max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-700 relative"
           >
             <!-- Close Button -->
             <button
               @click="isOpen = false"
-              class="absolute top-3 right-3 text-white text-2xl hover:text-red-400 transition"
+              class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 text-white text-xl hover:bg-red-500 hover:rotate-90 transition-all duration-300"
             >
               ✕
             </button>
 
-            <!-- Nav Links -->
-            <ul
-              class="flex flex-col space-y-4 text-center text-white font-medium"
+            <!-- Menu Title -->
+            <h3
+              class="text-center text-xl font-bold mb-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-transparent bg-clip-text"
             >
+              Navigation
+            </h3>
+
+            <!-- Nav Links -->
+            <ul class="flex flex-col space-y-3 text-white font-medium">
               <li
                 v-for="(item, i) in navItems"
                 :key="item.href"
@@ -85,10 +92,11 @@
               >
                 <a
                   :href="item.href"
-                  class="block py-2 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition"
+                  class="flex items-center justify-center gap-3 py-3 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition-all duration-300"
                   @click="isOpen = false"
                 >
-                  {{ item.icon }} {{ item.label }}
+                  <component :is="item.icon" class="w-5 h-5" />
+                  <span>{{ item.label }}</span>
                 </a>
                 <!-- Divider -->
                 <div
@@ -239,7 +247,8 @@
             Get in Touch
           </a>
           <a
-            href="#my-recent-project"
+            href="/Mahmudul-hasan-resume (1).pdf.pdf"
+            download="Mahmudul-Hasan-Resume.pdf"
             class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
           >
             Download Resume
@@ -387,7 +396,7 @@
               class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-4 w-full justify-center"
             >
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/20 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -408,7 +417,7 @@
               </div>
 
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/10 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -432,7 +441,7 @@
               </div>
 
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/20 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -450,7 +459,7 @@
               </div>
 
               <div
-                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-pink-500/10 card-hover cursor-pointer"
+                class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/20 card-hover cursor-pointer"
               >
                 <div class="text-purple-500 mb-1">
                   <svg
@@ -693,7 +702,7 @@
             class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
           >
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-300 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 0ms"
             >
               <div
@@ -722,7 +731,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 50ms"
             >
               <div
@@ -763,7 +772,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 100ms"
             >
               <div
@@ -923,7 +932,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 150ms"
             >
               <div
@@ -949,7 +958,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 200ms"
             >
               <div
@@ -985,7 +994,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 250ms"
             >
               <div
@@ -1034,7 +1043,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 300ms"
             >
               <div
@@ -1076,7 +1085,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 350ms"
             >
               <div
@@ -1110,7 +1119,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 400ms"
             >
               <div
@@ -1143,7 +1152,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 50ms"
             >
               <div
@@ -1219,7 +1228,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 200ms"
             >
               <div
@@ -1249,7 +1258,7 @@
             </div>
 
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 300ms"
             >
               <div
@@ -1401,7 +1410,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 400ms"
             >
               <div
@@ -1430,7 +1439,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 450ms"
             >
               <div
@@ -1465,7 +1474,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 0ms"
             >
               <div
@@ -1498,7 +1507,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 50ms"
             >
               <div
@@ -1543,7 +1552,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 100ms"
             >
               <div
@@ -1576,7 +1585,7 @@
               </div>
             </div>
             <div
-              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-700 card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
+              class="rounded-lg border bg-card text-card-foreground shadow-lg shadow-cyan-500/50 overflow-hidden transition-all duration-500 ease-in-out card-hover hover:bg-cyan-500/50 opacity-100 translate-y-0 cursor-pointer"
               style="transition-delay: 150ms"
             >
               <div
@@ -1615,11 +1624,8 @@
     <!-- tools section end -->
 
     <!-- My project section start -->
-    <section
-      id="my-recent-project"
-      class="py-16 from-[#080d16] via-[#0c1422] to-[#0a0f1a] text-white relative overflow-hidden"
-    >
-      <!-- 🔹 Decorative Glows -->
+    <section id="my-recent-project" class="relative py-20 px-6 overflow-hidden">
+      <!-- Background blur elements -->
       <div
         class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full"
       ></div>
@@ -1627,76 +1633,117 @@
         class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-600/10 blur-[120px] rounded-full"
       ></div>
 
-      <div class="text-center mb-12 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold">
-          ✨ My Recent <span class="text-cyan-400">Projects</span>
+      <div class="text-center mb-16 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+          My
+          <span
+            class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            >Projects</span
+          >
         </h2>
       </div>
 
-      <div class="relative max-w-6xl mx-auto px-6 lg:px-10 xl:px-16 z-10">
-        <Swiper
-          :modules="[EffectCoverflow, Navigation, Pagination, Autoplay]"
-          effect="coverflow"
-          :grabCursor="true"
-          :centeredSlides="true"
-          :slidesPerView="'auto'"
-          :loop="true"
-          :coverflowEffect="{
-            rotate: 0,
-            stretch: 0,
-            depth: 180,
-            modifier: 3,
-            slideShadows: true,
-          }"
-          :autoplay="{ delay: 3500, disableOnInteraction: false }"
-          navigation
-          pagination
-          class="swiper-container"
-        >
-          <SwiperSlide
+      <!-- Grid Layout with Laptop Mockups -->
+      <div class="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8 z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card with Laptop Mockup -->
+          <div
             v-for="(project, index) in projects"
             :key="index"
-            class="rounded-2xl overflow-hidden border border-[#1f2b46]/40 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-cyan-500/30 transition-all duration-500 mx-4"
-            style="
-              background: radial-gradient(
-                circle at top left,
-                rgba(8, 60, 95, 0.8),
-                rgba(10, 20, 35, 0.95)
-              );
-              backdrop-filter: blur(12px);
-            "
+            class="group relative"
           >
-            <!-- Image Section -->
-            <div class="p-5">
-              <div class="rounded-xl overflow-hidden shadow-md">
-                <img
-                  :src="project.image"
-                  :alt="project.title"
-                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-700"
-                />
+            <!-- Laptop Mockup Container -->
+            <div
+              class="laptop-mockup relative rounded-2xl bg-gradient-to-br from-[#1a1a2e]/95 via-[#16162a]/95 to-[#0f0f1e]/95 backdrop-blur-md p-5 border border-white/10 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-[1.02]"
+            >
+              <!-- Laptop Frame -->
+              <div class="laptop-frame relative mb-4">
+                <!-- Screen Bezel -->
+                <div
+                  class="screen-bezel rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 p-2 shadow-xl border border-gray-700"
+                >
+                  <!-- Screen -->
+                  <div
+                    class="screen relative rounded-md overflow-hidden bg-black aspect-video shadow-inner group"
+                  >
+                    <!-- Project Image Inside Screen -->
+                    <img
+                      :src="project.image"
+                      :alt="project.title"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <!-- Screen Gloss Effect -->
+                    <div
+                      class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"
+                    ></div>
+                  </div>
+                  <!-- Camera Notch -->
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gray-700 border border-gray-600"
+                  ></div>
+                </div>
+
+                <!-- Laptop Base -->
+                <div class="laptop-base mt-1">
+                  <div
+                    class="h-2 rounded-b-lg bg-gradient-to-b from-gray-700 to-gray-800 shadow-md"
+                  ></div>
+                  <div
+                    class="h-1 rounded-b-xl bg-gradient-to-b from-gray-800 to-gray-900"
+                  ></div>
+                </div>
               </div>
-            </div>
 
-            <!-- Info Section -->
-            <div class="px-5 pb-6 text-center">
-              <h3 class="text-lg font-semibold text-white mb-1">
-                {{ project.title }}
-              </h3>
-              <p class="text-xs text-gray-400 mb-4">
-                Developed by
-                <span class="text-gray-200 font-medium">Mahmudul Hasan</span>
-              </p>
+              <!-- Project Info Below Laptop -->
+              <div class="space-y-3">
+                <!-- Project Title -->
+                <h3 class="text-xl font-bold" :class="project.titleColor">
+                  {{ project.title }}
+                </h3>
 
+                <!-- Project Description -->
+                <p class="text-sm text-gray-300 leading-relaxed line-clamp-3">
+                  {{ project.description }}
+                </p>
+
+                <!-- Technologies -->
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="(tech, techIndex) in project.technologies"
+                    :key="techIndex"
+                    class="px-3 py-1.5 text-xs font-medium rounded-md bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
+                  >
+                    {{ tech }}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Live View Icon - Bottom Right of Card -->
               <a
                 :href="project.live"
                 target="_blank"
-                class="inline-block bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 px-5 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
+                class="absolute bottom-4 right-4 p-2 rounded-lg bg-purple-600/20 backdrop-blur-md border border-purple-500/40 hover:bg-purple-600 hover:border-purple-500 transition-all duration-300 group/icon"
+                title="View Live"
+                @click.stop
               >
-                🚀 Live View
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-purple-300 group-hover/icon:text-white transition-all group-hover/icon:scale-110"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
               </a>
             </div>
-          </SwiperSlide>
-        </Swiper>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1705,7 +1752,7 @@
     <!-- Contact section start -->
     <section
       id="contact-me"
-      class="min-h-screen flex items-center justify-center px-4 mb-8 mt-8"
+      class="min-h-screen flex items-center justify-center px-4 mb-8 mt-6"
     >
       <div class="w-full max-w-3xl">
         <!-- Heading -->
@@ -1944,21 +1991,8 @@
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 import { Home, User, Brain, Folder, Code, Mail, Book } from "lucide-vue-next";
 
-// Swiper imports
-import { Swiper, SwiperSlide } from "swiper/vue";
-import {
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-  Autoplay,
-} from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 // ==========================
-// 🔹 Scroll progress bar
+// Scroll progress bar
 // ==========================
 const scrollProgress = ref(0);
 const updateScroll = () => {
@@ -2056,37 +2090,60 @@ onMounted(() => {
   });
 });
 
-// 🔹 Projects slider (Swiper coverflow)
+// 🔹 Projects data with technologies
 const projects = ref([
-
-{
-    title: "ONLINE.COM E-Commerce",
+  {
+    title: "ONLINE.COM",
+    titleColor: "text-purple-400",
     image: "/image/MH-online.com.png",
+    description:
+      "A full-featured e-commerce platform with modern UI, product catalog, shopping cart, and checkout functionality.",
+    technologies: ["Vue.js", "TailwindCSS", "JavaScript"],
     live: "https://shoppinginonline.netlify.app/",
   },
-{
-    title: "Salad Menu Project",
+  {
+    title: "SaladMenu.ai",
+    titleColor: "text-pink-400",
     image: "/image/MH-Salad-menu.png",
+    description:
+      "Interactive restaurant menu application with dynamic ordering system and beautiful animations.",
+    technologies: ["HTML", "CSS", "JavaScript"],
     live: "https://onlineorder-saladmenu.netlify.app/",
   },
   {
-    title: "Mh-Ai-Powered-Design",
+    title: "AI-PoweredDesign",
+    titleColor: "text-yellow-400",
     image: "/image/MH-Ai-powered.png",
+    description:
+      "Modern AI-powered design showcase with stunning visual effects and smooth user experience.",
+    technologies: ["Vue.js", "CSS3", "Animation"],
     live: "https://mh-ai-powered-design.netlify.app/",
   },
   {
-    title: "Personal Website",
+    title: "PersonalPortfolio",
+    titleColor: "text-cyan-400",
     image: "/image/MH-personal.png",
+    description:
+      "Professional portfolio website showcasing skills, projects, and experience with elegant design.",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
     live: "https://mh-portfolio01.netlify.app/",
   },
   {
-    title: "Login Form UI",
+    title: "AuthUI.design",
+    titleColor: "text-green-400",
     image: "/image/MH-signin-6.png",
+    description:
+      "Beautiful animated login and sign-up forms with smooth transitions and modern UI patterns.",
+    technologies: ["CSS3", "Animation", "JavaScript"],
     live: "https://animation-login-and-sign-in.netlify.app/",
   },
   {
-    title: "Practice API Project",
+    title: "ImageSearch.api",
+    titleColor: "text-orange-400",
     image: "/image/MH-imageSRC-1.png",
+    description:
+      "API-powered image search application with real-time results and responsive grid layout.",
+    technologies: ["API", "JavaScript", "CSS3"],
     live: "https://image-search-website2.netlify.app/",
   },
 ]);
@@ -2125,6 +2182,54 @@ a:hover svg {
 .tech-badge:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
+}
+
+/* ✨ Laptop Mockup Styles */
+.laptop-mockup {
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.laptop-frame {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.laptop-mockup:hover .laptop-frame {
+  transform: rotateX(2deg) rotateY(-2deg);
+}
+
+/* Screen Bezel Enhancement */
+.screen-bezel {
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Screen Inner Glow */
+.screen {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Laptop Base Shadow */
+.laptop-base {
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced Hover Animation */
+@keyframes laptopGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
+  }
+}
+
+.laptop-mockup:hover {
+  animation: laptopGlow 2s ease-in-out infinite;
 }
 
 /* Galaxy Starfield Background */
@@ -2302,23 +2407,6 @@ a:hover svg {
   background-size: 800px 800px;
   opacity: 0.7;
   animation: moveStars 60s linear infinite;
-}
-
-.swiper-container {
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-
-.swiper-slide {
-  width: 340px;
-  height: 360px;
-  transition: all 0.4s ease-in-out;
-}
-
-.swiper-slide-active {
-  transform: scale(1.05);
-  z-index: 2;
 }
 
 @keyframes moveStars {
