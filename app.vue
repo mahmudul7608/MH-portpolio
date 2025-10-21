@@ -1991,9 +1991,8 @@
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 import { Home, User, Brain, Folder, Code, Mail, Book } from "lucide-vue-next";
 
-// ==========================
 // Scroll progress bar
-// ==========================
+
 const scrollProgress = ref(0);
 const updateScroll = () => {
   if (process.client) {
@@ -2005,14 +2004,11 @@ const updateScroll = () => {
 onMounted(() => window.addEventListener("scroll", updateScroll));
 onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 
-// ==========================
 // 🔹 Mobile menu state
-// ==========================
 const isOpen = ref(false);
 
-// ==========================
+
 // 🔹 Navbar items
-// ==========================
 const navItems = [
   { href: "#intro", label: "Home", icon: Home },
   { href: "#about", label: "About", icon: User },
@@ -2095,7 +2091,7 @@ const projects = ref([
   {
     title: "ONLINE.COM",
     titleColor: "text-purple-400",
-    image: "/image/MH-online.com.png",
+    image: "/image/MH-Online.com1.png",
     description:
       "A full-featured e-commerce platform with modern UI, product catalog, shopping cart, and checkout functionality.",
     technologies: ["Vue.js", "TailwindCSS", "JavaScript"],
@@ -2104,7 +2100,7 @@ const projects = ref([
   {
     title: "SaladMenu.ai",
     titleColor: "text-pink-400",
-    image: "/image/MH-Salad-menu.png",
+    image: "/image/MH-SaladMenu.png",
     description:
       "Interactive restaurant menu application with dynamic ordering system and beautiful animations.",
     technologies: ["HTML", "CSS", "JavaScript"],
