@@ -1639,10 +1639,10 @@
     <section id="my-recent-project" class="relative py-20 px-6 overflow-hidden">
       <!-- Background blur elements -->
       <div
-        class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full"
+        class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-400/10 blur-[100px] rounded-full"
       ></div>
       <div
-        class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-600/10 blur-[120px] rounded-full"
+        class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-300/10 blur-[100px] rounded-full"
       ></div>
 
       <div class="text-center mb-16 relative z-10">
