@@ -246,13 +246,12 @@
           >
             Get in Touch
           </a>
-          <a
-            href="/Mahmudul-hasan-resume (1).pdf.pdf"
-            download="Mahmudul-Hasan-Resume.pdf"
+          <button
+            @click="downloadResume"
             class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
           >
             Download Resume
-          </a>
+          </button>
         </div>
         <!-- Scroll Mouse section -->
         <div class="flex flex-col items-center space-y-2 mt-5">
@@ -275,7 +274,7 @@
 
     <!-- about section start -->
 
-    <section id="about" class="py-12 md:py-16 text-white">
+    <section id="about" class="py-6 md:py-16 text-white">
       <h2 class="text-3xl md:text-4xl mb-8 md:mb-10 font-bold text-center">
         About
         <span
@@ -2016,6 +2015,18 @@ const updateScroll = () => {
 onMounted(() => window.addEventListener("scroll", updateScroll));
 onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 
+// 🔹 Resume download function
+const downloadResume = () => {
+  if (process.client) {
+    const link = document.createElement("a");
+    link.href = "/image/Mahmudul-Hasan-Resume.pdf";
+    link.download = "Mahmudul-Hasan-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+};
+
 // 🔹 Mobile menu state
 const isOpen = ref(false);
 
@@ -2098,6 +2109,7 @@ onMounted(() => {
 });
 
 // 🔹 Projects data with technologies
+
 const projects = ref([
   {
     title: "ONLINE.COM",
@@ -2105,8 +2117,17 @@ const projects = ref([
     image: "/image/MH-Online.com1.png",
     description:
       "A full-featured e-commerce platform with modern UI, product catalog, shopping cart, and checkout functionality.",
-    technologies: ["Vue.js", "TailwindCSS", "JavaScript"],
+    technologies: ["Vue.js", "TailwindCSS", "JavaScript", "API"],
     live: "https://shoppinginonline.netlify.app/",
+  },
+  {
+    title: "AI-powered idea generator",
+    titleColor: "text-orange-400",
+    image: "/image/MH-ai-idea.genare.png",
+    description:
+      "API-powered image search application with real-time results and responsive grid layout.",
+    technologies: ["API", "Vue.js", "JavaScript", "TailwindCSS"],
+    live: "https://ai-powered-idea-generator.netlify.app/",
   },
   {
     title: "SaladMenu.ai",
@@ -2118,13 +2139,13 @@ const projects = ref([
     live: "https://onlineorder-saladmenu.netlify.app/",
   },
   {
-    title: "AI-PoweredDesign",
-    titleColor: "text-yellow-400",
-    image: "/image/MH-Ai-powered.png",
+    title: "AI-powered-trip-planner",
+    titleColor: "text-green-400",
+    image: "/image/MH-ai-tour-planner.png",
     description:
-      "Modern AI-powered design showcase with stunning visual effects and smooth user experience.",
-    technologies: ["Vue.js", "JavaScript", "Animation"],
-    live: "https://mh-ai-powered-design.netlify.app/",
+      "AI-powered trip planner application with personalized itineraries and travel recommendations.",
+    technologies: ["TailwindCss", "Animation", "JavaScript"],
+    live: "https://new-ai-trip-planner-web.netlify.app/",
   },
   {
     title: "PersonalPortfolio",
@@ -2136,22 +2157,13 @@ const projects = ref([
     live: "https://mh-portfolio01.netlify.app/",
   },
   {
-    title: "AuthUI.design",
-    titleColor: "text-green-400",
-    image: "/image/MH-signin-6.png",
+    title: "AI-PoweredDesign",
+    titleColor: "text-yellow-400",
+    image: "/image/MH-Ai-powered.png",
     description:
-      "Beautiful animated login and sign-up forms with smooth transitions and modern UI patterns.",
-    technologies: ["TalwindCss", "Animation", "JavaScript"],
-    live: "https://animation-login-and-sign-in.netlify.app/",
-  },
-  {
-    title: "ImageSearch.api",
-    titleColor: "text-orange-400",
-    image: "/image/MH-imageSRC-1.png",
-    description:
-      "API-powered image search application with real-time results and responsive grid layout.",
-    technologies: ["API", "JavaScript", "TalwindCss"],
-    live: "https://image-search-website2.netlify.app/",
+      "Modern AI-powered design showcase with stunning visual effects and smooth user experience.",
+    technologies: ["Vue.js", "JavaScript", "Animation"],
+    live: "https://mh-ai-powered-design.netlify.app/",
   },
 ]);
 </script>
