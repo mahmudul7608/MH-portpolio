@@ -114,7 +114,7 @@
     <!-- Hero Section start -->
     <section
       id="intro"
-      class="relative flex flex-col items-center justify-center text-center px-8 md:px-12 py-20 min-h-screen overflow-hidden"
+      class="relative flex flex-col items-center justify-center text-center px-8 md:px-12 py-12 min-h-screen overflow-hidden"
     >
       <!-- LEFT: Social Icons -->
       <div
@@ -254,7 +254,7 @@
           </button>
         </div>
         <!-- Scroll Mouse section -->
-        <div class="flex flex-col items-center space-y-2 mt-5">
+        <div class="flex flex-col items-center space-y-2 mt-3">
           <span class="text-white text-xs sm:text-lg font-medium"
             >Scroll to explore</span
           >
@@ -274,8 +274,8 @@
 
     <!-- about section start -->
 
-    <section id="about" class="py-6 md:py-16 text-white">
-      <h2 class="text-3xl md:text-4xl mb-8 md:mb-10 font-bold text-center">
+    <section id="about" class="py-2 md:py-4 text-white">
+      <h2 class="text-3xl md:text-4xl mb-6 md:mb-8 font-bold text-center">
         About
         <span
           class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -497,9 +497,9 @@
     <!-- about section end  -->
 
     <!-- skills section start-->
-    <section id="skills" class="mt-10 bg-black-100">
+    <section id="skills" class="mt-4 bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -689,8 +689,8 @@
     <!-- skills section end -->
 
     <!-- tools section start -->
-    <section id="tools-i-use" class="mt-10 bg-black-500 py-2 px-3">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+    <section id="tools-i-use" class="mt-4 bg-black-500 py-2 px-3">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
         Tools
         <span
           class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -698,7 +698,7 @@
         >
       </h2>
 
-      <div dir="ltr" data-orientation="horizontal" class="w-full mb-10">
+      <div dir="ltr" data-orientation="horizontal" class="w-full mb-6">
         <div
           data-state="active"
           data-orientation="horizontal"
@@ -1635,7 +1635,7 @@
     <!-- tools section end -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="relative py-20 px-6 overflow-hidden">
+    <section id="my-recent-project" class="relative py-8 px-6 overflow-hidden">
       <!-- Background blur elements -->
       <div
         class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-400/10 blur-[100px] rounded-full"
@@ -1644,8 +1644,8 @@
         class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-300/10 blur-[100px] rounded-full"
       ></div>
 
-      <div class="text-center mb-16 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+      <div class="text-center mb-8 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -1763,12 +1763,12 @@
     <!-- Contact section start -->
     <section
       id="contact-me"
-      class="min-h-screen flex items-center justify-center px-4 mb-8 mt-6"
+      class="min-h-screen flex items-center justify-center px-4 mb-4 mt-4"
     >
       <div class="w-full max-w-3xl">
         <!-- Heading -->
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
             Contact
             <span
               class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
