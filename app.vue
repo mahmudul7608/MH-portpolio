@@ -241,10 +241,10 @@
         <!-- Buttons -->
         <div class="flex flex-wrap gap-4 justify-center mt-8">
           <a
-            href="#contact-me"
+            href="#my-recent-project"
             class="inline-block px-6 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
           >
-            Get in Touch
+            My Projects
           </a>
           <button
             @click="downloadResume"
@@ -689,7 +689,7 @@
     <!-- skills section end -->
 
     <!-- tools section start -->
-    <section id="tools-i-use" class="mt-4 bg-black-500 py-2 px-3">
+    <section id="tools-i-use" class="mt-8 bg-black-500 py-12 md:py-20 px-3">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
         Tools
         <span
@@ -698,7 +698,113 @@
         >
       </h2>
 
-      <div dir="ltr" data-orientation="horizontal" class="w-full mb-6">
+      <!-- Orbit Tools (New) -->
+      <div
+        class="relative flex items-center justify-center min-h-[90vh] overflow-hidden"
+      >
+        <!-- Multi-ring field and glows -->
+        <div
+          class="absolute w-[620px] h-[620px] rounded-full ring-field pointer-events-none"
+        ></div>
+        <!-- outer glow removed -->
+        <div
+          class="absolute w-[360px] h-[360px] rounded-full ring-inner-glow"
+        ></div>
+
+        <!-- Outer Orbit (clockwise) -->
+        <!-- outer rotor removed -->
+        <!-- Outer icons (orbit with ring) -->
+        <div
+          class="absolute w-[560px] h-[560px] animate-spin-outer"
+          :class="{ 'orbit-paused': !orbitsActive }"
+        >
+          <div
+            v-for="(skill, index) in outerSkills"
+            :key="`outer-${index}`"
+            :style="getPositionStyle(index, outerSkills.length, 225)"
+            class="absolute"
+          >
+            <div
+              class="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 orbit-icon keep-upright-outer relative"
+              :class="{ 'orbit-paused': !orbitsActive }"
+              @mouseenter="onIconHover(true)"
+              @mouseleave="onIconHover(false)"
+              :style="getIconStyle(skill.name)"
+            >
+              <img
+                :src="skill.icon"
+                :alt="skill.name"
+                class="w-6 h-6 md:w-8 md:h-8 object-contain"
+              />
+              <span class="orbit-label">{{ skill.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inner Orbit (counter-clockwise) -->
+        <!-- Rotating visual ring (inner) -->
+        <div
+          class="absolute w-[340px] h-[340px] rounded-full ring-rotor ring-rotor-inner animate-spin-inner"
+          :class="{ 'orbit-paused': !orbitsActive }"
+        ></div>
+        <!-- Inner icons (orbit with ring) -->
+        <div
+          class="absolute w-[340px] h-[340px] animate-spin-inner"
+          :class="{ 'orbit-paused': !orbitsActive }"
+        >
+          <div
+            v-for="(skill, index) in innerSkills"
+            :key="`inner-${index}`"
+            :style="getPositionStyle(index, innerSkills.length, 135)"
+            class="absolute"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 orbit-icon keep-upright-inner relative"
+              :class="{ 'orbit-paused': !orbitsActive }"
+              @mouseenter="onIconHover(true)"
+              @mouseleave="onIconHover(false)"
+              :style="getIconStyle(skill.name)"
+            >
+              <img
+                :src="skill.icon"
+                :alt="skill.name"
+                class="w-5 h-5 md:w-6 md:h-6 object-contain"
+              />
+              <span class="orbit-label">{{ skill.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Satellite ring removed for simpler design -->
+
+        <!-- Center Core Icon -->
+        <div class="center-core relative z-10">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 8L6 12L10 16"
+              stroke="#7c3aed"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M14 8L18 12L14 16"
+              stroke="#22d3ee"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div dir="ltr" data-orientation="horizontal" class="w-full mb-6 hidden">
         <div
           data-state="active"
           data-orientation="horizontal"
@@ -2108,6 +2214,156 @@ onMounted(() => {
   });
 });
 
+// 🔹 Orbit tools data (icons around the ring)
+const skills = [
+  {
+    name: "Vue.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  },
+  {
+    name: "Nuxt.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+  },
+  {
+    name: "React.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    name: "CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "HTML5",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "HTML",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "REST APIs",
+    icon: "https://cdn-icons-png.flaticon.com/512/833/833524.png",
+  },
+  {
+    name: "VS Code",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  {
+    name: "Netlify",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg",
+  },
+  {
+    name: "Figma",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  },
+  {
+    name: "Photoshop",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
+  },
+  {
+    name: "Canva",
+    icon: "https://cdn.simpleicons.org/canva/00C4CC",
+  },
+];
+
+// 🔹 Ensure unique tools by name (no duplicates)
+const uniqueSkills = computed(() => {
+  const seen = new Set();
+  const out = [];
+  for (const s of skills) {
+    if (!seen.has(s.name)) {
+      seen.add(s.name);
+      out.push(s);
+    }
+  }
+  return out;
+});
+
+// 🔹 Split into two rings (simple, no satellite ring)
+const outerSkills = computed(() => uniqueSkills.value.slice(0, 10));
+const innerSkills = computed(() => uniqueSkills.value.slice(10));
+
+// 🔹 Circular positioning for orbit icons
+const getPositionStyle = (index, total, radius = 250) => {
+  const angle = (index / total) * 2 * Math.PI;
+  const x = Math.cos(angle) * radius;
+  const y = Math.sin(angle) * radius;
+  return {
+    left: "50%",
+    top: "50%",
+    transform: `translate(${x}px, ${y}px) translate(-50%, -50%)`,
+    willChange: "transform",
+  };
+};
+
+// 🔹 Custom background styling for specific tools
+const getIconStyle = (name) => {
+  switch (name) {
+    case "GitHub":
+      return {
+        background: "#ffffff",
+        border: "1px solid rgba(59,130,246,0.6)",
+        boxShadow: "0 0 0 4px rgba(2,6,23,.6), 0 8px 24px rgba(59,130,246,.25)",
+      };
+    case "Photoshop":
+      return {
+        background: "linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)",
+        border: "1px solid rgba(59,130,246,0.7)",
+        boxShadow: "0 0 0 4px rgba(2,6,23,.6), 0 8px 24px rgba(59,130,246,.35)",
+      };
+    default:
+      return {};
+  }
+};
+
+// 🔹 Play/pause orbits when in viewport
+// 🔹 Orbit run-state (in view AND not hovering any icon)
+const orbitsInView = ref(false);
+const isHoveringOrbitIcon = ref(false);
+const orbitsActive = computed(
+  () => orbitsInView.value && !isHoveringOrbitIcon.value
+);
+
+const onIconHover = (hovering) => {
+  isHoveringOrbitIcon.value = !!hovering;
+};
+
+onMounted(() => {
+  const el = document.getElementById("tools-i-use");
+  if (!el) return;
+  const o = new IntersectionObserver(
+    (entries) => {
+      orbitsInView.value = entries[0]?.isIntersecting ?? false;
+    },
+    { threshold: 0.25 }
+  );
+  o.observe(el);
+});
+
 // 🔹 Projects data with technologies
 
 const projects = ref([
@@ -2483,5 +2739,224 @@ a:hover svg {
 .animate-developer {
   animation: developerAppear 2s ease-out forwards;
   animation-delay: 0.3s;
+}
+
+/* Orbit animations for Tools section */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-reverse-slow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 60s linear infinite;
+}
+.animate-spin-outer {
+  animation: spin-slow 55s linear infinite;
+}
+.animate-spin-inner {
+  animation: spin-reverse-slow 35s linear infinite;
+}
+.animate-spin-slowest {
+  animation: spin-slow 90s linear infinite;
+}
+
+/* Glowing ring styles */
+.ring-outer-glow {
+  background: radial-gradient(
+    closest-side,
+    rgba(168, 85, 247, 0.12),
+    rgba(168, 85, 247, 0.04) 55%,
+    transparent 65%
+  );
+  box-shadow: 0 0 80px rgba(168, 85, 247, 0.25),
+    0 0 36px rgba(168, 85, 247, 0.18) inset;
+}
+.ring-inner-glow {
+  background: radial-gradient(
+    closest-side,
+    rgba(45, 212, 191, 0.12),
+    rgba(56, 189, 248, 0.06) 60%,
+    transparent 70%
+  );
+  box-shadow: 0 0 36px rgba(56, 189, 248, 0.22),
+    0 0 20px rgba(45, 212, 191, 0.16) inset;
+}
+
+/* Center core style */
+.center-core {
+  width: 96px;
+  height: 96px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(closest-side, #22283a, #151826);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.35),
+    inset 0 0 20px rgba(34, 211, 238, 0.25);
+  position: relative;
+  animation: corePulse 3.5s ease-in-out infinite;
+}
+
+/* Orbit icon chip */
+.orbit-icon {
+  border-radius: 9999px;
+  background: #0f1117;
+  border: 1px solid rgba(0, 188, 212, 0.25);
+  box-shadow: 0 0 0 4px rgba(2, 6, 23, 0.6), 0 6px 20px rgba(0, 188, 212, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.orbit-icon:hover {
+  box-shadow: 0 0 0 4px rgba(2, 6, 23, 0.6), 0 10px 28px rgba(0, 188, 212, 0.35);
+}
+
+/* Hover label for tool names */
+.orbit-label {
+  position: absolute;
+  bottom: -1.75rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(15, 17, 23, 0.9);
+  color: #e5e7eb;
+  font-size: 0.7rem;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 188, 212, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.orbit-icon:hover .orbit-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Keep icons upright while rings rotate */
+.keep-upright-outer {
+  animation: spin-reverse-slow 55s linear infinite;
+}
+.keep-upright-inner {
+  animation: spin-slow 35s linear infinite;
+}
+.keep-upright-slowest {
+  animation: spin-reverse-slow 90s linear infinite;
+}
+
+/* Pause helper */
+.orbit-paused {
+  animation-play-state: paused !important;
+}
+
+/* subtle concentric rings */
+.ring-field {
+  background: radial-gradient(
+      circle at center,
+      rgba(34, 211, 238, 0.08) 0%,
+      rgba(34, 211, 238, 0.04) 12%,
+      transparent 13%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(124, 58, 237, 0.1) 25%,
+      rgba(124, 58, 237, 0.05) 26%,
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(34, 211, 238, 0.08) 40%,
+      rgba(34, 211, 238, 0.04) 41%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(124, 58, 237, 0.1) 55%,
+      rgba(124, 58, 237, 0.05) 56%,
+      transparent 57%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(34, 211, 238, 0.08) 70%,
+      rgba(34, 211, 238, 0.04) 71%,
+      transparent 72%
+    );
+  filter: blur(0.2px);
+}
+
+@keyframes corePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 32px rgba(168, 85, 247, 0.28),
+      inset 0 0 16px rgba(34, 211, 238, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 56px rgba(168, 85, 247, 0.45),
+      inset 0 0 24px rgba(34, 211, 238, 0.35);
+  }
+}
+
+/* Rotating rotor visuals using conic gradients */
+.ring-rotor {
+  pointer-events: none;
+}
+.ring-rotor-outer {
+  background: conic-gradient(
+    from 0deg,
+    rgba(124, 58, 237, 0) 0%,
+    rgba(124, 58, 237, 0.25) 15%,
+    rgba(124, 58, 237, 0) 30%,
+    rgba(124, 58, 237, 0.18) 45%,
+    rgba(124, 58, 237, 0) 60%,
+    rgba(124, 58, 237, 0.22) 75%,
+    rgba(124, 58, 237, 0) 90%,
+    rgba(124, 58, 237, 0.12) 100%
+  );
+  filter: blur(0.5px);
+}
+.ring-rotor-inner {
+  background: conic-gradient(
+    from 0deg,
+    rgba(34, 211, 238, 0) 0%,
+    rgba(34, 211, 238, 0.25) 20%,
+    rgba(34, 211, 238, 0) 40%,
+    rgba(34, 211, 238, 0.18) 60%,
+    rgba(34, 211, 238, 0) 80%,
+    rgba(34, 211, 238, 0.12) 100%
+  );
+  filter: blur(0.4px);
+}
+.ring-rotor-slowest {
+  background: conic-gradient(
+    from 0deg,
+    rgba(168, 85, 247, 0) 0%,
+    rgba(168, 85, 247, 0.18) 10%,
+    rgba(168, 85, 247, 0) 20%,
+    rgba(168, 85, 247, 0.12) 30%,
+    rgba(168, 85, 247, 0) 40%,
+    rgba(168, 85, 247, 0.16) 50%,
+    rgba(168, 85, 247, 0) 60%,
+    rgba(168, 85, 247, 0.1) 70%,
+    rgba(168, 85, 247, 0) 80%,
+    rgba(168, 85, 247, 0.12) 90%,
+    rgba(168, 85, 247, 0) 100%
+  );
+  filter: blur(0.8px);
 }
 </style>
