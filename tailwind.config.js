@@ -8,6 +8,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        18: "4.5rem",
+        22: "5.5rem",
+        26: "6.5rem",
+        30: "7.5rem",
+      },
+      height: {
+        18: "4.5rem",
+        22: "5.5rem",
+        26: "6.5rem",
+        30: "7.5rem",
+      },
       colors: {
         "base-100": "#0b0f19",
       },

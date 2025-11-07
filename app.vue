@@ -35,7 +35,7 @@
             <!-- Icon -->
             <a
               :href="item.href"
-              class="p-3 rounded-full flex items-center justify-center shadow-md transition-all duration-300 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:scale-110"
+              class="p-3 rounded-full flex items-center justify-center shadow-md transition-all duration-300 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:scale-110 active:scale-110 cursor-pointer"
               :class="[
                 activeSection === item.href
                   ? activeColor(item.label) +
@@ -53,7 +53,7 @@
       <button
         @click="isOpen = true"
         v-show="!isOpen"
-        class="md:hidden fixed top-4 right-4 z-[60] p-3 rounded-full bg-gray-800/90 backdrop-blur-sm text-white text-2xl shadow-lg hover:bg-cyan-500 transition-all duration-300"
+        class="md:hidden fixed top-4 right-4 z-[60] p-3 rounded-full bg-gray-800/90 backdrop-blur-sm text-white text-2xl shadow-lg hover:bg-cyan-500 active:bg-cyan-500 transition-all duration-300 cursor-pointer"
       >
         ☰
       </button>
@@ -71,7 +71,7 @@
             <!-- Close Button -->
             <button
               @click="isOpen = false"
-              class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 text-white text-xl hover:bg-red-500 hover:rotate-90 transition-all duration-300"
+              class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 text-white text-xl hover:bg-red-500 active:bg-red-500 hover:rotate-90 active:rotate-90 transition-all duration-300 cursor-pointer"
             >
               ✕
             </button>
@@ -92,7 +92,7 @@
               >
                 <a
                   :href="item.href"
-                  class="flex items-center justify-center gap-3 py-3 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 transition-all duration-300"
+                  class="flex items-center justify-center gap-3 py-3 px-4 rounded-lg bg-gray-800 hover:bg-cyan-500 active:bg-cyan-500 transition-all duration-300 cursor-pointer"
                   @click="isOpen = false"
                 >
                   <component :is="item.icon" class="w-5 h-5" />
@@ -125,7 +125,7 @@
           href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
           target="_blank"
           rel="noopener noreferrer"
-          class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+          class="p-2 rounded-full hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white transition-colors cursor-pointer"
           aria-label="LinkedIn"
         >
           <svg
@@ -151,7 +151,7 @@
           href="https://github.com/mahmudul7608"
           target="_blank"
           rel="noopener noreferrer"
-          class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+          class="p-2 rounded-full hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white transition-colors cursor-pointer"
           aria-label="GitHub"
         >
           <svg
@@ -175,7 +175,7 @@
         <a
           href="https://wa.me/8801650217808"
           target="_blank"
-          class="p-2 rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+          class="p-2 rounded-full hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white transition-colors cursor-pointer"
           aria-label="WhatsApp"
         >
           <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
@@ -242,13 +242,13 @@
         <div class="flex flex-wrap gap-4 justify-center mt-8">
           <a
             href="#my-recent-project"
-            class="inline-block px-6 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 transition shadow-lg"
+            class="inline-block px-6 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 active:scale-105 transition shadow-lg cursor-pointer"
           >
             My Projects
           </a>
           <button
             @click="downloadResume"
-            class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white hover:scale-105 transition shadow-lg"
+            class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white hover:scale-105 active:scale-105 transition shadow-lg cursor-pointer"
           >
             Download Resume
           </button>
@@ -730,16 +730,18 @@
             class="absolute"
           >
             <div
-              class="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 orbit-icon keep-upright-outer relative"
+              class="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 orbit-icon keep-upright-outer relative cursor-pointer"
               :class="{ 'orbit-paused': !orbitsActive }"
               @mouseenter="onIconHover(true)"
               @mouseleave="onIconHover(false)"
+              @touchstart="onIconHover(true)"
+              @touchend="onIconHover(false)"
               :style="getIconStyle(skill.name)"
             >
               <img
                 :src="skill.icon"
                 :alt="skill.name"
-                class="w-6 h-6 md:w-8 md:h-8 object-contain"
+                class="w-6 h-6 md:w-8 md:h-8 object-contain pointer-events-none"
               />
               <span class="orbit-label">{{ skill.name }}</span>
             </div>
@@ -764,16 +766,18 @@
             class="absolute"
           >
             <div
-              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 orbit-icon keep-upright-inner relative"
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 orbit-icon keep-upright-inner relative cursor-pointer"
               :class="{ 'orbit-paused': !orbitsActive }"
               @mouseenter="onIconHover(true)"
               @mouseleave="onIconHover(false)"
+              @touchstart="onIconHover(true)"
+              @touchend="onIconHover(false)"
               :style="getIconStyle(skill.name)"
             >
               <img
                 :src="skill.icon"
                 :alt="skill.name"
-                class="w-5 h-5 md:w-6 md:h-6 object-contain"
+                class="w-5 h-5 md:w-6 md:h-6 object-contain pointer-events-none"
               />
               <span class="orbit-label">{{ skill.name }}</span>
             </div>
@@ -1777,7 +1781,7 @@
           >
             <!-- Laptop Mockup Container -->
             <div
-              class="laptop-mockup relative rounded-2xl bg-gradient-to-br from-[#1a1a2e]/95 via-[#16162a]/95 to-[#0f0f1e]/95 backdrop-blur-md p-5 border border-white/10 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-[1.02]"
+              class="laptop-mockup relative rounded-2xl bg-gradient-to-br from-[#1a1a2e]/95 via-[#16162a]/95 to-[#0f0f1e]/95 backdrop-blur-md p-5 border-2 border-purple-500/20 hover:border-purple-500/60 active:border-purple-500/60 transition-all duration-500 shadow-lg shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/30 active:shadow-2xl active:shadow-purple-500/30 hover:scale-[1.02] active:scale-[1.02] cursor-pointer"
             >
               <!-- Laptop Frame -->
               <div class="laptop-frame relative mb-4">
@@ -1793,7 +1797,7 @@
                     <img
                       :src="project.image"
                       :alt="project.title"
-                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 group-active:scale-105 transition-transform duration-700"
                     />
                     <!-- Screen Gloss Effect -->
                     <div
@@ -2506,8 +2510,12 @@ a:hover svg {
   font-size: 0.875rem;
   font-weight: 500;
   transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
-.tech-badge:hover {
+.tech-badge:hover,
+.tech-badge:active {
   background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
@@ -2516,6 +2524,30 @@ a:hover svg {
 .laptop-mockup {
   cursor: pointer;
   perspective: 1000px;
+  position: relative;
+}
+
+/* Card Border Glow Effect */
+.laptop-mockup::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3), rgba(168, 85, 247, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.laptop-mockup:hover::before,
+.laptop-mockup:active::before {
+  opacity: 1;
 }
 
 .laptop-frame {
@@ -2523,7 +2555,8 @@ a:hover svg {
   transition: transform 0.6s ease;
 }
 
-.laptop-mockup:hover .laptop-frame {
+.laptop-mockup:hover .laptop-frame,
+.laptop-mockup:active .laptop-frame {
   transform: rotateX(2deg) rotateY(-2deg);
 }
 
@@ -2556,8 +2589,24 @@ a:hover svg {
   }
 }
 
-.laptop-mockup:hover {
+.laptop-mockup:hover,
+.laptop-mockup:active {
   animation: laptopGlow 2s ease-in-out infinite;
+}
+
+/* Mobile touch feedback */
+@media (hover: none) and (pointer: coarse) {
+  .laptop-mockup:active {
+    transform: scale(0.98);
+  }
+
+  .orbit-icon:active {
+    transform: scale(0.95);
+  }
+
+  .tech-badge:active {
+    transform: translateY(0);
+  }
 }
 
 /* Galaxy Starfield Background */
@@ -2871,8 +2920,11 @@ a:hover svg {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
-.orbit-icon:hover {
+.orbit-icon:hover,
+.orbit-icon:active {
   box-shadow: 0 0 0 4px rgba(2, 6, 23, 0.6), 0 10px 28px rgba(0, 188, 212, 0.35);
 }
 
@@ -2895,7 +2947,8 @@ a:hover svg {
   transition: opacity 0.2s ease, transform 0.2s ease;
   pointer-events: none;
 }
-.orbit-icon:hover .orbit-label {
+.orbit-icon:hover .orbit-label,
+.orbit-icon:active .orbit-label {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
