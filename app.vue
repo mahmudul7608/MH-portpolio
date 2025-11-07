@@ -689,8 +689,13 @@
     <!-- skills section end -->
 
     <!-- tools section start -->
-    <section id="tools-i-use" class="mt-8 bg-black-500 py-12 md:py-20 px-3">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+    <section
+      id="tools-i-use"
+      class="mt-8 bg-black-500 py-6 sm:py-8 md:py-12 lg:py-20 px-3"
+    >
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-5 md:mb-6"
+      >
         Tools
         <span
           class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -700,28 +705,28 @@
 
       <!-- Orbit Tools (New) -->
       <div
-        class="relative flex items-center justify-center min-h-[90vh] overflow-hidden"
+        class="relative flex items-center justify-center min-h-[50vh] sm:min-h-[60vh] md:min-h-[75vh] lg:min-h-[85vh] xl:min-h-[90vh] overflow-hidden"
       >
-        <!-- Multi-ring field and glows -->
+        <!-- Multi-ring field and glows - Responsive scaling -->
         <div
-          class="absolute w-[620px] h-[620px] rounded-full ring-field pointer-events-none"
+          class="absolute w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[580px] lg:h-[580px] xl:w-[620px] xl:h-[620px] rounded-full ring-field pointer-events-none"
         ></div>
         <!-- outer glow removed -->
         <div
-          class="absolute w-[360px] h-[360px] rounded-full ring-inner-glow"
+          class="absolute w-[160px] h-[160px] sm:w-[230px] sm:h-[230px] md:w-[290px] md:h-[290px] lg:w-[340px] lg:h-[340px] xl:w-[360px] xl:h-[360px] rounded-full ring-inner-glow"
         ></div>
 
         <!-- Outer Orbit (clockwise) -->
         <!-- outer rotor removed -->
-        <!-- Outer icons (orbit with ring) -->
+        <!-- Outer icons (orbit with ring) - Responsive scaling -->
         <div
-          class="absolute w-[560px] h-[560px] animate-spin-outer"
+          class="absolute w-[250px] h-[250px] sm:w-[360px] sm:h-[360px] md:w-[450px] md:h-[450px] lg:w-[530px] lg:h-[530px] xl:w-[560px] xl:h-[560px] animate-spin-outer"
           :class="{ 'orbit-paused': !orbitsActive }"
         >
           <div
             v-for="(skill, index) in outerSkills"
             :key="`outer-${index}`"
-            :style="getPositionStyle(index, outerSkills.length, 225)"
+            :style="getPositionStyle(index, outerSkills.length, outerRadius)"
             class="absolute"
           >
             <div
@@ -742,20 +747,20 @@
         </div>
 
         <!-- Inner Orbit (counter-clockwise) -->
-        <!-- Rotating visual ring (inner) -->
+        <!-- Rotating visual ring (inner) - Responsive scaling -->
         <div
-          class="absolute w-[340px] h-[340px] rounded-full ring-rotor ring-rotor-inner animate-spin-inner"
+          class="absolute w-[150px] h-[150px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] xl:w-[340px] xl:h-[340px] rounded-full ring-rotor ring-rotor-inner animate-spin-inner"
           :class="{ 'orbit-paused': !orbitsActive }"
         ></div>
-        <!-- Inner icons (orbit with ring) -->
+        <!-- Inner icons (orbit with ring) - Responsive scaling -->
         <div
-          class="absolute w-[340px] h-[340px] animate-spin-inner"
+          class="absolute w-[150px] h-[150px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] xl:w-[340px] xl:h-[340px] animate-spin-inner"
           :class="{ 'orbit-paused': !orbitsActive }"
         >
           <div
             v-for="(skill, index) in innerSkills"
             :key="`inner-${index}`"
-            :style="getPositionStyle(index, innerSkills.length, 135)"
+            :style="getPositionStyle(index, innerSkills.length, innerRadius)"
             class="absolute"
           >
             <div
@@ -777,11 +782,12 @@
 
         <!-- Satellite ring removed for simpler design -->
 
-        <!-- Center Core Icon -->
-        <div class="center-core relative z-10">
+        <!-- Center Core Icon - Responsive scaling -->
+        <div
+          class="center-core relative z-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-24 lg:h-24 xl:w-24 xl:h-24"
+        >
           <svg
-            width="28"
-            height="28"
+            class="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -2307,6 +2313,37 @@ const uniqueSkills = computed(() => {
 const outerSkills = computed(() => uniqueSkills.value.slice(0, 10));
 const innerSkills = computed(() => uniqueSkills.value.slice(10));
 
+// 🔹 Responsive window width tracking
+const windowWidth = ref(
+  typeof window !== "undefined" ? window.innerWidth : 1920
+);
+
+// 🔹 Update window width on resize
+const updateWindowWidth = () => {
+  if (typeof window !== "undefined") {
+    windowWidth.value = window.innerWidth;
+  }
+};
+
+// 🔹 Responsive radius - maintaining same proportions as original design
+const outerRadius = computed(() => {
+  const width = windowWidth.value;
+  if (width < 640) return 100; // Mobile: ~45% of original (225px)
+  if (width < 768) return 145; // Small tablet: ~65% of original
+  if (width < 1024) return 190; // Tablet: ~85% of original
+  if (width < 1280) return 215; // Laptop: ~95% of original
+  return 225; // Desktop/XL: original size
+});
+
+const innerRadius = computed(() => {
+  const width = windowWidth.value;
+  if (width < 640) return 60; // Mobile: ~44% of original (135px)
+  if (width < 768) return 87; // Small tablet: ~64% of original
+  if (width < 1024) return 114; // Tablet: ~84% of original
+  if (width < 1280) return 129; // Laptop: ~95% of original
+  return 135; // Desktop/XL: original size
+});
+
 // 🔹 Circular positioning for orbit icons
 const getPositionStyle = (index, total, radius = 250) => {
   const angle = (index / total) * 2 * Math.PI;
@@ -2353,6 +2390,15 @@ const onIconHover = (hovering) => {
 };
 
 onMounted(() => {
+  // Initialize window width
+  updateWindowWidth();
+
+  // Add resize listener for responsive radius
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", updateWindowWidth);
+  }
+
+  // Intersection observer for orbit animation
   const el = document.getElementById("tools-i-use");
   if (!el) return;
   const o = new IntersectionObserver(
@@ -2362,6 +2408,13 @@ onMounted(() => {
     { threshold: 0.25 }
   );
   o.observe(el);
+});
+
+// Cleanup resize listener
+onBeforeUnmount(() => {
+  if (typeof window !== "undefined") {
+    window.removeEventListener("resize", updateWindowWidth);
+  }
 });
 
 // 🔹 Projects data with technologies
@@ -2796,10 +2849,8 @@ a:hover svg {
     0 0 20px rgba(45, 212, 191, 0.16) inset;
 }
 
-/* Center core style */
+/* Center core style - Responsive (size controlled by Tailwind classes) */
 .center-core {
-  width: 96px;
-  height: 96px;
   border-radius: 9999px;
   display: flex;
   align-items: center;
