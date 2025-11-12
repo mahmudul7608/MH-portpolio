@@ -2448,7 +2448,7 @@ const projects = ref([
     image: "/image/MH-SaladMenu.png",
     description:
       "Interactive restaurant menu application with dynamic ordering system and beautiful animations.",
-    technologies: ["Vue.js", "TailwindCSS", "JavaScript"],
+    technologies: ["Vue.js", "TailwindCSS", "JavaScript","API"],
     live: "https://onlineorder-saladmenu.netlify.app/",
   },
   {
@@ -2457,17 +2457,17 @@ const projects = ref([
     image: "/image/MH-ai-tour-planner.png",
     description:
       "AI-powered trip planner application with personalized itineraries and travel recommendations.",
-    technologies: ["TailwindCss", "Animation", "JavaScript"],
+    technologies: ["TailwindCss", "Animation", "JavaScript","API"],
     live: "https://new-ai-trip-planner-web.netlify.app/",
   },
   {
-    title: "PersonalPortfolio",
+    title: "5 Star Hotel Booking",
     titleColor: "text-cyan-400",
-    image: "/image/MH-personal.png",
+    image: "/image/Mh-hotel-booking.png",
     description:
-      "Professional portfolio website showcasing skills, projects, and experience with elegant design.",
-    technologies: ["vueJs", "TalwindCss", "JavaScript"],
-    live: "https://mh-portfolio01.netlify.app/",
+      "Professional hotel booking website with elegant design and seamless user experience.",
+    technologies: ["Vue.js", "TailwindCSS","API", "JavaScript"],
+    live: "https://exquisite-kashata-37b72f.netlify.app/",
   },
   {
     title: "AI-PoweredDesign",
@@ -2534,7 +2534,12 @@ a:hover svg {
   inset: -2px;
   border-radius: 1rem;
   padding: 2px;
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3), rgba(168, 85, 247, 0.3));
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.3),
+    rgba(236, 72, 153, 0.3),
+    rgba(168, 85, 247, 0.3)
+  );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
