@@ -336,7 +336,7 @@
                   <div class="space-y-4">
                     <div class="flex justify-between items-center">
                       <h4 class="font-semibold">
-                        Complete Web Development and Master HTML & CSS Projects
+                        Complete Web Development and Master HTML & Talwind CSS Projects
                       </h4>
                       <span class="text-xs text-white-500">2022–2025(self-taught)</span>
                     </div>
@@ -377,7 +377,7 @@
                         <path d="M16 17H8"></path>
                       </svg>
                     </div>
-                    <div class="text-xl font-bold">20+</div>
+                    <div class="text-xl font-bold">25+</div>
                     <p class="text-xs text-white/70">Projects Built</p>
                   </div>
 
@@ -402,7 +402,7 @@
                         <polyline points="8 6 2 12 8 18"></polyline>
                       </svg>
                     </div>
-                    <div class="text-xl font-bold">40K+</div>
+                    <div class="text-xl font-bold">50K+</div>
                     <p class="text-xs text-white/70">Lines of Code</p>
                   </div>
                 </div>
@@ -413,11 +413,27 @@
             <!-- ✅ Right Section (Improved Center Layout) -->
             <div class="flex flex-col items-center text-center space-y-6 h-full justify-center">
               <!-- Image -->
-              <div class="w-full sm:w-[80%] md:w-[85%] lg:w-[80%]">
+              <div class="relative w-full sm:w-[80%] md:w-[85%] lg:w-[80%]">
+                <!-- Animated Galaxy Backdrop -->
+                <div class="absolute -inset-3 -z-10">
+                  <div class="relative mx-auto w-[95%] aspect-square">
+                    <!-- soft outer glow ring -->
+                    <div class="absolute inset-0 rounded-full ring-outer-glow animate-spin-slowest"></div>
+                    <!-- inner glow ring -->
+                    <div class="absolute inset-8 rounded-full ring-inner-glow animate-spin-inner"></div>
+                    <!-- subtle ring field -->
+                    <div class="absolute inset-0 rounded-full ring-field opacity-70"></div>
+                    <!-- rotating rotor layers -->
+                    <div class="absolute inset-2 rounded-full ring-rotor ring-rotor-outer animate-spin-slow"></div>
+                    <div class="absolute inset-10 rounded-full ring-rotor ring-rotor-inner animate-spin-reverse-slow"></div>
+                    <div class="absolute inset-[22%] rounded-full ring-rotor ring-rotor-slowest animate-spin-slowest"></div>
+                  </div>
+                </div>
+
                 <img
                   src="/image/HM-image-1.png"
                   alt="Mahmudul Hasan"
-                  class="rounded-2xl shadow-2xl mx-auto object-cover w-full h-auto"
+                  class="relative rounded-2xl shadow-2xl mx-auto object-cover w-full h-auto"
                 />
               </div>
 
