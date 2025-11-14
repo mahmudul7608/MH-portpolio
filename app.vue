@@ -287,13 +287,13 @@
         <div
           class="border border-purple-500/30 rounded-2xl p-6 md:p-10 shadow-xl shadow-purple-500/20 bg-gradient-to-br from-gray-900/40 to-transparent backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300"
         >
-          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <!-- Left Section (As is) -->
-            <div class="space-y-8">
+            <div class="space-y-4 h-full">
               <!-- Education -->
               <div>
                 <h3
-                  class="text-2xl md:text-3xl font-bold mb-10 flex items-center"
+                  class="text-2xl md:text-3xl font-bold mb-4 flex items-center"
                 >
                   <span class="p-2 mr-3 bg-purple-500/20 rounded-full">
                     <svg
@@ -309,7 +309,7 @@
                   Education
                 </h3>
                 <div
-                  class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
+                  class="relative p-5 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
                 >
                   <div
                     class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
@@ -327,67 +327,91 @@
 
               <!-- Certifications -->
               <div>
-                <div class="space-y-5">
+                <div
+                  class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
+                >
                   <div
-                    class="p-3 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-                  >
+                    class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
+                  ></div>
+                  <div class="space-y-4">
                     <div class="flex justify-between items-center">
-                      <div>
-                        <h4 class="font-semibold">Complete Web Development</h4>
-                        <p class="text-sm text-white-500">Self Learning</p>
-                      </div>
-                      <span class="text-xs text-white-500"
-                        >2022–2025(self-taught)</span
-                      >
+                      <h4 class="font-semibold">
+                        Complete Web Development and Master HTML & CSS Projects
+                      </h4>
+                      <span class="text-xs text-white-500">2022–2025(self-taught)</span>
                     </div>
-                  </div>
-                  <div
-                    class="p-4 rounded-lg shadow-sm shadow-indigo-600/50 border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 cursor-pointer"
-                  >
                     <div class="flex justify-between items-center">
-                      <div>
-                        <h4 class="font-semibold">
-                          Master HTML & CSS Projects
-                        </h4>
-                        <p class="text-sm text-white-500">Self Learning</p>
-                      </div>
-                      <span class="text-xs text-white-500"
-                        >2022–2023(self-taught)</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-                  >
-                    <div class="flex justify-between items-center">
-                      <div>
-                        <h4 class="font-semibold">Master Git & GitHub</h4>
-                        <p class="text-sm text-white-500">Self Learning</p>
-                      </div>
-                      <span class="text-xs text-white-500"
-                        >2022–2025(self-taught)</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="p-4 rounded-lg border-l-4 border-purple-40 border-white-500 card-hover hover:bg-purple-500/10 shadow-sm shadow-indigo-600/50 cursor-pointer"
-                  >
-                    <div class="flex justify-between items-center">
-                      <div>
-                        <h4 class="font-semibold">Communications</h4>
-                        <p class="text-sm text-white-500">
-                          10 Minute School, Duolingo
-                        </p>
-                      </div>
-                      <span class="text-xs text-white-500">2025</span>
+                      <h4 class="font-semibold">
+                        Master Git & GitHub and Communications
+                      </h4>
+                      <span class="text-xs text-white-500">2022–2025(self-taught)</span>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- Left: Stats grid placed below items (standalone) -->
+              <div class="mt-2">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 w-full">
+                  <div
+                    class="text-center p-3 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
+                  >
+                    <div class="text-purple-400 mb-2">
+                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                      </svg>
+                    </div>
+                    <div class="text-xl font-bold">3+</div>
+                    <p class="text-xs text-white/70">Years Coding Experience</p>
+                  </div>
+
+                  <div
+                    class="text-center p-4 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
+                  >
+                    <div class="text-purple-400 mb-2">
+                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                        <path d="M10 9H8"></path>
+                        <path d="M16 13H8"></path>
+                        <path d="M16 17H8"></path>
+                      </svg>
+                    </div>
+                    <div class="text-xl font-bold">20+</div>
+                    <p class="text-xs text-white/70">Projects Built</p>
+                  </div>
+
+                  <div
+                    class="text-center p-4 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
+                  >
+                    <div class="text-purple-400 mb-2">
+                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="7" r="4"></circle>
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                      </svg>
+                    </div>
+                    <p class="text-xs text-white/80 font-semibold">Good Understanding</p>
+                  </div>
+
+                  <div
+                    class="text-center p-4 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
+                  >
+                    <div class="text-purple-400 mb-2">
+                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                      </svg>
+                    </div>
+                    <div class="text-xl font-bold">40K+</div>
+                    <p class="text-xs text-white/70">Lines of Code</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             <!-- ✅ Right Section (Improved Center Layout) -->
-            <div class="flex flex-col items-center text-center space-y-6">
+            <div class="flex flex-col items-center text-center space-y-6 h-full justify-center">
               <!-- Image -->
               <div class="w-full sm:w-[80%] md:w-[85%] lg:w-[80%]">
                 <img
@@ -397,96 +421,6 @@
                 />
               </div>
 
-              <!-- Stats -->
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-                <div
-                  class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/20 card-hover cursor-pointer"
-                >
-                  <div class="text-purple-500 mb-1">
-                    <svg
-                      class="w-6 h-6 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
-                      ></path>
-                      <rect width="20" height="14" x="2" y="6" rx="2"></rect>
-                    </svg>
-                  </div>
-                  <div class="text-xl font-bold">3+</div>
-                  <p class="text-xs text-muted-foreground">
-                    Years Coding Experience
-                  </p>
-                </div>
-
-                <div
-                  class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/10 card-hover cursor-pointer"
-                >
-                  <div class="text-purple-500 mb-1">
-                    <svg
-                      class="w-6 h-6 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
-                      ></path>
-                      <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                      <path d="M10 9H8"></path>
-                      <path d="M16 13H8"></path>
-                      <path d="M16 17H8"></path>
-                    </svg>
-                  </div>
-                  <div class="text-xl font-bold">20+</div>
-                  <p class="text-xs text-muted-foreground">Projects Built</p>
-                </div>
-
-                <div
-                  class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/20 card-hover cursor-pointer"
-                >
-                  <div class="text-purple-500 mb-1">
-                    <svg
-                      class="w-6 h-6 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="12" cy="7" r="4"></circle>
-                      <path
-                        d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
-                      ></path>
-                    </svg>
-                  </div>
-                  <p class="text-xs text-muted-foreground">
-                    Good Understanding
-                  </p>
-                </div>
-
-                <div
-                  class="text-center p-4 rounded-lg bg-black-700 border border-black-500 shadow-lg shadow-blue-500/50 hover:bg-blue-500/20 card-hover cursor-pointer"
-                >
-                  <div class="text-purple-500 mb-1">
-                    <svg
-                      class="w-6 h-6 mx-auto"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <polyline points="16 18 22 12 16 6"></polyline>
-                      <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
-                  </div>
-                  <div class="text-xl font-bold">40K+</div>
-                  <p class="text-xs text-muted-foreground">Lines of Code</p>
-                </div>
-              </div>
             </div>
             <!-- End Right -->
           </div>
