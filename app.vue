@@ -253,6 +253,7 @@
             Download Resume
           </button>
         </div>
+
         <!-- Scroll Mouse section -->
         <div class="flex flex-col items-center space-y-2 mt-3">
           <span class="text-white text-xs sm:text-lg font-medium"
