@@ -292,123 +292,119 @@
             <!-- Left Section (As is) -->
             <div class="space-y-4 h-full">
               <!-- Education -->
+
+              <!-- Education -->
               <div>
-                <h3
-                  class="text-2xl md:text-3xl font-bold mb-4 flex items-center"
-                >
-                  <span class="p-2 mr-3 bg-purple-500/20 rounded-full">
-                    <svg
-                      class="w-8 h-8 text-purple-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
+                  <span class="p-2 bg-gray-800 rounded-lg border border-white/10">
+                    <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                       <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
                     </svg>
                   </span>
                   Education
                 </h3>
-                <div
-                  class="relative p-5 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
-                >
-                  <div
-                    class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
-                  ></div>
-                  <h4 class="text-xl font-bold">Diploma in Engineering</h4>
-                  <span
-                    class="inline-block text-xs bg-purple-100 text-black px-3 py-1 rounded-full border-white-100 border-2 mt-3"
-                    >2019 - 2024</span
-                  >
-                  <p class="text-sm text-white-600 mt-2">
-                    Government Polytechnic Institute, Bogura
-                  </p>
+                
+                <div class="relative pl-8 border-l-2 border-white/20">
+                  <!-- Education Card -->
+                  <div class="relative group">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[39px] top-0 w-5 h-5 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
+                    
+                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-purple-500/30 transition-all duration-300 backdrop-blur-sm">
+                      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                        <div>
+                          <h4 class="text-lg font-bold text-white leading-tight">Diploma in Engineering</h4>
+                          <p class="text-sm text-gray-400 mt-1 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Government Polytechnic Institute, Bogura
+                          </p>
+                        </div>
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap self-start md:self-auto">2019 - 2024</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Certifications -->
               <div>
-                <div
-                  class="relative p-6 rounded-lg border-l-4 border-purple-40 border-white-500 shadow-sm shadow-indigo-600/50 card-hover hover:bg-purple-500/10 cursor-pointer"
-                >
-                  <div
-                    class="absolute -left-3 top-7 w-6 h-6 bg-black-100 border-2 border-black-900 rounded-full"
-                  ></div>
-                  <div class="space-y-4">
-                    <div class="flex justify-between items-center">
-                      <h4 class="font-semibold">
-                        Complete Web Development and Master HTML & Talwind CSS Projects
-                      </h4>
-                      <span class="text-xs text-white-500">2022–2025(self-taught)</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                      <h4 class="font-semibold">
-                        Master Git & GitHub and Communications
-                      </h4>
-                      <span class="text-xs text-white-500">2022–2025(self-taught)</span>
+                <div class="relative pl-8 border-l-2 border-white/20">
+                  <!-- Certification Card -->
+                  <div class="relative group">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[39px] top-0 w-5 h-5 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
+                    
+                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-sm">
+                      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+                        <h4 class="text-lg font-bold text-white leading-tight">
+                          Web Development & Frontend Engineering
+                        </h4>
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap">2022–2025(self-taught)</span>
+                      </div>
+                      
+                      <!-- Achievement List -->
+                      <div class="space-y-2.5">
+                        <div class="flex items-start gap-3">
+                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span class="text-sm text-gray-300">Complete Web Development</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span class="text-sm text-gray-300">HTML, CSS & Tailwind</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span class="text-sm text-gray-300">Real-world Projects</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span class="text-sm text-gray-300">Git & GitHub</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Left: Stats grid placed below items (standalone) -->
-              <div class="mt-2">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 w-full">
-                  <div
-                    class="text-center p-3 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
-                  >
-                    <div class="text-purple-400 mb-2">
-                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        <rect width="20" height="14" x="2" y="6" rx="2"></rect>
-                      </svg>
-                    </div>
-                    <div class="text-xl font-bold">3+</div>
-                    <p class="text-xs text-white/70">Years Coding Experience</p>
-                  </div>
 
-                  <div
-                    class="text-center p-4 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
-                  >
-                    <div class="text-purple-400 mb-2">
-                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
-                        <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                        <path d="M10 9H8"></path>
-                        <path d="M16 13H8"></path>
-                        <path d="M16 17H8"></path>
-                      </svg>
-                    </div>
-                    <div class="text-xl font-bold">25+</div>
-                    <p class="text-xs text-white/70">Projects Built</p>
+              <!-- Stats Grid -->
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+                <!-- Stat 1 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-purple-500/30 transition-all duration-300">
+                  <div class="text-purple-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                   </div>
-
-                  <div
-                    class="text-center p-4 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
-                  >
-                    <div class="text-purple-400 mb-2">
-                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <circle cx="12" cy="7" r="4"></circle>
-                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                      </svg>
-                    </div>
-                    <p class="text-xs text-white/80 font-semibold">Good Understanding</p>
+                  <div class="text-xl font-bold text-white">3+</div>
+                  <p class="text-xs text-gray-400">Years Exp.</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-blue-500/30 transition-all duration-300">
+                  <div class="text-blue-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                   </div>
-
-                  <div
-                    class="text-center p-4 rounded-xl bg-black/30 border border-white/15 shadow-lg shadow-blue-500/20 hover:bg-blue-500/10 card-hover cursor-pointer backdrop-blur-sm"
-                  >
-                    <div class="text-purple-400 mb-2">
-                      <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <polyline points="16 18 22 12 16 6"></polyline>
-                        <polyline points="8 6 2 12 8 18"></polyline>
-                      </svg>
-                    </div>
-                    <div class="text-xl font-bold">50K+</div>
-                    <p class="text-xs text-white/70">Lines of Code</p>
+                  <div class="text-xl font-bold text-white">25+</div>
+                  <p class="text-xs text-gray-400">Projects</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-green-500/30 transition-all duration-300">
+                  <div class="text-green-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                   </div>
+                  <div class="text-sm font-bold text-white mt-1">Good</div>
+                  <p class="text-xs text-gray-400">Understanding</p>
+                </div>
+                <!-- Stat 4 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-pink-500/30 transition-all duration-300">
+                  <div class="text-pink-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                  </div>
+                  <div class="text-xl font-bold text-white">50K+</div>
+                  <p class="text-xs text-gray-400">Lines Code</p>
                 </div>
               </div>
-
             </div>
 
             <!-- ✅ Right Section (Improved Center Layout) -->
