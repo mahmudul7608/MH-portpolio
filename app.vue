@@ -309,11 +309,11 @@
                   <!-- Education Card -->
                   <div class="relative group">
                     <!-- Timeline Dot -->
-                    <div class="absolute -left-[39px] top-0 w-5 h-5 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="absolute -left-[41px] top-0 w-7 h-7 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
                     
-                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-purple-500/30 transition-all duration-300 backdrop-blur-sm">
+                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-sm">
                       <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                        <div>
+                        <div class="pl-4">
                           <h4 class="text-lg font-bold text-white leading-tight">Diploma in Engineering</h4>
                           <p class="text-sm text-gray-400 mt-1 flex items-center gap-2">
                             <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -336,33 +336,29 @@
                   <!-- Certification Card -->
                   <div class="relative group">
                     <!-- Timeline Dot -->
-                    <div class="absolute -left-[39px] top-0 w-5 h-5 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="absolute -left-[41px] top-0 w-7 h-7 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
                     
-                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-blue-500/30 transition-all duration-300 backdrop-blur-sm">
+                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 backdrop-blur-sm">
                       <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
                         <h4 class="text-lg font-bold text-white leading-tight">
-                          Web Development & Frontend Engineering
+                          Frontend Engineering
                         </h4>
                         <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap">2022–2025(self-taught)</span>
                       </div>
                       
                       <!-- Achievement List -->
-                      <div class="space-y-2.5">
+                      <div class="space-y-2.5 pl-4">
                         <div class="flex items-start gap-3">
                           <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                          <span class="text-sm text-gray-300">Complete Web Development</span>
+                          <span class="text-sm text-gray-300"><strong>Frontend:</strong> HTML, CSS, Tailwind, JS (ES6+), Vue, Nuxt, React</span>
                         </div>
                         <div class="flex items-start gap-3">
                           <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                          <span class="text-sm text-gray-300">HTML, CSS & Tailwind</span>
+                          <span class="text-sm text-gray-300"><strong>Focus:</strong> Responsive UI, real-world projects</span>
                         </div>
                         <div class="flex items-start gap-3">
                           <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                          <span class="text-sm text-gray-300">Real-world Projects</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                          <span class="text-sm text-gray-300">Git & GitHub</span>
+                          <span class="text-sm text-gray-300"><strong>Workflow:</strong> Git, GitHub, version control</span>
                         </div>
                       </div>
                     </div>
@@ -373,7 +369,7 @@
               <!-- Stats Grid -->
               <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
                 <!-- Stat 1 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-purple-500/30 transition-all duration-300">
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-purple-500/50 hover:bg-purple-500/5 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
                   <div class="text-purple-400 mb-2 flex justify-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                   </div>
@@ -381,7 +377,7 @@
                   <p class="text-xs text-gray-400">Years Exp.</p>
                 </div>
                 <!-- Stat 2 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-blue-500/30 transition-all duration-300">
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-blue-500/50 hover:bg-blue-500/5 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
                   <div class="text-blue-400 mb-2 flex justify-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                   </div>
@@ -389,7 +385,7 @@
                   <p class="text-xs text-gray-400">Projects</p>
                 </div>
                 <!-- Stat 3 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-green-500/30 transition-all duration-300">
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-green-500/50 hover:bg-green-500/5 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300">
                   <div class="text-green-400 mb-2 flex justify-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                   </div>
@@ -397,7 +393,7 @@
                   <p class="text-xs text-gray-400">Understanding</p>
                 </div>
                 <!-- Stat 4 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-pink-500/30 transition-all duration-300">
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-pink-500/50 hover:bg-pink-500/5 hover:shadow-lg hover:shadow-pink-500/10 transition-all duration-300">
                   <div class="text-pink-400 mb-2 flex justify-center">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                   </div>
@@ -2463,8 +2459,10 @@ a:hover svg {
 }
 .tech-badge:hover,
 .tech-badge:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(34, 211, 238, 0.15));
+  border-color: rgba(168, 85, 247, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
 }
 
 /* ✨ Laptop Mockup Styles */
