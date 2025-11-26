@@ -1,6 +1,11 @@
 <template>
+  <!-- Boot Loader -->
+  <BootLoader @boot-complete="onBootComplete" />
+
   <div
-    class="min-h-screen text-white transition-colors duration-300 relative overflow-hidden"
+    v-show="bootComplete"
+    class="min-h-screen text-white transition-colors duration-300 relative overflow-hidden main-content"
+    :class="{ 'fade-in': bootComplete }"
   >
     <!-- Galaxy Animated Background -->
     <div class="absolute inset-0 -z-10 galaxy-bg">
@@ -2061,6 +2066,12 @@
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 import { Home, User, Brain, Folder, Code, Mail, Book } from "lucide-vue-next";
 
+// Boot loader state
+const bootComplete = ref(false);
+const onBootComplete = () => {
+  bootComplete.value = true;
+};
+
 // Scroll progress bar
 
 const scrollProgress = ref(0);
@@ -3012,5 +3023,15 @@ a:hover svg {
     rgba(168, 85, 247, 0) 100%
   );
   filter: blur(0.8px);
+}
+
+/* Main content fade-in animation */
+.main-content {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.main-content.fade-in {
+  opacity: 1;
 }
 </style>
