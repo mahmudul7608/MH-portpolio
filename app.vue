@@ -343,7 +343,7 @@
                         <h4 class="text-lg font-bold text-white leading-tight">
                           Web Design & Development
                         </h4>
-                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap">2022–2025(self-taught)</span>
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap">2022 – 2025</span>
                       </div>
                       
                       <!-- Achievement List -->
