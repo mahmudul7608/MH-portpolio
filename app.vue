@@ -412,19 +412,11 @@
             <div class="flex flex-col items-center text-center space-y-6 h-full justify-center">
               <!-- Image -->
               <div class="relative w-full sm:w-[80%] md:w-[85%] lg:w-[80%]">
-                <!-- Animated Galaxy Backdrop -->
+                <!-- Static subtle glow effect -->
                 <div class="absolute -inset-3 -z-10">
                   <div class="relative mx-auto w-[95%] aspect-square">
-                    <!-- soft outer glow ring -->
-                    <div class="absolute inset-0 rounded-full ring-outer-glow animate-spin-slowest"></div>
-                    <!-- inner glow ring -->
-                    <div class="absolute inset-8 rounded-full ring-inner-glow animate-spin-inner"></div>
-                    <!-- subtle ring field -->
-                    <div class="absolute inset-0 rounded-full ring-field opacity-70"></div>
-                    <!-- rotating rotor layers -->
-                    <div class="absolute inset-2 rounded-full ring-rotor ring-rotor-outer animate-spin-slow"></div>
-                    <div class="absolute inset-10 rounded-full ring-rotor ring-rotor-inner animate-spin-reverse-slow"></div>
-                    <div class="absolute inset-[22%] rounded-full ring-rotor ring-rotor-slowest animate-spin-slowest"></div>
+                    <!-- Soft static gradient glow -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-pink-500/20 blur-2xl"></div>
                   </div>
                 </div>
 
