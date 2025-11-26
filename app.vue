@@ -230,8 +230,8 @@
         </p>
 
         <!-- Subtext -->
-        <p class="mt-3 text-white/70 text-base sm:text-lg">
-          I’m <span class="text-white font-medium">Mahmudul Hasan</span> — a
+        <p class="mt-3 text-white/70 text-base sm:text-lg leading-relaxed">
+          I’m <span class="text-white font-medium">Mahmudul Hasan</span> - a
           <span class="text-white font-medium">Diploma Engineer </span> and
           <span class="text-white font-medium">Frontend Developer</span>
           dedicated to crafting beautiful, responsive, and high-performance web
@@ -242,20 +242,20 @@
         <div class="flex flex-wrap gap-4 justify-center mt-8">
           <a
             href="#my-recent-project"
-            class="inline-block px-6 py-2.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 active:scale-105 transition shadow-lg cursor-pointer"
+            class="inline-block px-6 py-2.5 lg:px-8 lg:py-3.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 active:scale-105 transition shadow-lg cursor-pointer"
           >
             My Projects
           </a>
           <button
             @click="downloadResume"
-            class="inline-block px-6 py-2.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white hover:scale-105 active:scale-105 transition shadow-lg cursor-pointer"
+            class="inline-block px-6 py-2.5 lg:px-8 lg:py-3.5 rounded-full border border-purple-500 bg-white text-black font-semibold hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white hover:scale-105 active:scale-105 transition shadow-lg cursor-pointer"
           >
             Download Resume
           </button>
         </div>
 
         <!-- Scroll Mouse section -->
-        <div class="flex flex-col items-center space-y-2 mt-3">
+        <div class="flex flex-col items-center space-y-2 mt-4">
           <span class="text-white text-xs sm:text-lg font-medium"
             >Scroll to explore</span
           >
@@ -341,7 +341,7 @@
                     <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 backdrop-blur-sm">
                       <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
                         <h4 class="text-lg font-bold text-white leading-tight">
-                          Frontend Engineering
+                          Web Design & Development
                         </h4>
                         <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap">2022–2025(self-taught)</span>
                       </div>
