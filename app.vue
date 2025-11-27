@@ -2077,7 +2077,7 @@ const updateScroll = () => {
 onMounted(() => window.addEventListener("scroll", updateScroll));
 onBeforeUnmount(() => window.removeEventListener("scroll", updateScroll));
 
-// 🔹 Resume download function
+// Resume download function
 const downloadResume = () => {
   if (process.client) {
     const link = document.createElement("a");
@@ -2089,10 +2089,10 @@ const downloadResume = () => {
   }
 };
 
-// 🔹 Mobile menu state
+//  Mobile menu state
 const isOpen = ref(false);
 
-// 🔹 Navbar items
+//  Navbar items
 const navItems = [
   { href: "#intro", label: "Home", icon: Home },
   { href: "#about", label: "About", icon: User },
@@ -2105,7 +2105,7 @@ const navItems = [
 
 const activeSection = ref("#intro");
 
-// 🔹 section color
+//  section color
 
 const activeColor = (label) => {
   switch (label) {
@@ -2128,7 +2128,7 @@ const activeColor = (label) => {
   }
 };
 
-// 🔹 scroll active section update
+//  scroll active section update
 
 let observer;
 
@@ -2170,7 +2170,7 @@ onMounted(() => {
   });
 });
 
-// 🔹 Orbit tools data (icons around the ring)
+//  Orbit tools data (icons around the ring)
 const skills = [
   {
     name: "Vue.js",
@@ -2246,7 +2246,7 @@ const skills = [
   },
 ];
 
-// 🔹 Ensure unique tools by name (no duplicates)
+// Ensure unique tools by name (no duplicates)
 const uniqueSkills = computed(() => {
   const seen = new Set();
   const out = [];
@@ -2259,23 +2259,23 @@ const uniqueSkills = computed(() => {
   return out;
 });
 
-// 🔹 Split into two rings (simple, no satellite ring)
+//  Split into two rings (simple, no satellite ring)
 const outerSkills = computed(() => uniqueSkills.value.slice(0, 10));
 const innerSkills = computed(() => uniqueSkills.value.slice(10));
 
-// 🔹 Responsive window width tracking
+//  Responsive window width tracking
 const windowWidth = ref(
   typeof window !== "undefined" ? window.innerWidth : 1920
 );
 
-// 🔹 Update window width on resize
+//  Update window width on resize
 const updateWindowWidth = () => {
   if (typeof window !== "undefined") {
     windowWidth.value = window.innerWidth;
   }
 };
 
-// 🔹 Responsive radius - maintaining same proportions as original design
+//  Responsive radius - maintaining same proportions as original design
 const outerRadius = computed(() => {
   const width = windowWidth.value;
   if (width < 640) return 100; // Mobile: ~45% of original (225px)
@@ -2294,7 +2294,7 @@ const innerRadius = computed(() => {
   return 135; // Desktop/XL: original size
 });
 
-// 🔹 Circular positioning for orbit icons
+//  Circular positioning for orbit icons
 const getPositionStyle = (index, total, radius = 250) => {
   const angle = (index / total) * 2 * Math.PI;
   const x = Math.cos(angle) * radius;
@@ -2307,7 +2307,7 @@ const getPositionStyle = (index, total, radius = 250) => {
   };
 };
 
-// 🔹 Custom background styling for specific tools
+//  Custom background styling for specific tools
 const getIconStyle = (name) => {
   switch (name) {
     case "GitHub":
@@ -2327,8 +2327,8 @@ const getIconStyle = (name) => {
   }
 };
 
-// 🔹 Play/pause orbits when in viewport
-// 🔹 Orbit run-state (in view AND not hovering any icon)
+//  Play/pause orbits when in viewport
+//  Orbit run-state (in view AND not hovering any icon)
 const orbitsInView = ref(false);
 const isHoveringOrbitIcon = ref(false);
 const orbitsActive = computed(
@@ -2367,7 +2367,7 @@ onBeforeUnmount(() => {
   }
 });
 
-// 🔹 Projects data with technologies
+//  Projects data with technologies
 
 const projects = ref([
   {
@@ -2376,7 +2376,7 @@ const projects = ref([
     image: "/image/MH-Online.com1.png",
     description:
       "A full-featured e-commerce platform with modern UI, product catalog, shopping cart, and checkout functionality.",
-    technologies: ["Vue.js", "TailwindCSS", "JavaScript", "API"],
+    technologies: ["Nuxt.js", "TailwindCSS", "JavaScript", "API"],
     live: "https://shoppinginonline.netlify.app/",
   },
   {
@@ -2385,7 +2385,7 @@ const projects = ref([
     image: "/image/MH-ai-idea.genare.png",
     description:
       "API-powered image search application with real-time results and responsive grid layout.",
-    technologies: ["API", "Vue.js", "JavaScript", "TailwindCSS"],
+    technologies: ["API", "Nuxt.js", "JavaScript", "TailwindCSS"],
     live: "https://ai-powered-idea-generator.netlify.app/",
   },
   {
@@ -2394,7 +2394,7 @@ const projects = ref([
     image: "/image/MH-SaladMenu.png",
     description:
       "Interactive restaurant menu application with dynamic ordering system and beautiful animations.",
-    technologies: ["Vue.js", "TailwindCSS", "JavaScript","API"],
+    technologies: ["Nuxt.js", "TailwindCSS", "JavaScript","API"],
     live: "https://onlineorder-saladmenu.netlify.app/",
   },
   {
@@ -2403,7 +2403,7 @@ const projects = ref([
     image: "/image/MH-ai-tour-planner.png",
     description:
       "AI-powered trip planner application with personalized itineraries and travel recommendations.",
-    technologies: ["TailwindCss", "Animation", "JavaScript","API"],
+    technologies: ["Nuxt.js", "TailwindCSS", "JavaScript","API"],
     live: "https://new-ai-trip-planner-web.netlify.app/",
   },
   {
@@ -2412,7 +2412,7 @@ const projects = ref([
     image: "/image/Mh-hotel-booking.png",
     description:
       "Professional hotel booking website with elegant design and seamless user experience.",
-    technologies: ["Vue.js", "TailwindCSS","API", "JavaScript"],
+    technologies: ["Nuxt.js", "TailwindCSS", "API", "JavaScript"],
     live: "https://exquisite-kashata-37b72f.netlify.app/",
   },
   {
@@ -2421,7 +2421,7 @@ const projects = ref([
     image: "/image/MH-Ai-powered.png",
     description:
       "Modern AI-powered design showcase with stunning visual effects and smooth user experience.",
-    technologies: ["Vue.js", "JavaScript", "Animation"],
+    technologies: ["Nuxt.js", "TailwindCSS", "JavaScript", "API"],
     live: "https://mh-ai-powered-design.netlify.app/",
   },
 ]);
@@ -2468,7 +2468,7 @@ a:hover svg {
   box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
 }
 
-/* ✨ Laptop Mockup Styles */
+/*  Laptop Mockup Styles */
 .laptop-mockup {
   cursor: pointer;
   perspective: 1000px;
@@ -2571,7 +2571,7 @@ a:hover svg {
   overflow: hidden;
 }
 
-/* 🌟 Horizontal Moving Stars (Left to Right) */
+/*  Horizontal Moving Stars (Left to Right) */
 .horizontal-stars {
   position: absolute;
   inset: 0;
@@ -2748,7 +2748,7 @@ a:hover svg {
   }
 }
 
-/* ⭐ Horizontal Stars Animation (Left to Right) */
+/* Horizontal Stars Animation (Left to Right) */
 @keyframes moveStarsHorizontal {
   from {
     background-position: 0% 0;
