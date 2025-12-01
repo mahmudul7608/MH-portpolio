@@ -461,9 +461,9 @@
     <!-- about section end  -->
 
     <!-- skills section start-->
-    <section id="skills" class="mt-4 bg-black-100">
+    <section id="skills" class="mt-10 bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -655,7 +655,7 @@
     <!-- tools section start -->
     <section
       id="tools-i-use"
-      class="mt-8 bg-black-500 py-6 sm:py-8 md:py-12 lg:py-20 px-3"
+      class="mt-2 bg-black-500 py-6 sm:py-8 md:py-12 lg:py-20 px-3"
     >
       <h2
         class="text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-5 md:mb-6"
@@ -1809,11 +1809,11 @@
                 </div>
               </div>
 
-              <!-- Live View Icon - Bottom Right of Card -->
+              <!-- Live View Icon - Top Right of Card -->
               <a
                 :href="project.live"
                 target="_blank"
-                class="absolute bottom-4 right-4 p-2 rounded-lg bg-purple-600/20 backdrop-blur-md border border-purple-500/40 hover:bg-purple-600 hover:border-purple-500 transition-all duration-300 group/icon"
+                class="absolute top-4 right-4 p-2 rounded-lg bg-purple-600/20 backdrop-blur-md border border-purple-500/40 hover:bg-purple-600 hover:border-purple-500 transition-all duration-300 group/icon"
                 title="View Live"
                 @click.stop
               >
