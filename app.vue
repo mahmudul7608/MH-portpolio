@@ -130,7 +130,7 @@
           href="https://www.linkedin.com/in/dev-mahmudul-hasan/"
           target="_blank"
           rel="noopener noreferrer"
-          class="p-2 rounded-full hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white transition-colors cursor-pointer"
+          class="p-2 rounded-full border border-white/30 hover:bg-purple-500 hover:text-white hover:border-purple-500 active:bg-purple-500 active:text-white active:border-purple-500 transition-all cursor-pointer"
           aria-label="LinkedIn"
         >
           <svg
@@ -156,7 +156,7 @@
           href="https://github.com/mahmudul7608"
           target="_blank"
           rel="noopener noreferrer"
-          class="p-2 rounded-full hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white transition-colors cursor-pointer"
+          class="p-2 rounded-full border border-white/30 hover:bg-purple-500 hover:text-white hover:border-purple-500 active:bg-purple-500 active:text-white active:border-purple-500 transition-all cursor-pointer"
           aria-label="GitHub"
         >
           <svg
@@ -180,13 +180,37 @@
         <a
           href="https://wa.me/8801650217808"
           target="_blank"
-          class="p-2 rounded-full hover:bg-purple-500 hover:text-white active:bg-purple-500 active:text-white transition-colors cursor-pointer"
+          class="p-2 rounded-full border border-white/30 hover:bg-purple-500 hover:text-white hover:border-purple-500 active:bg-purple-500 active:text-white active:border-purple-500 transition-all cursor-pointer"
           aria-label="WhatsApp"
         >
           <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 448 512">
             <path
               d="M380.9 97.1C339 55.2 283.1 32 224.5 32C106.6 32 11 127.6 11 245.5c0 37.6 9.7 74.4 28.1 107.1L3.4 480l131.4-34.6c30.5 16.7 64.9 25.4 99.7 25.4h.1c117.9 0 213.6-95.6 213.6-213.5 0-58.6-23.2-113.5-65.3-155.2z"
             />
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/mh_meraj07/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2 rounded-full border border-white/30 hover:bg-purple-500 hover:text-white hover:border-purple-500 active:bg-purple-500 active:text-white active:border-purple-500 transition-all cursor-pointer"
+          aria-label="Instagram"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
         </a>
       </div>
@@ -2105,27 +2129,11 @@ const navItems = [
 
 const activeSection = ref("#intro");
 
-//  section color
+//  section color - simplified to use single consistent color
 
 const activeColor = (label) => {
-  switch (label) {
-    case "Home":
-      return "bg-cyan-500";
-    case "About":
-      return "bg-pink-500";
-    case "Skills":
-      return "bg-green-500";
-    case "Tools":
-      return "bg-yellow-500";
-    case "Projects":
-      return "bg-blue-500";
-    case "Contact":
-      return "bg-purple-500";
-    case "Footer":
-      return "bg-red-500";
-    default:
-      return "bg-gray-700";
-  }
+  // Return same purple color for all sections for a consistent look
+  return "bg-purple-500";
 };
 
 //  scroll active section update
