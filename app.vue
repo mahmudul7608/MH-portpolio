@@ -302,355 +302,131 @@
 
     <!-- End Hero Section -->
 
-    <!-- about section start -->
+    <!-- My project section start -->
+    <section id="my-recent-project" class="relative py-8 px-6 overflow-hidden">
+      <!-- Background blur elements -->
+      <div
+        class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-400/10 blur-[100px] rounded-full"
+      ></div>
+      <div
+        class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-300/10 blur-[100px] rounded-full"
+      ></div>
 
-    <section id="about" class="py-2 md:py-4 text-white">
-      <h2 class="text-3xl md:text-4xl mb-6 md:mb-8 font-bold text-center">
-        About
-        <span
-          class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
-          >Me
-        </span>
-      </h2>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Content Grid with Border -->
-        <div
-          class="border border-purple-500/30 rounded-2xl p-6 md:p-10 shadow-xl shadow-purple-500/20 bg-gradient-to-br from-gray-900/40 to-transparent backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300"
-        >
-          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <!-- Left Section (As is) -->
-            <div class="space-y-4 h-full">
-              <!-- Education -->
-
-              <!-- Education -->
-              <div>
-                <h3 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
-                  <span class="p-2 bg-gray-800 rounded-lg border border-white/10">
-                    <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                      <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-                    </svg>
-                  </span>
-                  Education
-                </h3>
-                
-                <div class="relative pl-8 border-l-2 border-white/20">
-                  <!-- Education Card -->
-                  <div class="relative group">
-                    <!-- Timeline Dot -->
-                    <div class="absolute -left-[41px] top-0 w-7 h-7 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
-                    
-                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-sm">
-                      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                        <div class="pl-4">
-                          <h4 class="text-lg font-bold text-white leading-tight">Diploma in Engineering</h4>
-                          <p class="text-sm text-gray-400 mt-1 flex items-center gap-2">
-                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            Government Polytechnic Institute, Bogura
-                          </p>
-                        </div>
-                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap self-start md:self-auto">2019 - 2024</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Certifications -->
-              <div>
-                <div class="relative pl-8 border-l-2 border-white/20">
-                  <!-- Certification Card -->
-                  <div class="relative group">
-                    <!-- Timeline Dot -->
-                    <div class="absolute -left-[41px] top-0 w-7 h-7 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
-                    
-                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 backdrop-blur-sm">
-                      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
-                        <h4 class="text-lg font-bold text-white leading-tight">
-                          Web Design & Development
-                        </h4>
-                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap">2022 – 2025</span>
-                      </div>
-                      
-                      <!-- Achievement List -->
-                      <div class="space-y-2.5 pl-4">
-                        <div class="flex items-start gap-3">
-                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                          <span class="text-sm text-gray-300"><strong>Frontend:</strong> HTML, CSS, Tailwind, JS (ES6+), Vue, Nuxt, React</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                          <span class="text-sm text-gray-300"><strong>Focus:</strong> Responsive UI, real-world projects</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                          <span class="text-sm text-gray-300"><strong>Workflow:</strong> Git, GitHub, version control</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Stats Grid -->
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
-                <!-- Stat 1 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-purple-500/50 hover:bg-purple-500/5 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
-                  <div class="text-purple-400 mb-2 flex justify-center">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                  </div>
-                  <div class="text-xl font-bold text-white">3+</div>
-                  <p class="text-xs text-gray-400">Years Exp.</p>
-                </div>
-                <!-- Stat 2 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-blue-500/50 hover:bg-blue-500/5 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
-                  <div class="text-blue-400 mb-2 flex justify-center">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                  </div>
-                  <div class="text-xl font-bold text-white">25+</div>
-                  <p class="text-xs text-gray-400">Projects</p>
-                </div>
-                <!-- Stat 3 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-green-500/50 hover:bg-green-500/5 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300">
-                  <div class="text-green-400 mb-2 flex justify-center">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                  </div>
-                  <div class="text-sm font-bold text-white mt-1">Good</div>
-                  <p class="text-xs text-gray-400">Understanding</p>
-                </div>
-                <!-- Stat 4 -->
-                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-pink-500/50 hover:bg-pink-500/5 hover:shadow-lg hover:shadow-pink-500/10 transition-all duration-300">
-                  <div class="text-pink-400 mb-2 flex justify-center">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                  </div>
-                  <div class="text-xl font-bold text-white">50K+</div>
-                  <p class="text-xs text-gray-400">Lines Code</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- ✅ Right Section (Improved Center Layout) -->
-            <div class="flex flex-col items-center text-center space-y-6 h-full justify-center">
-              <!-- Image -->
-              <div class="relative w-full sm:w-[80%] md:w-[85%] lg:w-[80%]">
-                <!-- Static subtle glow effect -->
-                <div class="absolute -inset-3 -z-10">
-                  <div class="relative mx-auto w-[95%] aspect-square">
-                    <!-- Soft static gradient glow -->
-                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-pink-500/20 blur-2xl"></div>
-                  </div>
-                </div>
-
-                <img
-                  src="/image/HM-image-1.png"
-                  alt="Mahmudul Hasan"
-                  class="relative rounded-2xl shadow-2xl mx-auto object-cover w-full h-auto"
-                />
-              </div>
-
-            </div>
-            <!-- End Right -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- about section end  -->
-
-    <!-- skills section start-->
-    <section id="skills" class="mt-10 bg-black-100">
-      <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+      <div class="text-center mb-8 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
-            >skills</span
+            >Projects</span
           >
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      </div>
+
+      <!-- Grid Layout with Laptop Mockups -->
+      <div class="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8 z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card with Laptop Mockup -->
           <div
-            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+            v-for="(project, index) in projects"
+            :key="index"
+            class="group relative"
           >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-purple-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-rocket w-12 h-12 mb-6 text-purple-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <path
-                      d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
-                    ></path>
-                    <path
-                      d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
-                    ></path>
-                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent"
+            <!-- Laptop Mockup Container -->
+            <div
+              class="laptop-mockup relative rounded-2xl bg-gradient-to-br from-[#1a1a2e]/95 via-[#16162a]/95 to-[#0f0f1e]/95 backdrop-blur-md p-5 border-2 border-purple-500/20 hover:border-purple-500/60 active:border-purple-500/60 transition-all duration-500 shadow-lg shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/30 active:shadow-2xl active:shadow-purple-500/30 hover:scale-[1.02] active:scale-[1.02] cursor-pointer"
+            >
+              <!-- Laptop Frame -->
+              <div class="laptop-frame relative mb-4">
+                <!-- Screen Bezel -->
+                <div
+                  class="screen-bezel rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 p-2 shadow-xl border border-gray-700"
                 >
-                  Development
-                </h3>
-                <p class="text-white/70">Frontend & Development</p>
-                <p class="text-white/70">
-                  Languages & Frameworks / Build & Workflow
-                </p>
-                <div class="flex flex-wrap gap-2 mt-6">
-                  <span class="tech-badge cursor-pointer">VueJs</span>
-                  <span class="tech-badge cursor-pointer">NuxtJs</span>
-                  <span class="tech-badge cursor-pointer">ReactJs</span>
-                  <span class="tech-badge cursor-pointer">TypeScript</span>
-                  <span class="tech-badge cursor-pointer">JavaScript</span>
-                  <span class="tech-badge cursor-pointer">HTML5</span>
-                  <span class="tech-badge cursor-pointer">HTML</span>
-                  <span class="tech-badge cursor-pointer">JavaScript</span>
-                  <span class="tech-badge cursor-pointer">NodeJs</span>
-                  <span class="tech-badge cursor-pointer">Vite</span>
-                  <span class="tech-badge cursor-pointer">ESLint</span>
-                  <span class="tech-badge cursor-pointer">Prettier</span>
-                  <span class="tech-badge cursor-pointer">Git</span>
-                  <span class="tech-badge cursor-pointer">GitHub</span>
-                  <span class="tech-badge cursor-pointer">VS Code</span>
-                  <span class="tech-badge cursor-pointer">Figma</span>
+                  <!-- Screen -->
+                  <div
+                    class="screen relative rounded-md overflow-hidden bg-black aspect-video shadow-inner group"
+                  >
+                    <!-- Project Image Inside Screen -->
+                    <img
+                      :src="project.image"
+                      :alt="project.title"
+                      class="w-full h-full object-cover object-top group-hover:scale-105 group-active:scale-105 transition-transform duration-700"
+                    />
+                    <!-- Screen Gloss Effect -->
+                    <div
+                      class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"
+                    ></div>
+                  </div>
+                  <!-- Camera Notch -->
+                  <div
+                    class="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gray-700 border border-gray-600"
+                  ></div>
+                </div>
+
+                <!-- Laptop Base -->
+                <div class="laptop-base mt-1">
+                  <div
+                    class="h-2 rounded-b-lg bg-gradient-to-b from-gray-700 to-gray-800 shadow-md"
+                  ></div>
+                  <div
+                    class="h-1 rounded-b-xl bg-gradient-to-b from-gray-800 to-gray-900"
+                  ></div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div
-            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30 bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-green-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-target w-12 h-12 mb-6 text-green-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="6"></circle>
-                    <circle cx="12" cy="12" r="2"></circle>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-green-400 to-green-200 bg-clip-text text-transparent"
-                >
-                  Design
+
+              <!-- Project Info Below Laptop -->
+              <div class="space-y-3">
+                <!-- Project Title -->
+                <h3 class="text-xl font-bold" :class="project.titleColor">
+                  {{ project.title }}
                 </h3>
-                <p class="text-white/70">Styling & UI</p>
-                <p class="text-white/70">Design & Animation</p>
-                <div class="flex flex-wrap gap-2 mt-6">
-                  <span class="tech-badge cursor-pointer">Tailwind CSS</span>
-                  <span class="tech-badge cursor-pointer">CSS</span>
-                  <span class="tech-badge cursor-pointer"
-                    >Styled Components</span
+
+                <!-- Project Description -->
+                <p class="text-sm text-gray-300 leading-relaxed line-clamp-3">
+                  {{ project.description }}
+                </p>
+
+                <!-- Technologies -->
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="(tech, techIndex) in project.technologies"
+                    :key="techIndex"
+                    class="px-3 py-1.5 text-xs font-medium rounded-md bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
                   >
-                  <span class="tech-badge cursor-pointer">CSS Modules</span>
-                  <span class="tech-badge cursor-pointer">Figma</span>
-                  <span class="tech-badge cursor-pointer">Photoshop</span>
-                  <span class="tech-badge cursor-pointer">Canva</span>
-                  <span class="tech-badge cursor-pointer">VS Code</span>
-                  <span class="tech-badge cursor-pointer">Framer Motion</span>
-                  <span class="tech-badge cursor-pointer">Material-UI</span>
+                    {{ tech }}
+                  </span>
                 </div>
               </div>
-            </div>
-          </div>
-          <div
-            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30 bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/50 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-          >
-            <div class="p-6 pt-8 relative">
-              <div class="flex flex-col items-center text-center">
-                <div class="relative">
-                  <div
-                    class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
-                  ></div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
+
+              <!-- Live View Icon - Top Right of Card -->
+              <a
+                :href="project.live"
+                target="_blank"
+                class="absolute top-4 right-4 p-2 rounded-lg bg-purple-600/20 backdrop-blur-md border border-purple-500/40 hover:bg-purple-600 hover:border-purple-500 transition-all duration-300 group/icon"
+                title="View Live"
+                @click.stop
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-purple-300 group-hover/icon:text-white transition-all group-hover/icon:scale-110"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-brain w-12 h-12 mb-6 text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  >
-                    <path
-                      d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
-                    ></path>
-                    <path
-                      d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
-                    ></path>
-                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
-                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
-                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
-                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
-                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
-                    <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
-                    <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
-                  </svg>
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"
-                >
-                  Engineering
-                </h3>
-                <p class="text-white/70">
-                  Diploma in Engineering with a focus on practical
-                </p>
-                <p class="text-white/70">
-                  Bogura Polytechnic Institute, Bangladesh.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-6">
-                  <span class="tech-badge cursor-pointer">Engineering</span>
-                  <span class="tech-badge cursor-pointer">Team Work</span>
-                  <span class="tech-badge cursor-pointer">Building</span>
-                  <span class="tech-badge cursor-pointer">Problem Solving</span>
-                  <span class="tech-badge cursor-pointer">Creativity</span>
-                  <span class="tech-badge cursor-pointer"
-                    >Critical Thinking</span
-                  >
-                  <span class="tech-badge cursor-pointer">Communication</span>
-                  <span class="tech-badge cursor-pointer">Collaboration</span>
-                  <span class="tech-badge cursor-pointer">Adaptability</span>
-                  <span class="tech-badge cursor-pointer">Flexibility</span>
-                  <span class="tech-badge cursor-pointer">Time Management</span>
-                </div>
-              </div>
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- skills section end -->
+
+    <!-- my project section end -->
 
     <!-- tools section start -->
     <section
@@ -1714,131 +1490,355 @@
     </section>
     <!-- tools section end -->
 
-    <!-- My project section start -->
-    <section id="my-recent-project" class="relative py-8 px-6 overflow-hidden">
-      <!-- Background blur elements -->
-      <div
-        class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-400/10 blur-[100px] rounded-full"
-      ></div>
-      <div
-        class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-300/10 blur-[100px] rounded-full"
-      ></div>
-
-      <div class="text-center mb-8 relative z-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+    <!-- skills section start-->
+    <section id="skills" class="mt-10 bg-black-100">
+      <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
-            >Projects</span
+            >skills</span
           >
         </h2>
-      </div>
-
-      <!-- Grid Layout with Laptop Mockups -->
-      <div class="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8 z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project Card with Laptop Mockup -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            v-for="(project, index) in projects"
-            :key="index"
-            class="group relative"
+            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
           >
-            <!-- Laptop Mockup Container -->
-            <div
-              class="laptop-mockup relative rounded-2xl bg-gradient-to-br from-[#1a1a2e]/95 via-[#16162a]/95 to-[#0f0f1e]/95 backdrop-blur-md p-5 border-2 border-purple-500/20 hover:border-purple-500/60 active:border-purple-500/60 transition-all duration-500 shadow-lg shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/30 active:shadow-2xl active:shadow-purple-500/30 hover:scale-[1.02] active:scale-[1.02] cursor-pointer"
-            >
-              <!-- Laptop Frame -->
-              <div class="laptop-frame relative mb-4">
-                <!-- Screen Bezel -->
-                <div
-                  class="screen-bezel rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 p-2 shadow-xl border border-gray-700"
-                >
-                  <!-- Screen -->
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
                   <div
-                    class="screen relative rounded-md overflow-hidden bg-black aspect-video shadow-inner group"
-                  >
-                    <!-- Project Image Inside Screen -->
-                    <img
-                      :src="project.image"
-                      :alt="project.title"
-                      class="w-full h-full object-cover object-top group-hover:scale-105 group-active:scale-105 transition-transform duration-700"
-                    />
-                    <!-- Screen Gloss Effect -->
-                    <div
-                      class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"
-                    ></div>
-                  </div>
-                  <!-- Camera Notch -->
-                  <div
-                    class="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-gray-700 border border-gray-600"
+                    class="absolute -inset-1 bg-purple-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
                   ></div>
-                </div>
-
-                <!-- Laptop Base -->
-                <div class="laptop-base mt-1">
-                  <div
-                    class="h-2 rounded-b-lg bg-gradient-to-b from-gray-700 to-gray-800 shadow-md"
-                  ></div>
-                  <div
-                    class="h-1 rounded-b-xl bg-gradient-to-b from-gray-800 to-gray-900"
-                  ></div>
-                </div>
-              </div>
-
-              <!-- Project Info Below Laptop -->
-              <div class="space-y-3">
-                <!-- Project Title -->
-                <h3 class="text-xl font-bold" :class="project.titleColor">
-                  {{ project.title }}
-                </h3>
-
-                <!-- Project Description -->
-                <p class="text-sm text-gray-300 leading-relaxed line-clamp-3">
-                  {{ project.description }}
-                </p>
-
-                <!-- Technologies -->
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    v-for="(tech, techIndex) in project.technologies"
-                    :key="techIndex"
-                    class="px-3 py-1.5 text-xs font-medium rounded-md bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
-                  >
-                    {{ tech }}
-                  </span>
-                </div>
-              </div>
-
-              <!-- Live View Icon - Top Right of Card -->
-              <a
-                :href="project.live"
-                target="_blank"
-                class="absolute top-4 right-4 p-2 rounded-lg bg-purple-600/20 backdrop-blur-md border border-purple-500/40 hover:bg-purple-600 hover:border-purple-500 transition-all duration-300 group/icon"
-                title="View Live"
-                @click.stop
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 text-purple-300 group-hover/icon:text-white transition-all group-hover/icon:scale-110"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
+                    class="lucide lucide-rocket w-12 h-12 mb-6 text-purple-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                    ></path>
+                    <path
+                      d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                    ></path>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-purple-200 bg-clip-text text-transparent"
+                >
+                  Development
+                </h3>
+                <p class="text-white/70">Frontend & Development</p>
+                <p class="text-white/70">
+                  Languages & Frameworks / Build & Workflow
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="tech-badge cursor-pointer">VueJs</span>
+                  <span class="tech-badge cursor-pointer">NuxtJs</span>
+                  <span class="tech-badge cursor-pointer">ReactJs</span>
+                  <span class="tech-badge cursor-pointer">TypeScript</span>
+                  <span class="tech-badge cursor-pointer">JavaScript</span>
+                  <span class="tech-badge cursor-pointer">HTML5</span>
+                  <span class="tech-badge cursor-pointer">HTML</span>
+                  <span class="tech-badge cursor-pointer">JavaScript</span>
+                  <span class="tech-badge cursor-pointer">NodeJs</span>
+                  <span class="tech-badge cursor-pointer">Vite</span>
+                  <span class="tech-badge cursor-pointer">ESLint</span>
+                  <span class="tech-badge cursor-pointer">Prettier</span>
+                  <span class="tech-badge cursor-pointer">Git</span>
+                  <span class="tech-badge cursor-pointer">GitHub</span>
+                  <span class="tech-badge cursor-pointer">VS Code</span>
+                  <span class="tech-badge cursor-pointer">Figma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30 bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/30 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+          >
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-green-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-target w-12 h-12 mb-6 text-green-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-green-400 to-green-200 bg-clip-text text-transparent"
+                >
+                  Design
+                </h3>
+                <p class="text-white/70">Styling & UI</p>
+                <p class="text-white/70">Design & Animation</p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="tech-badge cursor-pointer">Tailwind CSS</span>
+                  <span class="tech-badge cursor-pointer">CSS</span>
+                  <span class="tech-badge cursor-pointer"
+                    >Styled Components</span
+                  >
+                  <span class="tech-badge cursor-pointer">CSS Modules</span>
+                  <span class="tech-badge cursor-pointer">Figma</span>
+                  <span class="tech-badge cursor-pointer">Photoshop</span>
+                  <span class="tech-badge cursor-pointer">Canva</span>
+                  <span class="tech-badge cursor-pointer">VS Code</span>
+                  <span class="tech-badge cursor-pointer">Framer Motion</span>
+                  <span class="tech-badge cursor-pointer">Material-UI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border text-card-foreground shadow-lg shadow-blue-700/30 bg-black/20 backdrop-blur-md border-primary/20 hover:bg-black/50 transition-all duration-300 group relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/10 before:via-transparent before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+          >
+            <div class="p-6 pt-8 relative">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative">
+                  <div
+                    class="absolute -inset-1 bg-blue-400/20 rounded-full blur-md group-hover:blur-xl transition-all duration-300"
+                  ></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-brain w-12 h-12 mb-6 text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+                    ></path>
+                    <path
+                      d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+                    ></path>
+                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
+                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                    <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                    <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                  </svg>
+                </div>
+                <h3
+                  class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"
+                >
+                  Engineering
+                </h3>
+                <p class="text-white/70">
+                  Diploma in Engineering with a focus on practical
+                </p>
+                <p class="text-white/70">
+                  Bogura Polytechnic Institute, Bangladesh.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="tech-badge cursor-pointer">Engineering</span>
+                  <span class="tech-badge cursor-pointer">Team Work</span>
+                  <span class="tech-badge cursor-pointer">Building</span>
+                  <span class="tech-badge cursor-pointer">Problem Solving</span>
+                  <span class="tech-badge cursor-pointer">Creativity</span>
+                  <span class="tech-badge cursor-pointer"
+                    >Critical Thinking</span
+                  >
+                  <span class="tech-badge cursor-pointer">Communication</span>
+                  <span class="tech-badge cursor-pointer">Collaboration</span>
+                  <span class="tech-badge cursor-pointer">Adaptability</span>
+                  <span class="tech-badge cursor-pointer">Flexibility</span>
+                  <span class="tech-badge cursor-pointer">Time Management</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- skills section end -->
 
-    <!-- my project section end -->
+    <!-- about section start -->
+
+    <section id="about" class="py-2 md:py-4 text-white">
+      <h2 class="text-3xl md:text-4xl mb-6 md:mb-8 font-bold text-center">
+        About
+        <span
+          class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+          >Me
+        </span>
+      </h2>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Content Grid with Border -->
+        <div
+          class="border border-purple-500/30 rounded-2xl p-6 md:p-10 shadow-xl shadow-purple-500/20 bg-gradient-to-br from-gray-900/40 to-transparent backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300"
+        >
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <!-- Left Section (As is) -->
+            <div class="space-y-4 h-full">
+              <!-- Education -->
+
+              <!-- Education -->
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
+                  <span class="p-2 bg-gray-800 rounded-lg border border-white/10">
+                    <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                      <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                    </svg>
+                  </span>
+                  Education
+                </h3>
+                
+                <div class="relative pl-8 border-l-2 border-white/20">
+                  <!-- Education Card -->
+                  <div class="relative group">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[41px] top-0 w-7 h-7 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
+                    
+                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 backdrop-blur-sm">
+                      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                        <div class="pl-4">
+                          <h4 class="text-lg font-bold text-white leading-tight">Diploma in Engineering</h4>
+                          <p class="text-sm text-gray-400 mt-1 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Government Polytechnic Institute, Bogura
+                          </p>
+                        </div>
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap self-start md:self-auto">2019 - 2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Certifications -->
+              <div>
+                <div class="relative pl-8 border-l-2 border-white/20">
+                  <!-- Certification Card -->
+                  <div class="relative group">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[41px] top-0 w-7 h-7 rounded-full border-2 border-white bg-gray-900 group-hover:scale-110 transition-transform duration-300"></div>
+                    
+                    <div class="p-6 rounded-2xl bg-gray-900/50 border border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 backdrop-blur-sm">
+                      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+                        <h4 class="text-lg font-bold text-white leading-tight">
+                          Web Design & Development
+                        </h4>
+                        <span class="inline-block px-4 py-1 rounded-full bg-white text-black text-xs font-bold whitespace-nowrap">2022 – 2025</span>
+                      </div>
+                      
+                      <!-- Achievement List -->
+                      <div class="space-y-2.5 pl-4">
+                        <div class="flex items-start gap-3">
+                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span class="text-sm text-gray-300"><strong>Frontend:</strong> HTML, CSS, Tailwind, JS (ES6+), Vue, Nuxt, React</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span class="text-sm text-gray-300"><strong>Focus:</strong> Responsive UI, real-world projects</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span class="text-sm text-gray-300"><strong>Workflow:</strong> Git, GitHub, version control</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats Grid -->
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+                <!-- Stat 1 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-purple-500/50 hover:bg-purple-500/5 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+                  <div class="text-purple-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  </div>
+                  <div class="text-xl font-bold text-white">3+</div>
+                  <p class="text-xs text-gray-400">Years Exp.</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-blue-500/50 hover:bg-blue-500/5 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+                  <div class="text-blue-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  </div>
+                  <div class="text-xl font-bold text-white">25+</div>
+                  <p class="text-xs text-gray-400">Projects</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-green-500/50 hover:bg-green-500/5 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300">
+                  <div class="text-green-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                  </div>
+                  <div class="text-sm font-bold text-white mt-1">Good</div>
+                  <p class="text-xs text-gray-400">Understanding</p>
+                </div>
+                <!-- Stat 4 -->
+                <div class="p-4 rounded-xl bg-gray-900/50 border border-white/10 text-center hover:border-pink-500/50 hover:bg-pink-500/5 hover:shadow-lg hover:shadow-pink-500/10 transition-all duration-300">
+                  <div class="text-pink-400 mb-2 flex justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                  </div>
+                  <div class="text-xl font-bold text-white">50K+</div>
+                  <p class="text-xs text-gray-400">Lines Code</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ✅ Right Section (Improved Center Layout) -->
+            <div class="flex flex-col items-center text-center space-y-6 h-full justify-center">
+              <!-- Image -->
+              <div class="relative w-full sm:w-[80%] md:w-[85%] lg:w-[80%]">
+                <!-- Static subtle glow effect -->
+                <div class="absolute -inset-3 -z-10">
+                  <div class="relative mx-auto w-[95%] aspect-square">
+                    <!-- Soft static gradient glow -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-pink-500/20 blur-2xl"></div>
+                  </div>
+                </div>
+
+                <img
+                  src="./public/image/HM-image-1.png"
+                  alt="Mahmudul Hasan"
+                  class="relative rounded-2xl shadow-2xl mx-auto object-cover w-full h-auto"
+                />
+              </div>
+
+            </div>
+            <!-- End Right -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section end  -->
 
     <!-- Contact section start -->
     <section
