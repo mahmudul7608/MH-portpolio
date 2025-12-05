@@ -270,10 +270,10 @@
         <!-- Buttons -->
         <div class="flex flex-wrap gap-4 justify-center mt-8">
           <a
-            href="#my-recent-project"
+            href="#contact-me"
             class="inline-block px-6 py-2.5 lg:px-8 lg:py-3.5 rounded-full border border-pink-500 bg-gradient-to-r from-sky-400 to-pink-500 text-black font-semibold hover:scale-105 active:scale-105 transition shadow-lg cursor-pointer"
           >
-            My Projects
+            Get in Touch
           </a>
           <button
             @click="downloadResume"
@@ -303,7 +303,7 @@
     <!-- End Hero Section -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="relative py-3 px-2 overflow-hidden">
+    <section id="my-recent-project" class="relative py-12 px-6 overflow-hidden">
       <!-- Background blur elements -->
       <div
         class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-400/10 blur-[100px] rounded-full"
@@ -312,7 +312,7 @@
         class="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-purple-300/10 blur-[100px] rounded-full"
       ></div>
 
-      <div class="text-center mb-8 relative z-10">
+      <div class="text-center mb-12 relative z-10">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
           My
           <span
@@ -431,10 +431,11 @@
     <!-- tools section start -->
     <section
       id="tools-i-use"
-      class="mt-0 bg-black-500 py-6 sm:py-8 md:py-12 lg:py-20 px-3"
+      class="mt-12 bg-black-500 py-12 px-6"
     >
       <h2
         class="text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-5 md:mb-6"
+        style="margin-top: -5px;"
       >
         Tools
         <span
@@ -1491,9 +1492,9 @@
     <!-- tools section end -->
 
     <!-- skills section start-->
-    <section id="skills" class="mt-10 bg-black-100">
+    <section id="skills" class="mt-12 py-12 bg-black-100">
       <div class="container mx-auto mb-2 px-2 max-w-7xl relative">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10" style="margin-top: -10px;">
           My
           <span
             class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -1684,7 +1685,7 @@
 
     <!-- about section start -->
 
-    <section id="about" class="py-2 md:py-4 text-white">
+    <section id="about" class="py-12 text-white">
       <h2 class="text-3xl md:text-4xl mb-6 md:mb-8 font-bold text-center">
         About
         <span
@@ -1843,7 +1844,7 @@
     <!-- Contact section start -->
     <section
       id="contact-me"
-      class="min-h-screen flex items-center justify-center px-4 mb-4 mt-4"
+      class="min-h-screen flex items-center justify-center px-4 py-12"
     >
       <div class="w-full max-w-3xl">
         <!-- Heading -->
