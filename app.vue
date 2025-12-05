@@ -303,7 +303,7 @@
     <!-- End Hero Section -->
 
     <!-- My project section start -->
-    <section id="my-recent-project" class="relative py-8 px-6 overflow-hidden">
+    <section id="my-recent-project" class="relative py-3 px-2 overflow-hidden">
       <!-- Background blur elements -->
       <div
         class="absolute -top-40 -left-40 w-[400px] h-[400px] bg-cyan-400/10 blur-[100px] rounded-full"
@@ -431,7 +431,7 @@
     <!-- tools section start -->
     <section
       id="tools-i-use"
-      class="mt-2 bg-black-500 py-6 sm:py-8 md:py-12 lg:py-20 px-3"
+      class="mt-0 bg-black-500 py-6 sm:py-8 md:py-12 lg:py-20 px-3"
     >
       <h2
         class="text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-5 md:mb-6"
@@ -2119,10 +2119,10 @@ const isOpen = ref(false);
 //  Navbar items
 const navItems = [
   { href: "#intro", label: "Home", icon: Home },
-  { href: "#about", label: "About", icon: User },
-  { href: "#skills", label: "Skills", icon: Brain },
-  { href: "#tools-i-use", label: "Tools", icon: Code },
   { href: "#my-recent-project", label: "Projects", icon: Folder },
+  { href: "#tools-i-use", label: "Tools", icon: Code },
+  { href: "#skills", label: "Skills", icon: Brain },
+  { href: "#about", label: "About", icon: User },
   { href: "#contact-me", label: "Contact", icon: Mail },
   { href: "#footer", label: "Footer", icon: Book },
 ];
